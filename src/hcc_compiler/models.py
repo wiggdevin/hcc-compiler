@@ -51,3 +51,18 @@ class EvidenceAtom(BaseModel):
     library_version: str
     last_reviewed: date
     expiry: date
+
+
+class RecommendationPattern(BaseModel):
+    id: str = Field(pattern=r"^RP-[A-Z]{2,4}-[a-z0-9-]+$")
+    domain: Domain
+    pattern: str
+    parameterization: str
+    backing_atom_ids: list[str] = Field(min_length=1)
+    falsification_signal: str
+    safety_bounds: str
+    applies_because: str
+    doesnt_apply_if: str
+    tier: Tier
+    approval: str
+    version: str
