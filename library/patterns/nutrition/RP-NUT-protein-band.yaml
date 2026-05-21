@@ -1,0 +1,13 @@
+id: RP-NUT-protein-band
+domain: nutrition
+pattern: "protein target band"
+parameterization: "1.6-2.2 g/kg/day; pick the upper end in steeper deficits or higher training volume."
+backing_atom_ids:
+  - "EA-NUT-0001"
+falsification_signal: "Fat-free mass drops >1%/week over 3 weeks at target intake."
+safety_bounds: "Do not exceed 2.5 g/kg/day; flag renal history before recommending."
+applies_because: "Trained adults in an energy deficit."
+doesnt_apply_if: "CKD or other renal contraindication present."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-21"
+version: "0.1.0"
