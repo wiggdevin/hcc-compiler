@@ -1,23 +1,23 @@
 id: EA-NUT-0001
 domain: nutrition
-claim: "1.6-2.2 g/kg/day protein maximizes lean mass retention during an energy deficit in trained adults."
+claim: "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods."
 evidence_level: L1
 citations:
   - id: "10.1186/s12970-017-0177-8"
-    locator_quote: "protein intakes of 1.6 to 2.2 g/kg/day are sufficient to maximize muscle protein accretion and preserve lean mass"
+    locator_quote: "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods."
     existence: VERIFIED
     faithfulness: VERIFIED
 population_applicability:
   age: "18-55"
   sex: "both"
-  training_status: "trained"
-  dose_magnitude: "moderate deficit"
+  training_status: "resistance-trained"
+  dose_magnitude: "2.3-3.1 g/kg/d during hypocaloric periods"
   duration: "8-16 wk"
-effect: "Preserves fat-free mass vs lower intake (SMD ~0.3)."
+effect: "Maximizes retention of lean body mass during an energy deficit, vs lower intakes."
 contraindications:
   - "CKD or other renal contraindication"
 tier: high-impact
-approval: "Dev Wiggins 2026-05-21"
+approval: "Dev Wiggins 2026-05-22"
 library_version: "0.1.0"
-last_reviewed: "2026-05-21"
-expiry: "2027-05-21"
+last_reviewed: "2026-05-22"
+expiry: "2027-05-22"

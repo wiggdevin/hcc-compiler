@@ -1,23 +1,23 @@
 id: EA-SUP-0001
 domain: supplements
-claim: "Creatine monohydrate at 3-5 g/day maintenance increases strength and lean mass when paired with resistance training."
+claim: "Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations."
 evidence_level: L1
 citations:
   - id: "10.1186/s12970-017-0173-z"
-    locator_quote: "creatine monohydrate is the most effective ergogenic nutritional supplement currently available to athletes with the intent of increasing high-intensity exercise capacity and lean body mass during training"
+    locator_quote: "Studies have consistently shown that creatine supplementation increases intramuscular creatine concentrations which may help explain the observed improvements in high intensity exercise performance leading to greater training adaptations."
     existence: VERIFIED
     faithfulness: VERIFIED
 population_applicability:
-  age: "18-55"
+  age: "18-65"
   sex: "both"
   training_status: "trained"
-  dose_magnitude: "3-5 g/day maintenance"
-  duration: "4-12 wk"
-effect: "Increases 1RM strength (~5-10%) and lean mass (~1-2 kg) vs placebo over a 4-12 wk resistance program."
+  dose_magnitude: "habitual ~3 g/day (per ISSN safety review)"
+  duration: "weeks to years"
+effect: "Improves high-intensity exercise capacity and supports greater resistance-training adaptations vs placebo."
 contraindications:
   - "Pre-existing renal disease"
 tier: high-impact
-approval: "Dev Wiggins 2026-05-21"
+approval: "Dev Wiggins 2026-05-22"
 library_version: "0.1.0"
-last_reviewed: "2026-05-21"
-expiry: "2027-05-21"
+last_reviewed: "2026-05-22"
+expiry: "2027-05-22"

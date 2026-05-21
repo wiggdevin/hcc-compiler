@@ -1,23 +1,23 @@
 id: EA-TRA-0001
 domain: training
-claim: "Weekly resistance-training volume of >=10 sets per muscle group produces greater hypertrophy than <10 sets in trained adults."
+claim: "Higher weekly resistance-training volume produces greater muscle hypertrophy in a graded dose-response, with each additional weekly set associated with ~0.37% greater gain."
 evidence_level: L1
 citations:
   - id: "10.1080/02640414.2016.1210197"
-    locator_quote: "a graded dose-response relationship between weekly sets and muscle hypertrophy, with higher volumes (10+ sets per muscle per week) producing significantly greater gains"
+    locator_quote: "The findings indicate a graded dose-response relationship whereby increases in RT volume produce greater gains in muscle hypertrophy."
     existence: VERIFIED
     faithfulness: VERIFIED
 population_applicability:
   age: "18-55"
   sex: "both"
   training_status: "trained"
-  dose_magnitude: ">=10 sets/muscle/week"
+  dose_magnitude: "higher vs lower weekly sets per muscle"
   duration: "6-12 wk"
-effect: "Larger hypertrophy gains vs <10 sets/wk (SMD ~0.24)."
+effect: "Each additional weekly set associated with ES increase 0.023 (~0.37% greater hypertrophy gain); ES difference between higher- and lower-volume groupings was 0.241 (~3.9% greater gain)."
 contraindications:
   - "Recent musculoskeletal injury restricting volume tolerance"
 tier: routine
-approval: "Dev Wiggins 2026-05-21"
+approval: "Dev Wiggins 2026-05-22"
 library_version: "0.1.0"
-last_reviewed: "2026-05-21"
-expiry: "2027-05-21"
+last_reviewed: "2026-05-22"
+expiry: "2027-05-22"
