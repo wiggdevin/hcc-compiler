@@ -3,15 +3,16 @@ from __future__ import annotations
 
 import json
 import sqlite3
-import subprocess
 import sys
 from pathlib import Path
 from unittest.mock import patch
 
 import pytest
 
-# Path to the CLI script under test
-_SCRIPT = Path(__file__).resolve().parents[2] / "scripts" / "retrieve.py"
+# Import main() from the CLI script directly (no subprocess needed).
+_SCRIPT_DIR = Path(__file__).resolve().parents[2] / "scripts"
+sys.path.insert(0, str(_SCRIPT_DIR))
+from retrieve import main as _cli_main  # noqa: E402
 
 QUERY_VEC = [1.0, 0.0, 0.0]
 
@@ -57,37 +58,31 @@ def _make_db(tmp_path: Path) -> Path:
     return db
 
 
-def _run(args: list[str], env_patch: dict | None = None) -> subprocess.CompletedProcess:
-    """Run the CLI script as a subprocess."""
-    env = None
-    if env_patch:
-        import os
-        env = {**os.environ, **env_patch}
-    return subprocess.run(
-        [sys.executable, str(_SCRIPT)] + args,
-        capture_output=True,
-        text=True,
-        env=env,
-    )
+def _run_main(args: list[str], capsys) -> str:
+    """Invoke CLI main() directly with patched argv and embed mock."""
+    with patch("sys.argv", ["retrieve.py"] + args), \
+         patch("hcc_compiler.retrieve.embed", return_value=QUERY_VEC):
+        rc = _cli_main()
+    assert rc == 0, f"CLI exited with {rc}"
+    return capsys.readouterr().out
 
 
 # ---------------------------------------------------------------------------
 # Test 1: basic output format
 # ---------------------------------------------------------------------------
 
-def test_output_format(tmp_path):
+def test_output_format(tmp_path, capsys):
     """Each result line is <id>\\t<sim:.4f>\\t<excerpt<=80chars>."""
     db = _make_db(tmp_path)
-    result = _run(["protein", "--db", str(db), "--embed-mock"])
-    assert result.returncode == 0, result.stderr
-    lines = [l for l in result.stdout.strip().splitlines() if l]
+    stdout = _run_main(["protein", "--db", str(db)], capsys)
+    lines = [l for l in stdout.strip().splitlines() if l]
     assert len(lines) > 0
     for line in lines:
         parts = line.split("\t")
         assert len(parts) == 3, f"Expected 3 tab-separated fields, got: {line!r}"
         record_id, sim_str, excerpt = parts
         # sim must parse as float
-        sim = float(sim_str)
+        float(sim_str)
         # 4 decimal places
         assert "." in sim_str
         assert len(sim_str.split(".")[-1]) == 4, f"Expected 4 decimal places: {sim_str!r}"
@@ -99,12 +94,11 @@ def test_output_format(tmp_path):
 # Test 2: --domain filter
 # ---------------------------------------------------------------------------
 
-def test_domain_filter(tmp_path):
+def test_domain_filter(tmp_path, capsys):
     """--domain nutrition returns only nutrition records (a1, a2, p1)."""
     db = _make_db(tmp_path)
-    result = _run(["protein", "--domain", "nutrition", "--db", str(db), "--embed-mock"])
-    assert result.returncode == 0, result.stderr
-    lines = [l for l in result.stdout.strip().splitlines() if l]
+    stdout = _run_main(["protein", "--domain", "nutrition", "--db", str(db)], capsys)
+    lines = [l for l in stdout.strip().splitlines() if l]
     ids = [line.split("\t")[0] for line in lines]
     for rid in ids:
         assert rid in {"a1", "a2", "p1"}, f"Unexpected record in nutrition filter: {rid}"
@@ -115,12 +109,11 @@ def test_domain_filter(tmp_path):
 # Test 3: --k limits results
 # ---------------------------------------------------------------------------
 
-def test_k_limits_results(tmp_path):
+def test_k_limits_results(tmp_path, capsys):
     """--k 2 returns exactly 2 results."""
     db = _make_db(tmp_path)
-    result = _run(["protein", "--k", "2", "--db", str(db), "--embed-mock"])
-    assert result.returncode == 0, result.stderr
-    lines = [l for l in result.stdout.strip().splitlines() if l]
+    stdout = _run_main(["protein", "--k", "2", "--db", str(db)], capsys)
+    lines = [l for l in stdout.strip().splitlines() if l]
     assert len(lines) == 2
 
 
@@ -131,5 +124,6 @@ def test_k_limits_results(tmp_path):
 def test_missing_db_nonzero_exit(tmp_path):
     """--db pointing to nonexistent file exits with non-zero status."""
     missing_db = tmp_path / "nonexistent.db"
-    result = _run(["protein", "--db", str(missing_db)])
-    assert result.returncode != 0
+    with patch("sys.argv", ["retrieve.py", "protein", "--db", str(missing_db)]):
+        rc = _cli_main()
+    assert rc != 0

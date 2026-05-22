@@ -50,8 +50,6 @@ def main() -> int:
     parser.add_argument("--k", type=int, default=10, help="Number of results (default: 10).")
     parser.add_argument("--domain", default=None, help="Filter by domain (e.g. nutrition).")
     parser.add_argument("--db", default="library.db", help="Path to SQLite DB (default: library.db).")
-    # Internal flag for offline testing: emit a fixed mock vector without calling embed API.
-    parser.add_argument("--embed-mock", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
     db_path = Path(args.db)
@@ -59,20 +57,12 @@ def main() -> int:
         print(f"error: database not found: {db_path}", file=sys.stderr)
         return 1
 
-    if args.embed_mock:
-        import unittest.mock as _mock
-        patcher = _mock.patch("hcc_compiler.retrieve.embed", return_value=[1.0, 0.0, 0.0])
-        patcher.start()
-
     results = query(
         text=args.query_text,
         k=args.k,
         domain=args.domain,
         db_path=db_path,
     )
-
-    if args.embed_mock:
-        patcher.stop()  # type: ignore[possibly-undefined]
 
     con = sqlite3.connect(db_path)
     try:
