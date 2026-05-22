@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from hcc_compiler.llm.glm_client import GLMRequest, call_llm
+from hcc_compiler.llm.anthropic_client import LLMRequest, call_llm
 from hcc_compiler.models import DOMAIN_PREFIX, Domain
 
 _PROMPT_PATH = Path(__file__).with_name("extract_prompt.md")
@@ -65,7 +65,7 @@ def _quote_is_verbatim(draft: dict, abstract: str) -> bool:
 
 
 def _call_once(system: str, user_prompt: str, model: str) -> dict:
-    raw = call_llm(GLMRequest(
+    raw = call_llm(LLMRequest(
         model=model, system=system, user_prompt=user_prompt,
         max_tokens=2048, temperature=0.2,
     ))
@@ -75,7 +75,7 @@ def _call_once(system: str, user_prompt: str, model: str) -> dict:
     return json.loads(match.group(0))
 
 
-def extract_atom(candidate: dict, model: str = "glm-4.6") -> dict:
+def extract_atom(candidate: dict, model: str = "claude-sonnet-4-6") -> dict:
     user_prompt = (
         "CANDIDATE:\n"
         f"title: {candidate.get('title')}\n"
