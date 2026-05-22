@@ -1,8 +1,10 @@
 from __future__ import annotations
+import json
 import sqlite3
 from pathlib import Path
 from hcc_compiler.models import EvidenceAtom, RecommendationPattern
 from hcc_compiler.loader import load_dir
+from hcc_compiler.llm.embed_client import embed, EmbedRequest
 
 _SCHEMA = """
 DROP TABLE IF EXISTS atoms;
@@ -16,11 +18,25 @@ CREATE INDEX idx_atoms_tier ON atoms(tier);
 CREATE INDEX idx_patterns_domain ON patterns(domain);
 """
 
+_EMBEDDINGS_SCHEMA = """
+CREATE TABLE IF NOT EXISTS embeddings (
+  record_id TEXT PRIMARY KEY,
+  record_type TEXT NOT NULL CHECK (record_type IN ('atom', 'pattern')),
+  vector TEXT NOT NULL
+);
+"""
+
 
 def build_index(root: Path, out_db: Path) -> None:
     root = Path(root)
     atoms, a_err = load_dir(root / "atoms", EvidenceAtom)
-    patterns, p_err = load_dir(root / "patterns", RecommendationPattern)
+
+    patterns_dir = root / "patterns"
+    if patterns_dir.exists():
+        patterns, p_err = load_dir(patterns_dir, RecommendationPattern)
+    else:
+        patterns, p_err = [], []
+
     if a_err or p_err:
         raise ValueError(
             f"library has {len(a_err) + len(p_err)} invalid record(s); "
@@ -40,6 +56,24 @@ def build_index(root: Path, out_db: Path) -> None:
             [(p.id, p.domain.value, p.tier.value, p.model_dump_json()) for p in patterns],
         )
         con.execute("INSERT INTO meta VALUES ('library_version', ?)", (version,))
+
+        con.executescript(_EMBEDDINGS_SCHEMA)
+
+        for a in atoms:
+            vec = embed(EmbedRequest(text=a.claim))
+            con.execute(
+                "INSERT OR REPLACE INTO embeddings VALUES (?,?,?)",
+                (a.id, "atom", json.dumps(vec)),
+            )
+
+        for p in patterns:
+            text = f"{p.pattern} {p.parameterization}"
+            vec = embed(EmbedRequest(text=text))
+            con.execute(
+                "INSERT OR REPLACE INTO embeddings VALUES (?,?,?)",
+                (p.id, "pattern", json.dumps(vec)),
+            )
+
         con.commit()
     finally:
         con.close()
