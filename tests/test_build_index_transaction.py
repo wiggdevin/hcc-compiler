@@ -129,3 +129,66 @@ def test_embed_failure_on_pattern_leaves_no_partial_state(tmp_path):
             )
     finally:
         con.close()
+
+
+def test_db_write_failure_inside_transaction_leaves_no_partial_state(tmp_path):
+    """If a DB write fails INSIDE the BEGIN/COMMIT window, ROLLBACK must leave
+    row counts identical to the pre-call snapshot.
+
+    Injection: we run a full initial build_index to seed the DB, snapshot row
+    counts, then re-run with sqlite3.Connection.executemany patched to raise on
+    its second call (the patterns INSERT, which is inside BEGIN).  The first
+    executemany (atoms) has already written rows into the open transaction when
+    the failure occurs.  Without an explicit ROLLBACK those atom writes would
+    leak; the assertion proves they do not.
+    """
+    _setup_multi_atom(tmp_path)
+    db = tmp_path / "library.db"
+
+    # --- seed build: populate the DB with known rows ---
+    with patch("hcc_compiler.build_index.embed", side_effect=_mock_embed):
+        build_index(tmp_path, db)
+
+    con = sqlite3.connect(db)
+    seed_atoms = con.execute("SELECT COUNT(*) FROM atoms").fetchone()[0]
+    seed_patterns = con.execute("SELECT COUNT(*) FROM patterns").fetchone()[0]
+    seed_embeddings = con.execute("SELECT COUNT(*) FROM embeddings").fetchone()[0]
+    con.close()
+
+    # --- second build with a DB-path failure inside BEGIN ---
+    _executemany_call_count = 0
+    _real_executemany = sqlite3.Connection.executemany
+
+    def _failing_executemany(self, sql, params):
+        nonlocal _executemany_call_count
+        _executemany_call_count += 1
+        if _executemany_call_count == 2:
+            # Second executemany = patterns INSERT, which is inside BEGIN.
+            # First executemany (atoms INSERT) has already run inside the
+            # open transaction, so without ROLLBACK those rows would persist.
+            raise sqlite3.OperationalError("injected DB failure inside transaction")
+        return _real_executemany(self, sql, params)
+
+    with pytest.raises((sqlite3.OperationalError, Exception)):
+        with patch("hcc_compiler.build_index.embed", side_effect=_mock_embed):
+            with patch.object(sqlite3.Connection, "executemany", _failing_executemany):
+                build_index(tmp_path, db)
+
+    # Row counts must be identical to the pre-call snapshot (ROLLBACK worked).
+    con = sqlite3.connect(db)
+    try:
+        after_atoms = con.execute("SELECT COUNT(*) FROM atoms").fetchone()[0]
+        after_patterns = con.execute("SELECT COUNT(*) FROM patterns").fetchone()[0]
+        after_embeddings = con.execute("SELECT COUNT(*) FROM embeddings").fetchone()[0]
+    finally:
+        con.close()
+
+    assert after_atoms == seed_atoms, (
+        f"ROLLBACK failed: atoms went {seed_atoms} → {after_atoms}"
+    )
+    assert after_patterns == seed_patterns, (
+        f"ROLLBACK failed: patterns went {seed_patterns} → {after_patterns}"
+    )
+    assert after_embeddings == seed_embeddings, (
+        f"ROLLBACK failed: embeddings went {seed_embeddings} → {after_embeddings}"
+    )
