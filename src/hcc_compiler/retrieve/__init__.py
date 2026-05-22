@@ -2,8 +2,11 @@
 from __future__ import annotations
 
 import json
+import logging
 import sqlite3
 from pathlib import Path
+
+log = logging.getLogger(__name__)
 
 from hcc_compiler.llm.embed_client import embed, EmbedRequest
 from hcc_compiler.retrieve.cosine import cosine
@@ -59,7 +62,11 @@ def query(
 
     scored: list[tuple[str, float]] = []
     for record_id, vector_json in rows:
-        vec = json.loads(vector_json)
+        try:
+            vec = json.loads(vector_json)
+        except (json.JSONDecodeError, TypeError, ValueError):
+            log.warning("retrieve: skipping record_id=%r — malformed vector", record_id)
+            continue
         sim = cosine(query_vec, vec)
         scored.append((record_id, sim))
 

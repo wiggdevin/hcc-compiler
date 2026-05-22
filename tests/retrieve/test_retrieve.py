@@ -147,3 +147,44 @@ def test_patterns_included_without_domain_filter(tmp_path):
     ids = {r[0] for r in results}
     assert "p1" in ids
     assert "p2" in ids
+
+
+def test_malformed_vector_skipped(tmp_path, caplog):
+    """Rows with NULL or non-JSON vector are skipped; valid rows still returned."""
+    db = tmp_path / "bad.db"
+    con = sqlite3.connect(db)
+    # Use nullable vector column to allow NULL insertion.
+    con.executescript("""
+        CREATE TABLE atoms (id TEXT PRIMARY KEY, domain TEXT, tier TEXT, evidence_level TEXT, json TEXT);
+        CREATE TABLE patterns (id TEXT PRIMARY KEY, domain TEXT, tier TEXT, json TEXT);
+        CREATE TABLE embeddings (record_id TEXT PRIMARY KEY, record_type TEXT NOT NULL, vector TEXT);
+    """)
+    valid_rows = [
+        ("good1", "atom", json.dumps([1.0, 0.0, 0.0])),
+        ("good2", "atom", json.dumps([0.5, 0.5, 0.0])),
+        ("good3", "atom", json.dumps([0.0, 1.0, 0.0])),
+    ]
+    bad_rows = [
+        ("bad_str", "atom", "not-json"),
+        ("bad_null", "atom", None),
+    ]
+    con.executemany("INSERT INTO embeddings VALUES (?,?,?)", valid_rows + bad_rows)
+    con.commit()
+    con.close()
+
+    import logging
+    with patch("hcc_compiler.retrieve.embed") as mock_embed:
+        mock_embed.return_value = QUERY_VEC
+        with caplog.at_level(logging.WARNING, logger="hcc_compiler.retrieve"):
+            results = query("anything", k=10, db_path=db)
+
+    # Only valid rows returned.
+    ids = {r[0] for r in results}
+    assert ids == {"good1", "good2", "good3"}
+    assert "bad_str" not in ids
+    assert "bad_null" not in ids
+
+    # Warnings emitted for both bad rows.
+    warned_ids = [r.message for r in caplog.records]
+    assert any("bad_str" in m for m in warned_ids)
+    assert any("bad_null" in m for m in warned_ids)
