@@ -1,0 +1,18 @@
+client_id: carl_strength
+library_version: "0.1.0"
+demographics:
+  age: 45
+  sex: M
+  weight_kg: 92.0
+  height_cm: 182.0
+training_status: trained
+goals:
+  - strength
+  - hypertrophy
+current_regimen: |
+  4x/week heavy lifting (push/pull/legs/upper), compound focus, 4-6 rep
+  range on primary lifts. 12 years training history. Resting BP normal
+  before CKD diagnosis.
+constraints: []
+contraindications:
+  - "renal insufficiency (CKD stage 2)"

@@ -1,0 +1,18 @@
+client_id: sam_recomp
+library_version: "0.1.0"
+demographics:
+  age: 28
+  sex: other
+  weight_kg: 70.0
+  height_cm: 173.0
+training_status: recreational
+goals:
+  - recomposition
+  - longevity
+current_regimen: |
+  3x/week mixed strength + cardio (45-min sessions). Limited equipment
+  at home gym. Sleep 6-7h. Diet is intermittent fasting (16:8).
+constraints:
+  - type: schedule
+    detail: 45-minute session cap
+contraindications: []

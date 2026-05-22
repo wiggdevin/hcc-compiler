@@ -1,0 +1,19 @@
+client_id: amy_runner
+library_version: "0.1.0"
+demographics:
+  age: 32
+  sex: F
+  weight_kg: 58.0
+  height_cm: 168.0
+training_status: recreational
+goals:
+  - endurance
+  - performance
+current_regimen: |
+  5 runs per week (3 easy, 1 tempo, 1 long), 2 strength sessions per week
+  focused on lower-body and core. Currently training for a half-marathon
+  in 8 weeks. Sleep ~7h, generally well-recovered.
+constraints:
+  - type: injury
+    detail: left knee mild patellar tendinopathy
+contraindications: []
