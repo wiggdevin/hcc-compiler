@@ -1,0 +1,50 @@
+id: RP-REC-exercise-sleep-quality
+domain: recovery
+pattern: "Prescribe structured physical activity\u2014prioritizing combined aerobic\
+  \ and resistance training\u2014to improve sleep quality in adults, with Tai Chi,\
+  \ Qigong, dance, progressive muscle relaxation, or aquatic exercise as evidence-supported\
+  \ alternatives tailored to population-specific needs."
+parameterization: "Adults \u226550 yr: combined aerobic + resistance training preferred\
+  \ (SMD \u22121.56); perinatal women: relaxation exercises 30\u201360 min/session,\
+  \ 1\u20132\xD7/week, \u22644 weeks (SMD \u22122.54 to \u22123.13); cancer patients\
+  \ on chemotherapy: activity pacing plus progressive muscle relaxation first-line\
+  \ (ranked 98.6%), aerobic exercise or walking as alternatives; older adults with\
+  \ sleep disturbance or mild cognitive impairment: Tai Chi, Baduanjin-style Qigong\
+  \ (PSQI reduction \u22122.47), or rTMS+Tai Chi combination; perimenopausal women\
+  \ with insomnia: acupuncture or community-based traditional Chinese exercises as\
+  \ adjuncts; general adults: any aerobic, resistance, or mind-body modality scaled\
+  \ to baseline sleep impairment severity and intervention duration."
+backing_atom_ids:
+- EA-REC-0690
+- EA-REC-1128
+- EA-REC-1190
+- EA-REC-1687
+- EA-REC-2190
+- EA-REC-3826
+- EA-REC-3843
+- EA-REC-7231
+- EA-REC-7475
+- EA-REC-7630
+- EA-REC-9976
+falsification_signal: High-quality RCTs or updated meta-analyses demonstrating no
+  significant difference in PSQI scores or objective polysomnographic sleep metrics
+  between exercise or relaxation interventions and active or passive control conditions
+  across multiple independent adult populations.
+safety_bounds: "Avoid vigorous exercise within 2\u20133 hours of intended sleep onset;\
+  \ obtain medical clearance before initiating resistance or aerobic programs in cancer\
+  \ patients, frail older adults, or individuals with cardiopulmonary comorbidities;\
+  \ rTMS must be administered by a licensed clinician and is contraindicated in individuals\
+  \ with implanted metallic devices, cochlear implants, or a personal or family history\
+  \ of seizures."
+applies_because: "Multiple systematic reviews and meta-analyses consistently report\
+  \ significant SMD improvements in subjective sleep quality (range ~0.47\u20131.56\
+  \ across modalities), likely mediated by thermoregulatory normalization, hypothalamic-pituitary-adrenal\
+  \ axis down-regulation, and circadian rhythm entrainment via timed physical stimulation."
+doesnt_apply_if: Acute illness or injury precluding physical activity; currently hospitalized
+  patients (evidence base is restricted to non-hospitalized populations); individuals
+  with modality-specific contraindications (e.g., rTMS excluded in seizure history
+  or metallic implants); severe clinical insomnia requiring pharmacological management
+  as primary therapy.
+tier: routine
+approval: auto
+version: 0.1.0

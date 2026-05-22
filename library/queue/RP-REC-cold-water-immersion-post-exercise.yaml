@@ -1,0 +1,34 @@
+id: RP-REC-cold-water-immersion-post-exercise
+domain: recovery
+pattern: Implement cold water immersion immediately after exercise sessions to accelerate
+  parasympathetic reactivation and reduce delayed onset muscle soreness, prioritizing
+  its use over whole-body cryotherapy when DOMS mitigation is the primary goal.
+parameterization: "Effect on HRV recovery is larger following resistance exercise\
+  \ (Hedges' g = 0.69) than cardiovascular exercise; for DOMS relief, CWI is preferred\
+  \ over body cryotherapy within the first 24 hours post-exercise; dose typically\
+  \ 10\u201315 min at 10\u201315 \xB0C, adjusted downward in temperature for trained\
+  \ athletes tolerating colder protocols."
+backing_atom_ids:
+- EA-REC-4676
+- EA-REC-8163
+- EA-REC-8562
+falsification_signal: "A pre-registered RCT with \u2265 3 sessions per week over \u2265\
+  \ 4 weeks showing no statistically significant difference in RMSSD recovery or DOMS\
+  \ scores between CWI and passive recovery controls across both resistance and cardiovascular\
+  \ exercise modalities."
+safety_bounds: "Water temperature must remain \u2265 10 \xB0C to mitigate hypothermia\
+  \ and cold-shock risk; single immersion duration must not exceed 15 minutes; clinical\
+  \ supervision required for individuals with hypertension, arrhythmia, or prior cardiovascular\
+  \ events; chronic post-resistance-exercise use (> 3\xD7/week) warrants monitoring\
+  \ for blunted hypertrophic adaptation."
+applies_because: Cold water immersion attenuates sympathetic nervous system activity
+  and peripheral inflammatory signaling post-exercise, enabling faster vagal tone
+  restoration (reflected in RMSSD) and reducing the nociceptive sensitization underpinning
+  DOMS.
+doesnt_apply_if: Individuals with cardiovascular disease, cold urticaria, Raynaud's
+  phenomenon, peripheral vascular disease, open or infected wounds, uncontrolled hypertension,
+  or those in phases of training where maximizing hypertrophic adaptation is the primary
+  objective.
+tier: high-impact
+approval: auto
+version: 0.1.0

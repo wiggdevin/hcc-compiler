@@ -1,0 +1,46 @@
+id: RP-BEH-multicomponent-bct-physical-activity
+domain: behavioral
+pattern: "Design physical activity and health-behavior interventions as multicomponent\
+  \ programs that deliberately stack at least three evidence-based behavior change\
+  \ techniques\u2014prioritizing social support, self-monitoring, and feedback\u2014\
+  to maximize significant improvements in physical activity, mental health, and related\
+  \ outcomes in adolescents and young adults."
+parameterization: "Adolescents (12\u201318 y): emphasize Social reward, Behavioral\
+  \ contract, and Prompts/cues alongside Social support for greatest effect on physical\
+  \ activity adherence; digital delivery of social support is a viable substitute\
+  \ when in-person access is limited. University students (18\u201325 y): structured\
+  \ physical activity programs alone yield large mental-health gains; pairing with\
+  \ self-monitoring apps amplifies wellbeing and depression/anxiety reductions. Middle-aged\
+  \ adults (40\u201360 y): add goal-setting and meditation BCTs to the core stack\
+  \ to generate co-benefits in sleep quality and cognitive function. Environmental\
+  \ or policy components (e.g., activity-friendly spaces, cue redesign) can be layered\
+  \ into any age cohort to further reduce sedentary behavior."
+backing_atom_ids:
+- EA-BEH-2105
+- EA-BEH-3918
+- EA-BEH-6526
+- EA-BEH-9076
+- EA-BEH-9829
+falsification_signal: "A pre-registered RCT of \u22653-BCT multicomponent interventions\
+  \ versus a single-BCT or no-BCT control fails to detect statistically significant\
+  \ between-group differences in objectively measured physical activity volume or\
+  \ validated mental-health or sleep-quality scores at 12-week follow-up."
+safety_bounds: "BCT-based behavioral programs carry no known pharmacological risk;\
+  \ however, prescribed exercise intensity should remain within age-appropriate aerobic\
+  \ guidelines (moderate\u2013vigorous, \u226460 min/day for youth per WHO) and must\
+  \ not substitute for clinical care in participants with diagnosed psychiatric or\
+  \ sleep disorders requiring pharmacological or psychotherapeutic treatment."
+applies_because: BCTs target the psychological, social, and environmental determinants
+  of behavior simultaneously; multicomponent designs reduce barriers across all three
+  levels at once, producing additive or synergistic effects on motivation, habit formation,
+  and sustained behavior change that single-component approaches cannot match.
+doesnt_apply_if: Individuals with clinically diagnosed psychiatric conditions (e.g.,
+  severe MDD, bipolar disorder, psychosis) requiring pharmacological or intensive
+  psychotherapeutic management; those with physical contraindications to exercise;
+  settings that lack the personnel, technology, or community infrastructure needed
+  to operationalize social support or feedback components; populations outside the
+  adolescent-to-middle-age range (i.e., children <12 y or older adults >65 y) where
+  evidence from these atoms does not directly apply.
+tier: routine
+approval: auto
+version: 0.1.0

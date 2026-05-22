@@ -1,0 +1,99 @@
+id: RP-TRA-resistance-volume-hypertrophy-dose-response
+domain: training
+pattern: "Prescribe progressive resistance training volume in the range of 10\u2013\
+  20 weekly sets per muscle group to maximize hypertrophy, recognizing a graded dose-response\
+  \ (~0.37% gain per additional set) with diminishing returns at higher volumes, and\
+  \ complement with aerobic or multicomponent elements to further enhance functional\
+  \ and metabolic outcomes."
+parameterization: "Older adults with sarcopenia: start low volume (\u22652 sessions/week,\
+  \ ~49% 1RM, 3\xD7/week for \u226519 weeks with 15 exercises, 6 sets, ~16 reps) and\
+  \ add balance/aerobic components for functional gains (TUG, chair-stand); metabolic\
+  \ disease (T2D, PCOS, CAD): use concurrent aerobic+resistance programming; untrained\
+  \ individuals: traditional progressive overload\u2014advanced methods confer no\
+  \ added benefit; advanced athletes: higher volumes tolerated but with pronounced\
+  \ diminishing returns; patellofemoral pain: favor higher volume over lower volume;\
+  \ older adults targeting grip strength specifically: multicomponent or resistance-only\
+  \ at prescribed dose."
+backing_atom_ids:
+- EA-TRA-0001
+- EA-TRA-0227
+- EA-TRA-0309
+- EA-TRA-0722
+- EA-TRA-1619
+- EA-TRA-1711
+- EA-TRA-1853
+- EA-TRA-1916
+- EA-TRA-1931
+- EA-TRA-2176
+- EA-TRA-2215
+- EA-TRA-2772
+- EA-TRA-2799
+- EA-TRA-3030
+- EA-TRA-3037
+- EA-TRA-3057
+- EA-TRA-3375
+- EA-TRA-3416
+- EA-TRA-3683
+- EA-TRA-3771
+- EA-TRA-4241
+- EA-TRA-4294
+- EA-TRA-4379
+- EA-TRA-4554
+- EA-TRA-4675
+- EA-TRA-4688
+- EA-TRA-4772
+- EA-TRA-4779
+- EA-TRA-4939
+- EA-TRA-5023
+- EA-TRA-5190
+- EA-TRA-5271
+- EA-TRA-5305
+- EA-TRA-5364
+- EA-TRA-5420
+- EA-TRA-5422
+- EA-TRA-6351
+- EA-TRA-6688
+- EA-TRA-6707
+- EA-TRA-6804
+- EA-TRA-7176
+- EA-TRA-7544
+- EA-TRA-7564
+- EA-TRA-7657
+- EA-TRA-8105
+- EA-TRA-8464
+- EA-TRA-8671
+- EA-TRA-8718
+- EA-TRA-8790
+- EA-TRA-8910
+- EA-TRA-8975
+- EA-TRA-9029
+- EA-TRA-9632
+- EA-TRA-9659
+- EA-TRA-9798
+- EA-TRA-9806
+- EA-TRA-9824
+falsification_signal: "A well-powered RCT (n \u2265 200, \u226512 weeks) demonstrating\
+  \ no statistically significant dose-response between weekly set volume (5\u2013\
+  25 sets/muscle group) and muscle hypertrophy in trained adults, or showing that\
+  \ a fixed low-volume protocol produces equivalent hypertrophy to progressively higher\
+  \ volumes across the full dose range."
+safety_bounds: "Do not exceed 25\u201330 weekly sets per muscle group without experienced\
+  \ coach supervision; cap novice single-session volume at \u22646 sets per exercise;\
+  \ limit intensity to \u226480% 1RM in unsupervised older adults or those with cardiovascular\
+  \ comorbidities; require clinical clearance and supervised initiation for individuals\
+  \ with CAD, COPD, congenital heart disease, or sickle cell disease before commencing\
+  \ high-intensity or high-volume protocols."
+applies_because: "A graded dose-response links weekly resistance-training set volume\
+  \ to muscle hypertrophy (ES increment \u22480.023 per set; higher vs. lower volume\
+  \ grouping ES difference = 0.241), mediated by cumulative mechanical tension and\
+  \ metabolic stress that upregulate muscle protein synthesis proportionally to training\
+  \ stimulus up to the individual's recoverable threshold."
+doesnt_apply_if: "Acute musculoskeletal injury precluding loaded movement; children\
+  \ with cerebral palsy (volume-driven hypertrophy does not translate to fascicle\
+  \ length gains); individuals in acute cancer treatment phases with severely limited\
+  \ volume tolerance; severe sarcopenic obesity where multicomponent-first programming\
+  \ takes precedence; patients in the first 6\u20138 weeks of Nordic hamstring programs\
+  \ where volume variables do not predict strength gains."
+tier: high-impact
+approval: auto
+version: 0.1.0

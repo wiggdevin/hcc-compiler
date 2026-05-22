@@ -1,0 +1,41 @@
+id: RP-BEH-multicomponent-exercise-adherence
+domain: behavioral
+pattern: Implement a multi-component behavioral program combining personalized exercise
+  prescription, multidimensional social support, self-efficacy enhancement, progress
+  monitoring with feedback, and participant education to maximize long-term physical
+  activity adherence in adults with chronic conditions.
+parameterization: 'Scale social support modality by setting and age: older adults
+  benefit from AI-assisted or robotic social prompting to extend training duration
+  and engagement; T2D populations require integration of glycemic self-monitoring
+  feedback (HbA1c, fasting glucose, waist circumference targets) as motivational anchors;
+  chronic pain populations should pair adherence strategies with high-value physiotherapy
+  protocols and technology-based delivery where in-person access is limited; autonomy
+  support and emotional experience management should be weighted more heavily when
+  extrinsic motivation is low.'
+backing_atom_ids:
+- EA-BEH-3146
+- EA-BEH-4153
+- EA-BEH-4318
+- EA-BEH-6984
+- EA-BEH-9242
+falsification_signal: A well-powered RCT demonstrating that single-component interventions
+  (e.g., education alone or monitoring alone) produce statistically equivalent long-term
+  adherence rates and clinical outcomes to multi-component programs across older adult,
+  T2D, or chronic pain populations.
+safety_bounds: Exercise intensity must remain within individually medically cleared
+  ranges; patients with uncontrolled HbA1c >10%, unstable cardiovascular disease,
+  acute musculoskeletal injury, or severe unmanaged chronic pain flares require direct
+  clinical supervision before program enrollment; AI/robotic-assisted interventions
+  must include human clinical oversight protocols.
+applies_because: COM-B model and TDF analyses establish that exercise adherence is
+  co-determined by capability, opportunity, and motivational factors simultaneously,
+  meaning isolated single-domain strategies produce insufficient and non-durable behavior
+  change, while multi-component approaches address the full causal architecture of
+  adherence.
+doesnt_apply_if: Patient is acutely hospitalized, has absolute contraindications to
+  exercise (e.g., unstable angina, acute fracture, decompensated heart failure), is
+  cognitively unable to engage with self-monitoring or educational components, or
+  lacks minimum baseline physical function required for structured program participation.
+tier: high-impact
+approval: auto
+version: 0.1.0

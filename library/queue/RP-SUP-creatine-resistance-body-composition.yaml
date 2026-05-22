@@ -1,0 +1,86 @@
+id: RP-SUP-creatine-resistance-body-composition
+domain: supplements
+pattern: "Supplement with creatine monohydrate at 3\u20135 g/day maintenance dose\
+  \ (optionally preceded by a 5\u20137-day, 20 g/day loading phase split across 4\
+  \ servings) alongside structured resistance training to meaningfully increase fat-free\
+  \ mass, muscular strength, and power output compared to resistance training alone."
+parameterization: "Postmenopausal women: \u22655 g/day required to elicit lean mass\
+  \ gains (+0.37 kg) and lower-body strength (+7.5 kg leg-press 1RM); untrained individuals:\
+  \ expect larger absolute strength gains than trained athletes, who show greater\
+  \ absolute FFM gains (1.82 kg vs 1.23 kg); active females: performance responses\
+  \ are inconsistent and clients should set conservative expectations; combat sport\
+  \ and swimming athletes: use for sport-specific power and ergogenic outcomes; co-supplementation\
+  \ with \u03B2-alanine (divided 4\u20136.4 g/day) may further enhance repeated high-intensity\
+  \ bout performance without adding to maximal strength beyond creatine alone."
+backing_atom_ids:
+- EA-SUP-0001
+- EA-SUP-0398
+- EA-SUP-0510
+- EA-SUP-0822
+- EA-SUP-1084
+- EA-SUP-1351
+- EA-SUP-1368
+- EA-SUP-1449
+- EA-SUP-1930
+- EA-SUP-2054
+- EA-SUP-2412
+- EA-SUP-2459
+- EA-SUP-2597
+- EA-SUP-2701
+- EA-SUP-3021
+- EA-SUP-3039
+- EA-SUP-3594
+- EA-SUP-3993
+- EA-SUP-4083
+- EA-SUP-4139
+- EA-SUP-4168
+- EA-SUP-4341
+- EA-SUP-4445
+- EA-SUP-4525
+- EA-SUP-5023
+- EA-SUP-5676
+- EA-SUP-5761
+- EA-SUP-6155
+- EA-SUP-6467
+- EA-SUP-7073
+- EA-SUP-7092
+- EA-SUP-7180
+- EA-SUP-7507
+- EA-SUP-7536
+- EA-SUP-7640
+- EA-SUP-7825
+- EA-SUP-8071
+- EA-SUP-8319
+- EA-SUP-8400
+- EA-SUP-8455
+- EA-SUP-8548
+- EA-SUP-8825
+- EA-SUP-8953
+- EA-SUP-9218
+- EA-SUP-9444
+- EA-SUP-9818
+- EA-SUP-9880
+falsification_signal: "A large-scale, adequately powered RCT (n > 200, \u226512-week\
+  \ duration) in mixed-sex, mixed-training-status adults demonstrating no statistically\
+  \ significant or clinically meaningful difference in fat-free mass or 1RM strength\
+  \ gains between creatine monohydrate plus resistance training and placebo plus resistance\
+  \ training would disprove this pattern."
+safety_bounds: "Loading phase ceiling: 20 g/day for \u22647 days in 4 divided doses;\
+  \ maintenance ceiling: 5 g/day for healthy adults; expect a transient, clinically\
+  \ non-significant serum creatinine rise (~0.07 \xB5mol/L) with no meaningful GFR\
+  \ change in healthy kidneys; clinical supervision and eGFR monitoring required if\
+  \ baseline eGFR < 60 mL/min/1.73 m\xB2; do not use loading phase without medical\
+  \ clearance in individuals with hypertension or fluid-sensitive conditions."
+applies_because: "Creatine supplementation saturates intramuscular phosphocreatine\
+  \ stores, accelerating ATP resynthesis during repeated high-intensity bouts and\
+  \ enabling higher training volumes, thereby amplifying the anabolic stimulus of\
+  \ resistance training and producing consistent meta-analytic gains in fat-free mass\
+  \ (+0.82\u20131.39 kg) and strength across diverse populations."
+doesnt_apply_if: "Chronic kidney disease (eGFR < 60 mL/min/1.73 m\xB2); known or suspected\
+  \ creatine non-responders (low baseline intramuscular creatine, estimated ~25\u2013\
+  30% of users); individuals not engaged in structured resistance or high-intensity\
+  \ training; active females seeking acute performance improvements should be counselled\
+  \ on the currently inconsistent evidence base."
+tier: high-impact
+approval: auto
+version: 0.1.0

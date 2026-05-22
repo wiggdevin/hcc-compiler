@@ -1,0 +1,69 @@
+id: RP-NUT-caloric-restriction-rt-protein-body-comp
+domain: nutrition
+pattern: "Combine a structured caloric deficit (250\u2013750 kcal/day) with resistance\
+  \ training at least 3 times per week and protein intake of 1.6\u20133.1 g/kg/day\
+  \ to maximize fat loss while preserving lean body mass."
+parameterization: "Sedentary or untrained healthy adults: 1.6\u20132.0 g/kg/day protein,\
+  \ 250\u2013500 kcal/day deficit, moderate-intensity resistance or aerobic exercise.\
+  \ Resistance-trained athletes during aggressive cuts: 2.3\u20133.1 g/kg/day protein,\
+  \ up to 750 kcal/day deficit, 60\u201380% 1RM resistance training. Older adults\
+  \ (\u226560 years): whey protein \u226515 g/day combined with resistance plus multicomponent\
+  \ exercise; deficit \u2264500 kcal/day to limit FFM loss. Postmenopausal women:\
+  \ 250\u2013750 kcal/day deficit, protein \u22650.8 g/kg/day minimum but 1.6+ g/kg\
+  \ preferred for LBM retention. Very-low-energy-diet contexts (\u2264800 kcal/day):\
+  \ exercise component is mandatory to mitigate disproportionate FFM loss. Adults\
+  \ with prediabetes or T2DM: intermittent fasting formats are interchangeable with\
+  \ continuous restriction provided protein and training targets are met; target \u2265\
+  5% weight loss for normoglycemia reversion benefit."
+backing_atom_ids:
+- EA-NUT-0001
+- EA-NUT-0266
+- EA-NUT-0496
+- EA-NUT-1643
+- EA-NUT-1676
+- EA-NUT-2097
+- EA-NUT-3067
+- EA-NUT-3103
+- EA-NUT-3698
+- EA-NUT-4009
+- EA-NUT-4512
+- EA-NUT-5322
+- EA-NUT-5482
+- EA-NUT-5593
+- EA-NUT-5978
+- EA-NUT-6175
+- EA-NUT-6194
+- EA-NUT-6631
+- EA-NUT-6673
+- EA-NUT-7175
+- EA-NUT-7354
+- EA-NUT-7491
+- EA-NUT-8934
+- EA-NUT-9353
+- EA-NUT-9665
+- EA-NUT-9906
+falsification_signal: "A powered RCT demonstrating that isocaloric caloric restriction\
+  \ alone, without elevated protein or resistance training, achieves statistically\
+  \ equivalent fat-free mass retention and fat mass loss as the combined protocol\
+  \ in the same population over \u226512 weeks."
+safety_bounds: "Caloric deficit must not exceed 1,000 kcal/day without clinical supervision\
+  \ and body composition monitoring. Protein above 3.5 g/kg/day is not recommended\
+  \ without prior renal function screening (eGFR, serum creatinine). Resistance training\
+  \ load must be individualized; do not prescribe 60\u201380% 1RM to individuals with\
+  \ uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event\
+  \ without medical clearance."
+applies_because: Caloric restriction alone induces negative nitrogen balance and upregulates
+  muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar
+  synthesis and high protein intake saturates muscle fractional synthetic rate, together
+  creating a net anabolic intramuscular environment that counteracts the catabolic
+  energy deficit.
+doesnt_apply_if: "CKD stages 3\u20135 or dialysis patients (protein restriction required);\
+  \ absolute contraindications to resistance exercise (acute MI within 6 weeks, unstable\
+  \ angina, severe aortic stenosis, acute musculoskeletal injury); pediatric or adolescent\
+  \ populations with obesity (altered REE response to restriction); individuals on\
+  \ incretin-based pharmacotherapy who must be monitored separately for disproportionate\
+  \ FFM loss exceeding 25\u201339% of total weight loss; protein timing flexibility\
+  \ applies \u2014 pre- vs. post-exercise distribution does not materially alter outcomes."
+tier: high-impact
+approval: auto
+version: 0.1.0
