@@ -26,3 +26,14 @@ curate-smoke:
 
 patterns-smoke:
 	python -m pytest tests/test_patterns_smoke.py -q
+
+embed: build
+
+derive-patterns:
+	python scripts/curation/derive_patterns.py
+
+patterns: embed derive-patterns
+
+retrieve:
+	$(if $(QUERY),,$(error Usage: make retrieve QUERY="your search text"))
+	python scripts/retrieve.py "$(QUERY)"
