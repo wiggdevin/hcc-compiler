@@ -1,25 +1,31 @@
-"""T10: End-to-end patterns smoke — 6 retrieval probes against the live library.
+"""T10: End-to-end patterns smoke — 6 retrieval probes + 6 derive probes.
 
 Builds a SQLite index from the real 179-atom library using a cross-session-
 deterministic bag-of-words fake embedder (hashlib SHA-256, NOT built-in hash()),
 then issues 6 hand-crafted domain-filtered queries and asserts each top-1 result
 falls in an acceptable set computed programmatically from the live library claims.
 
+Also exercises derive_pattern() for each of the 6 domains by mocking call_llm
+and asserting that ≥1 RecommendationPattern YAML is emitted per domain into a
+tmp library dir (never touching the real library/patterns/ or library/queue/).
+
 Design notes
 ------------
-- Pattern derivation (call_llm mocking) is intentionally scoped out: it adds
-  significant complexity for no retrieval-correctness gain in this smoke.
 - Queries use domain= filtering to avoid cross-domain false positives from the
   sparse bag-of-words fake embedder.
 - Acceptable sets are computed from the live library using the *primary* topic
   keyword(s) for each probe (e.g. any training atom with "hiit" in its claim).
   This is intentionally broader than requiring full semantic match — a bag-of-words
   cosine model will top-rank any atom in the domain that shares the primary keyword.
+- Derive tests copy the real atoms into a tmp dir, build a real index there, then
+  run derive_patterns.main() with sys.argv patched so no files touch the repo.
 """
 from __future__ import annotations
 
 import hashlib
+import json
 import re
+import shutil
 import sys
 from pathlib import Path
 from unittest.mock import patch
@@ -37,6 +43,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from hcc_compiler.build_index import build_index
 from hcc_compiler.llm.embed_client import EmbedRequest
+from hcc_compiler.llm.anthropic_client import LLMRequest
 import hcc_compiler.retrieve as retrieve
 
 
@@ -216,4 +223,113 @@ def test_probe_vo2max_endurance(indexed_db):
     top1 = _top1("VO2max endurance", "conditioning", indexed_db)
     assert top1 in acceptable, (
         f"top-1={top1!r} not in acceptable={acceptable}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Pattern derivation tests — mocked call_llm, isolated tmp library
+# ---------------------------------------------------------------------------
+
+# Domain-to-prefix map mirrors models.DOMAIN_PREFIX
+_DOMAIN_PREFIX = {
+    "nutrition": "NUT",
+    "supplements": "SUP",
+    "training": "TRA",
+    "conditioning": "CON",
+    "recovery": "REC",
+    "behavioral": "BEH",
+}
+
+_DOMAINS = list(_DOMAIN_PREFIX.keys())
+
+
+def _make_canned_pattern(domain: str) -> str:
+    """Return a canned JSON string that derive_pattern will accept for *domain*."""
+    prefix = _DOMAIN_PREFIX[domain]
+    return json.dumps({
+        "id": f"RP-{prefix}-test-pattern-smoke",
+        "domain": domain,
+        "pattern": f"Canned {domain} pattern for smoke test.",
+        "parameterization": "Dose: standard; Duration: 8–12 wk.",
+        "backing_atom_ids": [],      # will be overwritten by derive_pattern
+        "falsification_signal": "No measurable outcome change at 12 wk.",
+        "safety_bounds": "No known contraindications in healthy adults.",
+        "applies_because": "Canned smoke-test value.",
+        "doesnt_apply_if": "Canned smoke-test exclusion.",
+        "tier": "routine",
+        "approval": "smoke-test",
+        "version": "0.0.0-smoke",
+    })
+
+
+def _fake_call_llm(req: LLMRequest) -> str:
+    """Return a canned pattern JSON matching the domain mentioned in user_prompt."""
+    for domain in _DOMAINS:
+        if f"domain={domain}" in req.user_prompt:
+            return _make_canned_pattern(domain)
+    # Fallback: derive from the first atom id prefix (EA-NUT-… etc.)
+    for prefix, domain in {v: k for k, v in _DOMAIN_PREFIX.items()}.items():
+        if f"EA-{prefix}-" in req.user_prompt:
+            return _make_canned_pattern(domain)
+    return _make_canned_pattern("nutrition")
+
+
+@pytest.fixture(scope="session")
+def derive_tmp_library(tmp_path_factory) -> tuple[Path, Path]:
+    """Copy real library atoms into a tmp dir and build a real index there.
+
+    Returns (tmp_library_root, tmp_db_path).  The copy is isolated so derive
+    tests never write into the repo's library/patterns/ or library/queue/.
+    """
+    tmp_lib = tmp_path_factory.mktemp("derive_lib")
+    # Copy atoms tree + VERSION file (build_index requires it).
+    shutil.copytree(LIBRARY_ROOT / "atoms", tmp_lib / "atoms")
+    shutil.copy2(LIBRARY_ROOT / "VERSION", tmp_lib / "VERSION")
+    # Build the index into the tmp dir.
+    tmp_db = tmp_lib / "library.db"
+    with patch("hcc_compiler.build_index.embed", side_effect=_fake_embed):
+        build_index(tmp_lib, tmp_db)
+    return tmp_lib, tmp_db
+
+
+@pytest.mark.parametrize("domain", _DOMAINS)
+def test_derive_pattern_per_domain(domain, derive_tmp_library):
+    """derive_pattern emits ≥1 RecommendationPattern YAML for every domain.
+
+    Uses a mocked call_llm so no real LLM call is made.  Writes only to the
+    isolated tmp library — the real library/patterns/ and library/queue/ are
+    never touched.
+    """
+    import scripts.curation.derive_patterns as dp
+
+    tmp_lib, tmp_db = derive_tmp_library
+
+    with (
+        patch("hcc_compiler.patterns.derive.call_llm", side_effect=_fake_call_llm),
+        patch("hcc_compiler.build_index.embed", side_effect=_fake_embed),
+        patch(
+            "sys.argv",
+            [
+                "derive_patterns.py",
+                "--library", str(tmp_lib),
+                "--db", str(tmp_db),
+                "--min-atoms", "1",
+            ],
+        ),
+    ):
+        dp.main()
+
+    prefix = _DOMAIN_PREFIX[domain]
+    expected_id = f"RP-{prefix}-test-pattern-smoke"
+    expected_fname = f"{expected_id}.yaml"
+
+    patterns_dir = tmp_lib / "patterns" / domain
+    queue_dir = tmp_lib / "queue"
+
+    admitted = patterns_dir.exists() and (patterns_dir / expected_fname).exists()
+    queued = queue_dir.exists() and (queue_dir / expected_fname).exists()
+
+    assert admitted or queued, (
+        f"No pattern YAML found for domain={domain!r}: "
+        f"checked {patterns_dir / expected_fname} and {queue_dir / expected_fname}"
     )
