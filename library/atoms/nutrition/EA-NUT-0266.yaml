@@ -1,0 +1,33 @@
+id: EA-NUT-0266
+domain: nutrition
+claim: Combining resistance exercise three times per week at 60-80% of one-repetition
+  maximum with daily protein supplementation of at least 15 g yields synergistic improvements
+  in inflammatory and anabolic biomarkers, including reductions in myostatin and increases
+  in IGF-1.
+evidence_level: L1
+citations:
+- id: 10.3390/biom16020195
+  locator_quote: Interventions combining resistance exercise three times per week
+    at 60-80% of one-repetition maximum with daily protein supplementation of at least
+    15 g, mainly from dairy sources, showed synergistic effects. Improvements were
+    observed in inflammatory and anabolic biomarkers, with reductions in myostatin,
+    activin, and IL-6, and increases in IGF-1, follistatin, and IL-10.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Synergistic Effects of Protein Intake and Exercise on Biomarkers of
+    Sarcopenia: A Systematic Review'
+population_applicability:
+  age: older adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: "\u226515 g protein daily + resistance exercise 3x/week (60-80%\
+    \ 1RM)"
+  duration: unspecified
+effect: Synergistic improvements in biomarkers (reduced myostatin/IL-6, increased
+  IGF-1) and functional outcomes (strength, fat-free mass).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'
