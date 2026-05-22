@@ -36,6 +36,6 @@ doesnt_apply_if: Patient is acutely hospitalized, has absolute contraindications
   exercise (e.g., unstable angina, acute fracture, decompensated heart failure), is
   cognitively unable to engage with self-monitoring or educational components, or
   lacks minimum baseline physical function required for structured program participation.
-tier: high-impact
+tier: routine
 approval: auto
 version: 0.1.0
