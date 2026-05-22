@@ -16,7 +16,7 @@ def query(
     text: str,
     k: int = 10,
     domain: str | None = None,
-    db_path: Path = Path("library.db"),
+    db_path: Path | None = None,
 ) -> list[tuple[str, float]]:
     """Return top-k (record_id, similarity) tuples for *text*.
 
@@ -27,7 +27,17 @@ def query(
     - Computes cosine similarity for each candidate.
     - Returns up to *k* results sorted descending by similarity.
     - Returns ``[]`` when the embeddings table is empty.
+
+    *db_path* is required; omitting it raises ``ValueError``.  A cwd-relative
+    default (``Path("library.db")``) was removed because it silently resolved
+    against the caller's working directory, which caused surprising behaviour
+    when scripts were invoked from arbitrary directories.
     """
+    if db_path is None:
+        raise ValueError(
+            "db_path is required. Pass an explicit Path, e.g. "
+            "Path('/path/to/library.db')."
+        )
     db_path = Path(db_path)
     query_vec = embed(EmbedRequest(text=text))
 
