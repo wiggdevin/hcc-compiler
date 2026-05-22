@@ -1,0 +1,27 @@
+id: EA-BEH-9242
+domain: behavioral
+claim: Technology-based interventions can improve exercise adherence in patients with
+  chronic pain undergoing high-value physiotherapy.
+evidence_level: L1
+citations:
+- id: 10.1093/pm/pnad134
+  locator_quote: Of these, evidence from 4 randomized controlled trials of technology-based
+    interventions demonstrated improved exercise adherence among intervention groups
+    compared with controls.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Patient-related barriers and enablers to the implementation of high-value
+    physiotherapy for chronic pain: a systematic review'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: chronic pain patients
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: improved exercise adherence
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-04-01'
+expiry: '2029-04-01'

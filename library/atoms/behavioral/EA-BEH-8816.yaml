@@ -1,0 +1,30 @@
+id: EA-BEH-8816
+domain: behavioral
+claim: Interactive conversational agents can improve specific dietary behaviors, including
+  fruit and vegetable intake and adherence to the Mediterranean diet, while also enhancing
+  nutritional knowledge.
+evidence_level: L1
+citations:
+- id: 10.2196/78220
+  locator_quote: CAs show promising potential to improve dietary behaviors, with evidence
+    of gains in fruit and vegetable intake, Mediterranean diet adherence, nutritional
+    knowledge, physical activity, and modest weight loss.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Interactive Conversational Agents to Improve Dietary Behaviors for
+    Health Promotion: Mixed Systematic Review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Improvements in fruit and vegetable intake, adherence to the Mediterranean
+  diet, and nutritional knowledge were observed, alongside modest weight loss and
+  increased physical activity.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-15'
+expiry: '2030-01-15'

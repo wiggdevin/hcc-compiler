@@ -1,0 +1,26 @@
+id: EA-TRA-4688
+domain: training
+claim: High-intensity interval training appears to improve aerobic capacity in adults
+  with congenital heart disease with no serious adverse events.
+evidence_level: L1
+citations:
+- id: 10.1016/j.hlc.2024.09.008
+  locator_quote: Available evidence to date suggests that HIIT improves aerobic capacity
+    in adults with CHD with no serious adverse events.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'High-Intensity Interval Training in Adults With Congenital Heart Disease:
+    A Systematic Review'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: congenital heart disease patients
+  dose_magnitude: high-intensity interval training
+  duration: unspecified
+effect: Improves aerobic capacity with no serious adverse events.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

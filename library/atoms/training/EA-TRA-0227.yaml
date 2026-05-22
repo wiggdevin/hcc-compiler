@@ -1,0 +1,29 @@
+id: EA-TRA-0227
+domain: training
+claim: Widely adopted exercise prescription apps meet fundamental structural requirements
+  but lack explicit guidance on exercise progression and individualized adjustment
+  consistent with FITT-VP principles.
+evidence_level: L1
+citations:
+- id: 10.2196/77616
+  locator_quote: Widely adopted exercise prescription apps meet fundamental structural
+    requirements but do not fully support the progressive and individualized processes
+    central to clinical exercise prescription.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Clinical Usability of Exercise Prescription Apps for Professional
+    Use: Systematic Review and Multidimensional Evaluation'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Apps satisfy basic FITT requirements but fail to incorporate explicit guidance
+  on exercise progression or individualized adjustment consistent with FITT-VP principles.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

@@ -1,0 +1,29 @@
+id: EA-TRA-4779
+domain: training
+claim: High-intensity interval training (HIIT) significantly improves cardiorespiratory
+  fitness (VO2max) in patients with coronary artery disease, with a minimum effective
+  dose identified at approximately 620 MET-min/week.
+evidence_level: L1
+citations:
+- id: 10.1080/09638288.2025.2591827
+  locator_quote: 'Meta-analysis demonstrated that HIIT significantly improved VO2max
+    compared to controls (mean difference [MD] = 3.20 mL/kg/min; 95% credible interval
+    [CrI]: 2.78-3.61). Dose-response analysis revealed a nonlinear relationship, with
+    the minimum effective dose identified at approximately 620 MET-min/week.'
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'High-intensity interval training dose and cardiorespiratory fitness
+    in coronary artery disease: a systematic review and dose-response meta-analysis'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: patients with coronary artery disease
+  dose_magnitude: minimum effective dose approx 620 MET-min/week
+  duration: varies by RCT
+effect: Significant improvement in VO2max (MD = 3.20 mL/kg/min) compared to controls.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2026-04-10'

@@ -1,0 +1,37 @@
+id: EA-REC-4676
+domain: recovery
+claim: Physical post-exercise recovery techniques produce a small to moderate positive
+  effect on vagally-mediated heart rate variability (RMSSD), with cold water immersion
+  showing a moderate to large effect and techniques following resistance exercise
+  demonstrating a larger positive effect than those following cardiovascular exercise.
+evidence_level: L1
+citations:
+- id: 10.1111/cpf.12855
+  locator_quote: "Using physical post-exercise recovery techniques displayed a small\
+    \ to moderate positive effect on RMSSD (k\u2009=\u200922, Hedges' g\u2009=\u2009\
+    0.40, 95% confidence interval [CI]\u2009=\u20090.20-0.61, p\u2009=\u20090.04)\
+    \ with moderate heterogeneity. In the subgroup analyses, cold water immersion\
+    \ displayed a moderate to large positive effect (g\u2009=\u20090.75, 95% CI: 0.42-1.07)\
+    \ compared with none for other techniques. For exercise type, physical recovery\
+    \ techniques performed after resistance exercise (g\u2009=\u20090.69, 95% CI:\
+    \ 0.48-0.89) demonstrated a larger positive effect than after cardiovascular intermittent\
+    \ (g\u2009=\u20090.52, 95% CI: 0.06-0.97), while physical recovery techniques\
+    \ performed after cardiovascular continuous exercise had no effect."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Influence of physical post-exercise recovery techniques on vagally-mediated
+    heart rate variability: A systematic review and meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: mixed
+  dose_magnitude: varies
+  duration: acute
+effect: Positive effect on RMSSD (Hedges' g = 0.40); Cold water immersion (g = 0.75);
+  Post-resistance exercise (g = 0.69).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-01'
+expiry: '2029-06-01'

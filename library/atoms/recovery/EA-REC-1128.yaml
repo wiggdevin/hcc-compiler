@@ -1,0 +1,28 @@
+id: EA-REC-1128
+domain: recovery
+claim: Activity pacing-related interventions may provide some benefit in improving
+  cancer-related fatigue, particularly during chemotherapy.
+evidence_level: L1
+citations:
+- id: 10.1007/s00520-026-10754-3
+  locator_quote: AP-related interventions may provide some benefit in improving CRF,
+    particularly during chemotherapy.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of activity pacing-related interventions on cancer-related
+    fatigue and classification of behavior change techniques: A systematic review
+    and meta-analysis'
+population_applicability:
+  age: adults
+  sex: female (breast cancer subgroup)
+  training_status: cancer patients
+  dose_magnitude: N/A
+  duration: N/A
+effect: Small but not significant effect on overall CRF (SMD = -0.36); moderate, statistically
+  significant effect in patients undergoing chemotherapy (SMD = -0.58).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

@@ -1,0 +1,27 @@
+id: EA-SUP-8058
+domain: supplements
+claim: Wearable devices for diabetes management are associated with significant increases
+  in time in range (TIR) and reductions in glycated hemoglobin (HbA1c).
+evidence_level: L1
+citations:
+- id: 10.1155/jdr/1464982
+  locator_quote: Blood glucose monitoring devices were the most widely used and were
+    associated with significant increases in time in range (TIR) and reductions in
+    glycated hemoglobin (HbA1c).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effectiveness of Wearable Devices for Diabetes Management: An Overview
+    of Systematic Reviews and Meta-Analyses'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Increased time in range (TIR) and reduced glycated hemoglobin (HbA1c).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2026-04-10'

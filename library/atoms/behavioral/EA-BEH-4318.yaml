@@ -1,0 +1,33 @@
+id: EA-BEH-4318
+domain: behavioral
+claim: Flexible and personalized physical activity programs, multidimensional social
+  support, participant education, enhancing self-efficacy and motivation, monitoring
+  and feedback, and managing emotional experiences are key implementation strategies
+  to improve adherence in individuals with type 2 diabetes.
+evidence_level: L1
+citations:
+- id: 10.1007/s12529-025-10400-y
+  locator_quote: 'Additionally, 26 potentially effective behavior change techniques
+    were extracted and categorized into six key implementation strategies: flexible
+    and personalized physical activity programs, multidimensional social support,
+    participant education, enhancing self-efficacy and motivation, monitoring and
+    feedback, and managing emotional experiences.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Barriers and Facilitators to Physical Activity Adherence in People
+    With Type 2 Diabetes: A Mixed-Methods Systematic Review Using the COM-B Model
+    and Theoretical Domains Framework'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: individuals with type 2 diabetes
+  dose_magnitude: N/A
+  duration: N/A
+effect: Identifies six key implementation strategies to improve physical activity
+  adherence.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

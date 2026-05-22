@@ -1,0 +1,28 @@
+id: EA-TRA-7657
+domain: training
+claim: Moderate-to-vigorous physical activity (MVPA), particularly vigorous PA, shows
+  the most consistent benefits for cardiometabolic health in school-aged youth, including
+  lower adiposity, reduced cardiometabolic risk, and higher fitness.
+evidence_level: L1
+citations:
+- id: 10.1080/02640414.2025.2603845
+  locator_quote: MVPA, particularly vigorous PA, showed the most consistent benefits,
+    including lower adiposity, reduced cardiometabolic risk, and higher fitness.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Compositional data analysis of 24-hour movement behaviors as a predictor
+    for cardiometabolic health outcomes among school-aged youth: A systematic review'
+population_applicability:
+  age: 6-17 years
+  sex: unspecified
+  training_status: school-aged youth
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: MVPA is associated with lower adiposity, reduced cardiometabolic risk, and
+  higher fitness.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

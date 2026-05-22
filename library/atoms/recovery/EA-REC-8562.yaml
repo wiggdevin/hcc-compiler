@@ -1,0 +1,28 @@
+id: EA-REC-8562
+domain: recovery
+claim: Cold-water immersion is significantly more effective than body cryotherapy
+  for alleviating delayed onset muscle soreness within 24 hours post-exercise.
+evidence_level: L1
+citations:
+- id: 10.1097/MD.0000000000046781
+  locator_quote: 'The analysis showed that CWI was significantly more effective than
+    BC in alleviating DOMS, particularly within 24 hours (mean difference = 1.07;
+    95% confidence interval [CI]: 0.70-1.43; P < .00001).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of cold water immersion vs body cryotherapy on delayed onset
+    muscle soreness and jump performance following acute strenuous exercise in physically
+    active participants: A systematic review and meta-analysis'
+population_applicability:
+  age: 20-47.2 years
+  sex: not specified
+  training_status: physically active
+  dose_magnitude: not specified
+  duration: 24 hours post-exercise
+effect: CWI provides superior alleviation of DOMS compared to BC within 24 hours.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-18'
+expiry: '2026-03-18'

@@ -1,0 +1,27 @@
+id: EA-REC-7231
+domain: recovery
+claim: Physical exercise programs (including aerobic, resistance, tai chi, and aquatic
+  activities) significantly improve sleep latency and efficiency in non-hospitalized
+  older adults.
+evidence_level: L1
+citations:
+- id: 10.7717/peerj.20764
+  locator_quote: Meta-analyses confirmed statistically significant benefits, particularly
+    in terms of sleep latency and efficiency.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Physical exercise programmes to improve insomnia or poor sleep quality
+    in non-hospitalised elderly people: a systematic review and meta-analysis'
+population_applicability:
+  age: '>60 years'
+  sex: mixed
+  training_status: non-hospitalized elderly
+  dose_magnitude: varied (aerobic, resistance, tai chi, aquatic)
+  duration: varied
+effect: Improved sleep latency and efficiency.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

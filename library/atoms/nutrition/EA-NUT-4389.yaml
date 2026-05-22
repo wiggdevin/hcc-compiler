@@ -1,0 +1,28 @@
+id: EA-NUT-4389
+domain: nutrition
+claim: Meta-analysis quantifies the accuracy of blood glucose prediction models across
+  various horizons and the performance of meal and physical activity detection models.
+evidence_level: L1
+citations:
+- id: 10.1088/2516-1091/ae39b9
+  locator_quote: "The resulting meta-analysis quantifies the accuracy of prediction\
+    \ models for the various prediction horizons (15, 30, 45, 60, and 120\u2009min)\
+    \ and the performance of meal and physical activity detection models using sensitivity\
+    \ and metrics related to false-positivity."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Meta-analysis of technologies for diabetes treatment: glycemic control,
+    prediction, meal and physical activity detection'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Quantifies accuracy of glycemic prediction and meal/activity detection models.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2026-05-20'

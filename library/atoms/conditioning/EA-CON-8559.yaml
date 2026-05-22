@@ -1,0 +1,29 @@
+id: EA-CON-8559
+domain: conditioning
+claim: Small-sided games (SSGs) and high-intensity interval training (HIIT) produce
+  similar effects on improving endurance performance and VO2max in soccer players.
+evidence_level: L1
+citations:
+- id: 10.1055/a-2171-3255
+  locator_quote: Despite the very low certainty of evidence, the findings suggest
+    similar effects induced by both SSG and HIIT on improving endurance performance
+    and VO2max.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Endurance Performance Adaptations between SSG and HIIT in Soccer Players:
+    A Meta-analysis'
+population_applicability:
+  age: youth and adult
+  sex: male and female
+  training_status: soccer players
+  dose_magnitude: N/A
+  duration: N/A
+effect: Similar improvements in endurance performance and VO2max were observed between
+  SSG and HIIT interventions, with non-significant differences favoring HIIT for endurance
+  (ES=0.37) and SSGs for VO2max (ES=-0.20).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-17'
+expiry: '2029-06-17'

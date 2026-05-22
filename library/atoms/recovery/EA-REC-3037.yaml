@@ -1,0 +1,30 @@
+id: EA-REC-3037
+domain: recovery
+claim: Aromatherapy significantly improves anxiety levels and sleep quality in maternal
+  women, with prenatal aromatherapy showing particularly strong effects for reducing
+  anxiety.
+evidence_level: L1
+citations:
+- id: 10.3389/fpubh.2025.1701126
+  locator_quote: Aromatherapy improved anxiety levels [SMD = -0.4, 95% CI (-0.68,
+    -0.14), p = 0.002, I 2 = 63.8] and enhanced sleep quality [SMD = -0.59, 95% CI
+    (-0.98, -0.21), p = 0.002, I 2 = 88.7]. Subgroup analysis revealed that prenatal
+    aromatherapy effectively reduced anxiety [SMD = -0.75, 95% CI (-0.97, -0.52),
+    p = 0.000, I 2 = 0]
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The effects of aromatherapy on anxiety and sleep quality in maternal
+    women: a systematic review and meta-analysis'
+population_applicability:
+  age: adult
+  sex: female
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Reduced anxiety and improved sleep quality.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

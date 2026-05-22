@@ -1,0 +1,31 @@
+id: EA-CON-6998
+domain: conditioning
+claim: "High-intensity interval training (HIIT) is more effective than moderate-intensity\
+  \ continuous training (MICT) in improving oxygen consumption at peak (V\u0307O2-peak)\
+  \ and at ventilation threshold (VO2-VT) in patients after stroke."
+evidence_level: L1
+citations:
+- id: 10.3389/fneur.2026.1727980
+  locator_quote: "The meta-analysis revealed that HIIT was more effective in improving\
+    \ V\u0307O2-peak (MD\u202F=\u202F1.88\u202FmL/kg/min, 95% CI: 1.20 to 2.55, p\u202F\
+    <\u202F0.05) and VO2-VT (MD\u202F=\u202F2.20\u202FmL/kg/min, 95% CI: 0.46 to 3.95,\
+    \ p\u202F<\u202F0.05)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of high-intensity interval training versus moderate-intensity
+    continuous training on cardiorespiratory function in patients after stroke: a
+    systematic review and meta-analysis of randomized trials'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: post-stroke patients
+  dose_magnitude: HIIT vs MICT
+  duration: unspecified in abstract
+effect: "HIIT resulted in significantly greater improvements in V\u0307O2-peak (MD\
+  \ 1.88 mL/kg/min) and VO2-VT (MD 2.20 mL/kg/min) compared to MICT."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

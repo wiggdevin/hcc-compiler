@@ -1,0 +1,36 @@
+id: EA-CON-6779
+domain: conditioning
+claim: Intermittent hypoxia (IH) protocols, including live high-train low (LHTL),
+  repeated sprint training in hypoxia (RSH), and hypoxic interval training, effectively
+  improve aerobic capacity, anaerobic performance, and muscular strength in both trained
+  and untrained individuals.
+evidence_level: L1
+citations:
+- id: 10.1186/s40798-025-00933-7
+  locator_quote: "Intermittent hypoxia (IH) protocols improved both aerobic and anaerobic\
+    \ performance, as well as muscular strength. Live high-train low (LHTL) and live\
+    \ low-train high (LLTH) protocols consistently enhanced V\u0307O\u2082max, especially\
+    \ when combined with sea-level training. Anaerobic-focused strategies like repeated\
+    \ sprint training in hypoxia (RSH) and RSH induced by voluntary hypoventilation\
+    \ at low lung volume (RSH-VHL) led to improvements in sprint-fatigue resistance\
+    \ and glycolytic capacity. Intermittent hypoxic interval training (IHIT) and high-intensity\
+    \ interval training (HIIT) under hypoxia showed robust aerobic benefits."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Intermittent Hypoxia Protocols on Physical Performance
+    in Trained and Untrained Individuals: An Umbrella Review of Systematic Reviews
+    and Meta-Analyses'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: trained and untrained individuals
+  dose_magnitude: variable (LHTL, LLTH, RSH, IHIT)
+  duration: variable
+effect: Improved VO2max, sprint-fatigue resistance, glycolytic capacity, and muscular
+  strength.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

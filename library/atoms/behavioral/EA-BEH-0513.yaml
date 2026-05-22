@@ -1,0 +1,25 @@
+id: EA-BEH-0513
+domain: behavioral
+claim: Exercise may be moderately more effective than a control intervention for reducing
+  symptoms of depression.
+evidence_level: L1
+citations:
+- id: 10.1002/14651858.CD004366.pub7
+  locator_quote: Exercise may be moderately more effective than a control intervention
+    for reducing symptoms of depression.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Exercise for depression
+population_applicability:
+  age: 18+
+  sex: male/female
+  training_status: unspecified
+  dose_magnitude: varied
+  duration: varied
+effect: moderate reduction in depressive symptoms compared to control
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2026-05-20'

@@ -1,0 +1,31 @@
+id: EA-CON-2262
+domain: conditioning
+claim: High-intensity interval training (HIIT) performed under hypoxic conditions
+  results in greater improvements in VO2 max compared to normoxic conditions in distance
+  runners.
+evidence_level: L1
+citations:
+- id: 10.14814/phy2.70349
+  locator_quote: "The results revealed that VO2 max improved more in hypoxic (4.4%-13%)\
+    \ HIIT than in normoxic (1%-8.3%) HIIT. The meta-analysis results revealed that\
+    \ the effect of HIIT under hypoxia on the VO2 max overall standardized mean difference\
+    \ (SMD) was 0.68, with a 95% confidence interval [0.3, 1.06], p\u2009<\u20090.001."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Methodological and aerobic capacity adaptations of high-intensity
+    interval training at different altitudes in distance runners: A comprehensive
+    meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: mixed
+  training_status: distance runners
+  dose_magnitude: HIIT under hypoxia vs normoxia
+  duration: unspecified
+effect: Superior increase in aerobic capacity (VO2 max) with hypoxic HIIT (SMD 0.68)
+  compared to normoxic HIIT.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

@@ -1,0 +1,28 @@
+id: EA-NUT-3067
+domain: nutrition
+claim: Achieving at least 5% weight loss is associated with higher reversion rates
+  to normoglycemia compared to losing less than 5%.
+evidence_level: L1
+citations:
+- id: 10.1111/wvn.70152
+  locator_quote: Achieving ≥ 5% (vs. < 5%) weight loss was associated with higher
+    reversion rates to normoglycemia (RR = 1.80 [1.55; 2.08] vs. 1.32 [1.03; 1.70];
+    psubgroup = 0.036).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Identifying Promising Practices in Lifestyle Intervention Programs
+    for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized
+    Controlled Trials'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: ≥5% weight loss
+  duration: unspecified
+effect: Increased reversion to normoglycemia
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2026-04-10'

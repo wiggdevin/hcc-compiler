@@ -1,0 +1,28 @@
+id: EA-TRA-9798
+domain: training
+claim: High-intensity interval training (HIIT) improves asthma control, asthma-related
+  quality of life, and aerobic capacity in adults with asthma compared with a control
+  group.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jaip.2025.11.032
+  locator_quote: HIIT improved asthma control, asthma-related quality of life, and
+    aerobic capacity in adults with asthma compared with CG.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'High-Intensity Interval Training in Adults With Asthma: Systematic
+    Review and Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: asthma patients
+  dose_magnitude: unspecified
+  duration: short-term and long-term (1-year follow-up)
+effect: Improvements in asthma control, asthma-related quality of life, and aerobic
+  capacity.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2026-05-20'

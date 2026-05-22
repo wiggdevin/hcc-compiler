@@ -1,0 +1,29 @@
+id: EA-REC-1657
+domain: recovery
+claim: Sleep and circadian interventions in athletes have a more substantial impact
+  on positive affect compared to negative affect.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-025-02387-z
+  locator_quote: "The results of the meta-analysis showed that sleep and circadian\
+    \ interventions had a more substantial impact on positive affect compared to negative\
+    \ (\u03B2\u2009=\u20090.68, p\u2009<\u20090.001)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Sleep and Circadian Interventions to Improve Athletes'' Mental Health,
+    Mood and Well-Being: A Systematic Review and Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: mixed (limited female representation)
+  training_status: athletes (any level)
+  dose_magnitude: various sleep/circadian interventions
+  duration: unspecified
+effect: "Interventions showed a statistically significant greater effect on positive\
+  \ affect (\u03B2=0.68) compared to negative affect, and were more effective for\
+  \ improving anxiety, tension, and vigour."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

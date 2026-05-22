@@ -1,0 +1,28 @@
+id: EA-REC-8163
+domain: recovery
+claim: Cold water immersion (CWI) after exercise may have a positive acute effect
+  on parasympathetic reactivation, as measured by heart rate variability (HRV).
+evidence_level: L1
+citations:
+- id: 10.1002/pri.70033
+  locator_quote: The results of this study indicate that CWI after exercise may have
+    a positive acute effect on parasympathetic reactivation, as measured by HRV.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Cold Water Immersion, Heart Rate Variability and Post-Exercise Recovery:
+    A Systematic Review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes
+  dose_magnitude: unspecified
+  duration: acute
+effect: All studies reported parasympathetic reactivation with CWI after physical
+  exertion, with six studies demonstrating statistically significant results compared
+  to passive recovery.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

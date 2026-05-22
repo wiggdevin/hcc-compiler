@@ -1,0 +1,30 @@
+id: EA-TRA-2772
+domain: training
+claim: Swimming provides the greatest improvement in overall health status, while
+  Liuzijue shows favorable effects on pain reduction and sleep quality in patients
+  with fibromyalgia.
+evidence_level: L1
+citations:
+- id: 10.1016/j.ctim.2026.103352
+  locator_quote: Among single-form aerobic exercise interventions for fibromyalgia,
+    swimming appeared to provide the greatest improvement in overall health status,
+    while Liuzijue showed favorable effects on pain reduction and sleep quality.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effectiveness of aerobic exercise in fibromyalgia: A systematic review
+    and network meta-analysis'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: fibromyalgia patients
+  dose_magnitude: various aerobic exercise modalities
+  duration: varies
+effect: Swimming showed the greatest improvement in overall health status (MD = -23.36);
+  Liuzijue showed the greatest benefit for pain intensity (MD = -3.69) and sleep quality
+  (MD = -5.29).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

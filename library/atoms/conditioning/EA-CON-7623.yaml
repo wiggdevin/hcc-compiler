@@ -1,0 +1,28 @@
+id: EA-CON-7623
+domain: conditioning
+claim: Repeated-sprint training in hypoxia provides a moderate performance advantage
+  over normoxic training, particularly for repeated-sprint ability.
+evidence_level: L1
+citations:
+- id: 10.3389/fspor.2025.1641379
+  locator_quote: This meta-analysis confirms that RSH provides a moderate performance
+    advantage over RSN, particularly for repeated-sprint ability.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: A multilevel meta-analysis of the effects of repeated sprint training
+    in hypoxia on athletic performance
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: athletes
+  dose_magnitude: moderate hypoxia intensity (FiO2 ~13-14%)
+  duration: multi-week training blocks
+effect: RSH significantly improved performance outcomes compared with RSN (g = 0.50),
+  with stronger effects for RSA (g = 0.61) than aerobic (g = 0.42) or anaerobic (g
+  = 0.39) outcomes.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2030-04-10'

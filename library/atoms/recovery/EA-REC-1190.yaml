@@ -1,0 +1,31 @@
+id: EA-REC-1190
+domain: recovery
+claim: In older adults with sleep disturbances or disorders and/or mild cognitive
+  impairment, active repetitive transcranial magnetic stimulation combined with Tai
+  Chi probably improves sleep efficiency and likely reduces sleep onset latency.
+evidence_level: L1
+citations:
+- id: 10.1016/j.exger.2026.113125
+  locator_quote: The meta-analysis showed that active rTMS + TC probably improves
+    sleep efficiency (MD = 1.53%, 95% CI 0.00 to 3.05; I2 = 0%; p (overall) = 0.05;
+    moderate certainty), likely reduces sleep onset latency (MD = -2.71 min, 95% CI
+    -5.79 to 0.36; I2 = 45%; p (overall) = 0.08; moderate certainty)
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of non-invasive brain stimulation combined with Tai Chi on
+    the physical, cognitive, emotional, sleep, and quality-of-life outcomes in older
+    adults: A systematic review and meta-analysis'
+population_applicability:
+  age: older adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: active rTMS + Tai Chi
+  duration: unspecified
+effect: Active rTMS + TC probably improves sleep efficiency and likely reduces sleep
+  onset latency.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2026-05-20'

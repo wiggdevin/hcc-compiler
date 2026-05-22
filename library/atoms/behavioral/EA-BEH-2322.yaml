@@ -1,0 +1,27 @@
+id: EA-BEH-2322
+domain: behavioral
+claim: Higher quality health coaching interventions, as assessed by the Health Coaching
+  Quality Index (HCQI), appear to be associated with a greater proportion of positive
+  outcomes.
+evidence_level: L1
+citations:
+- id: 10.1007/s12529-025-10419-1
+  locator_quote: Additionally, higher quality HC interventions appeared to be associated
+    with a greater proportion of positive outcomes.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Development of the Health Coaching Quality Index: A Proposed Method
+    for Evaluating Health Coaching Interventions'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Positive association between intervention quality and outcomes
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2026-04-10'

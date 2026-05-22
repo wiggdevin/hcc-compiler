@@ -1,0 +1,40 @@
+id: EA-TRA-4294
+domain: training
+claim: High-intensity interval training (HIIT) demonstrates significantly superior
+  improvements in relative and absolute maximal oxygen uptake, maximal aerobic power/speed,
+  and mean anaerobic power compared to moderate-to-vigorous-intensity continuous training
+  (MVICT), while both modalities yield comparable outcomes for intensity thresholds,
+  exercise economy, and physical performance indices.
+evidence_level: L1
+citations:
+- id: 10.1111/sms.70243
+  locator_quote: "Compared to MVICT, HIIT demonstrated significantly superior improvements\
+    \ in relative maximal oxygen uptake (SD\u2009=\u20091.30\u2009mL\xB7kg-1\xB7min-1,\
+    \ g\u2009=\u20090.39, 95% CI [0.27, 0.51]), absolute maximal oxygen uptake (SD\u2009\
+    =\u20090.09\u2009L\xB7min-1, g\u2009=\u20090.29, 95% CI [0.15, 0.43]), maximal\
+    \ aerobic power/speed (g\u2009=\u20090.31, 95% CI [0.17, 0.47]), and mean anaerobic\
+    \ power (g\u2009=\u20090.47, 95% CI [0.08, 0.86]). No significant differences\
+    \ were observed between HIIT and MVICT in peak anaerobic power (g\u2009=\u2009\
+    0.31, 95% CI [-0.06, 0.68]), first intensity thresholds (g\u2009=\u20090.43, 95%\
+    \ CI [-0.38, 1.25]), second intensity threshold (g\u2009=\u20090.06, 95% CI [-0.25,\
+    \ 0.36]), exercise economy (g\u2009=\u20090.26, 95% CI [-0.03, 0.54]), and on\
+    \ indices of physical performance (g\u2009=\u20090.04, 95% CI [-0.46, 0.54])."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'One Size Does Not Fit All: A Meta-Analysis of 115 Trials Comparing
+    High-Intensity Interval and Moderate-to-Vigorous-Intensity Continuous Training
+    Across Diverse Participants, Protocols, and Outcomes'
+population_applicability:
+  age: 8 to 68 years
+  sex: Males and Females
+  training_status: Untrained sedentary individuals to elite/world-class athletes
+  dose_magnitude: N/A
+  duration: Chronic training
+effect: HIIT provides superior benefits for VO2max and anaerobic capacity compared
+  to MVICT, with equivalent effects on thresholds and economy.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-28'
+expiry: '2028-03-28'

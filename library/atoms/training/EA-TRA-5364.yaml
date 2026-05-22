@@ -1,0 +1,34 @@
+id: EA-TRA-5364
+domain: training
+claim: Remote device & Exercise is the most effective intervention for improving exercise
+  function, while Online self-management & Exercise and Application & Exercise are
+  superior for facilitating daily activity time and improving quality of life, respectively.
+evidence_level: L1
+citations:
+- id: 10.2147/COPD.S552283
+  locator_quote: Remote device & Exercise was the most effective remote-exercise intervention
+    to improve exercise function.Online self-management & Exercise, Application &
+    Exercise and Telephone & Exercise were the most effective in improving exercise
+    behaviour and quality of life, respectively.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Which Remote Exercise Interventions are Most Effective in Improving
+    Physical Activity and Quality of Life in Patients with Chronic Obstructive Pulmonary
+    Disease? A Systematic Review and Network Meta-Analysis
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: COPD patients
+  dose_magnitude: varied remote interventions
+  duration: varied
+effect: Remote device & Exercise was superior in improving 6-minute walking distance
+  (6MWD, SMD 0.51, 95% CI 0.10-0.93, SUCRA 81.8%); Online self-management & Exercise
+  was superior in facilitating daily activity time (SMD 0.48, 95% CI 0.08-0.88, SUCRA
+  90.1%); Application & Exercise significantly improved healthy quality of life (Negative
+  scale, SMD -0.67, 95%CI-1.05--0.29, SUCRA 81.1%).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2030-01-01'

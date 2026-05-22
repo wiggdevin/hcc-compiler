@@ -1,0 +1,28 @@
+id: EA-TRA-8464
+domain: training
+claim: High-intensity interval training (HIIT) significantly improves aerobic capacity,
+  athletic performance, and body composition in martial arts athletes.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2026.1792680
+  locator_quote: The findings demonstrated that HIIT significantly improved aerobic
+    capacity, athletic performance, and body composition in martial arts athletes.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of high-intensity interval training on aerobic capacity, physical
+    fitness, and body composition in martial arts athletes: a systematic review and
+    meta-analysis of randomized controlled trials'
+population_applicability:
+  age: unspecified
+  sex: mixed
+  training_status: martial arts athletes
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Significant improvements in aerobic capacity (VO2max), lower-limb muscular
+  power, agility, speed, and percent body fat.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

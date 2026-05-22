@@ -1,0 +1,30 @@
+id: EA-NUT-9353
+domain: nutrition
+claim: Patient-accessible continuous glucose monitoring significantly reduces cardiometabolic
+  risk factors in adults with type 2 diabetes, including HbA1c, non-HDL cholesterol,
+  triglycerides, systolic blood pressure, weight, and BMI.
+evidence_level: L1
+citations:
+- id: 10.1016/j.disamonth.2025.102043
+  locator_quote: CGM lowered non-HDL cholesterol (-9.31 mg/dL), triglycerides (-32.17
+    mg/dL), systolic blood pressure (-3.47 mmHg), weight (-3.26 kg), and BMI (-0.87
+    kg/m²).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Patient-accessible continuous glucose monitoring for cardiometabolic
+    risk reduction in type 2 diabetes: A meta-analysis of randomized controlled trials'
+population_applicability:
+  age: 60.2 years (mean)
+  sex: mixed
+  training_status: unspecified
+  dose_magnitude: rtCGM or isCGM vs SMBG
+  duration: unspecified
+effect: Reductions in HbA1c (-0.48%), mean glucose (-14.72 mg/dL), non-HDL cholesterol
+  (-9.31 mg/dL), triglycerides (-32.17 mg/dL), systolic blood pressure (-3.47 mmHg),
+  weight (-3.26 kg), and BMI (-0.87 kg/m²); increased Time in Range (10.76%).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-05-20'

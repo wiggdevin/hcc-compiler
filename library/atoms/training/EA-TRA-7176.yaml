@@ -1,0 +1,31 @@
+id: EA-TRA-7176
+domain: training
+claim: Graded physical exercises play a vital role in improving the overall health
+  and well-being of cancer survivors by enhancing aerobic capacity, endurance, fatigue,
+  depression, sleep quality, pain, physical function, and emotional function.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jbmt.2025.10.053
+  locator_quote: 'The findings demonstrated that physical activity had a positive
+    influence on the following aspects in cancer survivors: Aerobic capacity, Endurance,
+    Fatigue, Depression, Sleep quality, Pain, Physical function, Emotional function.
+    This Systematic literature review reveals that graded physical exercises play
+    a vital role in improving the overall health and well-being of cancer survivors.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Impact of Graded Physical Exercise on Aerobic fitness, Endurance and
+    health related functional outcomes among cancer patients: A Systematic Review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: cancer survivors
+  dose_magnitude: graded physical exercises
+  duration: unspecified
+effect: Improved aerobic capacity, endurance, fatigue, depression, sleep quality,
+  pain, physical function, and emotional function.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

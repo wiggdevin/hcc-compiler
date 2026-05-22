@@ -1,0 +1,33 @@
+id: EA-CON-0247
+domain: conditioning
+claim: In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory
+  muscle training, high-intensity interval training, and combined aerobic and resistance
+  exercise are the most effective interventions for improving aerobic capacity (VO2
+  peak).
+evidence_level: L1
+citations:
+- id: 10.1097/CRD.0000000000000447
+  locator_quote: The inspiratory muscle training, high-intensity interval training,
+    and combined aerobic and resistance exercise were the highest ranked physical
+    rehabilitation intervention to improve VO 2 peak.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Exercise Interventions on Aerobic Capacity in Patients
+    With Heart Failure With Preserved Left Ventricular Ejection Fraction: Systematic
+    Review and Network Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: patients with heart failure with preserved ejection fraction (HFpEF)
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: "Significant improvement in peak oxygen consumption (VO2 peak), with inspiratory\
+  \ muscle training showing the highest rank (SMD 3.6 mL/kg\xB7min), followed by high-intensity\
+  \ interval training (SMD 3.5 mL/kg\xB7min) and combined aerobic and resistance exercise\
+  \ (SMD 3.2 mL/kg\xB7min)."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-13'
+expiry: '2026-01-13'

@@ -1,0 +1,33 @@
+id: EA-SUP-7640
+domain: supplements
+claim: Combining high-intensity interval training (HIIT) with dietary supplementation
+  such as green tea or ginger can enhance reductions in body fat and improvements
+  in metabolic health and aerobic capacity in adults with overweight and obesity,
+  though the combination is not strictly necessary for benefits.
+evidence_level: L1
+citations:
+- id: 10.3390/nu16030355
+  locator_quote: Almost all studies (93%) demonstrated effectiveness of high-intensity
+    interval training of various protocols in reducing body fat, improving metabolic
+    health and aerobic capacity of adults with overweight and obesity. These effects
+    were enhanced by an addition of a dietary supplement, such as green tea or ginger
+    or other.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Combined Effects of High-Intensity Interval Exercise Training
+    and Dietary Supplementation on Reduction of Body Fat in Adults with Overweight
+    and Obesity: A Systematic Review'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: overweight and obesity
+  dose_magnitude: various protocols
+  duration: unspecified
+effect: Enhanced reduction of body fat and improvement in metabolic health and aerobic
+  capacity compared to HIIT alone.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-17'
+expiry: '2029-06-17'

@@ -1,0 +1,29 @@
+id: EA-REC-7475
+domain: recovery
+claim: Progressive muscle relaxation exercises are the preferred recommendation for
+  sleep intervention in patients with cancer, with aerobic exercise and walking serving
+  as alternative options.
+evidence_level: L1
+citations:
+- id: 10.1002/pon.70466
+  locator_quote: Progressive muscle relaxation exercises are the preferred recommendation
+    for sleep intervention in patients with cancer. Aerobic exercise and walking are
+    alternative options.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Exercise Interventions for Improving Sleep Quality in Patients With
+    Cancer: A Systematic Review and Network Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: patients with cancer
+  dose_magnitude: various exercise interventions
+  duration: various
+effect: Progressive muscle relaxation exercises ranked highest (98.6%) for sleep quality
+  improvement, followed by aerobic exercise (70.7%) and walking (68%).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

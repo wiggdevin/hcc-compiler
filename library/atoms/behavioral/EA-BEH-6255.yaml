@@ -1,0 +1,29 @@
+id: EA-BEH-6255
+domain: behavioral
+claim: Goal-setting guidelines for return-to-work rehabilitation in Australia are
+  inconsistent and primarily based on SMART goal principles.
+evidence_level: L1
+citations:
+- id: 10.1071/PY25160
+  locator_quote: This study suggests that goal-setting guidelines for return-to-work
+    rehabilitation in Australia are inconsistent and primarily based on SMART goal
+    principles.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: A systematic-narrative review of goal-setting guidelines in workers'
+    compensation rehabilitation in Australia
+population_applicability:
+  age: adult
+  sex: unspecified
+  training_status: workers' compensation rehabilitation
+  dose_magnitude: N/A
+  duration: N/A
+effect: The review found that 58% of guidelines involved SMART goal principles, but
+  the acronym was inconsistently conceptualized in 22% of guidelines that included
+  this approach.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

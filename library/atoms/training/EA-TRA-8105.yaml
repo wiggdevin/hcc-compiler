@@ -1,0 +1,27 @@
+id: EA-TRA-8105
+domain: training
+claim: Concurrent training significantly improves countermovement jump performance
+  compared to resistance training alone in children and adolescents.
+evidence_level: L1
+citations:
+- id: 10.1111/sms.14764
+  locator_quote: 'In contrast, CT significantly improved countermovement jump (CMJ)
+    compared to RT alone (SMD = 0.19; 95% CI: 0.01-0.36; p = 0.04).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Synergistic Effects of Concurrent Aerobic and Strength Training on
+    Fitness in Children and Adolescents: A Multivariate and Network Meta-Analysis'
+population_applicability:
+  age: "14.32 \xB1 2.29 years"
+  sex: mixed
+  training_status: youth
+  dose_magnitude: concurrent training vs RT alone
+  duration: varies by study
+effect: Standardized Mean Difference (SMD) of 0.19 for countermovement jump (CMJ)
+  improvement.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-10'
+expiry: '2029-06-10'

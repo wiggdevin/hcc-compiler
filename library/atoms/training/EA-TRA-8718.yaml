@@ -1,0 +1,29 @@
+id: EA-TRA-8718
+domain: training
+claim: Smartphone app-based interventions that deliver walking-related knowledge,
+  facilitate goal setting, and support behavioral monitoring appear effective for
+  improving walking behavior and intention in community-dwelling older adults.
+evidence_level: L1
+citations:
+- id: 10.2196/78042
+  locator_quote: Apps that deliver walking-related knowledge, facilitate goal setting,
+    and support behavioral monitoring appear especially effective and may strengthen
+    walking behavior and intention in this population.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Physical and Psychological Effects of Smartphone App-Based Walking
+    Interventions in Community-Dwelling Older Adults: Systematic Review and Behavior
+    Change Technique-Informed Analysis'
+population_applicability:
+  age: Older adults
+  sex: Not specified
+  training_status: Community-dwelling
+  dose_magnitude: Not specified
+  duration: Not specified
+effect: Improved walking behavior and intention
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2026-04-10'

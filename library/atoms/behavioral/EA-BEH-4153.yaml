@@ -1,0 +1,29 @@
+id: EA-BEH-4153
+domain: behavioral
+claim: Therapeutic patient education interventions in the Eastern Mediterranean Region
+  produce significant improvements in diabetes self-management outcomes, specifically
+  waist circumference, HbA1c, and fasting blood glucose.
+evidence_level: L1
+citations:
+- id: 10.1186/s12889-025-24721-w
+  locator_quote: Despite varying effect sizes for most outcomes, TPE interventions
+    in the EMR showed significant improvements in several diabetes self-management
+    outcomes, including waist circumference, HbA1c, and fasting blood glucose.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of therapeutic patient education interventions on diabetes
+    self-management outcomes in the Eastern Mediterranean Region: a systematic review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Significant improvements in waist circumference, HbA1c, and fasting blood
+  glucose.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-31'
+expiry: '2026-03-31'

@@ -1,0 +1,32 @@
+id: EA-TRA-8910
+domain: training
+claim: "High-Intensity Interval Training (HIIT) has the highest probability of being\
+  \ the most effective intervention for improving VO\u2082max levels and Yo-Yo Intermittent\
+  \ Recovery Test level 1 performance in soccer players."
+evidence_level: L1
+citations:
+- id: 10.1186/s13102-026-01668-y
+  locator_quote: "Regarding aerobic capacity, SUCRA rankings indicated that High-Intensity\
+    \ Interval Training (HIIT) had the highest probability of being the most effective\
+    \ intervention for improving VO\u2082max levels (SUCRA\u2009=\u200974.3; SMD\u2009\
+    =\u20090.53, 95% CI [0.15, 0.91], p\u2009=\u20090.007)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Comparative efficacy of different training modes on physical fitness
+    in soccer (football) players: a systematic review and network meta-analysis incorporating
+    randomized controlled trials'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: soccer players
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: "HIIT is ranked as the most effective intervention for improving aerobic capacity\
+  \ (VO\u2082max) and soccer-specific endurance (Yo-Yo IR1) compared to other training\
+  \ modes."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-10'
+expiry: '2028-02-10'

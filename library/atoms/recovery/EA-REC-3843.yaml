@@ -1,0 +1,29 @@
+id: EA-REC-3843
+domain: recovery
+claim: Community-based traditional Chinese exercises (CTCEs), including Qigong and
+  Tai Chi, are effective in reducing sleep disturbance among community-dwelling older
+  adults.
+evidence_level: L1
+citations:
+- id: 10.1177/10436596251412642
+  locator_quote: CTCEs are effective in reducing sleep disturbance among older adults.
+    Both Qigong and tai chi improved sleep; Qigong showed a slightly larger effect
+    size than tai chi, but the difference between modality was not significant.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Beneficial Effects of Community-Based Traditional Chinese Exercises
+    on Sleep Disturbance Among Older Adults: Systematic Review, Meta-Analysis, and
+    Meta-Regression of Randomized Controlled Trials'
+population_applicability:
+  age: Older adults
+  sex: Mixed
+  training_status: Sedentary/Community-dwelling
+  dose_magnitude: Not specified
+  duration: Not specified
+effect: Reduction in sleep disturbance
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

@@ -1,0 +1,27 @@
+id: EA-BEH-6471
+domain: behavioral
+claim: mHealth interventions significantly improve self-care ability and reduce rehospitalization
+  rates among organ transplant recipients.
+evidence_level: L1
+citations:
+- id: 10.2196/69795
+  locator_quote: mHealth interventions significantly improved self-care ability and
+    reduced rehospitalization rates among organ transplant recipients.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effectiveness of mHealth Interventions to Improve Follow-Up and Management
+    Among Solid Organ Transplant Recipients: Systematic Review and Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Significant improvement in self-care ability and reduction in rehospitalization
+  rates.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-15'
+expiry: '2026-01-15'

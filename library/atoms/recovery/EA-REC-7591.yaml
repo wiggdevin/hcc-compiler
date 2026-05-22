@@ -1,0 +1,34 @@
+id: EA-REC-7591
+domain: recovery
+claim: Rehabilitation exercise adherence in patients following Total Hip Arthroplasty
+  (THA) and Total Knee Arthroplasty (TKA) is influenced by facilitators such as self-motivation,
+  effective strategies, and support networks, and barriers such as physical limitations,
+  fear of movement, and lack of knowledge.
+evidence_level: L1
+citations:
+- id: 10.1186/s12891-026-09789-8
+  locator_quote: "Facilitators to rehabilitation exercise adherence for THA/TKA patients:\
+    \ Self-motivation and rehabilitation goals, effective rehabilitation strategies,\
+    \ establishment of doctor-patient trust, and multidimensional support networks.\u200B\
+    Barriers to rehabilitation exercise adherence for THA/TKA patients: Physical symptoms\
+    \ and functional limitations, fear of movement, cognitive biases, lack of rehabilitation-related\
+    \ knowledge, psychological stress and negative emotions, and socio-environmental\
+    \ constraints."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Facilitators and barriers to rehabilitation exercise adherence among
+    patients after total hip and total knee arthroplasty: a qualitative meta-synthesis'
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: post-surgical rehabilitation
+  dose_magnitude: N/A
+  duration: N/A
+effect: Identifies multi-level factors (facilitators and barriers) that influence
+  adherence to post-arthroplasty rehabilitation exercises.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2030-01-01'

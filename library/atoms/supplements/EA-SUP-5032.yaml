@@ -1,0 +1,33 @@
+id: EA-SUP-5032
+domain: supplements
+claim: Caffeine consistently suppresses low-frequency NREM EEG activity, particularly
+  slow-wave activity, and increases faster EEG activity, resulting in a lighter, more
+  aroused sleep profile.
+evidence_level: L1
+citations:
+- id: 10.3390/nu18081220
+  locator_quote: Across highly heterogeneous paradigms-including acute bedtime or
+    evening dosing, daytime or repeated caffeine use before nocturnal sleep, administration
+    during prolonged wakefulness followed by recovery sleep, withdrawal protocols,
+    and ambulatory/home EEG monitoring-the most consistent finding was suppression
+    of low-frequency NREM EEG activity, particularly slow-wave activity and the lowest
+    delta frequencies. Caffeine frequently increased faster EEG activity, including
+    sigma/spindle and beta ranges, producing a lighter, more aroused, and more wake-like
+    sleep EEG profile.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Caffeinated Brain Part 2: The Effect of Caffeine on Sleep-Related
+    Electroencephalography (EEG)-A Systematic and Mechanistic Review'
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: general population
+  dose_magnitude: varied
+  duration: acute and chronic
+effect: reduced sleep depth and weakened homeostatic recovery
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

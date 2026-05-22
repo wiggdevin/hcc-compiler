@@ -1,0 +1,26 @@
+id: EA-TRA-3683
+domain: training
+claim: Community-dwelling older adults with sarcopenia demonstrate relatively high
+  adherence to exercise interventions, with a pooled adherence rate of 85%.
+evidence_level: L1
+citations:
+- id: 10.1093/ageing/afaf094
+  locator_quote: 'The pooled estimate of adherence rates for exercise interventions
+    amongst older adults with sarcopenia was 85% (95% CI: 0.79-0.89, range: 71%-100%).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Adherence to exercise intervention for community-dwelling older adults
+    with sarcopenia: a systematic review and meta-analysis'
+population_applicability:
+  age: older adults
+  sex: mixed
+  training_status: sarcopenic
+  dose_magnitude: varied
+  duration: <24 weeks and >=24 weeks
+effect: High adherence (85%) to exercise programs was observed in this population.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

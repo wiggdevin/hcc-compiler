@@ -1,0 +1,33 @@
+id: EA-BEH-6526
+domain: behavioral
+claim: Physical activity interventions significantly improve mental health outcomes
+  in university students, including large positive effects on overall mental health
+  and enhanced wellbeing, and moderate reductions in anxiety, depression, and stress.
+evidence_level: L1
+citations:
+- id: 10.3389/fpsyg.2025.1612408
+  locator_quote: 'Physical activity interventions were significantly associated with
+    improvements in university students'' mental health outcomes. Specifically, exercise
+    demonstrated a large positive effect on overall mental health (SMD = 0.91, 95%
+    CI: 0.15 to 1.67), enhanced wellbeing (SMD = 0.41, 95% CI: 0.29 to 0.53), and
+    led to moderate reductions in anxiety (SMD = -0.62, 95% CI: -0.84 to -0.41), depression
+    (SMD = -0.67, 95% CI: -0.91 to -0.43), and stress (SMD = -0.46, 95% CI: -0.64
+    to -0.28).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effectiveness of physical exercise on mental health among university
+    students: a systematic review and meta-analysis'
+population_applicability:
+  age: university students
+  sex: mixed
+  training_status: various
+  dose_magnitude: varied
+  duration: varied
+effect: Significant improvement in mental health outcomes including wellbeing, anxiety,
+  depression, and stress.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'

@@ -1,0 +1,30 @@
+id: EA-REC-2190
+domain: recovery
+claim: Relaxation exercises performed for 30-60 minutes per session, 1-2 times per
+  week, for a duration of 4 weeks or less, are the most effective regimen for improving
+  sleep quality in perinatal women.
+evidence_level: L1
+citations:
+- id: 10.1186/s12884-026-08673-6
+  locator_quote: "The findings revealed that RE lasting\u2009\u2264\u20094 weeks,\
+    \ performed 1-2 times per week, and 30-60\_min per session, was the relatively\
+    \ effective."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Optimal types and doses of exercise for improving sleep quality in
+    perinatal women: a systematic review and network meta-analysis based on randomized
+    controlled trials'
+population_applicability:
+  age: perinatal (pregnancy to 1 year postpartum)
+  sex: female
+  training_status: unspecified
+  dose_magnitude: 30-60 min per session, 1-2 times per week
+  duration: "\u2264 4 weeks"
+effect: Significant improvement in sleep quality (Standardized Mean Difference -2.54
+  to -3.13 depending on parameter).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-31'
+expiry: '2030-01-31'

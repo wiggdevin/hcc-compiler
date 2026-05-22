@@ -1,0 +1,29 @@
+id: EA-REC-3826
+domain: recovery
+claim: Dance interventions produce a statistically significant overall improvement
+  in sleep quality with a small-to-approaching-moderate effect.
+evidence_level: L1
+citations:
+- id: 10.3389/fpubh.2026.1776902
+  locator_quote: Dance interventions, as a nonpharmacological approach, produce a
+    statistically significant overall improvement in sleep quality, with a small-to-approaching-moderate
+    effect that is supported by consistent findings across sensitivity and meta-regression
+    analyses
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The effectiveness of dance interventions on sleep quality: a systematic
+    review and meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: 3 times/week, 60 min/session
+  duration: 12-16 weeks
+effect: Significant improvement in sleep quality (SMD = 0.48) and subjective sleep
+  quality (SMD = 0.47).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-10'
+expiry: '2028-02-10'

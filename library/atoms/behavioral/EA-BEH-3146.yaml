@@ -1,0 +1,33 @@
+id: EA-BEH-3146
+domain: behavioral
+claim: Barriers and facilitators to exercise adherence in community-dwelling older
+  adults can be categorized using the COM-B model and TDF, and effective implementation
+  strategies include tailored exercise programs, appropriate environments, multidimensional
+  social support, monitoring and feedback, managing emotional experiences, participant
+  education, enhancing self-efficacy, and exerting participant autonomy.
+evidence_level: L1
+citations:
+- id: 10.1016/j.ijnurstu.2024.104808
+  locator_quote: The 38 BCTs were further categorized into 8 areas of implementation
+    strategies (tailored exercise program, appropriate exercise environment, multidimensional
+    social support, monitoring and feedback, managing emotional experiences and issues,
+    participants education, enhancing self-efficacy, and exerting participants' autonomy).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Barriers and facilitators to exercise adherence in community-dwelling
+    older adults: A mixed-methods systematic review using the COM-B model and Theoretical
+    Domains Framework'
+population_applicability:
+  age: Older adults
+  sex: Mixed
+  training_status: Community-dwelling
+  dose_magnitude: N/A
+  duration: N/A
+effect: Identification of 54 factors influencing adherence and 8 areas of implementation
+  strategies to improve exercise adherence.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-14'
+expiry: '2028-01-14'

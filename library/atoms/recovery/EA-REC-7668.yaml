@@ -1,0 +1,31 @@
+id: EA-REC-7668
+domain: recovery
+claim: Game-based telerehabilitation for stroke, Parkinson's disease, and multiple
+  sclerosis offers opportunities for effectiveness through engaging and affordable
+  technologies, though it faces challenges regarding motivation, usability, and technical
+  barriers.
+evidence_level: L1
+citations:
+- id: 10.1080/17483107.2025.2450010
+  locator_quote: Key opportunities identified include the effectiveness of telerehabilitation
+    and the use of new, engaging, user-friendly, and affordable technologies. However,
+    challenges such as motivation, usability, exercise adherence, and technical barriers
+    were significant.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Game-based telerehabilitation in neurological disorders: a systematic
+    review of features, opportunities and challenges'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: patients with stroke, Parkinson's disease, and multiple sclerosis
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: The integration of engaging, user-friendly, and cost-effective technologies
+  presents opportunities for enhancing rehabilitation effectiveness.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

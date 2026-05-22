@@ -1,0 +1,34 @@
+id: EA-TRA-6351
+domain: training
+claim: Interval training combined with blood flow restriction (IT+BFR) significantly
+  improves maximal oxygen uptake (VO2max), mean power during the Wingate 30-s test,
+  muscle strength, muscle endurance, time to fatigue, and maximal aerobic speed compared
+  to interval training alone.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jshs.2025.101030
+  locator_quote: "IT combined with BFR (IT+BFR) significantly improved maximal oxygen\
+    \ uptake (VO2max) (g\u202F=\u202F0.63, I2\u202F=\u202F63%), mean power during\
+    \ the Wingate 30-s test (g\u202F=\u202F0.70, I2\u202F=\u202F47%), muscle strength\
+    \ (g\u202F=\u202F0.88, I2\u202F=\u202F64%), muscle endurance (g\u202F=\u202F0.43,\
+    \ I2\u202F=\u202F0%), time to fatigue (g\u202F=\u202F1.26, I2\u202F=\u202F86%),\
+    \ and maximal aerobic speed (g\u202F=\u202F0.74, I2\u202F=\u202F0%) compared to\
+    \ IT alone."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Physiological adaptations and performance enhancement with combined
+    blood flow restricted and interval training: A systematic review with meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: mixed (trained and untrained)
+  dose_magnitude: varied (supra-maximal, moderate, walking, running)
+  duration: unspecified
+effect: Significant improvements in VO2max, mean power, muscle strength, muscle endurance,
+  time to fatigue, and maximal aerobic speed compared to IT alone.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-17'
+expiry: '2028-04-17'

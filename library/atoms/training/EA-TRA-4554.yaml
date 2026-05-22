@@ -1,0 +1,29 @@
+id: EA-TRA-4554
+domain: training
+claim: Exercise interventions with high adherence to ACSM guidelines are more effective
+  than low-adherence interventions at improving quality of life, reducing fatigue,
+  and relieving pain in lung cancer patients.
+evidence_level: L1
+citations:
+- id: 10.3389/fphys.2026.1797432
+  locator_quote: Exercise interventions with high adherence to the ACSM guidelines
+    may be more effective in improving quality of life, fatigue, and pain.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of ACSM guideline-based exercise on patients with lung cancer:
+    a systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: lung cancer patients
+  dose_magnitude: high adherence to ACSM guidelines
+  duration: varies
+effect: High-adherence exercise interventions resulted in greater improvements for
+  quality of life (SMD = 0.75), fatigue (SMD = -0.77), and pain (SMD = -1.46) compared
+  to low-adherence groups.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-27'
+expiry: '2026-03-27'

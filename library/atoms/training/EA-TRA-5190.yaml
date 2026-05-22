@@ -1,0 +1,26 @@
+id: EA-TRA-5190
+domain: training
+claim: Mind-body exercise therapies lasting over 40 hours show greater improvements
+  in fibromyalgia impact than shorter durations.
+evidence_level: L1
+citations:
+- id: 10.1123/jpah.2025-0207
+  locator_quote: A potential dose-response relationship was observed, with interventions
+    lasting over 40 hours showing greater improvements in FIQ.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Mind-Body Exercise Therapies on Patients With Fibromyalgia:
+    A Systematic Review and Meta-analysis'
+population_applicability:
+  age: adults
+  sex: female/male
+  training_status: patients with fibromyalgia
+  dose_magnitude: '>40 hours total duration'
+  duration: unspecified
+effect: Greater improvements in Fibromyalgia Impact Questionnaire (FIQ) scores.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2026-04-10'

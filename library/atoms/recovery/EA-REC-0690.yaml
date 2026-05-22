@@ -1,0 +1,28 @@
+id: EA-REC-0690
+domain: recovery
+claim: Exercise improves subjective sleep quality in adults, with the magnitude of
+  benefit influenced by baseline sleep quality and intervention duration.
+evidence_level: L1
+citations:
+- id: 10.1016/j.smrv.2026.102239
+  locator_quote: Exercise improves subjective sleep quality in a benefit-on-demand
+    pattern, supporting prioritisation of approximately 25-week programmes for adults
+    with moderate-to-severe sleep problems while acknowledging very low certainty.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Determinants and interrelations of exercise effects on sleep quality:
+    A multimethod meta-analysis'
+population_applicability:
+  age: "Adults (\u226518 years)"
+  sex: Mixed
+  training_status: Mixed
+  dose_magnitude: Varied (Qigong, walking, HIIT noted)
+  duration: ~25 weeks (optimal)
+effect: Improves subjective sleep quality, particularly in populations with poorer
+  baseline sleep quality.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-14'
+expiry: '2026-02-14'

@@ -1,0 +1,33 @@
+id: EA-TRA-3771
+domain: training
+claim: In patients with COPD, facilitators for initiating and sustaining exercise
+  behavior include integrating programs into daily life, increasing educational subjects,
+  and enhancing enjoyment, while barriers include insufficient motivation and overly
+  simplistic training plans.
+evidence_level: L4
+citations:
+- id: 10.1186/s12890-026-04204-3
+  locator_quote: According to the CIFR framework, within the domain of fundamental
+    characteristics of intervention programmes, facilitators for initiating and sustaining
+    patient exercise behaviour primarily centred on integrating programmes into daily
+    life (5/23), increasing the number of educational subjects (4/23), and enhancing
+    enjoyment (4/23). Barriers mainly included insufficient motivation to act (3/5)
+    and overly simplistic training plans (2/5).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'People with chronic obstructive pulmonary disease and exercise behaviour:
+    a scoping review using the CFIR framework'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: patients with chronic obstructive pulmonary disease
+  dose_magnitude: N/A
+  duration: N/A
+effect: Facilitators include integrating programs into daily life, education, and
+  enjoyment; barriers include lack of motivation and simplistic plans.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2026-05-20'
