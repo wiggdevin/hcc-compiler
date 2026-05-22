@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from urllib.parse import quote, urlencode
@@ -17,6 +18,19 @@ class LookupResult:
     journal: str | None
 
 
+_MIN_INTERVAL_S = 0.4
+_last_call_at = 0.0
+
+
+def _throttle() -> None:
+    global _last_call_at
+    now = time.monotonic()
+    wait = _MIN_INTERVAL_S - (now - _last_call_at)
+    if wait > 0:
+        time.sleep(wait)
+    _last_call_at = time.monotonic()
+
+
 def _email() -> str:
     return os.environ.get("HCC_CONTACT_EMAIL", "devin@zerosumsolutions.com")
 
@@ -26,12 +40,14 @@ def _ua_headers() -> dict[str, str]:
 
 
 def _get_json(url: str, timeout: float = 15.0) -> dict:
+    _throttle()
     req = Request(url, headers=_ua_headers())
     with urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
 def _get_text(url: str, timeout: float = 15.0) -> str:
+    _throttle()
     req = Request(url, headers=_ua_headers())
     with urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8")
