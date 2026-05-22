@@ -23,3 +23,6 @@ curate: harvest extract verify route
 
 curate-smoke:
 	python -m pytest tests/test_pipeline_smoke.py -q
+
+patterns-smoke:
+	pytest tests/test_patterns_smoke.py -q
