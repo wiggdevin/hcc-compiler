@@ -125,7 +125,12 @@ def main() -> dict:
             dest_dir.mkdir(parents=True, exist_ok=True)
             dest_path = dest_dir / f"{pattern.id}.yaml"
             dest_path.write_text(
-                yaml.safe_dump(pattern.model_dump(mode="json"), sort_keys=False),
+                yaml.safe_dump(
+                    pattern.model_dump(mode="json"),
+                    sort_keys=False,
+                    allow_unicode=True,
+                    default_flow_style=False,
+                ),
                 encoding="utf-8",
             )
             print(f"{decision} {pattern.id}")

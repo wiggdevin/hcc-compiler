@@ -12,6 +12,23 @@ import pytest
 import yaml
 
 # ---------------------------------------------------------------------------
+# SC9 Regression guard
+# ---------------------------------------------------------------------------
+
+def test_derive_exposes_derive_pattern_binding():
+    """Regression guard: mock.patch('hcc_compiler.patterns.derive.derive_pattern') must resolve.
+
+    If hcc_compiler/patterns/derive.py stops defining 'derive_pattern', this
+    binding disappears and patches in _run_script silently no-op against real LLM.
+    """
+    import hcc_compiler.patterns.derive as m
+    assert hasattr(m, "derive_pattern"), (
+        "derive_pattern binding missing — update patch targets or restore "
+        "'def derive_pattern' in hcc_compiler.patterns.derive"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
