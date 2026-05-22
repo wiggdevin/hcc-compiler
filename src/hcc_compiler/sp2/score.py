@@ -61,11 +61,8 @@ _AGE_KEYWORD_MAP: list[tuple[str, str]] = [
     ("10-19",           "adolescent"),
     ("11-17",           "adolescent"),
     ("≤18",             "adolescent"),
-    ("≤18",        "adolescent"),  # ≤18 (unicode)
     ("≥14",             "adolescent"),   # ≥14 years
-    ("≥14",        "adolescent"),
     ("≥15",             "adolescent"),
-    ("≥15",        "adolescent"),
     ("university",      "adolescent"),  # university students = young/adolescent
     # --- young adult ---
     ("young adult",     "young adult"),
@@ -75,10 +72,8 @@ _AGE_KEYWORD_MAP: list[tuple[str, str]] = [
     ("18-65",           "young adult"),  # wide span; conservative label
     ("18+",             "young adult"),
     ("adults (≥18",     "young adult"),
-    ("adults (≥18","young adult"),
     ("≥18 yr",          "young adult"),
     ("≥18",             "young adult"),
-    ("≥18",        "young adult"),
     ("20-47",           "young adult"),
     ("25.16",           "young adult"),  # 25.16 ± 5.22 years
     ("perinatal",       "young adult"),
@@ -98,9 +93,7 @@ _AGE_KEYWORD_MAP: list[tuple[str, str]] = [
     ("postmenopaus",    "adult"),       # without context, postmenopaus → adult (≥45)
     (">60",             "older adult"),
     ("≥40-45",          "older adult"),
-    ("≥40-45",     "older adult"),
     ("≥60",             "older adult"),
-    ("≥60",        "older adult"),
     ("60-80",           "older adult"),
     ("60.2",            "older adult"),
     ("60+ years",       "older adult"),
@@ -158,7 +151,8 @@ def _normalise_sex(v: str) -> str:
     if not v or v in _SEX_UNIVERSAL:
         return "any"
     # percentage-style descriptions → mixed
-    if "%" in v or "male and female" in v or "females" in v and "males" in v:
+    mixed_cohort = ("males" in v and "females" in v) or "male and female" in v or "%" in v
+    if mixed_cohort:
         return "any"
     if "female" in v and "male" not in v:
         return "F"
