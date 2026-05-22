@@ -11,6 +11,22 @@ import pytest
 from hcc_compiler.retrieve import query
 
 # ---------------------------------------------------------------------------
+# Regression guards
+# ---------------------------------------------------------------------------
+
+def test_retrieve_exposes_embed_binding():
+    """Regression guard: mock.patch('hcc_compiler.retrieve.embed') must resolve.
+
+    If retrieve.py stops using 'from X import embed', this binding disappears
+    and all embed patches silently no-op against real Ollama.
+    """
+    import hcc_compiler.retrieve as r
+    assert hasattr(r, "embed"), (
+        "retrieve.embed binding missing — update patch targets or restore "
+        "'from X import embed' in hcc_compiler.retrieve"
+    )
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
