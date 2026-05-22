@@ -29,3 +29,22 @@ def test_extract_numbers_handles_ranges_and_commas():
     assert 2800.0 in nums
     assert 1.6 in nums
     assert 2.2 in nums
+
+
+def test_extract_numbers_detects_english_number_words():
+    nums = extract_numbers("three times per week at one-repetition maximum")
+    assert 3.0 in nums
+    assert 1.0 in nums
+
+
+def test_extract_numbers_number_words_with_digits():
+    nums = extract_numbers("three sessions at 60-80% of one-repetition maximum")
+    assert 3.0 in nums
+    assert 60.0 in nums
+    assert 80.0 in nums
+    assert 1.0 in nums
+
+
+def test_extract_numbers_word_boundary_avoids_substrings():
+    # 'one' inside 'bone' or 'stone' must not match
+    assert extract_numbers("bone density stone fruit") == []
