@@ -44,9 +44,22 @@ def build_index(root: Path, out_db: Path) -> None:
         )
     version = (root / "VERSION").read_text(encoding="utf-8").strip()
 
+    # Compute all embeddings before touching the DB so an embed() failure
+    # cannot leave a partial write behind.
+    atom_vecs = [(a, embed(EmbedRequest(text=a.claim))) for a in atoms]
+    pattern_vecs = [
+        (p, embed(EmbedRequest(text=f"{p.pattern} {p.parameterization}")))
+        for p in patterns
+    ]
+
     con = sqlite3.connect(out_db)
     try:
+        # executescript issues an implicit COMMIT before running; call it before
+        # we open our explicit transaction so nothing leaks out.
         con.executescript(_SCHEMA)
+        con.executescript(_EMBEDDINGS_SCHEMA)
+
+        con.execute("BEGIN")
         con.executemany(
             "INSERT INTO atoms VALUES (?,?,?,?,?)",
             [(a.id, a.domain.value, a.tier.value, a.evidence_level.value, a.model_dump_json()) for a in atoms],
@@ -57,23 +70,32 @@ def build_index(root: Path, out_db: Path) -> None:
         )
         con.execute("INSERT INTO meta VALUES ('library_version', ?)", (version,))
 
-        con.executescript(_EMBEDDINGS_SCHEMA)
-
-        for a in atoms:
-            vec = embed(EmbedRequest(text=a.claim))
+        for a, vec in atom_vecs:
             con.execute(
                 "INSERT OR REPLACE INTO embeddings VALUES (?,?,?)",
                 (a.id, "atom", json.dumps(vec)),
             )
 
-        for p in patterns:
-            text = f"{p.pattern} {p.parameterization}"
-            vec = embed(EmbedRequest(text=text))
+        for p, vec in pattern_vecs:
             con.execute(
                 "INSERT OR REPLACE INTO embeddings VALUES (?,?,?)",
                 (p.id, "pattern", json.dumps(vec)),
             )
 
-        con.commit()
+        # Remove embedding rows whose atom/pattern no longer exists in the
+        # current library (orphans left by a previous run on a larger library).
+        con.execute(
+            "DELETE FROM embeddings WHERE record_type='atom' "
+            "AND record_id NOT IN (SELECT id FROM atoms)"
+        )
+        con.execute(
+            "DELETE FROM embeddings WHERE record_type='pattern' "
+            "AND record_id NOT IN (SELECT id FROM patterns)"
+        )
+
+        con.execute("COMMIT")
+    except Exception:
+        con.execute("ROLLBACK")
+        raise
     finally:
         con.close()
