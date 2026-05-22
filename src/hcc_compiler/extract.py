@@ -5,8 +5,9 @@ from pathlib import Path
 from hcc_compiler.llm.anthropic_client import LLMRequest, call_llm
 from hcc_compiler.models import DOMAIN_PREFIX, Domain
 
+from hcc_compiler.llm._util import _JSON_RE
+
 _PROMPT_PATH = Path(__file__).with_name("extract_prompt.md")
-_JSON_RE = re.compile(r"\{[\s\S]*\}")
 
 
 def _load_prompt() -> str:

@@ -1,13 +1,13 @@
 from __future__ import annotations
 import json
-import re
 from pathlib import Path
 
 from hcc_compiler.llm.anthropic_client import LLMRequest, call_llm
 from hcc_compiler.models import EvidenceAtom, RecommendationPattern
 
+from hcc_compiler.llm._util import _JSON_RE
+
 _PROMPT_PATH = Path(__file__).with_name("derive_prompt.md")
-_JSON_RE = re.compile(r"\{[\s\S]*\}")
 
 
 def _load_prompt() -> str:
