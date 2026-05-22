@@ -25,7 +25,7 @@ def derive_queries(intake: ClientIntake) -> dict[Domain, list[str]]:
         if len(nut) >= 3:
             break
     if len(nut) < 3:
-        nut.append(f"nutrition for {primary}")
+        nut.append(f"macronutrient timing for {ts} adults")
     result[Domain.NUTRITION] = nut[:3]
 
     # --- TRAINING ---

@@ -194,6 +194,17 @@ class TestTrainingStatusInQueries:
         assert any("recreational" in q for q in result[Domain.RECOVERY])
 
 
+class TestLongevityGoal:
+    """Longevity goal must produce ≥1 TRAINING query containing 'longevity'."""
+
+    def test_longevity_goal_produces_training_query(self):
+        """Spec: every goal must produce ≥1 query in TRAINING domain."""
+        intake = _make_intake(goals=["longevity"])
+        queries = derive_queries(intake)
+        assert len(queries[Domain.TRAINING]) >= 1
+        assert any("longevity" in q.lower() for q in queries[Domain.TRAINING])
+
+
 class TestReturnTypes:
     """Output must be dict[Domain, list[str]]."""
 
