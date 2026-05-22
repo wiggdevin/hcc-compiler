@@ -91,6 +91,30 @@ def test_routine_pass_skips_when_destination_already_exists(tmp_path):
     assert draft_path.exists()
 
 
+def test_skips_when_id_already_in_other_destination(tmp_path):
+    """An id already admitted to atoms/ must not be re-queued under queue/ (and vice versa)."""
+    draft = tmp_path / "draft-output"
+    verify = tmp_path / "verify-output"
+    library = tmp_path / "library"
+    draft.mkdir(); verify.mkdir()
+    admitted_dir = library / "atoms" / "training"
+    admitted_dir.mkdir(parents=True)
+    (admitted_dir / "EA-TRA-7777.yaml").write_text(yaml.safe_dump(_atom_yaml("EA-TRA-7777", "routine")))
+
+    # New extraction tags this id as high-impact PASS → would go to queue under old rules.
+    hi = _atom_yaml("EA-TRA-7777", "high-impact")
+    hi["domain"] = "training"
+    draft_path = draft / "EA-TRA-7777.yaml"
+    draft_path.write_text(yaml.safe_dump(hi))
+    (verify / "EA-TRA-7777.json").write_text(json.dumps({"atom_id": "EA-TRA-7777", "overall": "PASS"}))
+
+    out = route_draft(draft, verify, library)
+
+    assert out["EA-TRA-7777"] == "skipped-collision"
+    assert not (library / "queue" / "EA-TRA-7777.yaml").exists()
+    assert draft_path.exists()
+
+
 def test_routed_draft_removed_from_source(tmp_path):
     draft = tmp_path / "draft-output"
     verify = tmp_path / "verify-output"

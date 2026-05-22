@@ -1,0 +1,30 @@
+id: EA-TRA-1853
+domain: training
+claim: Nordic hamstring exercise training significantly improves eccentric and concentric
+  strength, but meta-regressions show no association between strength gains and training
+  volume variables (duration, frequency, sets, or repetitions) during the first 6-8
+  weeks.
+evidence_level: L1
+citations:
+- id: 10.1519/JSC.0000000000005184
+  locator_quote: Meta-regressions showed no association between strength gains and
+    training volume-related variables (duration, frequency, number of sets or repetitions).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Dose-Response Relationship for Strength Gains From Nordic Hamstring
+    Exercise: A Systematic Review, Meta-Analysis, and Meta-Regression'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: nonathletes and athletes inexperienced with NHE
+  dose_magnitude: '3-103 weekly repetitions (median: 50)'
+  duration: '3-39 weeks (median: 6)'
+effect: Significant improvements in eccentric NHE strength (ES = 0.98), eccentric
+  isokinetic strength (ES = 0.52), and concentric isokinetic strength (ES = 0.42);
+  no significant improvement in isometric strength.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'
