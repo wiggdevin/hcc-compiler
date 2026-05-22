@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
@@ -30,6 +31,12 @@ def _get_json(url: str, timeout: float = 15.0) -> dict:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def _get_text(url: str, timeout: float = 15.0) -> str:
+    req = Request(url, headers=_ua_headers())
+    with urlopen(req, timeout=timeout) as resp:
+        return resp.read().decode("utf-8")
+
+
 def fetch_pubmed_by_pmid(pmid: str) -> LookupResult:
     url = (
         "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?"
@@ -54,6 +61,27 @@ def fetch_pubmed_by_pmid(pmid: str) -> LookupResult:
         pmid=pmid,
         journal=rec.get("fulljournalname"),
     )
+
+
+def fetch_pubmed_abstract(pmid: str) -> str:
+    url = (
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?"
+        + urlencode({
+            "db": "pubmed", "id": pmid, "rettype": "abstract", "retmode": "xml",
+            "tool": "hcc-compiler", "email": _email(),
+        })
+    )
+    xml_text = _get_text(url)
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError:
+        return ""
+    parts: list[str] = []
+    for node in root.iter("AbstractText"):
+        text = "".join(node.itertext()).strip()
+        if text:
+            parts.append(text)
+    return " ".join(parts)
 
 
 def resolve_doi(doi: str) -> LookupResult:

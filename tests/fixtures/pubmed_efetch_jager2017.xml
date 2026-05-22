@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID Version="1">28642676</PMID>
+      <Article>
+        <ArticleTitle>International Society of Sports Nutrition Position Stand: protein and exercise.</ArticleTitle>
+        <Abstract>
+          <AbstractText Label="BACKGROUND">Protein intake supports muscle protein synthesis after resistance exercise.</AbstractText>
+          <AbstractText Label="CONCLUSIONS">An overall daily protein intake of 1.4-2.0 g protein/kg body weight/day is sufficient for most exercising individuals.</AbstractText>
+        </Abstract>
+      </Article>
+    </MedlineCitation>
+  </PubmedArticle>
+</PubmedArticleSet>
