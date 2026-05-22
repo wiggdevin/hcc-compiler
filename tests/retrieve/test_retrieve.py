@@ -72,6 +72,9 @@ QUERY_VEC = [1.0, 0.0, 0.0]  # embed() always returns this in tests
 def test_basic_top_k(tmp_path):
     """query returns top-3 results, descending similarity, a1 first."""
     db = _make_db(tmp_path)
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         results = query("anything", k=3, db_path=db)
@@ -91,6 +94,9 @@ def test_basic_top_k(tmp_path):
 def test_domain_filter_nutrition(tmp_path):
     """domain='nutrition' returns only nutrition atoms and nutrition patterns."""
     db = _make_db(tmp_path)
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         results = query("anything", k=10, domain="nutrition", db_path=db)
@@ -108,6 +114,9 @@ def test_domain_filter_nutrition(tmp_path):
 def test_k_larger_than_results(tmp_path):
     """k > total records returns all sorted without error."""
     db = _make_db(tmp_path)
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         results = query("anything", k=1000, db_path=db)
@@ -130,6 +139,9 @@ def test_empty_embeddings_table(tmp_path):
     con.commit()
     con.close()
 
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         results = query("anything", db_path=db)
@@ -140,6 +152,9 @@ def test_empty_embeddings_table(tmp_path):
 def test_patterns_included_without_domain_filter(tmp_path):
     """Patterns appear in results when no domain filter is applied."""
     db = _make_db(tmp_path)
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         results = query("anything", k=10, db_path=db)
@@ -173,6 +188,9 @@ def test_malformed_vector_skipped(tmp_path, caplog):
     con.close()
 
     import logging
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         with caplog.at_level(logging.WARNING, logger="hcc_compiler.retrieve"):

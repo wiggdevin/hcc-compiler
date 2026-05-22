@@ -162,6 +162,9 @@ def indexed_db(tmp_path_factory) -> Path:
 # ---------------------------------------------------------------------------
 
 def _top1(probe: str, domain: str, db: Path) -> str:
+    # Patch the import-site binding: retrieve.py uses "from X import embed",
+    # so this binding must be patched here. Patching the canonical definition
+    # site (embed_client.embed) would NOT intercept retrieve.py's local name.
     with patch("hcc_compiler.retrieve.embed", side_effect=_fake_embed):
         results = retrieve.query(probe, k=5, domain=domain, db_path=db)
     assert results, f"No results returned for probe: {probe!r} (domain={domain})"
