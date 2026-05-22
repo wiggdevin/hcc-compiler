@@ -24,4 +24,5 @@ def route_draft(draft_dir: Path, verify_dir: Path, library_root: Path) -> dict[s
             decisions[atom_id] = "queued"
         dest_dir.mkdir(parents=True, exist_ok=True)
         dest_dir.joinpath(f"{atom_id}.yaml").write_text(yaml.safe_dump(atom, sort_keys=False))
+        draft_path.unlink()
     return decisions

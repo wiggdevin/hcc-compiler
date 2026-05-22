@@ -50,3 +50,28 @@ def test_fail_verdict_routes_to_queue_even_for_routine(tmp_path):
     out = route_draft(draft, verify, library)
     assert (library / "queue" / "EA-NUT-0101.yaml").exists()
     assert out["EA-NUT-0101"] == "queued"
+
+
+def test_pass_with_notes_routes_routine_to_queue(tmp_path):
+    draft = tmp_path / "draft-output"
+    verify = tmp_path / "verify-output"
+    library = tmp_path / "library"
+    draft.mkdir(); verify.mkdir()
+    (draft / "EA-NUT-0102.yaml").write_text(yaml.safe_dump(_atom_yaml("EA-NUT-0102", "routine")))
+    (verify / "EA-NUT-0102.json").write_text(json.dumps({"atom_id": "EA-NUT-0102", "overall": "PASS_WITH_NOTES"}))
+    out = route_draft(draft, verify, library)
+    assert (library / "queue" / "EA-NUT-0102.yaml").exists()
+    assert out["EA-NUT-0102"] == "queued"
+
+
+def test_routed_draft_removed_from_source(tmp_path):
+    draft = tmp_path / "draft-output"
+    verify = tmp_path / "verify-output"
+    library = tmp_path / "library"
+    draft.mkdir(); verify.mkdir()
+    draft_path = draft / "EA-NUT-0103.yaml"
+    draft_path.write_text(yaml.safe_dump(_atom_yaml("EA-NUT-0103", "routine")))
+    (verify / "EA-NUT-0103.json").write_text(json.dumps({"atom_id": "EA-NUT-0103", "overall": "PASS"}))
+    route_draft(draft, verify, library)
+    assert not draft_path.exists()
+    assert (library / "atoms" / "nutrition" / "EA-NUT-0103.yaml").exists()
