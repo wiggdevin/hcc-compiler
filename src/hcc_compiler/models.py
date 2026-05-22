@@ -22,6 +22,18 @@ class Domain(str, Enum):
     BEHAVIORAL = "behavioral"
 
 
+# Canonical 3-letter prefix for each Domain. The atom-ID format is
+# EA-<PREFIX>-<4 digits>, and this mapping is the single source of truth.
+DOMAIN_PREFIX: dict[Domain, str] = {
+    Domain.NUTRITION: "NUT",
+    Domain.TRAINING: "TRA",
+    Domain.CONDITIONING: "CON",
+    Domain.SUPPLEMENTS: "SUP",
+    Domain.RECOVERY: "REC",
+    Domain.BEHAVIORAL: "BEH",
+}
+
+
 class Citation(BaseModel):
     id: str                 # DOI or PMID
     locator_quote: str      # verbatim supporting passage
