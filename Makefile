@@ -1,4 +1,4 @@
-.PHONY: validate build check harvest extract verify route curate curate-smoke patterns-smoke embed derive-patterns patterns retrieve
+.PHONY: validate build check harvest extract verify route curate curate-smoke patterns-smoke embed derive-patterns patterns retrieve compile
 
 validate:
 	uv run python scripts/curation/validate_library.py library
@@ -39,3 +39,7 @@ patterns: embed derive-patterns
 retrieve:
 	$(if $(QUERY),,$(error Usage: make retrieve QUERY="your search text"))
 	uv run python scripts/retrieve.py "$(QUERY)"
+
+compile:
+	$(if $(INTAKE),,$(error Usage: make compile INTAKE=path/to/intake.yaml))
+	uv run python scripts/compile_plan.py "$(INTAKE)"
