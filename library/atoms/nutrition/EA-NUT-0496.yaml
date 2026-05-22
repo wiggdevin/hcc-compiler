@@ -1,0 +1,29 @@
+id: EA-NUT-0496
+domain: nutrition
+claim: Combining moderate- or low-intensity resistance or aerobic exercise with caloric
+  restriction optimizes fat loss while preserving lean body mass.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2025.1579024
+  locator_quote: In summary, LR + CR, MA + CR and MR + CR are at an advantageous level
+    in improving various indicators. Combining moderate-and low-intensity resistance
+    or aerobic exercise with caloric restriction optimizes fat loss while preserving
+    lean body mass, making it a superior strategy for body composition improvement.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Comparing exercise modalities during caloric restriction: a systematic
+    review and network meta-analysis on body composition'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: healthy populations
+  dose_magnitude: caloric restriction combined with moderate- or low-intensity exercise
+  duration: varies (RCTs)
+effect: Optimizes fat loss and preserves lean body mass compared to other exercise
+  modalities during caloric restriction.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

@@ -1,0 +1,32 @@
+id: EA-NUT-5978
+domain: nutrition
+claim: Combined exercise and nutritional interventions are the most effective strategy
+  for improving handgrip strength, gait speed, and appendicular skeletal muscle mass
+  in older women with sarcopenia.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17152392
+  locator_quote: 'The network meta-analysis showed that combined exercise and nutritional
+    interventions were the most effective in improving handgrip strength (MD = 1.95,
+    95% CI: 0.1 to 3.18; SUCRA = 74%), usual gait speed (MD = 0.11, 95% CI: 0.04 to
+    0.17; SUCRA = 94.49%), maximum gait speed (MD = 0.22, 95% CI: 0.06 to 0.38; SUCRA
+    = 82.17%), and appendicular skeletal muscle mass (MD = 0.21, 95% CI: 0.05 to 0.38;
+    SUCRA = 92.83%).'
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Comparative Effectiveness of Exercise, Protein Supplementation, and
+    Combined Interventions for Sarcopenia Management in Women: A Network Meta-Analysis'
+population_applicability:
+  age: Older adults
+  sex: Female
+  training_status: Sarcopenic
+  dose_magnitude: Combined exercise and nutritional supplementation
+  duration: Variable (RCTs included)
+effect: Significant improvements in handgrip strength, usual and maximum gait speed,
+  and appendicular skeletal muscle mass compared to other interventions.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-08-24'

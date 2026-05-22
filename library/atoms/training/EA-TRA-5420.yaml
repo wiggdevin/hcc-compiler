@@ -1,0 +1,32 @@
+id: EA-TRA-5420
+domain: training
+claim: High-certainty evidence supports resistance and balance training combined with
+  protein-based nutritional supplementation as the most effective intervention for
+  improving muscle strength, mass, and physical function in individuals with sarcopenia.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jnha.2025.100718
+  locator_quote: High-certainty evidence supports RBT + Nu as the most effective intervention
+    for improving muscle strength, muscle mass, and physical function in individuals
+    with sarcopenia.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Comparative Effectiveness of Exercise and Protein-Based Interventions
+    on Muscle Strength, Mass, and Function in Sarcopenia: A Systematic Review and
+    Network Meta-Analysis'
+population_applicability:
+  age: Older adults (implied by sarcopenia diagnosis)
+  sex: Male and female
+  training_status: Sarcopenic
+  dose_magnitude: Resistance and balance training combined with protein-based nutritional
+    supplementation
+  duration: Not specified in abstract
+effect: RBT + Nu was the most effective intervention for improving grip strength (MD
+  = 5.45 kg), gait speed (MD = 0.20 m/s), SPPB (MD = 3.59 points), and skeletal muscle
+  index (MD = 0.95 kg/m²).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2030-04-10'

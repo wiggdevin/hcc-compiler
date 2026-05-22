@@ -1,0 +1,29 @@
+id: EA-SUP-7507
+domain: supplements
+claim: Combined intervention of leucine-enriched whey protein supplementation and
+  resistance training elicits favourable outcomes regarding increased lean muscle
+  mass, muscle strength and physical performance in older adults with sarcopenia.
+evidence_level: L1
+citations:
+- id: 10.1002/jcsm.70060
+  locator_quote: Findings from the reviewed studies indicate that the combined intervention
+    of leucine-enriched whey protein supplementation and resistance training elicits
+    favourable outcomes regarding increased lean muscle mass, muscle strength and
+    physical performance in older adults with sarcopenia.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Enhancing Muscle Quality: Exploring Leucine and Whey Protein in Sarcopenic
+    Individuals'
+population_applicability:
+  age: Older adults
+  sex: Unspecified
+  training_status: Sarcopenic
+  dose_magnitude: Leucine-enriched whey protein
+  duration: Unspecified
+effect: Increased lean muscle mass, muscle strength, and physical performance
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

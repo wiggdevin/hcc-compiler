@@ -1,0 +1,32 @@
+id: EA-NUT-4512
+domain: nutrition
+claim: Protein requirements estimated by the indicator amino acid oxidation (IAAO)
+  method are approximately 30% higher than those estimated by the nitrogen balance
+  (NB) method in both non-athletes and athletes.
+evidence_level: L1
+citations:
+- id: 10.1016/j.tjnut.2025.08.036
+  locator_quote: 'In nonathletes, protein requirements were significantly higher by
+    36% with IAAO [mean: 0.88 g/kg/d; 95% confidence interval (CI): 0.85, 0.90] than
+    with NB (mean: 0.64 g/kg/d; 95% CI: 0.61, 0.68). In athletes, protein requirements
+    were significantly higher by 27% with IAAO (mean: 1.61 g/kg/d; 95% CI: 1.44, 1.78)
+    than with NB (mean: 1.27 g/kg/d; 95% CI: 1.06, 1.47).'
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Comparison of Protein Requirements Based on the Nitrogen Balance and
+    Indicator Amino Acid Oxidation Methods: An Umbrella Review and Meta-analysis'
+population_applicability:
+  age: adults (subgroups analyzed)
+  sex: male and female
+  training_status: athletes and non-athletes
+  dose_magnitude: 0.64-1.61 g/kg/d
+  duration: acute assessment
+effect: The IAAO method suggests significantly higher protein requirements (0.88 g/kg/d
+  for non-athletes; 1.61 g/kg/d for athletes) compared to the NB method (0.64 g/kg/d
+  for non-athletes; 1.27 g/kg/d for athletes).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-08-24'

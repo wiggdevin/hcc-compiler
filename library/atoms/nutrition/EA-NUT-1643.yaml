@@ -1,0 +1,28 @@
+id: EA-NUT-1643
+domain: nutrition
+claim: The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with
+  no significant differences observed based on sex, age group, climate, or protein
+  source.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17162615
+  locator_quote: The overall mean nitrogen requirement was 104.2 mg N/kg/day. No significant
+    differences were found by sex, age group (<60 vs. ≥60 years), climate (temperate
+    vs. tropical), or protein source (animal, plant, or mixed).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Nitrogen Requirements in Healthy Adults: A Systematic Review and Meta-Analysis
+    of Nitrogen Balance Studies'
+population_applicability:
+  age: Adults (subgroups <60 and ≥60 years)
+  sex: Male and Female
+  training_status: Healthy adults
+  dose_magnitude: 104.2 mg N/kg/day
+  duration: Acute/Metabolic requirement
+effect: Establishes the estimated average nitrogen requirement for healthy adults.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2030-01-15'

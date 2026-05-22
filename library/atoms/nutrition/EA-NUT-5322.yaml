@@ -1,0 +1,27 @@
+id: EA-NUT-5322
+domain: nutrition
+claim: Calorie restriction combined with exercise is the most effective strategy for
+  reducing weight and fat percentage while maintaining lean body mass in healthy adults.
+evidence_level: L1
+citations:
+- id: 10.3390/nu16173007
+  locator_quote: Calorie restriction combined with exercise emerged as the most effective
+    strategy for reducing weight and fat percentage while maintaining lean body mass.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of Different Exercises Combined with Different Dietary Interventions
+    on Body Composition: A Systematic Review and Network Meta-Analysis'
+population_applicability:
+  age: 18-65
+  sex: Male and Female
+  training_status: healthy adults
+  dose_magnitude: N/A
+  duration: N/A
+effect: CR+EX ranked first for weight reduction, BMI, and body fat percentage, and
+  was effective for maintaining lean body mass in males.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2029-09-13'
