@@ -17,10 +17,16 @@ Rules:
   targets, or contraindications; otherwise "routine".
 - Use `evidence_level` L1 for meta-analyses / systematic reviews, L2 for RCTs,
   L3 for cohort/observational, L4 for expert opinion.
+- Canonical 3-letter domain prefixes used in `id` are:
+  nutrition→NUT, training→TRA, conditioning→CON, supplements→SUP,
+  recovery→REC, behavioral→BEH. Use exactly these codes.
+- Note: the `id` field you produce will be replaced by
+  `EA-<canonical-prefix>-<last 4 digits of PMID>` by the caller; you don't
+  need to invent a unique number.
 
 Schema (output JSON only, no markdown fences):
 {
-  "id": "EA-<DOMAIN3>-<4-DIGIT>",
+  "id": "EA-<NUT|TRA|CON|SUP|REC|BEH>-<4-DIGIT>",
   "domain": "<nutrition|supplements|training|conditioning|recovery|behavioral>",
   "claim": "<one-sentence verifiable claim>",
   "evidence_level": "L1|L2|L3|L4",
