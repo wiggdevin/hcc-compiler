@@ -1,0 +1,24 @@
+{
+  "id": "EA-NUT-0042",
+  "domain": "nutrition",
+  "claim": "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+  "evidence_level": "L1",
+  "citations": [{
+    "id": "10.1186/s12970-017-0177-8",
+    "locator_quote": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+    "existence": "UNVERIFIABLE",
+    "faithfulness": "ACCESS_LIMITED",
+    "cited_title": "International Society of Sports Nutrition Position Stand: protein and exercise"
+  }],
+  "population_applicability": {
+    "age": "18-55", "sex": "both", "training_status": "resistance-trained",
+    "dose_magnitude": "2.3-3.1 g/kg/d during hypocaloric periods", "duration": "8-16 wk"
+  },
+  "effect": "Maximizes retention of lean body mass during an energy deficit vs lower intakes.",
+  "contraindications": ["CKD or other renal contraindication"],
+  "tier": "high-impact",
+  "approval": "auto",
+  "library_version": "0.1.0",
+  "last_reviewed": "2026-05-22",
+  "expiry": "2027-05-22"
+}
