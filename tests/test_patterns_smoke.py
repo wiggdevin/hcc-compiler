@@ -79,13 +79,19 @@ def _fake_embed(req: EmbedRequest) -> list[float]:
 # ---------------------------------------------------------------------------
 
 def _claims_in(domain: str) -> dict[str, str]:
-    """Map atom_id -> lowercased claim for all atoms in *domain*."""
-    d = LIBRARY_ROOT / "atoms" / domain
+    """Map record_id -> lowercased searchable text for all atoms and patterns in *domain*."""
     result: dict[str, str] = {}
-    for f in sorted(d.glob("*.yaml")):
-        data = yaml.safe_load(f.read_text(encoding="utf-8"))
-        atom_id = data.get("id", f.stem)
-        result[atom_id] = data.get("claim", "").lower()
+    atoms_dir = LIBRARY_ROOT / "atoms" / domain
+    if atoms_dir.exists():
+        for f in sorted(atoms_dir.glob("*.yaml")):
+            data = yaml.safe_load(f.read_text(encoding="utf-8"))
+            result[data.get("id", f.stem)] = data.get("claim", "").lower()
+    patterns_dir = LIBRARY_ROOT / "patterns" / domain
+    if patterns_dir.exists():
+        for f in sorted(patterns_dir.glob("*.yaml")):
+            data = yaml.safe_load(f.read_text(encoding="utf-8"))
+            text = f"{data.get('pattern', '')} {data.get('parameterization', '')}".lower()
+            result[data.get("id", f.stem)] = text
     return result
 
 
