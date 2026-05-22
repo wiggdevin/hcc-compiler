@@ -1,0 +1,30 @@
+id: EA-NUT-8934
+domain: nutrition
+claim: Time-restricted eating (TRE) results in significant reductions in body weight,
+  fat mass, and fat-free mass compared to control groups, even when caloric intake
+  is isocaloric.
+evidence_level: L1
+citations:
+- id: 10.1093/nutrit/nuaf053
+  locator_quote: "In studies that used isocaloric control strategies, the TRE group\
+    \ showed significant reductions in BW (MD: -1.46\u2009kg; 95% CI: -2.65, -0.26),\
+    \ FM (MD: -1.50\u2009kg; 95% CI: -2.77, -0.24), and FFM (MD: -0.41\u2009kg; 95%\
+    \ CI: -0.79, -0. 03)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing
+    Time-Restricted Eating With and Without Caloric Restriction for Weight Loss
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: TRE yields favorable anthropometric and clinical outcomes, even when intake
+  is isocaloric between the intervention and control groups.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-28'
+expiry: '2026-03-28'

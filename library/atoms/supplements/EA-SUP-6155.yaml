@@ -1,0 +1,28 @@
+id: EA-SUP-6155
+domain: supplements
+claim: "Well-formulated plant protein blends can stimulate muscle protein synthesis\
+  \ at levels comparable to whey when consumed at adequate doses (\u226530 g with\
+  \ ~2.5 g leucine)."
+evidence_level: L1
+citations:
+- id: 10.3390/nu17152571
+  locator_quote: "our synthesis highlights that well-formulated plant protein blends\
+    \ (e.g., combinations of pea, rice, and canola) can stimulate MPS at levels comparable\
+    \ to whey when consumed at adequate doses (\u226530 g with ~2.5 g leucine)"
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Effect of Plant-Based Proteins on Recovery from Resistance Exercise-Induced
+    Muscle Damage in Healthy Young Adults-A Systematic Review
+population_applicability:
+  age: young adults
+  sex: unspecified
+  training_status: resistance-trained
+  dose_magnitude: "\u226530 g with ~2.5 g leucine"
+  duration: acute
+effect: stimulation of muscle protein synthesis comparable to whey
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2026-08-24'

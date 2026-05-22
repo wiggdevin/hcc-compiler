@@ -1,0 +1,35 @@
+id: EA-TRA-0309
+domain: training
+claim: In older adults with sarcopenic obesity, resistance training is the most effective
+  intervention for improving handgrip strength and reducing fat mass, while multicomponent
+  training is superior for reducing BMI and percentage body fat.
+evidence_level: L1
+citations:
+- id: 10.3389/fpubh.2026.1775783
+  locator_quote: For handgrip strength, both resistance training (RT) (MD = 3.96,
+    95% CI 2.15-5.77) and MC (MD = 2.13, 95% CI 0.25-4.01) were superior to UC, with
+    RT ranking first (SUCRA 90.9%). For fat mass, only RT significantly reduced FM
+    compared with UC (MD = -2.30, 95% CI -3.63 to -0.98) and achieved the highest
+    ranking (SUCRA 79.0%). For PBF, both MC (MD = -3.53, 95% CI -5.70 to -1.36) and
+    RT (MD = -2.30, 95% CI -3.98 to -0.62) were effective, with MC ranking highest
+    (SUCRA 77.1%).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Comparative effectiveness of exercise modalities and nutritional supplementation
+    for sarcopenic obesity in older adults: a network meta-analysis based on randomized
+    controlled trials'
+population_applicability:
+  age: Older adults
+  sex: Mixed
+  training_status: Sarcopenic obesity
+  dose_magnitude: Varies by study
+  duration: Varies by study
+effect: Resistance training ranked highest for handgrip strength (SUCRA 90.9%) and
+  fat mass reduction (SUCRA 79.0%), while multicomponent training ranked highest for
+  reducing BMI (SUCRA 85.1%) and percentage body fat (SUCRA 77.1%).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

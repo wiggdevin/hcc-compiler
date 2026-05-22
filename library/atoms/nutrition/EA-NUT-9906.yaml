@@ -1,0 +1,29 @@
+id: EA-NUT-9906
+domain: nutrition
+claim: Evidence-based nutritional strategies and structured hydration protocols offer
+  safe alternatives to performance-enhancing substances, enhancing performance and
+  cardiovascular health.
+evidence_level: L1
+citations:
+- id: 10.3390/nu18050736
+  locator_quote: Evidence-based nutrition offers safe alternatives to PESs (evidence-based
+    nutritional strategies and structured hydration protocols), enhancing performance
+    and cardiovascular health.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Forensic Perspective of Unintentional Doping, Cardiovascular Health,
+    and the Role of Nutrition in Competitive Sports
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: elite athletes
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Enhances performance and cardiovascular health as a safe alternative to performance-enhancing
+  substances.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-19'
+expiry: '2026-05-19'

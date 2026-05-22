@@ -1,0 +1,31 @@
+id: EA-SUP-0822
+domain: supplements
+claim: Supplementation with milk proteins significantly increases lean body mass and
+  fat-free mass while reducing body fat percentage, fat mass, and waist circumference.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17243877
+  locator_quote: 'MP supplementation substantially increased lean body mass (LBM)
+    (weighted mean difference (WMD): 0.41 kg; 95% CI: 0.19, 0.62; p < 0.001) and fat-free
+    mass (FFM) (WMD: 0.67 kg; 95% CI: 0.40, 0.94; p < 0.001). It also significantly
+    reduced body fat percentage (BFP) (WMD: -0.66%; 95% CI: -1.03, -0.28; p = 0.001),
+    fat mass (FM) (WMD: -0.66 kg; 95% CI: -0.91, -0.41; p < 0.001), and waist circumference
+    (WC) (WMD: -0.69 cm; 95% CI: -1.16, -0.22; p = 0.004).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Supplementation with Milk Proteins on Body Composition
+    and Anthropometric Parameters: A Systematic Review and Dose-Response Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: mixed
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Increased lean body mass and fat-free mass; reduced body fat percentage, fat
+  mass, and waist circumference.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-15'
+expiry: '2028-01-15'

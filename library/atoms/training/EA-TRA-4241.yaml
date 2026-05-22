@@ -1,0 +1,27 @@
+id: EA-TRA-4241
+domain: training
+claim: Strength training in older people with osteosarcopenia increases skeletal muscle
+  mass index, maximal isometric handgrip strength, and protein intake.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17172852
+  locator_quote: 'Conclusions: ST in older people with osteosarcopenia conditions
+    increases SMMI, MIHS, and protein intake.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Strength Training on Body Composition, Physical Performance,
+    and Protein or Calcium Intake in Older People with Osteosarcopenia: A Meta-Analysis'
+population_applicability:
+  age: older adults
+  sex: male and female
+  training_status: osteosarcopenic
+  dose_magnitude: various doses/types of strength training
+  duration: unspecified
+effect: Significant increases in skeletal muscle mass index (SMMI), maximal isometric
+  handgrip strength (MIHS), and protein intake.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'

@@ -1,0 +1,33 @@
+id: EA-NUT-7491
+domain: nutrition
+claim: Intermittent energy restriction (IER) diets combined result in comparable reductions
+  in body weight and fat mass to continuous energy restriction (CER), but lead to
+  slightly greater reductions in fat-free mass and waist circumference.
+evidence_level: L1
+citations:
+- id: 10.1016/j.advnut.2023.10.003
+  locator_quote: 'Changes in body weight [WMD: -0.42 kg; 95% confidence interval (CI):
+    -0.96 to 0.13; P = 0.132] and fat mass (FM) (WMD: -0.31 kg; 95% CI: -0.98 to 0.36;
+    P = 0.362) were comparable when results of the 3 IER diets were combined and compared
+    with those of CER. All IER diets combined reduced fat-free mass (WMD: -0.20 kg;
+    95% CI: -0.39 to -0.01; P = 0.044) and waist circumference (WMD: -0.91 cm; 95%
+    CI: -1.76 to -0.06; P = 0.036) more than CER.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Effects of Intermittent Energy Restriction Compared with Those of Continuous
+    Energy Restriction on Body Composition and Cardiometabolic Risk Markers - A Systematic
+    Review and Meta-Analysis of Randomized Controlled Trials in Adults
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: healthy adults
+  dose_magnitude: various IER protocols (TRE, ADF, 5:2)
+  duration: 2-52 weeks
+effect: IER resulted in comparable weight loss to CER but caused slightly greater
+  reductions in fat-free mass and waist circumference.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-04-01'
+expiry: '2029-04-01'

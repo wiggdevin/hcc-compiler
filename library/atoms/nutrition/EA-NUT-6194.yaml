@@ -1,0 +1,29 @@
+id: EA-NUT-6194
+domain: nutrition
+claim: Time-restricted eating significantly reduces body weight and fasting insulin
+  levels in overweight and obese women without negatively affecting lean body mass.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2025.1664412
+  locator_quote: "TRE significantly reduced body weight (WMD = -1.927 kg, 95% CI:\
+    \ -3.688 to -0.166, p = 0.032) and fasting insulin levels (WMD = -2.120 \u03BC\
+    U/mL, 95% CI: -4.172 to -0.069, p = 0.043), but showed no significant effects\
+    \ on BMI, fat mass, fat-free mass, visceral fat, blood lipids, glucose, HOMA-IR,\
+    \ or blood pressure (p > 0.05)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of time-restricted eating on body composition and metabolic
+    parameters in overweight and obese women: a systematic review and meta-analysis'
+population_applicability:
+  age: adult
+  sex: female
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Reduced body weight and fasting insulin; no lean mass loss.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

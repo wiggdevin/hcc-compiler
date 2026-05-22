@@ -1,0 +1,32 @@
+id: EA-NUT-6631
+domain: nutrition
+claim: Weight loss interventions in children and adolescents with obesity result in
+  a small but non-significant decrease in resting energy expenditure, although greater
+  decreases may occur with multidisciplinary studies involving caloric restriction.
+evidence_level: L1
+citations:
+- id: 10.1038/s41366-026-02048-9
+  locator_quote: The meta-analysis revealed a small but non-significant decrease in
+    resting EE (REE) after weight loss (Mean Change (MC) = -130.91 [-492.67, 230.86]
+    kJ, p = 0.467), regardless of the intervention type. However, the systematic review
+    suggests that the degree of weight loss and multidisciplinary studies (particularly
+    those involving caloric restriction) appear to result in a greater decrease in
+    REE, especially in girls, and during short-term interventions.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Energetic adaptations to weight loss in children and adolescents with
+    obesity: a systematic review and meta-analysis'
+population_applicability:
+  age: children and adolescents
+  sex: both
+  training_status: unspecified (overweight/obese)
+  dose_magnitude: unspecified
+  duration: variable
+effect: Small non-significant decrease in resting energy expenditure; greater decreases
+  observed with multidisciplinary interventions involving caloric restriction.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

@@ -1,0 +1,32 @@
+id: EA-SUP-1084
+domain: supplements
+claim: Creatine supplementation demonstrated superior effects for muscle strength,
+  protein supplementation proved most effective for endurance performance, and omega-3
+  supplementation yielded the greatest benefits for recovery outcomes in trained athletes.
+evidence_level: L1
+citations:
+- id: 10.3390/nu18060909
+  locator_quote: 'Creatine supplementation demonstrated superior effects for muscle
+    strength (SMD = 0.46, 95% CI: 0.29 to 0.63, SUCRA = 82.4%), protein supplementation
+    proved most effective for endurance performance (SMD = 0.28, 95% CI: 0.08 to 0.48,
+    SUCRA = 85.2%), and omega-3 supplementation yielded the greatest benefits for
+    recovery outcomes (SMD = 0.40, 95% CI: 0.18 to 0.62, SUCRA = 88.7%).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Comparative Effects of Dietary Protein, Creatine, and Omega-3 Supplementation
+    on Muscle Strength, Endurance, and Recovery in Trained Athletes: A Systematic
+    Review and Network Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: trained (minimum 6 months)
+  dose_magnitude: varies by supplement
+  duration: varies by trial
+effect: 'Outcome-specific efficacy: Creatine improves strength, protein improves endurance,
+  and omega-3 improves recovery.'
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-06'
+expiry: '2028-05-06'

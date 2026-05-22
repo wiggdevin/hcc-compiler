@@ -1,0 +1,32 @@
+id: EA-NUT-5482
+domain: nutrition
+claim: In postmenopausal women engaging in strength training, adding a calorie deficit
+  of 250-750 kcal/day enhances the reduction of fat mass, while protein intake at
+  a minimum of 0.8 g/kg bodyweight shows no significant additional effect on muscle
+  strength or lean body mass.
+evidence_level: L1
+citations:
+- id: 10.1186/s40798-025-00954-2
+  locator_quote: Eleven studies focused on an additional calorie deficit (250-750
+    kcal/day) which enhanced the reduction of fat mass. Protein intake was examined
+    in nine studies and has no significant additional effect on muscle strength and
+    lean body mass with a minimal intake of 0.8 g/kg bodyweight.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Analysis of the Additive Effects of Nutritional Strategies in Strength
+    Training Interventions on Body Composition, Muscle Strength and Bone Mineral Density
+    in Postmenopausal Women: A Systematic Review'
+population_applicability:
+  age: postmenopausal
+  sex: female
+  training_status: engaging in strength training
+  dose_magnitude: 250-750 kcal/day deficit; 0.8 g/kg protein
+  duration: varies (systematic review)
+effect: Calorie deficit enhances fat mass reduction; protein intake at 0.8 g/kg shows
+  no significant additional effect on muscle strength or lean body mass.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-17'
+expiry: '2026-04-17'

@@ -1,0 +1,36 @@
+id: EA-NUT-4009
+domain: nutrition
+claim: Whey protein combined with resistance training is the optimal regimen for improving
+  muscle mass and leg strength in older adults, while whey protein combined with multicomponent
+  exercise training is most effective for physical performance indicators like chair
+  rise and timed up and go.
+evidence_level: L1
+citations:
+- id: 10.3390/nu18091409
+  locator_quote: 'Among the treatment arms, whey plus resistance training was ranked
+    as the most effective treatment for muscle mass (large SMD, 1.29; CoE, moderate)
+    and leg strength (large SMD, 1.16; CoE, moderate); additionally, whey plus multicomponent
+    exercise training achieved the most promising effects on such sarcopenia-related
+    physical indicators such as chair rise (large effect, SMD = 1.09; CoE: high),
+    timed up and go (medium SMD, 0.70; CoE: high), and global mobility score (large
+    SMD, 1.02; CoE: high).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Explore the Optimal Treatment Regimen Across Combinations of Variate
+    Protein Sources and Exercise Modalities and Its Associated Factors in Older Adults:
+    A Network Meta-Analysis and Meta-Regression of Randomized Controlled Trials'
+population_applicability:
+  age: older adults
+  sex: unspecified
+  training_status: untrained
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Whey plus resistance training ranked most effective for muscle mass and leg
+  strength; whey plus multicomponent training ranked most effective for chair rise,
+  timed up and go, and global mobility score.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

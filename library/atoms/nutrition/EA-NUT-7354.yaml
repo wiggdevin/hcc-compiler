@@ -1,0 +1,35 @@
+id: EA-NUT-7354
+domain: nutrition
+claim: While lean mass loss is substantial during significant weight reduction, the
+  proportion of weight lost as lean mass is broadly comparable between incretin-based
+  pharmacotherapy and lifestyle interventions, and muscle mass can be significantly
+  preserved by integrating resistance training, adequate protein intake, and body
+  composition monitoring.
+evidence_level: L1
+citations:
+- id: 10.1111/dom.70666
+  locator_quote: Lean mass loss during significant weight reduction is substantial,
+    and the proportion of weight lost as lean mass is broadly comparable between incretin-based
+    pharmacotherapy and lifestyle interventions. Muscle mass can be significantly
+    preserved by integrating resistance training, adequate protein intake, and body
+    composition monitoring into weight-loss treatment programs.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Lean Mass Changes With Incretin Therapy Versus Lifestyle Intervention:
+    A Systematic Review and Meta-Analysis of Randomised Controlled Trials'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Incretin-based therapies result in lean mass constituting 25%-39% of total
+  weight loss, which is comparable to lifestyle interventions (26.2%), whereas lifestyle
+  interventions combined with resistance training demonstrate a more favorable profile
+  (17.5%).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-18'
+expiry: '2026-02-18'

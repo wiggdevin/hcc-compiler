@@ -1,0 +1,27 @@
+id: EA-NUT-7175
+domain: nutrition
+claim: Protein timing does not importantly modify exercise-induced changes in lean
+  body mass.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17132070
+  locator_quote: Protein timing does not importantly modify exercise-induced changes
+    in lean body mass.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Does Protein Ingestion Timing Affect Exercise-Induced Adaptations?
+    A Systematic Review with Meta-Analysis
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: resistance training
+  dose_magnitude: protein supplementation
+  duration: "\u22654 weeks"
+effect: No significant difference in lean body mass gains when comparing protein intake
+  before versus after exercise sessions.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

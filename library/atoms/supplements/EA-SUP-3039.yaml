@@ -1,0 +1,38 @@
+id: EA-SUP-3039
+domain: supplements
+claim: Protein supplements demonstrate beneficial effects on endurance performance,
+  muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only
+  supplements, though these benefits may be attributable to unmatched energy intake
+  between groups rather than protein per se.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2605338
+  locator_quote: "The results demonstrated that the effects of protein-carbohydrate\
+    \ supplements showed statistical significance in comparison to the placebo group\
+    \ [\u03BC(SMD): 0.57, 95% CI: 0.2 to 0.93] in enhancing endurance performance.\
+    \ Pure protein supplements demonstrated statistically significant effects compared\
+    \ to the placebo group in both endurance performance [\u03BC(SMD): 0.37, 95% CI:\
+    \ 0.02 to 0.71] and muscle strength [\u03BC(SMD): 0.72, 95% CI: 0.18 to 1.27].\
+    \ For post-exercise recovery, pure protein supplements also showed statistically\
+    \ significant effects compared to carbohydrate supplements for maintaining glycogen\
+    \ resynthesis [\u03BC(SMD): 0.83, 95% CI: 0.21 to 1.46]."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: The effectiveness of protein supplements on athletic performance and
+    post-exercise recovery - a Bayesian multilevel meta-analysis of randomized controlled
+    trials
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes
+  dose_magnitude: 1 g/kg/day additional protein
+  duration: unspecified
+effect: Protein-carbohydrate and pure protein supplements significantly improve endurance
+  performance and muscle strength versus placebo; pure protein improves glycogen resynthesis
+  versus carbohydrate supplements.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2026-04-10'

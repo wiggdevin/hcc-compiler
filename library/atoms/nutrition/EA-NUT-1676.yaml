@@ -1,0 +1,30 @@
+id: EA-NUT-1676
+domain: nutrition
+claim: In adults with overweight or obesity, intermittent fasting (IF) is comparably
+  effective to continuous caloric restriction (CR) for reducing body weight and adiposity,
+  and for improving cardiometabolic health markers.
+evidence_level: L1
+citations:
+- id: 10.1111/obr.13855
+  locator_quote: In adults with overweight or obesity, IF and CR are comparably effective
+    for reducing body weight and adiposity, as well as for improving cardiometabolic
+    health markers.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Longer-term effects of intermittent fasting on body composition and
+    cardiometabolic health in adults with overweight and obesity: A systematic review
+    and meta-analysis'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: unspecified/overweight or obese
+  dose_magnitude: intermittent fasting regimens
+  duration: "\u2265 6 months"
+effect: IF and CR result in similar reductions in body weight and adiposity, as well
+  as similar improvements in cardiometabolic health markers.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'
