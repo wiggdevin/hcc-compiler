@@ -27,6 +27,7 @@ curate-smoke:
 patterns-smoke:
 	python -m pytest tests/test_patterns_smoke.py -q
 
+.PHONY: embed
 embed: build
 
 derive-patterns:
