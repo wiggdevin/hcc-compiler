@@ -156,16 +156,14 @@ def test_db_write_failure_inside_transaction_leaves_no_partial_state(tmp_path):
     con.close()
 
     # --- second build with a DB-path failure inside BEGIN ---
-    _executemany_call_count = 0
     _real_executemany = sqlite3.Connection.executemany
 
     def _failing_executemany(self, sql, params):
-        nonlocal _executemany_call_count
-        _executemany_call_count += 1
-        if _executemany_call_count == 2:
-            # Second executemany = patterns INSERT, which is inside BEGIN.
-            # First executemany (atoms INSERT) has already run inside the
-            # open transaction, so without ROLLBACK those rows would persist.
+        # Inject on the patterns INSERT (inside BEGIN, after atoms INSERT has
+        # already written rows in the open transaction). Matching by SQL
+        # substring rather than call ordinal so future schema reshuffles
+        # don't silently move the injection point.
+        if "INSERT INTO patterns" in sql:
             raise sqlite3.OperationalError("injected DB failure inside transaction")
         return _real_executemany(self, sql, params)
 
