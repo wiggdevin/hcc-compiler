@@ -27,6 +27,7 @@ class Citation(BaseModel):
     locator_quote: str      # verbatim supporting passage
     existence: str          # VERIFIED / PLAUSIBLE / UNVERIFIABLE / DOI_MISMATCH / FABRICATED
     faithfulness: str       # VERIFIED / MINOR_DISTORTION / MAJOR_DISTORTION / UNSUPPORTED / ACCESS_LIMITED
+    cited_title: str | None = None  # NEW: the title the citation claims, used for L1 DOI_MISMATCH detection
 
 
 class PopulationApplicability(BaseModel):
