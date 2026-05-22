@@ -209,17 +209,15 @@ def test_compile_metadata_fields_filled(tmp_path: Path) -> None:
 
 
 def test_compile_compiled_at_is_recent(tmp_path: Path) -> None:
-    """compiled_at timestamp is within 5 seconds of now."""
+    """compiled_at timestamp is within seconds of now."""
     db = _make_fixture_db(tmp_path)
     intake = _make_intake()
-    before = datetime.utcnow()
+    before = datetime.now(timezone.utc)
     with patch("hcc_compiler.retrieve.embed") as mock_embed:
         mock_embed.return_value = QUERY_VEC
         pack = compile(intake, db)
-    after = datetime.utcnow()
-    # compiled_at is naive (utcnow)
-    compiled = pack.compiled_at.replace(tzinfo=None)
-    assert before <= compiled <= after
+    after = datetime.now(timezone.utc)
+    assert before <= pack.compiled_at <= after
 
 
 def test_compile_library_version_from_db(tmp_path: Path) -> None:

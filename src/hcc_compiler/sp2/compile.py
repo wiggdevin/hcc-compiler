@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from hcc_compiler.models import Domain, EvidenceAtom, RecommendationPattern
@@ -176,7 +176,7 @@ def compile(
     return EvidencePack(
         client_id=intake.client_id,
         library_version=db_version,
-        compiled_at=datetime.utcnow(),
+        compiled_at=datetime.now(timezone.utc),
         domain_recommendations=domain_blocks,
         compile_metadata=compile_metadata,
     )
