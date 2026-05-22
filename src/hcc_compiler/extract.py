@@ -46,6 +46,35 @@ def _stamp_ids(draft: dict, candidate: dict) -> dict:
     return draft
 
 
+_RETRY_NUDGE = (
+    "\nYour previous response had a locator_quote that was NOT a verbatim "
+    "substring of the abstract. You MUST copy the locator_quote character-for-"
+    "character from the abstract — no paraphrasing, no edits, no ellipses. "
+    "Pick a different verbatim span if needed."
+)
+
+
+def _quote_is_verbatim(draft: dict, abstract: str) -> bool:
+    if not abstract:
+        return True  # can't verify; trust LLM
+    citations = draft.get("citations") or []
+    if not citations:
+        return True
+    quote = (citations[0].get("locator_quote") or "").strip()
+    return bool(quote) and quote.lower() in abstract.lower()
+
+
+def _call_once(system: str, user_prompt: str, model: str) -> dict:
+    raw = call_llm(GLMRequest(
+        model=model, system=system, user_prompt=user_prompt,
+        max_tokens=2048, temperature=0.2,
+    ))
+    match = _JSON_RE.search(raw)
+    if not match:
+        raise ValueError(f"LLM did not return JSON: {raw[:200]}…")
+    return json.loads(match.group(0))
+
+
 def extract_atom(candidate: dict, model: str = "glm-4.6") -> dict:
     user_prompt = (
         "CANDIDATE:\n"
@@ -56,15 +85,9 @@ def extract_atom(candidate: dict, model: str = "glm-4.6") -> dict:
         f"journal: {candidate.get('journal')}\n"
         f"abstract: {candidate.get('abstract')}\n"
     )
-    raw = call_llm(GLMRequest(
-        model=model,
-        system=_load_prompt(),
-        user_prompt=user_prompt,
-        max_tokens=2048,
-        temperature=0.2,
-    ))
-    match = _JSON_RE.search(raw)
-    if not match:
-        raise ValueError(f"LLM did not return JSON: {raw[:200]}…")
-    draft = json.loads(match.group(0))
+    system = _load_prompt()
+    draft = _call_once(system, user_prompt, model)
+    abstract = candidate.get("abstract") or ""
+    if not _quote_is_verbatim(draft, abstract):
+        draft = _call_once(system + _RETRY_NUDGE, user_prompt, model)
     return _stamp_ids(draft, candidate)

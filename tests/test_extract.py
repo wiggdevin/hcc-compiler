@@ -70,6 +70,75 @@ def test_extract_atom_id_is_deterministic_from_pmid():
     assert draft["citations"][0]["cited_title"] == "Real Title"
 
 
+def test_extract_atom_retries_on_paraphrased_locator_quote():
+    """If LLM returns a quote that isn't a substring of the abstract, retry once."""
+    abstract = (
+        "Resistance training three times per week significantly improved "
+        "muscle strength and lean body mass in older adults."
+    )
+    candidate = {
+        "pmid": "12345678", "doi": "10.x/y", "title": "T", "year": 2026,
+        "journal": "J", "abstract": abstract,
+    }
+    paraphrased = json.dumps({
+        "id": "EA-TRA-0000", "domain": "training", "claim": "x", "evidence_level": "L1",
+        "citations": [{
+            "id": "10.x/y",
+            "locator_quote": "RT 3x/week improved strength and mass",  # paraphrase, NOT in abstract
+            "existence": "UNVERIFIABLE", "faithfulness": "ACCESS_LIMITED",
+            "cited_title": "T",
+        }],
+        "population_applicability": {"age":"x","sex":"x","training_status":"x","dose_magnitude":"x","duration":"x"},
+        "effect": "x", "contraindications": [], "tier": "routine",
+        "approval": "auto", "library_version": "0.1.0",
+        "last_reviewed": "2026-05-22", "expiry": "2027-05-22",
+    })
+    verbatim = json.dumps({
+        "id": "EA-TRA-0000", "domain": "training", "claim": "x", "evidence_level": "L1",
+        "citations": [{
+            "id": "10.x/y",
+            "locator_quote": "Resistance training three times per week significantly improved muscle strength and lean body mass in older adults.",
+            "existence": "UNVERIFIABLE", "faithfulness": "ACCESS_LIMITED",
+            "cited_title": "T",
+        }],
+        "population_applicability": {"age":"x","sex":"x","training_status":"x","dose_magnitude":"x","duration":"x"},
+        "effect": "x", "contraindications": [], "tier": "routine",
+        "approval": "auto", "library_version": "0.1.0",
+        "last_reviewed": "2026-05-22", "expiry": "2027-05-22",
+    })
+
+    with patch("hcc_compiler.extract.call_llm", side_effect=[paraphrased, verbatim]) as mocked:
+        draft = extract_atom(candidate)
+
+    assert mocked.call_count == 2, "should retry exactly once on paraphrased quote"
+    assert draft["citations"][0]["locator_quote"] in abstract
+
+
+def test_extract_atom_no_retry_when_locator_is_verbatim():
+    """If first attempt is already verbatim, no retry should happen."""
+    abstract = "The intervention improved outcomes by 25%."
+    candidate = {
+        "pmid": "12345678", "doi": "10.x/y", "title": "T", "year": 2026,
+        "journal": "J", "abstract": abstract,
+    }
+    good = json.dumps({
+        "id": "EA-NUT-0000", "domain": "nutrition", "claim": "x", "evidence_level": "L1",
+        "citations": [{
+            "id": "10.x/y",
+            "locator_quote": "The intervention improved outcomes by 25%.",
+            "existence": "UNVERIFIABLE", "faithfulness": "ACCESS_LIMITED",
+            "cited_title": "T",
+        }],
+        "population_applicability": {"age":"x","sex":"x","training_status":"x","dose_magnitude":"x","duration":"x"},
+        "effect": "x", "contraindications": [], "tier": "routine",
+        "approval": "auto", "library_version": "0.1.0",
+        "last_reviewed": "2026-05-22", "expiry": "2027-05-22",
+    })
+    with patch("hcc_compiler.extract.call_llm", side_effect=[good]) as mocked:
+        extract_atom(candidate)
+    assert mocked.call_count == 1
+
+
 def test_extract_atom_id_pads_short_pmid():
     bogus = json.dumps({
         "id": "EA-XX-0000",

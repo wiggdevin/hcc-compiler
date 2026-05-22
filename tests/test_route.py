@@ -64,6 +64,33 @@ def test_pass_with_notes_routes_routine_to_queue(tmp_path):
     assert out["EA-NUT-0102"] == "queued"
 
 
+def test_routine_pass_skips_when_destination_already_exists(tmp_path):
+    draft = tmp_path / "draft-output"
+    verify = tmp_path / "verify-output"
+    library = tmp_path / "library"
+    draft.mkdir(); verify.mkdir()
+    existing_dir = library / "atoms" / "nutrition"
+    existing_dir.mkdir(parents=True)
+    existing_path = existing_dir / "EA-NUT-0104.yaml"
+    original_atom = _atom_yaml("EA-NUT-0104", "routine")
+    original_atom["claim"] = "ORIGINAL CLAIM — must not be overwritten"
+    existing_path.write_text(yaml.safe_dump(original_atom))
+
+    new_atom = _atom_yaml("EA-NUT-0104", "routine")
+    new_atom["claim"] = "NEW CLAIM — should not land"
+    draft_path = draft / "EA-NUT-0104.yaml"
+    draft_path.write_text(yaml.safe_dump(new_atom))
+    (verify / "EA-NUT-0104.json").write_text(json.dumps({"atom_id": "EA-NUT-0104", "overall": "PASS"}))
+
+    out = route_draft(draft, verify, library)
+
+    assert out["EA-NUT-0104"] == "skipped-collision"
+    # Existing file untouched
+    assert "ORIGINAL CLAIM" in existing_path.read_text()
+    # Draft preserved for manual triage
+    assert draft_path.exists()
+
+
 def test_routed_draft_removed_from_source(tmp_path):
     draft = tmp_path / "draft-output"
     verify = tmp_path / "verify-output"

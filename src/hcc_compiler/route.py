@@ -18,11 +18,16 @@ def route_draft(draft_dir: Path, verify_dir: Path, library_root: Path) -> dict[s
         tier = atom.get("tier")
         if tier == "routine" and verdict == "PASS":
             dest_dir = library_root / "atoms" / atom["domain"]
-            decisions[atom_id] = "admitted"
+            decision = "admitted"
         else:
             dest_dir = library_root / "queue"
-            decisions[atom_id] = "queued"
+            decision = "queued"
         dest_dir.mkdir(parents=True, exist_ok=True)
-        dest_dir.joinpath(f"{atom_id}.yaml").write_text(yaml.safe_dump(atom, sort_keys=False))
+        dest_path = dest_dir / f"{atom_id}.yaml"
+        if dest_path.exists():
+            decisions[atom_id] = "skipped-collision"
+            continue
+        dest_path.write_text(yaml.safe_dump(atom, sort_keys=False))
         draft_path.unlink()
+        decisions[atom_id] = decision
     return decisions
