@@ -4,3 +4,6 @@ __pycache__/
 *.db
 .pytest_cache/
 *.egg-info/
+harvest-output/
+draft-output/
+verify-output/
