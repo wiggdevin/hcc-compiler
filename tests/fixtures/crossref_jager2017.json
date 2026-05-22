@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "message": {
+    "DOI": "10.1186/s12970-017-0177-8",
+    "title": ["International Society of Sports Nutrition Position Stand: protein and exercise"],
+    "issued": {"date-parts": [[2017, 6, 20]]},
+    "container-title": ["Journal of the International Society of Sports Nutrition"],
+    "author": [{"family": "Jäger", "given": "Ralf"}]
+  }
+}

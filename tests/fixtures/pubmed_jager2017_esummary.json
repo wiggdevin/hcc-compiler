@@ -1,0 +1,14 @@
+{
+  "header": {"type": "esummary", "version": "0.3"},
+  "result": {
+    "uids": ["28642676"],
+    "28642676": {
+      "uid": "28642676",
+      "pubdate": "2017 Jun 20",
+      "title": "International Society of Sports Nutrition Position Stand: protein and exercise.",
+      "fulljournalname": "Journal of the International Society of Sports Nutrition",
+      "elocationid": "doi: 10.1186/s12970-017-0177-8",
+      "articleids": [{"idtype": "doi", "value": "10.1186/s12970-017-0177-8"}, {"idtype": "pmid", "value": "28642676"}]
+    }
+  }
+}
