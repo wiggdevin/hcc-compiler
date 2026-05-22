@@ -1,0 +1,34 @@
+id: EA-TRA-4675
+domain: training
+claim: Combined aerobic and muscle strength training is more effective than aerobic
+  training alone at increasing cardiorespiratory fitness and lean body mass and reducing
+  percent body fat in patients with coronary artery disease.
+evidence_level: L1
+citations:
+- id: 10.1136/bjsports-2024-108530
+  locator_quote: Combined training was more effective in increasing CRF (standard
+    mean difference (SMD) 0.26, 95% CI 0.02 to 0.49, p=0.03) and lean body mass (mean
+    difference (MD) 0.78 kg, 95% CI 0.39 kg to 1.17 kg, p<0.001), and reducing per
+    cent body fat (MD -2.2%, 95% CI -3.5% to -0.9%, p=0.001) compared with aerobic
+    training alone.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of muscle strength training combined with aerobic training
+    versus aerobic training alone on cardiovascular disease risk indicators in patients
+    with coronary artery disease: a systematic review and meta-analysis of randomised
+    clinical trials'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: patients with coronary artery disease
+  dose_magnitude: ≥4 weeks of combined training
+  duration: ≥4 weeks
+effect: Combined training resulted in statistically significant improvements in cardiorespiratory
+  fitness (SMD 0.26), lean body mass (MD 0.78 kg), and percent body fat (MD -2.2%)
+  compared to aerobic training alone.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

@@ -1,0 +1,32 @@
+id: EA-TRA-1711
+domain: training
+claim: The optimal dose of resistance training to improve handgrip strength in older
+  adults with sarcopenia is 3 times per week, 49% 1RM, for 19 weeks, featuring 15
+  exercises, 6 sets, and 16 repetitions per exercise, totaling up to 1,400 reps weekly.
+evidence_level: L1
+citations:
+- id: 10.3389/fphys.2025.1564988
+  locator_quote: The optimal dose of resistance training to improve handgrip strength
+    in older adults with sarcopenia is 3 times per week (MD = 7.02, 95% CrI [4.62,
+    9.42]), 49% 1RM (MD = 7.11, 95% CrI [2.69, 11.52]), 19 weeks (MD = 7.87, 95% CrI
+    [3.89, 11.85]), 15 exercises (MD = 8.16, 95% CrI [3.65, 12.66]), 16 reps (MD =
+    7.62; 95% CrI [4.77, 10.46]), 6 sets (MD = 8.63; 95% CrI [5.06, 12.21]), 1,400
+    reps/week (MD = 8.45; 95% CrI [5.50, 11.40]).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Optimal dose of resistance training to improve handgrip strength in
+    older adults with sarcopenia: a systematic review and Bayesian model-based network
+    meta-analysis'
+population_applicability:
+  age: 68.3 ± 5.3 years
+  sex: 79.5% female
+  training_status: Sarcopenic older adults
+  dose_magnitude: 3 sessions/week, 49% 1RM, 15 exercises, 6 sets, 16 reps, 1400 reps/week
+  duration: 19 weeks
+effect: Improves handgrip strength (MD range 7.02–8.63 depending on parameter).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

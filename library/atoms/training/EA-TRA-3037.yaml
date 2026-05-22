@@ -1,0 +1,31 @@
+id: EA-TRA-3037
+domain: training
+claim: Increases in weekly training set volume are associated with increases in both
+  muscle hypertrophy and strength, though both exhibit diminishing returns.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-025-02344-w
+  locator_quote: The posterior probability of the marginal slope exceeding zero for
+    the effect of volume on both hypertrophy and strength was 100%, indicating that
+    gains in muscle size and strength increase as volume increases. However, both
+    best-fit models suggest diminishing returns, with the diminishing returns for
+    strength being considerably more pronounced.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Resistance Training Dose Response: Meta-Regressions Exploring
+    the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength
+    Gains'
+population_applicability:
+  age: 25.16 +/- 5.22 years
+  sex: 79.1% male, 20.9% female
+  training_status: mixed (adjusted for)
+  dose_magnitude: various weekly set volumes
+  duration: various (adjusted for)
+effect: Gains in muscle size and strength increase as volume increases, but with diminishing
+  returns.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

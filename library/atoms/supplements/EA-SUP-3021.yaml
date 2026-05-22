@@ -1,0 +1,34 @@
+id: EA-SUP-3021
+domain: supplements
+claim: Creatine supplementation combined with resistance training significantly increases
+  fat-free mass and body mass, with trained individuals exhibiting greater gains in
+  fat-free mass compared to untrained individuals.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2586523
+  locator_quote: "A pooled analysis of 61 trials revealed that Cr supplementation\
+    \ significantly increased FFM (weighted mean difference [WMD]: 1.39 kg; 95% confidence\
+    \ intereval (CI): 1.07,1.70; p\u2009<\u20090.001) and body mass (WMD: 0.89 kg;\
+    \ 95% CI: 0.76,1.01; p\u2009<\u20090.001) without significant effects on FM, BMI,\
+    \ and BFP. Trained individuals exhibited greater, though non-significant, gains\
+    \ in FFM (1.82 vs. 1.23 kg) compared with untrained participants, despite similar\
+    \ increases in total body mass."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Creatine supplementation and resistance training: a comparison between
+    novice and experienced lifters - a systematic review and dose-response meta-analysis'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: trained and untrained
+  dose_magnitude: various
+  duration: various
+effect: Significant increase in fat-free mass (1.39 kg) and body mass (0.89 kg); trained
+  individuals showed greater gains in FFM (1.82 kg) compared to untrained (1.23 kg),
+  though the difference was not statistically significant.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'

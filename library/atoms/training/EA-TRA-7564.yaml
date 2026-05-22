@@ -1,0 +1,33 @@
+id: EA-TRA-7564
+domain: training
+claim: Resistance exercise interventions lasting up to 6 months do not result in meaningful
+  changes in muscle fiber number, as meta-analysis results indicated no significant
+  alteration in estimated muscle fibers.
+evidence_level: L1
+citations:
+- id: 10.23736/S0022-4707.25.17206-X
+  locator_quote: 'Meta-analysis results indicated that resistance exercise did not
+    significantly alter the estimated number of muscle fibers (ES: 4086; 95% CI: -6430,
+    14,604; P=0.419). Additionally, the presence of muscle hyperplasia was not moderated
+    by prior training status, training duration, or the muscle group analyzed (all
+    P>0.05). These findings suggest that meaningful changes in muscle fiber number
+    are unlikely to occur in humans following resistance training interventions lasting
+    up to 6 months.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: A systematic review and meta-analysis examining if hyperplasia occurs
+    in humans in response to resistance exercise
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: mixed/untrained
+  dose_magnitude: resistance training
+  duration: up to 6 months
+effect: No significant change in muscle fiber number (hyperplasia) following resistance
+  training.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-13'
+expiry: '2026-05-13'

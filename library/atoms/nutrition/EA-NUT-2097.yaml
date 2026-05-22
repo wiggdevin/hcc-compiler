@@ -1,0 +1,27 @@
+id: EA-NUT-2097
+domain: nutrition
+claim: A higher carbohydrate intake does not significantly enhance muscle hypertrophy
+  during resistance training under isonitrogenous conditions.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-025-02341-z
+  locator_quote: "A pooled analysis revealed no significant effect of carbohydrate\
+    \ intake on muscle hypertrophy (SMD\u2009=\u20090.15, p\u2009=\u20090.23), with\
+    \ negligible heterogeneity across studies."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Effect of Carbohydrate Intake on Muscle Hypertrophy: A Systematic
+    Review and Meta-analysis'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: resistance training
+  dose_magnitude: higher vs lower carbohydrate intake
+  duration: unspecified
+effect: no significant effect on muscle hypertrophy
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

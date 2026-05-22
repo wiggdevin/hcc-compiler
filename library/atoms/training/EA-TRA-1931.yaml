@@ -1,0 +1,33 @@
+id: EA-TRA-1931
+domain: training
+claim: Resistance training under hypoxic conditions (RTH) results in trivial benefits
+  for muscle strength gains compared to normoxic conditions (RTN), with specific programming
+  variables like non-full-body routines and higher weekly volumes potentially enhancing
+  this effect.
+evidence_level: L1
+citations:
+- id: 10.1080/02640414.2024.2425536
+  locator_quote: 'The overall analyses showed trivial differences in 1RM favouring
+    RTH over RTN (SMD = 0.18 [CI: 0.04; 0.31]; p = 0.030). Sub-analyses revealed that
+    a RT programme of a non-full-body routine, including 9 or more sets per exercise/week
+    of multi-joint exercises performed to non-failure, favoured RTH for enhancing
+    1RM (p < 0.10).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The influence of specific resistance training methodological prescription
+    variables on strength development under hypoxic conditions: A systematic review
+    and meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Trivial differences in 1RM strength favouring hypoxic resistance training
+  over normoxic training.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

@@ -1,0 +1,29 @@
+id: EA-SUP-4168
+domain: supplements
+claim: Creatine supplementation combined with resistance training increases lean body
+  mass and reduces body fat percentage and mass compared to resistance training alone.
+evidence_level: L1
+citations:
+- id: 10.1519/JSC.0000000000004862
+  locator_quote: Compared with resistance training (RT) alone, creatine supplementation
+    increased LBM by 1.14 kg (95% CI 0.69 to 1.59), and reduced body fat percentage
+    by -0.88% (95% CI -1.66 to -0.11) and body fat mass by -0.73 kg (95% CI -1.34
+    to -0.11).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Effect of Creatine Supplementation on Resistance Training-Based
+    Changes to Body Composition: A Systematic Review and Meta-analysis'
+population_applicability:
+  age: < 50 years
+  sex: male/female
+  training_status: unspecified
+  dose_magnitude: 7 g or 0.3 g/kg
+  duration: unspecified
+effect: Increased lean body mass (1.14 kg) and reduced body fat percentage (-0.88%)
+  and mass (-0.73 kg).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-13'
+expiry: '2026-01-13'

@@ -1,0 +1,30 @@
+id: EA-SUP-5761
+domain: supplements
+claim: Divided daily doses of 4–6.4 g β-alanine are more likely to enhance maximal
+  strength and power than sustained-release formats or single large servings.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2566368
+  locator_quote: Daily β-alanine doses between 4 g and 6.4 g, especially when divided
+    into multiple smaller servings such as 0.8 g taken several times a day, were more
+    likely to enhance maximal strength and power-related outcomes. In contrast, studies
+    that used high total doses but relied on sustained-release formats, single large
+    servings, or training protocols with limited metabolic stress such as low volume
+    or long rest intervals often failed to show improvements in performance.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Dosing strategies for β-alanine supplementation in strength and power
+    performance: a systematic review'
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: resistance-trained
+  dose_magnitude: 4–6.4 g/day
+  duration: 5–8 weeks
+effect: Enhanced maximal strength and power outcomes when using divided dosing protocols.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-08-24'

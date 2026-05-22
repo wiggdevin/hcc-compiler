@@ -1,0 +1,33 @@
+id: EA-TRA-5023
+domain: training
+claim: Low-volume resistance training is the most effective intervention for improving
+  physical function, lean body mass, and lower-body muscle hypertrophy in older adults,
+  whereas higher volumes are required for maximal improvements in lower-limb strength.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-024-02123-z
+  locator_quote: 'LVRT was the most effective for improving timed up and go [- 1.20
+    standardised mean difference (SMD), 95% confidence interval (95% CI): - 1.57 to
+    - 0.82], 6-min walk test (1.03 SMD, 95% CI: 0.33-1.73), lean body mass (0.25 SMD,
+    95% CI: 0.10-0.40) and muscle hypertrophy (0.40 SMD, 95% CI: 0.25-0.54). Both
+    MVRT and HVRT were the most effective for improving lower-limb strength'
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of Resistance Training Volume on Physical Function, Lean Body
+    Mass and Lower-Body Muscle Hypertrophy and Strength in Older Adults: A Systematic
+    Review and Network Meta-analysis of 151 Randomised Trials'
+population_applicability:
+  age: ≥60 years
+  sex: Male and Female
+  training_status: Older adults (physically healthy)
+  dose_magnitude: Low, Moderate, and High Volume (based on weekly sets x frequency)
+  duration: Short (<20 weeks) and Medium-to-Long (≥20 weeks)
+effect: Low-volume resistance training provided the greatest improvements in timed
+  up and go, 6-min walk test, lean body mass, and muscle hypertrophy; moderate and
+  high volumes were most effective for lower-limb strength.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

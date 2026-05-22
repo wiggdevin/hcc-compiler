@@ -1,0 +1,29 @@
+id: EA-TRA-9632
+domain: training
+claim: Linear and undulating periodization resistance training have comparable effects
+  on enhancing athletic capacity, improving body composition, and regulating blood
+  glucose and insulin resistance.
+evidence_level: L1
+citations:
+- id: 10.3389/fpubh.2026.1707627
+  locator_quote: The results showed that LP and UP had comparable effects on enhancing
+    athletic capacity, improving body composition, and regulating blood glucose and
+    insulin resistance.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Comparison of linear and undulating periodization resistance training
+    on athletic capacities and health promotion: a systematic review and meta-analysis'
+population_applicability:
+  age: various
+  sex: male/female
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: various
+effect: Comparable improvements in athletic capacity, body composition, and glucose
+  regulation between Linear and Undulating Periodization.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-10'
+expiry: '2028-02-10'

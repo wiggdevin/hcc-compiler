@@ -1,0 +1,29 @@
+id: EA-TRA-5271
+domain: training
+claim: Resistance training is the most effective intervention for improving muscle
+  mass and strength in older adults, while combined resistance and aerobic exercise
+  is most effective for enhancing physical function.
+evidence_level: L1
+citations:
+- id: 10.4235/agmr.25.0052
+  locator_quote: Resistance training was most effective for improving muscle mass
+    and strength, while combined resistance and aerobic exercise is most effective
+    for enhancing physical function.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Position statement: Evidence-Based Exercise Guidelines for Sarcopenia
+    in Older Adults: Insights from the Korean Working Group on Sarcopenia'
+population_applicability:
+  age: older adults
+  sex: male/female
+  training_status: sarcopenic or non-sarcopenic older adults
+  dose_magnitude: individualized based on FITT principles
+  duration: not specified in abstract
+effect: Resistance training improves muscle mass and strength; combined resistance
+  and aerobic exercise improves physical function.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

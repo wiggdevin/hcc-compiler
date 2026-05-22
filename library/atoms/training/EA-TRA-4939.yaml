@@ -1,0 +1,29 @@
+id: EA-TRA-4939
+domain: training
+claim: Higher resistance training volume yields better outcomes for pain intensity
+  and disability compared to lower volume in individuals with patellofemoral pain.
+evidence_level: L1
+citations:
+- id: 10.2519/jospt.2025.13062
+  locator_quote: There was very low-certainty evidence that higher resistance training
+    volume yielded better outcomes for pain intensity and disability compared to a
+    lower volume.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of Equalized and Nonequalized Resistance Training Volumes on
+    Pain and Disability in Patients With Patellofemoral Pain: A Systematic Review
+    With Meta-Analyses'
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: patellofemoral pain patients
+  dose_magnitude: higher vs lower volume
+  duration: immediately and beyond intervention
+effect: Higher training volume improved pain intensity and disability compared to
+  lower volume.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-14'
+expiry: '2028-05-14'

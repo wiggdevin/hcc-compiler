@@ -1,0 +1,27 @@
+id: EA-TRA-9029
+domain: training
+claim: Aerobic and resistance training significantly improve quality of life, fatigue,
+  body composition, and functional capacity in patients across various cancer types.
+evidence_level: L1
+citations:
+- id: 10.1007/s00520-026-10363-0
+  locator_quote: Structured aerobic and resistance exercise showed to significantly
+    improve QoL, fatigue, body composition, and functional capacity in cancer patients.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The effects of aerobic and resistance training across eight cancer
+    types: a systematic review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: cancer patients
+  dose_magnitude: moderate-intensity, three times per week
+  duration: unspecified
+effect: Beneficial improvements in QoL, fatigue, body composition, and functional
+  capacity during and after cancer treatment.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

@@ -1,0 +1,27 @@
+id: EA-TRA-8975
+domain: training
+claim: Strength training significantly reduces both systolic and diastolic blood pressure
+  in older hypertensive individuals.
+evidence_level: L1
+citations:
+- id: 10.2174/0115734021411110251113064207
+  locator_quote: This meta-analysis concluded that strength training reduces systolic
+    and diastolic blood pressure in older hypertensive individuals.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Impact of Strength Training on Blood Pressure in Older Hypertensive
+    Patients: A Systematic Review and Meta-Analysis of Randomized Controlled Trials'
+population_applicability:
+  age: Older adults (average 69 years)
+  sex: Mixed
+  training_status: Hypertensive patients
+  dose_magnitude: 68 minutes per session, 3 times weekly
+  duration: 11 weeks
+effect: Reductions in systolic blood pressure (MD -8.81 mmHg) and diastolic blood
+  pressure (MD -4.53 mmHg).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2026-03-18'

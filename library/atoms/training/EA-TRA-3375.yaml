@@ -1,0 +1,33 @@
+id: EA-TRA-3375
+domain: training
+claim: Supersets provide a time-efficient alternative to traditional resistance training,
+  reducing session duration without compromising training volume, muscle activation,
+  perceived recovery, or chronic adaptations in maximal strength, strength endurance,
+  and muscle hypertrophy.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-025-02176-8
+  locator_quote: Supersets provide a time-efficient alternative to traditional RT,
+    reducing session duration without compromising training volume, muscle activation,
+    perceived recovery, or chronic adaptations in maximal strength, strength endurance,
+    and muscle hypertrophy.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Superset Versus Traditional Resistance Training Prescriptions: A Systematic
+    Review and Meta-analysis Exploring Acute and Chronic Effects on Mechanical, Metabolic,
+    and Perceptual Variables'
+population_applicability:
+  age: adults
+  sex: male and female
+  training_status: athletes and RT enthusiasts
+  dose_magnitude: N/A
+  duration: acute and chronic
+effect: Reduces session duration and increases training efficiency while maintaining
+  total repetitions, volume load, and chronic adaptations (strength, hypertrophy),
+  though with higher blood lactate, energy cost, and perceived exertion.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

@@ -1,0 +1,29 @@
+id: EA-TRA-5305
+domain: training
+claim: Resistance training induces significant gains in muscle mass in older adults
+  with sarcopenia, but the manipulation of training variables such as frequency, intensity,
+  volume, and duration does not yield greater outcomes.
+evidence_level: L1
+citations:
+- id: 10.1002/jcsm.70162
+  locator_quote: In sarcopenic older adults, designing an evidence-based RT induces
+    significant gains in muscle mass, but training variables manipulation does not
+    yield greater outcomes.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Influence of Resistance Training Variables to Improve Muscle Mass
+    Outcomes in Sarcopenia: A Systematic Review With Meta-Regressions'
+population_applicability:
+  age: "73.1 \xB1 6.6 years"
+  sex: 385 women (73%) and 143 men (27%)
+  training_status: Sarcopenic older adults
+  dose_magnitude: Supervised RT without nutritional intervention
+  duration: Varies (studies within last 14 years)
+effect: Significant gains in muscle mass (weighted ES g = 0.38); however, training
+  variable manipulation did not yield greater outcomes.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

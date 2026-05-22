@@ -1,0 +1,30 @@
+id: EA-TRA-3416
+domain: training
+claim: Resistance training significantly improves muscle strength, hypertrophy, power,
+  and physical function in healthy adults, with specific adaptations enhanced by manipulating
+  load, volume, and velocity.
+evidence_level: L1
+citations:
+- id: 10.1249/MSS.0000000000003897
+  locator_quote: Compared with no exercise (control), RT significantly improved muscle
+    strength, size (hypertrophy), power, endurance, contraction velocity, gait speed,
+    balance, and multiple physical function outcomes.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'American College of Sports Medicine Position Stand. Resistance Training
+    Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy
+    Adults: An Overview of Reviews'
+population_applicability:
+  age: ≥18 yr
+  sex: healthy adults
+  training_status: healthy adults
+  dose_magnitude: ≥6 wk
+  duration: 6-52 wk
+effect: Significant improvements in muscle strength, size, power, endurance, contraction
+  velocity, gait speed, balance, and physical function.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-03-28'

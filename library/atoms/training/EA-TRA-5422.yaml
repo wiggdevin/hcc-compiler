@@ -1,0 +1,26 @@
+id: EA-TRA-5422
+domain: training
+claim: Combined aerobic and resistance exercise significantly improves the 6-minute
+  walk test distance in hemodialysis patients.
+evidence_level: L1
+citations:
+- id: 10.1016/j.clnu.2025.08.005
+  locator_quote: Combined aerobic exercise (AE) and resistance exercise (RE) significantly
+    improved 6-min walk test (6MWT) (MD = 52.2 m; 95 % CrI, 31.7-73.0).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Nutritional and exercise interventions for muscle status in hemodialysis
+    patients: A systematic review and network meta-analysis'
+population_applicability:
+  age: adults
+  sex: male/female
+  training_status: hemodialysis patients
+  dose_magnitude: combined aerobic and resistance exercise
+  duration: unspecified
+effect: Improved 6-min walk test distance (MD = 52.2 m).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'

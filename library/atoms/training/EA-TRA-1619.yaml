@@ -1,0 +1,30 @@
+id: EA-TRA-1619
+domain: training
+claim: Multicomponent training programs combining strength, balance, and aerobic exercises
+  are more effective than single-component regimens at improving functional parameters
+  like Timed Up and Go, balance, and chair stand performance in older adults.
+evidence_level: L1
+citations:
+- id: 10.3389/fpubh.2025.1636439
+  locator_quote: "Multicomponent programs surpassed single-component interventions,\
+    \ producing a\u202F~\u202F1-s faster TUG, an 8-20% improvement in SEBT reach,\
+    \ and a 55% increase in CS-30 repetitions."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: A systematic review of multicomponent vs. single-component training
+    programs for fall prevention in older adults
+population_applicability:
+  age: 60-80 years
+  sex: unspecified
+  training_status: older adults
+  dose_magnitude: at least 6 weeks
+  duration: at least 6 weeks
+effect: Multicomponent programs resulted in a ~1-s faster Timed Up and Go test, an
+  8-20% improvement in Star Excursion Balance Test reach, and a 55% increase in 30-Second
+  Chair Stand repetitions compared to single-component interventions.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

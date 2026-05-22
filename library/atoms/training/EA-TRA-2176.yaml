@@ -1,0 +1,35 @@
+id: EA-TRA-2176
+domain: training
+claim: Shorter eccentric phase durations (SEG) enhance countermovement jump height
+  (CMJ) by a practically worthwhile degree with moderate certainty, whereas longer
+  eccentric phase durations (LEG) may result in similar or higher strength increases
+  in trained participants and volume-load matched conditions.
+evidence_level: L1
+citations:
+- id: 10.1080/02640414.2025.2535198
+  locator_quote: SEG enhanced CMJ by a practically worthwhile degree with moderate
+    certainty (Hedge's g = -0.73 [90% CI = -1.34, -0.12; 90% PI = -1.34, -0.12]),
+    while uncertain estimates were observed for maximal strength (g = 0.25 [90% CI
+    = -0.17, 0.67; 90% PI = -0.86, 1.36]) and muscle hypertrophy (g = 0.05 [90% CI
+    = -0.22, 0.33; 90% PI = -0.54, 0.64]). LEG led to practically equivalent or enhanced
+    strength gains, compared to SEG, in trained participants (g = 0.33 [90% CI = 0.07,
+    0.60; 90% PI = 0.07, 0.60]) and volume-load matched trials (g = 0.25 [90% CI =
+    0.04, 0.45; 90% PI = 0.04, 0.45]) with moderate certainty in subgroup analyses.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The effect of eccentric phase duration on maximal strength, muscle
+    hypertrophy and countermovement jump height: A systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: mixed (77% male)
+  training_status: mixed (46% trained)
+  dose_magnitude: N/A
+  duration: N/A
+effect: Shorter eccentric durations improve CMJ; longer durations may improve strength
+  in trained athletes or when volume is matched.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

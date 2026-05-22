@@ -1,0 +1,29 @@
+id: EA-TRA-6707
+domain: training
+claim: A 1.9-3.3% increase in global muscle mass in humans is associated with 4.1
+  ± 5.8% lower fat mass, a mean relative reduction in HbA1c of 4.1 ± 4.6% from baseline,
+  and a reduction of fasting glucose concentrations by 5.8 ± 7.3%.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-025-02263-w
+  locator_quote: This analysis reveals that a 1.9-3.3% increase in global muscle mass
+    in humans is associated with 4.1 ± 5.8% lower fat mass, a mean relative reduction
+    in HbA1c of 4.1 ± 4.6% from baseline, and a reduction of fasting glucose concentrations
+    by 5.8 ± 7.3% in studies lasting 2 weeks to 3 years.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of Skeletal Muscle Hypertrophy on Fat Mass and Glucose Homeostasis
+    in Humans and Animals: A Narrative Review with Systematic Literature Search'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: mixed
+  dose_magnitude: 1.9-3.3% increase in global muscle mass
+  duration: 2 weeks to 3 years
+effect: Reduced fat mass, reduced HbA1c, and reduced fasting glucose concentrations.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

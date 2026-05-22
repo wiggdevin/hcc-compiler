@@ -1,0 +1,31 @@
+id: EA-TRA-8790
+domain: training
+claim: In overweight/obese postmenopausal and older females, high-volume resistance
+  training (~77 sets/week) elicits greater improvements in glucose and C-reactive
+  protein levels compared to low-volume resistance training (~44 sets/week).
+evidence_level: L1
+citations:
+- id: 10.1016/j.jshs.2023.09.012
+  locator_quote: 'However, HVRT demonstrated higher effect sizes than LVRT for glucose
+    (HVRT = -1.19; 95%CI: -1.63 to -0.74; LVRT = -0.78; 95%CI:-1.15 to -0.41) and
+    C-reactive protein (HVRT = -1.00; 95%CI: -1.32 to -0.67; LVRT = -0.34; 95%CI,
+    -0.63 to -0.04)) when compared to CG.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of resistance training volume on body adiposity, metabolic
+    risk, and inflammation in postmenopausal and older females: Systematic review
+    and meta-analysis of randomized controlled trials'
+population_applicability:
+  age: Older/Postmenopausal
+  sex: Female
+  training_status: Not specified/Overweight or Obese
+  dose_magnitude: High-volume RT (~77 sets/week) vs Low-volume RT (~44 sets/week)
+  duration: Not specified in abstract
+effect: High-volume resistance training resulted in significantly larger reductions
+  in glucose and C-reactive protein compared to low-volume training.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-04-10'
+expiry: '2029-04-10'

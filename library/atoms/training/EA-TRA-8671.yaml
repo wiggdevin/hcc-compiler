@@ -1,0 +1,26 @@
+id: EA-TRA-8671
+domain: training
+claim: Aerobic and resistance exercise improve anthropometric measures, metabolic
+  health, and hormonal balance in women with PCOS.
+evidence_level: L1
+citations:
+- id: 10.61622/rbgo/2025rbgo56
+  locator_quote: Aerobic and resistance exercise improve anthropometric measures,
+    metabolic health, and hormonal balance in women with PCOS.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of physical activity in women with polycystic ovary syndrome:
+    a systematic review and meta-analysis'
+population_applicability:
+  age: reproductive-age
+  sex: female
+  training_status: unspecified/sedentary
+  dose_magnitude: 12-24 weeks
+  duration: 12-24 weeks
+effect: Improved anthropometric measures, metabolic health, and hormonal balance.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2030-04-10'

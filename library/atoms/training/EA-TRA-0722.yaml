@@ -1,0 +1,34 @@
+id: EA-TRA-0722
+domain: training
+claim: Resistance training significantly increases muscle fiber diameter, whereas
+  power training does not, and neither modality significantly increases muscle fascicle
+  length in ambulatory children with cerebral palsy.
+evidence_level: L1
+citations:
+- id: 10.3389/fped.2025.1546156
+  locator_quote: "Resistance training significantly increased muscle fiber diameter\
+    \ (d\u2009=\u20090.82, 95% CI\u2009=\u20090.54-1.09), whereas power training did\
+    \ not (d\u2009=\u20090.35, 95% CI\u2009=\u2009-0.29 to 0.99). Neither training\
+    \ modality produced a significant increase in muscle fascicle length (resistance\
+    \ training: d\u2009=\u20090.19, 95% CI\u2009=\u2009-0.17 to 0.56; power training:\
+    \ d\u2009=\u20090.37, 95% CI\u2009=\u2009-0.27 to 1.01)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Resistance or power training to enhance lower limb muscle morphology
+    in ambulatory children with cerebral palsy? A focused systematic review with meta-analysis
+population_applicability:
+  age: children
+  sex: male and female
+  training_status: ambulatory children with cerebral palsy (Gross Motor Function Classification
+    System levels I-III)
+  dose_magnitude: resistance or power training programs
+  duration: unspecified
+effect: Resistance training yields a significant increase in muscle fiber diameter
+  (d=0.82), while power training shows no significant effect on diameter; neither
+  modality produces a significant increase in muscle fascicle length.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

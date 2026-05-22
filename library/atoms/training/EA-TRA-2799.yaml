@@ -1,0 +1,30 @@
+id: EA-TRA-2799
+domain: training
+claim: Eccentric resistance training yields slightly greater muscle strength gains
+  than traditional resistance training in older adults, though both modalities produce
+  comparable effects on functional capacity, muscle power, and hypertrophy.
+evidence_level: L1
+citations:
+- id: 10.1016/j.arr.2025.102933
+  locator_quote: In summary, ERT yields slightly greater muscle strength gains than
+    TRT in older adults, while both produced comparable effects on functional capacity,
+    muscle power, and hypertrophy.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The effects of eccentric versus traditional resistance training on
+    muscle strength, power, hypertrophy, and functional performance in older adults:
+    A systematic review with multilevel meta-analysis of randomized controlled trials'
+population_applicability:
+  age: older adults
+  sex: mixed
+  training_status: healthy older adults
+  dose_magnitude: not specified
+  duration: varies
+effect: ERT provides a small but significant advantage in muscle strength (SMD=0.27)
+  over TRT, with no significant differences in functional capacity, power, or hypertrophy.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-05-20'
+expiry: '2028-05-20'

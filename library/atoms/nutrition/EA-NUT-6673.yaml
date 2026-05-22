@@ -1,0 +1,33 @@
+id: EA-NUT-6673
+domain: nutrition
+claim: Resistance training performed in a fasted state results in similar gains in
+  fat-free mass, muscle hypertrophy, and strength compared to training in a fed state,
+  but may be associated with greater reductions in body fat mass.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jbmt.2025.08.003
+  locator_quote: 'No significant differences were found between fasted and fed states
+    in fat free mass (SMD: 0.529; 95 % CI: -0.801 to 1.859; p = 0.436), muscle hypertrophy
+    (SMD: 0.645; 95 % CI: -0.753 to 2.042; p = 0.366), or strength (SMD: 0.415; 95
+    % CI: -0.399 to 1.228; p = 0.318). However, the fasted state was associated with
+    greater changes in body fat mass (SMD: -1.001; 95 % CI: -1.970 to -0.032; p =
+    0.043).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Resistance training performed in the fasted state compared to the
+    fed state on body composition and strength in adults: A systematic review with
+    meta-analysis'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: resistance training sessions
+  duration: unspecified
+effect: Fasted resistance training appears to have similar effects on muscle mass
+  and strength as fed training, but may lead to greater reductions in body fat mass.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'
