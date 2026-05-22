@@ -1,0 +1,29 @@
+id: EA-SUP-8400
+domain: supplements
+claim: Creatine use during resistance training can safely increase total and lean
+  body mass, strength, and performance in high-intensity, short-duration, repetitive
+  tasks.
+evidence_level: L1
+citations:
+- id: 10.1177/19417381231197389
+  locator_quote: Creatine use during resistance training can safely increase total
+    and lean body mass, strength, and performance in high-intensity, short-duration,
+    repetitive tasks.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Performance-Enhancing Drugs in Healthy Athletes: An Umbrella Review
+    of Systematic Reviews and Meta-analyses'
+population_applicability:
+  age: young healthy persons and athletes
+  sex: unspecified
+  training_status: resistance training
+  dose_magnitude: controlled doses
+  duration: unspecified
+effect: increased total and lean body mass, strength, and performance in high-intensity,
+  short-duration, repetitive tasks
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-17'
+expiry: '2029-06-17'

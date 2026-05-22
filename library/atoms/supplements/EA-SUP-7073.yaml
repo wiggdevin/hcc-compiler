@@ -1,0 +1,30 @@
+id: EA-SUP-7073
+domain: supplements
+claim: Caffeine supplementation enhances athletic performance in individuals with
+  the CYP1A2 AA genotype, shows marginal improvement in AC individuals, and has null
+  or detrimental effects in CC individuals.
+evidence_level: L1
+citations:
+- id: 10.1016/j.nutres.2025.10.005
+  locator_quote: Caffeine may enhance athletic performance in various sports modalities
+    and physical tests in individuals with the AA genotype, may also demonstrate marginal
+    improvement in AC individuals, and has null or detrimental effects on individuals
+    with the CC genotype.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Influence of the CYP1A2 genotype on the exercise performance of physically
+    active individuals under caffeine supplementation: a systematic review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes and physically active individuals
+  dose_magnitude: 2-9 mg/kg
+  duration: acute
+effect: Performance enhancement in AA genotype, marginal in AC, null/detrimental in
+  CC.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-15'
+expiry: '2030-01-15'

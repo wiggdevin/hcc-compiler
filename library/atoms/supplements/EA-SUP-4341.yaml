@@ -1,0 +1,33 @@
+id: EA-SUP-4341
+domain: supplements
+claim: Nutritional supplements, particularly caffeine, are associated with improvements
+  in attention, executive function, psychological mood, and gaming performance (shooting
+  scores and reaction times) in esports players.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2603303
+  locator_quote: 'Based on existing evidence, some nutritional supplements are associated
+    with three aspects of competitive performance among esports players: 1) Esports
+    players demonstrate significant improvements in attention and executive function,
+    which are closely related to gaming. 2) Improvements in esports players'' psychological
+    mood are manifested as increased vitality and reduced fatigue/negative emotions.
+    3) Improvements in gaming performance are primarily focused on shooting performance,
+    such as increased shooting scores and accuracy, as well as reduced reaction times.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Nutritional supplements to improve esports player performance: a systematic
+    review of randomized controlled trials'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: amateur esports players
+  dose_magnitude: variable
+  duration: acute
+effect: Improvements in attention, executive function, vitality, shooting accuracy,
+  and reaction time.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-31'
+expiry: '2030-01-31'

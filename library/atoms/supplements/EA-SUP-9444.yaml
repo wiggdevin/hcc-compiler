@@ -1,0 +1,31 @@
+id: EA-SUP-9444
+domain: supplements
+claim: Pre-exercise caffeinated chewing gum supplementation is effective in improving
+  endurance, repetitive sprinting, lower limb strength, and sport-specific performance,
+  as well as lowering rating of perceived exertion (RPE) or fatigue index even with
+  lower dosages of caffeine.
+evidence_level: L1
+citations:
+- id: 10.3390/nu16213611
+  locator_quote: Most studies have found that pre-exercise caffeinated chewing gum
+    supplementation is effective in improving endurance, repetitive sprinting, lower
+    limb strength, and sport-specific performance, as well as lowering rating of perceived
+    exertion (RPE) or fatigue index even with lower dosages of caffeine.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Caffeinated Chewing Gum on Exercise Performance and Physiological
+    Responses: A Systematic Review'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: 100-300 mg or 2-4 mg/kg
+  duration: acute
+effect: Improves endurance, repetitive sprinting, lower limb strength, and sport-specific
+  performance; lowers RPE and fatigue index.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-13'
+expiry: '2026-01-13'

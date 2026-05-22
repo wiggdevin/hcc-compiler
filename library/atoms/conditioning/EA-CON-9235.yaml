@@ -1,0 +1,31 @@
+id: EA-CON-9235
+domain: conditioning
+claim: Greater age is associated with longer phosphocreatine (PCr) recovery times
+  in upper leg muscles, and more acidic end-of-exercise pH correlates with longer
+  PCr recovery times across muscle groups in healthy individuals.
+evidence_level: L1
+citations:
+- id: 10.1002/nbm.70023
+  locator_quote: "Greater age was associated with longer PCr recovery in upper leg\
+    \ muscles among both healthy (\u03C1\u2009=\u20090.387, p\u2009<\u20090.05) and\
+    \ diseased (\u03C1\u2009=\u20090.733, p\u2009<\u20090.05) individuals. Additionally,\
+    \ longer PCr recovery time was correlated with more acidic end-of-exercise pH\
+    \ in all three muscle groups among healthy individuals."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: (31)P-MRS-Measured Phosphocreatine Recovery Kinetics in Human Muscles
+    in Health and Disease-A Systematic Review and Meta-Analysis
+population_applicability:
+  age: lifespan
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: N/A
+  duration: N/A
+effect: Increased age and lower end-of-exercise pH are associated with prolonged phosphocreatine
+  recovery kinetics.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

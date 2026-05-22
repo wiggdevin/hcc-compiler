@@ -1,0 +1,32 @@
+id: EA-SUP-2054
+domain: supplements
+claim: Creatine supplementation significantly increases body mass and fat-free mass
+  while reducing body fat percentage, with effects enhanced when combined with resistance
+  training.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2024.2380058
+  locator_quote: "Creatine supplementation increased body mass (WMD: 0.86\u2009kg;\
+    \ 95% CI: 0.76 to 0.96, I2\u2009=\u20090%) and fat-free mass (WMD: 0.82\u2009\
+    kg; 95% CI: 0.57 to 1.06, I2\u2009=\u20090%) while reducing body fat percentage\
+    \ (WMD: -0.28 %; 95% CI: -0.47 to -0.09; I2\u2009=\u20090%). Studies that incorporated\
+    \ a maintenance dose of creatine or performed resistance training in conjunction\
+    \ with supplementation had greater effects on body composition."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Creatine supplementation protocols with or without training interventions
+    on body composition: a GRADE-assessed systematic review and dose-response meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: mixed
+  dose_magnitude: various protocols
+  duration: various durations
+effect: Increased body mass (+0.86 kg), increased fat-free mass (+0.82 kg), and reduced
+  body fat percentage (-0.28%).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-01'
+expiry: '2029-06-01'

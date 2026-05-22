@@ -1,0 +1,34 @@
+id: EA-SUP-8455
+domain: supplements
+claim: Acute caffeine intake increases high-intensity sport-specific actions (such
+  as sprints, impacts, and accelerations) and improves the success rate of actions
+  during intermittent sports competition.
+evidence_level: L1
+citations:
+- id: 10.1123/ijspp.2023-0232
+  locator_quote: 'Caffeine ingestion increased high-intensity sport-specific actions
+    during competition, such as the number of sprints (SMD: 0.48; 95% CI, 0.23-0.74),
+    body impacts (SMD: 0.28; 95% CI, 0.08-0.49), accelerations (SMD: 0.35; 95% CI,
+    0.06-0.63), decelerations (SMD: 0.63; 95% CI, 0.12-1.14), and high-intensity offensive
+    efforts (SMD: 0.36; 95% CI, 0.11-0.61). Additionally, caffeine ingestion induced
+    a higher positive or success rate of actions during real or simulated competition
+    (SMD: 0.44; 95% CI, 0.19-0.69).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Can Caffeine Change the Game? Effects of Acute Caffeine Intake on
+    Specific Performance in Intermittent Sports During Competition: A Systematic Review
+    and Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes
+  dose_magnitude: unspecified
+  duration: acute
+effect: Increased high-intensity actions (sprints, impacts, accelerations, decelerations)
+  and higher success rate of sport-specific actions during competition.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-09'
+expiry: '2026-01-09'

@@ -1,0 +1,29 @@
+id: EA-SUP-7536
+domain: supplements
+claim: Caffeine, sodium bicarbonate, creatine, and beta-alanine (alone or in combination)
+  can significantly improve various performance metrics in elite combat sports athletes.
+evidence_level: L1
+citations:
+- id: 10.1038/s41598-024-84359-3
+  locator_quote: This study suggests that a range of dietary supplements, including
+    caffeine, sodium bicarbonate, sodium bicarbonate combined with caffeine, creatine,
+    creatine combined with sodium bicarbonate, and beta-alanine can improve the athletic
+    performance of elite combat sports athletes.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Advantages of different dietary supplements for elite combat sports
+    athletes: a systematic review and Bayesian network meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: elite
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: Significant increases in blood lactate, heart rate, mean power, peak power,
+  and number of kicks/throws were observed for various supplements compared to placebo.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-15'
+expiry: '2028-01-15'

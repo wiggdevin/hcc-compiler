@@ -1,0 +1,26 @@
+id: EA-SUP-8548
+domain: supplements
+claim: Acute caffeine ingestion significantly enhances repeated sprint ability, particularly
+  at doses ≥6 mg/kg body weight.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17213475
+  locator_quote: Acute caffeine ingestion significantly enhances RSA, particularly
+    at doses ≥6 mg/kg BW.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of Acute Caffeine Ingestion on Repeated Sprint Ability: A
+    Systematic Review and Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: males and females
+  training_status: mixed
+  dose_magnitude: ≥6 mg/kg BW
+  duration: acute
+effect: Significant enhancement in repeated sprint ability peak power output.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

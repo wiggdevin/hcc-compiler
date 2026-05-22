@@ -1,0 +1,27 @@
+id: EA-SUP-2412
+domain: supplements
+claim: Creatine supplementation can increase brain creatine content, but evidence
+  for an effect on cognition remains equivocal.
+evidence_level: L1
+citations:
+- id: 10.1016/j.bbr.2024.114982
+  locator_quote: The review supported claims that creatine supplementation can increases
+    brain creatine content but also demonstrated somewhat equivocal results for effects
+    on cognition.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Creatine supplementation research fails to support the theoretical
+    basis for an effect on cognition: Evidence from a systematic review'
+population_applicability:
+  age: general
+  sex: all
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: equivocal results for effects on cognition
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-17'
+expiry: '2029-06-17'

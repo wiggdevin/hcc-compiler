@@ -1,0 +1,29 @@
+id: EA-SUP-8319
+domain: supplements
+claim: Co-supplementation of caffeine and nitrates does not enhance exercise performance,
+  heart rate, or oxygen uptake compared to the isolated ingestion of caffeine or nitrates
+  alone.
+evidence_level: L1
+citations:
+- id: 10.3390/nu16193352
+  locator_quote: CAF+nitrates did not offer further benefits on exercise performance
+    or physiological variables from the isolated intake of CAF and nitrates.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of Caffeine and Nitrates Combination on Exercise Performance,
+    Heart Rate and Oxygen Uptake: A Systematic Review and Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: acute
+effect: No additive or synergistic benefit was observed for time trial performance,
+  submaximal heart rate, or oxygen uptake when combining caffeine and nitrates versus
+  taking them in isolation.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-03-18'
+expiry: '2026-03-18'

@@ -1,0 +1,26 @@
+id: EA-SUP-1351
+domain: supplements
+claim: Caffeine supplementation may enhance athletic performance but could have a
+  detrimental effect on sleep and recovery in athletes.
+evidence_level: L1
+citations:
+- id: 10.1016/j.clnesp.2024.11.007
+  locator_quote: While caffeine supplementation may enhance athletic performance,
+    it could have a detrimental effect on sleep and therefore recovery.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Does caffeine supplementation affect sleep in athletes? A systematic
+    review of nine randomized controlled trials
+population_applicability:
+  age: adult
+  sex: male/female
+  training_status: professional athletes
+  dose_magnitude: varied
+  duration: acute
+effect: Potential detrimental effect on sleep and recovery despite performance enhancement.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

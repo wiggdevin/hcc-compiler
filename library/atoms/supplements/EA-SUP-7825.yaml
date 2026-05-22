@@ -1,0 +1,28 @@
+id: EA-SUP-7825
+domain: supplements
+claim: Combined carbohydrate-caffeine mouth rinsing does not demonstrate synergistic
+  ergogenic effects on physical exercise performance but may improve cognitive performance.
+evidence_level: L1
+citations:
+- id: 10.1139/apnm-2024-0228
+  locator_quote: Overall, a synergistic influence of CHO-CAF mouth rinse on physical
+    exercise performance is not evident, but preliminary evidence suggests potential
+    benefits on cognitive performance.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Exploring the ergogenic potential of carbohydrate-caffeine combined
+    mouth rinse on exercise and cognitive performance: a systematic review'
+population_applicability:
+  age: adult
+  sex: male and female
+  training_status: athletes
+  dose_magnitude: mouth rinse
+  duration: acute
+effect: No synergistic effect on physical performance; potential benefit for cognitive
+  performance.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-13'
+expiry: '2026-01-13'

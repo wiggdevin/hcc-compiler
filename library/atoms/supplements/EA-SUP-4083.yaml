@@ -1,0 +1,28 @@
+id: EA-SUP-4083
+domain: supplements
+claim: Low-dose caffeine capsules (≈3 mg/kg) are the most effective strategy for improving
+  time-trial performance, with moderate-dose capsules and gum serving as viable alternatives.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17233792
+  locator_quote: This systematic review and network meta-analysis identified low-dose
+    caffeine capsules (≈3 mg/kg) as the most effective strategy for improving time-trial
+    performance, with moderate-dose capsules and gum serving as viable alternatives.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of Caffeine Dose and Administration Method on Time-Trial Performance:
+    A Systematic Review and Network Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes
+  dose_magnitude: low (≈3 mg/kg)
+  duration: acute
+effect: Low-dose capsules most effectively reduced completion time (SMD = -0.34) and
+  had the highest probability of improving mean power output (SMD = 0.38).
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

@@ -1,0 +1,32 @@
+id: EA-SUP-4139
+domain: supplements
+claim: Creatine supplementation combined with resistance training produces small but
+  statistically significant improvements in upper-body strength (bench/chest press),
+  lower-body strength (squat), vertical jump height, and Wingate peak power compared
+  to placebo.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17172748
+  locator_quote: Creatine plus resistance training produced small but statistically
+    significant improvements in bench and chest press strength [WMD = 1.43 kg, p =
+    0.002], squat strength [WMD = 5.64 kg, p = 0.001], vertical jump [WMD = 1.48 cm,
+    p = 0.01], and Wingate peak power [WMD = 47.81 Watts, p = 0.004] when compared
+    to the placebo.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Effects of Creatine Supplementation on Upper- and Lower-Body Strength
+    and Power: A Systematic Review and Meta-Analysis'
+population_applicability:
+  age: adults (younger adults showed significant increases; older adults did not)
+  sex: males (significant increases observed); females (benefits not observed)
+  training_status: combined with resistance training
+  dose_magnitude: not specified in abstract
+  duration: not specified in abstract
+effect: Small but statistically significant improvements in bench/chest press strength,
+  squat strength, vertical jump, and Wingate peak power.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

@@ -1,0 +1,29 @@
+id: EA-SUP-4525
+domain: supplements
+claim: Caffeine mouth rinsing yields trivial-to-small improvements in exercise performance,
+  particularly for aerobic endurance and in the fed state, with brief (~5 s) rinses
+  outperforming longer durations.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2026.2638903
+  locator_quote: Caff-MR was associated with trivial-to-small improvements in exercise
+    performance (k = 114; g = 0.12, p = 0.01). Benefits were most consistent for aerobic
+    endurance and in the fed state; ~5-s rinses outperformed longer durations.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Revisiting the evidence on caffeine mouth rinse: effects on exercise
+    and cognitive performance: a meta-analytic review'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: mixed
+  dose_magnitude: 32-133 mg (U-shaped window)
+  duration: acute
+effect: Trivial-to-small improvements in exercise performance (g = 0.12), most consistent
+  for aerobic endurance.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

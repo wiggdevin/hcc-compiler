@@ -1,0 +1,29 @@
+id: EA-SUP-2459
+domain: supplements
+claim: Combined supplementation of caffeine and taurine yields credible positive effects
+  on anaerobic capacity and reaction time compared to either compound alone.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2566371
+  locator_quote: "Posterior estimates indicated that CAF+TAU was associated with a\
+    \ credible positive effect on anaerobic capacity (g\u2009=\u20090.46, 95% CrI\
+    \ [0.19, 0.71]) and reaction time (g\u2009=\u20090.75, 95% CrI [0.29, 1.18]) compared\
+    \ to CAF or TAU alone."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Caffeine and taurine: a systematic review and network meta-analysis
+    of their individual and combined effects on physical capacity, cognitive function,
+    and physiological markers'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: mixed
+  dose_magnitude: varied
+  duration: acute
+effect: Improved anaerobic capacity and reaction time.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-21'
+expiry: '2028-08-21'

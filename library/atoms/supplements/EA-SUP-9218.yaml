@@ -1,0 +1,31 @@
+id: EA-SUP-9218
+domain: supplements
+claim: Creatine supplementation is associated with a modest, transient increase in
+  serum creatinine levels, likely due to metabolic turnover rather than renal impairment,
+  and no significant changes were observed in GFR, suggesting preserved kidney function.
+evidence_level: L1
+citations:
+- id: 10.1186/s12882-025-04558-6
+  locator_quote: Creatine supplementation is associated with a modest, transient increase
+    in serum creatinine levels, likely due to metabolic turnover rather than renal
+    impairment. No significant changes were observed in GFR, suggesting preserved
+    kidney function.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effect of creatine supplementation on kidney function: a systematic
+    review and meta-analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: mixed
+  dose_magnitude: unspecified
+  duration: varied (≤1 week to >12 weeks)
+effect: 'Creatine supplementation results in a small but statistically significant
+  increase in serum creatinine (MD: 0.07 µmol/L) without significant changes in glomerular
+  filtration rate (GFR).'
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2028-04-10'

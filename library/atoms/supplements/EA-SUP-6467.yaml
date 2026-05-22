@@ -1,0 +1,29 @@
+id: EA-SUP-6467
+domain: supplements
+claim: L-arginine is the most effective supplement for reducing 100 m swimming time,
+  while beta-alanine is the best for decreasing blood lactate, and creatine combined
+  with sodium bicarbonate is the optimal approach for increasing blood pH.
+evidence_level: L1
+citations:
+- id: 10.3390/nu17010033
+  locator_quote: Arg emerged as the most efficacious modality for reducing 100 m time.
+    BA proved to be the preeminent strategy for decreasing blood lactate. Creatine_NaHCO3
+    was distinguished as the optimal approach for improving blood pH.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Different Dietary Supplements on Swimming Performance:
+    A Systematic Review and Network Meta-Analysis'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: swimmers
+  dose_magnitude: unspecified
+  duration: unspecified
+effect: L-arginine reduces 100 m time; beta-alanine decreases blood lactate; creatine
+  combined with sodium bicarbonate increases blood pH.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-14'
+expiry: '2030-01-14'

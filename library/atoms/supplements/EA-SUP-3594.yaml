@@ -1,0 +1,31 @@
+id: EA-SUP-3594
+domain: supplements
+claim: Caffeine intake in athletes increases the likelihood of side effects in a dose-dependent
+  manner, with tachycardia, insomnia, abdominal discomfort, and anxiety being the
+  most consistent.
+evidence_level: L1
+citations:
+- id: 10.1007/s40279-026-02441-4
+  locator_quote: Caffeine intake in athletes increases the likelihood of side effects
+    in a dose-dependent manner, with tachycardia, insomnia, abdominal discomfort,
+    and anxiety being the most consistent.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Caffeine Use in Sport: A Systematic Review and Meta-analysis of Acute
+    Side Effects and Implications for Athlete Health and Safety'
+population_applicability:
+  age: ≥15 years
+  sex: Mixed (63% male, 37% female)
+  training_status: Athletes
+  dose_magnitude: Mean 4.9 ± 2.4 mg/kg (range 1.3-12 mg/kg)
+  duration: Acute ingestion
+effect: Significantly higher odds of headache, abdominal discomfort, vigor/activeness,
+  tachycardia, insomnia, increased urine output, anxiety, and nervousness compared
+  to placebo; dose-dependent increase in tachycardia, headache, abdominal discomfort,
+  vigor/activeness, urine output, and anxiety.
+contraindications: []
+tier: high-impact
+approval: human
+library_version: 0.1.0
+last_reviewed: '2026-05-22'
+expiry: '2030-01-31'

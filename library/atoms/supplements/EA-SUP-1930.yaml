@@ -1,0 +1,29 @@
+id: EA-SUP-1930
+domain: supplements
+claim: In postmenopausal women, creatine supplementation at doses of at least 5 g/day
+  combined with resistance training yields small but meaningful gains in lean mass
+  and strength without evidence of harm.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2026.2668435
+  locator_quote: "In postmenopausal women, creatine, particularly \u2265 5 g\xB7day\u207B\
+    \xB9 with RT, yields small but meaningful gains in lean mass and strength without\
+    \ evidence of harm."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Creatine monohydrate for lean mass, strength, and bone density in
+    postmenopausal women: a systematic review and meta-analysis'
+population_applicability:
+  age: "\u226540-45 years (mean \u2248 62 y)"
+  sex: female
+  training_status: engaged in resistance training
+  dose_magnitude: "\u2265 5 g/day"
+  duration: "\u2265 6 weeks"
+effect: Lean mass increased by +0.37 kg (95% CI +0.05 to +0.69) and leg-press 1RM
+  strength increased by +7.5 kg (95% CI +2.2 to +12.8).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-18'
+expiry: '2026-02-18'

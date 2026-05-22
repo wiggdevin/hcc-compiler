@@ -1,0 +1,27 @@
+id: EA-SUP-8953
+domain: supplements
+claim: Creatine supplementation does not significantly reduce inflammatory biomarkers
+  in humans based on current evidence.
+evidence_level: L1
+citations:
+- id: 10.3389/fimmu.2026.1743603
+  locator_quote: Creatine supplementation does not significantly reduce inflammatory
+    biomarkers in humans based on current evidence.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Impact of creatine supplementation on inflammation: evidence from
+    a systematic review and meta-analysis of randomized double-blind placebo trials'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: healthy individuals, athletes, and clinical populations
+  dose_magnitude: various dosages
+  duration: various durations
+effect: "No significant acute or chronic effects on CRP, IL-6, IL-1\u03B2, TNF-\u03B1\
+  , or prostaglandin E2 were observed."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-18'
+expiry: '2028-02-18'

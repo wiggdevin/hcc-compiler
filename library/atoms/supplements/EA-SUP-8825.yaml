@@ -1,0 +1,35 @@
+id: EA-SUP-8825
+domain: supplements
+claim: Nutritional supplementation combined with exercise does not significantly improve
+  muscle mass or bone health outcomes in women across reproductive stages, though
+  it may improve upper-body strength.
+evidence_level: L1
+citations:
+- id: 10.7150/ijms.130435
+  locator_quote: 'The combined intervention showed no significant effects on muscle
+    mass measures: skeletal muscle mass (g=0.065, 95% CI: -0.353 to 0.482, p=0.762),
+    appendicular lean mass (g=0.197, 95% CI: -0.177 to 0.571, p=0.302), or fat-free
+    mass (g=0.069, 95% CI: -0.110 to 0.249, p=0.447). Significant improvements occurred
+    in bench press (g=0.279, 95% CI: 0.008 to 0.550, p=0.043) and handgrip strength
+    (g=0.412, 95% CI: 0.039 to 0.786, p=0.031). No significant effects emerged for
+    bone mineral content (g=0.195, 95% CI: -0.281 to 0.671, p=0.421) or bone mineral
+    density (g=0.087, 95% CI: -0.129 to 0.303, p=0.430).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Nutritional Supplementation Combined with Exercise for Musculoskeletal
+    Health in Women: A Systematic Review and Meta-Analysis Evaluating Proteins, Amino
+    Acids, and Creatine across Reproductive Stages'
+population_applicability:
+  age: broad (reproductive stages)
+  sex: female
+  training_status: exercising
+  dose_magnitude: varied (proteins, amino acids, creatine)
+  duration: varied
+effect: No significant effect on muscle mass or bone health; potential improvement
+  in upper-body strength.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-02-13'
+expiry: '2026-02-13'

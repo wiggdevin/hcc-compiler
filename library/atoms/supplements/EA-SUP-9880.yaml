@@ -1,0 +1,34 @@
+id: EA-SUP-9880
+domain: supplements
+claim: Combined supplementation of caffeine with sodium bicarbonate or beetroot juice
+  did not result in statistically significant improvements in endurance performance
+  compared to placebo or isolated supplementation.
+evidence_level: L1
+citations:
+- id: 10.1080/15502783.2025.2524033
+  locator_quote: 'The results showed no significant differences for either the isolated
+    (CAF/PLA [CAF+SB studies]: SMD = 0.30, 95% CI [-0.12, 0.73], p = 0.16; SB/PLA:
+    SMD = 0.31, 95% CI [-0.18, 0.80], p = 0.22; CAF/PLA [CAF+BJ studies]: SMD = 0.28,
+    95% CI [-0.08, 0.63], p = 0.13; BJ/PLA: SMD = 0.02, 95% CI [-0.33, 0.38], p =
+    0.90) or the combined supplement intake (CAF-SB/PLA: SMD = 0.43, 95% CI [-0.05,
+    0.91], p = 0.08; CAF-BJ/PLA: SMD = 0.33, 95% CI [-0.03, 0.69], p = 0.07) compared
+    with the PLA trial.'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Ergogenic effects of supplement combinations on endurance performance:
+    a systematic review and meta-analysis of randomized controlled trials'
+population_applicability:
+  age: unspecified
+  sex: unspecified
+  training_status: athletes
+  dose_magnitude: unspecified
+  duration: acute
+effect: No significant differences were found for combined supplement intake (Caffeine-Sodium
+  Bicarbonate or Caffeine-Beetroot Juice) versus placebo or versus the isolated supplements
+  on endurance performance.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

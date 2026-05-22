@@ -1,0 +1,31 @@
+id: EA-SUP-7092
+domain: supplements
+claim: Acute caffeine intake significantly improves mean velocity and mean power output
+  during resistance exercises, with greater improvements in mean velocity observed
+  in males and individuals with low habitual caffeine consumption.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2025.1686283
+  locator_quote: 'Caffeine significantly improved mean velocity (SMD = 0.42, 95% CI:
+    0.19-0.65, p < 0.05, I2 = 85%) and mean power output (SMD = 0.21, 95% CI: 0.12-0.30,
+    p < 0.05, I2 = 14%) during resistance exercises. Greater improvements in mean
+    velocity were observed in males (SMD: 0.56 vs. 0.22), and habitual caffeine consumption
+    < 3 mg/kg/day (SMD: 0.87 vs. 0.21) (all p < 0.01 for subgroup comparisons).'
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of acute caffeine intake on muscular power during resistance
+    exercise: a systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: males and females
+  training_status: resistance training participants
+  dose_magnitude: various caffeine doses
+  duration: acute intake
+effect: Increased mean velocity and mean power output during resistance exercise;
+  effects more pronounced in males and low habitual caffeine consumers.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-08-24'
+expiry: '2028-08-24'

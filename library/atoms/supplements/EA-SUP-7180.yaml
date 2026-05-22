@@ -1,0 +1,31 @@
+id: EA-SUP-7180
+domain: supplements
+claim: "Co-ingestion of creatine and \u03B2-alanine enhances high-intensity exercise\
+  \ performance, particularly anaerobic power and repeated-bout performance, but does\
+  \ not increase maximal strength compared to creatine alone."
+evidence_level: L1
+citations:
+- id: 10.3390/nu17132074
+  locator_quote: "Collectively, the combination of creatine and \u03B2-alanine supplementation\
+    \ enhanced high-intensity exercise performance, particularly anaerobic power and\
+    \ repeated-bout performance, compared to creatine or \u03B2-alanine alone. Co-ingestion\
+    \ of creatine and \u03B2-alanine supplementation did not increase measures of\
+    \ maximal strength compared to creatine alone."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: "Effects of Creatine and \u03B2-Alanine Co-Supplementation on Exercise\
+    \ Performance and Body Composition: A Systematic Review"
+population_applicability:
+  age: adults
+  sex: mixed (predominantly male)
+  training_status: unspecified
+  dose_magnitude: unspecified
+  duration: "\u22654 weeks"
+effect: Enhanced high-intensity exercise performance (anaerobic power, repeated-bout)
+  compared to mono-supplementation; no additional benefit for maximal strength.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'
