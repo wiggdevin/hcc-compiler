@@ -17,6 +17,18 @@ DOMAIN_QUERIES: dict[str, list[str]] = {
         '("resistance training"[MeSH] OR "strength training") AND (hypertrophy OR "lean body mass") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
         '("training volume" OR "weekly sets") AND ("muscle hypertrophy" OR strength) AND ("meta-analysis"[pt] OR "systematic review"[pt])',
     ],
+    "conditioning": [
+        '("endurance training" OR "aerobic exercise"[MeSH]) AND ("VO2 max" OR "cardiorespiratory fitness") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        '("high-intensity interval training"[MeSH] OR HIIT) AND ("aerobic capacity" OR "endurance performance") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+    ],
+    "recovery": [
+        '("sleep"[MeSH] OR "sleep quality") AND (athletes OR "athletic performance") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        '("cold water immersion" OR "cryotherapy"[MeSH] OR sauna) AND ("muscle recovery" OR "exercise recovery") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+    ],
+    "behavioral": [
+        '("exercise adherence" OR "physical activity adherence") AND ("behavior change" OR motivation) AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        '("goal setting" OR "self-monitoring" OR "habit formation") AND ("physical activity" OR exercise) AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+    ],
 }
 
 

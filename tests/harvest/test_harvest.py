@@ -7,8 +7,8 @@ FIXTURES = Path(__file__).resolve().parents[1] / "fixtures"
 
 
 def test_known_domains_registered():
-    for d in ("nutrition", "supplements", "training"):
-        assert d in DOMAIN_QUERIES
+    for d in ("nutrition", "supplements", "training", "conditioning", "recovery", "behavioral"):
+        assert d in DOMAIN_QUERIES, f"missing domain {d}"
         assert isinstance(DOMAIN_QUERIES[d], list)
         assert DOMAIN_QUERIES[d]
 
