@@ -10,9 +10,7 @@ from unittest.mock import patch
 import pytest
 
 # Import main() from the CLI script directly (no subprocess needed).
-_SCRIPT_DIR = Path(__file__).resolve().parents[2] / "scripts"
-sys.path.insert(0, str(_SCRIPT_DIR))
-from retrieve import main as _cli_main  # noqa: E402
+from retrieve import main as _cli_main
 
 QUERY_VEC = [1.0, 0.0, 0.0]
 
