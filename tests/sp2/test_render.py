@@ -12,6 +12,7 @@ from hcc_compiler.sp2.pack import (
     DomainBlock,
     EvidencePack,
     PatternMatch,
+    PreemptiveHit,
 )
 from hcc_compiler.sp2.render import render_markdown
 
@@ -271,6 +272,43 @@ def test_metadata_footer_present():
     assert "applicability_threshold: 0.5" in md
     assert "total queries issued: 2" in md
     assert "total contraindication hits: 1" in md
+
+
+def test_safety_preflight_section_renders():
+    """When preemptive_contraindications is non-empty, '## Safety preflight'
+    appears in the markdown BEFORE the first domain heading."""
+    meta = CompileMetadata(
+        top_k_per_domain=5,
+        applicability_threshold=0.4,
+        preemptive_contraindications=[
+            PreemptiveHit(
+                record_id="EA-NUT-9999",
+                record_type="atom",
+                claim_or_summary="Risky claim for nutrition",
+                matched_needle="CKD or other renal contraindication",
+            ),
+        ],
+    )
+    pack = EvidencePack(
+        client_id="preflight-test",
+        library_version="0.1.0",
+        compiled_at=datetime(2026, 5, 22, tzinfo=timezone.utc),
+        compile_metadata=meta,
+    )
+    md = render_markdown(pack)
+    assert "## Safety preflight" in md
+    preflight_pos = md.find("## Safety preflight")
+    first_domain_pos = md.find("## Nutrition")
+    assert preflight_pos != -1 and first_domain_pos != -1
+    assert preflight_pos < first_domain_pos
+    assert "EA-NUT-9999" in md
+    assert "CKD or other renal contraindication" in md
+
+
+def test_safety_preflight_section_absent_when_no_preemptive_hits():
+    """When preemptive_contraindications is empty, the section is omitted."""
+    md = render_markdown(_pack())
+    assert "## Safety preflight" not in md
 
 
 def test_total_queries_sums_across_domains():

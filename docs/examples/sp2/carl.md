@@ -1,9 +1,16 @@
 # Personalized Evidence Pack — carl_strength
 
-- Compiled at: 2026-05-22T20:57:42.144713
+- Compiled at: 2026-05-22T22:11:49.618286+00:00
 - Library version: 0.1.0
 
 ---
+
+## Safety preflight
+
+- **EA-NUT-0001** (atom): Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. — matched: *CKD or other renal contraindication*
+- **EA-SUP-0001** (atom): Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations. — matched: *Pre-existing renal disease*
+- **RP-NUT-caloric-restriction-rt-protein-body-comp** (pattern): Combine a structured caloric deficit (250–750 kcal/day) with resistance training at least 3 times per week and protein intake of 1.6–3.1 g/kg/day to maximize fat loss while preserving lean body mass. — matched: *CKD stages 3–5 or dialysis patients (protein restriction required)*
+- **RP-NUT-protein-band** (pattern): high-protein target during deficit — matched: *CKD or other renal contraindication present.*
 
 ## Nutrition
 
@@ -15,6 +22,8 @@
 
 **Backing evidence (top 3 by population match):**
 
+> ⚠ ⚠ CKD or other renal contraindication present. (matches intake)
+
 ### Pattern: RP-NUT-caloric-restriction-rt-protein-body-comp (sim=0.75)
 
 **Applies because:** Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.
@@ -25,6 +34,8 @@
 - A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions. ([10.1007/s40279-025-02341-z])
 - The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
 - Protein timing does not importantly modify exercise-induced changes in lean body mass. ([10.3390/nu17132070])
+
+> ⚠ ⚠ CKD stages 3–5 or dialysis patients (protein restriction required) (matches intake)
 
 ## Training
 
@@ -98,4 +109,4 @@
 - top_k_per_domain: 5
 - applicability_threshold: 0.4
 - total queries issued: 10
-- total contraindication hits: 0
+- total contraindication hits: 2

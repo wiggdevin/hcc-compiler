@@ -1,7 +1,7 @@
 {
   "client_id": "amy_runner",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-22T20:57:37.951521",
+  "compiled_at": "2026-05-22T22:11:49.154119Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -878,6 +878,7 @@
     "top_k_per_domain": 5,
     "applicability_threshold": 0.4,
     "contraindication_hits": [],
+    "preemptive_contraindications": [],
     "queries_issued": {
       "nutrition": [
         "protein intake for endurance in recreational adults",

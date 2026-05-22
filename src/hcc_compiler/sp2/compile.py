@@ -14,6 +14,7 @@ from hcc_compiler.sp2.pack import (
     DomainBlock,
     EvidencePack,
     PatternMatch,
+    PreemptiveHit,
 )
 from hcc_compiler.sp2.queries import derive_queries
 from hcc_compiler.sp2.safety import check_contraindications
@@ -73,6 +74,33 @@ def compile(
                 pass
     finally:
         con.close()
+
+    # ------------------------------------------------------------------
+    # 3b. Preemptive contraindication scan across the WHOLE library, so
+    # safety warnings surface even when the offending atom/pattern was
+    # not pulled into per-domain top-k by retrieval. Short-circuit when
+    # the intake has no restrictions to express.
+    # ------------------------------------------------------------------
+    preemptive: list[PreemptiveHit] = []
+    if intake.contraindications or intake.constraints:
+        for atom in atoms_by_id.values():
+            for warning in check_contraindications(atom, intake):
+                needle = warning.removeprefix("⚠ ").removesuffix(" (matches intake)")
+                preemptive.append(PreemptiveHit(
+                    record_id=atom.id,
+                    record_type="atom",
+                    claim_or_summary=atom.claim,
+                    matched_needle=needle,
+                ))
+        for pattern in patterns_by_id.values():
+            for warning in check_contraindications(pattern, intake):
+                needle = warning.removeprefix("⚠ ").removesuffix(" (matches intake)")
+                preemptive.append(PreemptiveHit(
+                    record_id=pattern.id,
+                    record_type="pattern",
+                    claim_or_summary=pattern.pattern,
+                    matched_needle=needle,
+                ))
 
     # ------------------------------------------------------------------
     # 4. Derive per-domain queries.
@@ -170,6 +198,7 @@ def compile(
         top_k_per_domain=top_k,
         applicability_threshold=applicability_threshold,
         contraindication_hits=sorted(all_warnings),
+        preemptive_contraindications=preemptive,
         queries_issued={d.value: qs for d, qs in queries_by_domain.items()},
     )
 

@@ -1,7 +1,7 @@
 {
   "client_id": "carl_strength",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-22T20:57:42.144713",
+  "compiled_at": "2026-05-22T22:11:49.618286Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -14,7 +14,9 @@
           "backing_atom_ids": [
             "EA-NUT-0001"
           ],
-          "warnings": []
+          "warnings": [
+            "⚠ CKD or other renal contraindication present. (matches intake)"
+          ]
         },
         {
           "pattern_id": "RP-NUT-caloric-restriction-rt-protein-body-comp",
@@ -50,7 +52,9 @@
             "EA-NUT-9665",
             "EA-NUT-9906"
           ],
-          "warnings": []
+          "warnings": [
+            "⚠ CKD stages 3–5 or dialysis patients (protein restriction required) (matches intake)"
+          ]
         }
       ],
       "atoms": [
@@ -724,7 +728,36 @@
   "compile_metadata": {
     "top_k_per_domain": 5,
     "applicability_threshold": 0.4,
-    "contraindication_hits": [],
+    "contraindication_hits": [
+      "⚠ CKD or other renal contraindication present. (matches intake)",
+      "⚠ CKD stages 3–5 or dialysis patients (protein restriction required) (matches intake)"
+    ],
+    "preemptive_contraindications": [
+      {
+        "record_id": "EA-NUT-0001",
+        "record_type": "atom",
+        "claim_or_summary": "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+        "matched_needle": "CKD or other renal contraindication"
+      },
+      {
+        "record_id": "EA-SUP-0001",
+        "record_type": "atom",
+        "claim_or_summary": "Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations.",
+        "matched_needle": "Pre-existing renal disease"
+      },
+      {
+        "record_id": "RP-NUT-caloric-restriction-rt-protein-body-comp",
+        "record_type": "pattern",
+        "claim_or_summary": "Combine a structured caloric deficit (250–750 kcal/day) with resistance training at least 3 times per week and protein intake of 1.6–3.1 g/kg/day to maximize fat loss while preserving lean body mass.",
+        "matched_needle": "CKD stages 3–5 or dialysis patients (protein restriction required)"
+      },
+      {
+        "record_id": "RP-NUT-protein-band",
+        "record_type": "pattern",
+        "claim_or_summary": "high-protein target during deficit",
+        "matched_needle": "CKD or other renal contraindication present."
+      }
+    ],
     "queries_issued": {
       "nutrition": [
         "protein intake for strength in trained adults",

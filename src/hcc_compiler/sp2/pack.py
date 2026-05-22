@@ -31,10 +31,18 @@ class DomainBlock(BaseModel):
     gaps: list[str] = Field(default_factory=list)
 
 
+class PreemptiveHit(BaseModel):
+    record_id: str
+    record_type: str  # "atom" | "pattern"
+    claim_or_summary: str
+    matched_needle: str
+
+
 class CompileMetadata(BaseModel):
     top_k_per_domain: int
     applicability_threshold: float
     contraindication_hits: list[str] = Field(default_factory=list)
+    preemptive_contraindications: list[PreemptiveHit] = Field(default_factory=list)
     queries_issued: dict[str, list[str]] = Field(default_factory=dict)
 
 

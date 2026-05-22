@@ -263,3 +263,122 @@ def test_compile_nutrition_block_has_pattern(tmp_path: Path) -> None:
     nut_block = pack.domain_recommendations[Domain.NUTRITION]
     pattern_ids = [p.pattern_id for p in nut_block.patterns]
     assert "RP-NUT-test-pattern" in pattern_ids
+
+
+def _atom_json_with_contraindication(atom_id: str, domain: str, contraindication: str) -> str:
+    """Variant of _atom_json that carries a contraindication string."""
+    return json.dumps({
+        "id": atom_id,
+        "domain": domain,
+        "claim": f"Risky claim for {domain}",
+        "evidence_level": "L1",
+        "citations": [
+            {
+                "id": "10.1234/test",
+                "locator_quote": "Supporting passage.",
+                "existence": "VERIFIED",
+                "faithfulness": "VERIFIED",
+                "cited_title": None,
+            }
+        ],
+        "population_applicability": {
+            "age": "adult",
+            "sex": "any",
+            "training_status": "any",
+            "dose_magnitude": "as needed",
+            "duration": "ongoing",
+        },
+        "effect": f"Has caveats in {domain}.",
+        "contraindications": [contraindication],
+        "tier": "high-impact",
+        "approval": "Dev Wiggins 2026-05-22",
+        "library_version": DB_VERSION,
+        "last_reviewed": "2026-05-22",
+        "expiry": "2027-05-22",
+    })
+
+
+def test_preemptive_contraindication_surfaces_when_atom_not_in_topk(tmp_path: Path) -> None:
+    """An atom with a matching contraindication surfaces in preemptive_contraindications
+    even when retrieval does NOT pull it into any domain's top-k.
+
+    The renal atom has no row in the embeddings table — retrieve.query() therefore
+    never sees it — but the library-wide preemptive scan still discovers it via
+    atoms_by_id iteration.
+    """
+    db = tmp_path / "preemptive.db"
+    con = sqlite3.connect(db)
+    con.executescript("""
+        CREATE TABLE atoms (
+            id TEXT PRIMARY KEY, domain TEXT, tier TEXT, evidence_level TEXT, json TEXT
+        );
+        CREATE TABLE patterns (
+            id TEXT PRIMARY KEY, domain TEXT, tier TEXT, json TEXT
+        );
+        CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
+        CREATE TABLE embeddings (
+            record_id TEXT PRIMARY KEY,
+            record_type TEXT NOT NULL,
+            vector TEXT NOT NULL
+        );
+    """)
+    # One contraindicated atom — NOT in embeddings table.
+    con.execute(
+        "INSERT INTO atoms VALUES (?,?,?,?,?)",
+        (
+            "EA-NUT-9999",
+            "nutrition",
+            "high-impact",
+            "L1",
+            _atom_json_with_contraindication(
+                "EA-NUT-9999", "nutrition", "CKD or other renal contraindication"
+            ),
+        ),
+    )
+    # One unrelated atom WITH an embedding so retrieve.query() has something to return.
+    con.execute(
+        "INSERT INTO atoms VALUES (?,?,?,?,?)",
+        ("EA-TRA-0001", "training", "high-impact", "L1", _atom_json("EA-TRA-0001", "training")),
+    )
+    con.execute(
+        "INSERT INTO embeddings VALUES (?,?,?)",
+        ("EA-TRA-0001", "atom", json.dumps(QUERY_VEC)),
+    )
+    con.execute("INSERT INTO meta VALUES ('library_version', ?)", (DB_VERSION,))
+    con.commit()
+    con.close()
+
+    intake = ClientIntake(
+        client_id="renal-client",
+        library_version=DB_VERSION,
+        demographics=Demographics(age=45, sex="M", weight_kg=92.0, height_cm=182.0),
+        training_status="trained",
+        goals=["strength"],
+        current_regimen="lifting",
+        constraints=[],
+        contraindications=["renal insufficiency (CKD stage 2)"],
+    )
+
+    with patch("hcc_compiler.retrieve.embed") as mock_embed:
+        mock_embed.return_value = QUERY_VEC
+        pack = compile(intake, db)
+
+    preemptive = pack.compile_metadata.preemptive_contraindications
+    assert any(hit.record_id == "EA-NUT-9999" for hit in preemptive), (
+        f"EA-NUT-9999 missing from preemptive hits: {[h.record_id for h in preemptive]}"
+    )
+    assert all(hit.record_type == "atom" for hit in preemptive if hit.record_id == "EA-NUT-9999")
+    # The contraindicated atom must NOT be in any domain block (no embedding → no retrieval).
+    for block in pack.domain_recommendations.values():
+        assert all(a.atom_id != "EA-NUT-9999" for a in block.atoms)
+
+
+def test_preemptive_skipped_when_intake_has_no_restrictions(tmp_path: Path) -> None:
+    """When intake.contraindications AND intake.constraints are both empty, the
+    preemptive scan short-circuits and returns an empty list."""
+    db = _make_fixture_db(tmp_path)
+    intake = _make_intake()  # contraindications=[], constraints=[]
+    with patch("hcc_compiler.retrieve.embed") as mock_embed:
+        mock_embed.return_value = QUERY_VEC
+        pack = compile(intake, db)
+    assert pack.compile_metadata.preemptive_contraindications == []

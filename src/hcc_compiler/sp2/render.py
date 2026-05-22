@@ -88,6 +88,18 @@ def render_markdown(pack: EvidencePack) -> str:
     lines.append("---")
     lines.append("")
 
+    # Safety preflight — library-wide preemptive contraindication hits
+    preemptive = pack.compile_metadata.preemptive_contraindications
+    if preemptive:
+        lines.append("## Safety preflight")
+        lines.append("")
+        for hit in preemptive:
+            lines.append(
+                f"- **{hit.record_id}** ({hit.record_type}): "
+                f"{hit.claim_or_summary} — matched: *{hit.matched_needle}*"
+            )
+        lines.append("")
+
     # Domain sections
     for domain in _DOMAIN_ORDER:
         block = pack.domain_recommendations.get(domain)

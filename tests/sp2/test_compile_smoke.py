@@ -104,3 +104,15 @@ def test_persona_compiles_against_real_library(persona: str, tmp_path: Path) -> 
         assert heading in md, (
             f"persona={persona}: missing domain heading '{heading}' in rendered markdown"
         )
+
+    # 5. Carl's CKD intake must surface ≥1 preemptive contraindication via
+    # the library-wide scan, regardless of retrieval top-k composition.
+    if persona == "carl_strength":
+        preemptive = pack.compile_metadata.preemptive_contraindications
+        assert len(preemptive) >= 1, (
+            f"persona={persona}: expected ≥1 preemptive contraindication hit, "
+            f"got {len(preemptive)}"
+        )
+        assert "## Safety preflight" in md, (
+            f"persona={persona}: missing '## Safety preflight' section in markdown"
+        )

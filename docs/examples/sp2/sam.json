@@ -1,7 +1,7 @@
 {
   "client_id": "sam_recomp",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-22T20:57:44.994949",
+  "compiled_at": "2026-05-22T22:11:50.121435Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -861,6 +861,7 @@
     "top_k_per_domain": 5,
     "applicability_threshold": 0.4,
     "contraindication_hits": [],
+    "preemptive_contraindications": [],
     "queries_issued": {
       "nutrition": [
         "protein intake for recomposition in recreational adults",
