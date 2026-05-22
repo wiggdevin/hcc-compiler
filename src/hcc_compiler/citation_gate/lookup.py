@@ -18,7 +18,7 @@ class LookupResult:
     journal: str | None
 
 
-_MIN_INTERVAL_S = 0.4
+_MIN_INTERVAL_S = 0.5
 _last_call_at = 0.0
 
 

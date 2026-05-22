@@ -1,8 +1,8 @@
 from __future__ import annotations
-import json
 import os
 from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+
+from hcc_compiler.citation_gate.lookup import _get_json
 
 DOMAIN_QUERIES: dict[str, list[str]] = {
     "nutrition": [
@@ -34,9 +34,7 @@ def _esearch(query: str) -> list[str]:
         + urlencode({"db": "pubmed", "term": query, "retmode": "json",
                      "retmax": "20", "tool": "hcc-compiler", "email": _email()})
     )
-    req = Request(url, headers={"User-Agent": f"hcc-compiler/0.1 (mailto:{_email()})"})
-    with urlopen(req, timeout=15) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+    data = _get_json(url)
     return data.get("esearchresult", {}).get("idlist", [])
 
 
