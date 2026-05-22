@@ -49,8 +49,9 @@ def test_matched_prompt_returns_canned_json():
 
 
 def test_unmatched_prompt_raises():
-    """A prompt that matches no branch must hard-fail (pytest.fail fires)."""
+    """A prompt that matches no branch must hard-fail (AssertionError fires)."""
     req = _make_req("ATOMS:\n- id=EA-UNK-001 domain=unknown claim='test' effect='test'")
-    # pytest.fail() raises pytest.fail.Exception (a subclass of BaseException)
-    with pytest.raises(pytest.fail.Exception):
+    # raise AssertionError(...) — subclasses Exception (not BaseException), so a
+    # broad `except Exception` in any future production caller will still see it.
+    with pytest.raises(AssertionError, match="no canned response for prompt"):
         _fake_call_llm(req)

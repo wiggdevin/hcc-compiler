@@ -280,7 +280,9 @@ def _fake_call_llm(req: LLMRequest) -> str:
     for prefix, domain in {v: k for k, v in _DOMAIN_PREFIX.items()}.items():
         if f"EA-{prefix}-" in req.user_prompt:
             return _make_canned_pattern(domain)
-    pytest.fail(f"_fake_call_llm: no canned response for prompt: {req.user_prompt!r}")
+    raise AssertionError(
+        f"_fake_call_llm: no canned response for prompt: {req.user_prompt!r}"
+    )
 
 
 @pytest.fixture(scope="session")
