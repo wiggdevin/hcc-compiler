@@ -1,0 +1,27 @@
+id: EA-NUT-6513
+domain: nutrition
+claim: Consuming at least 20-30 g of protein at a given meal provides anabolic and
+  metabolic benefits, particularly for older adults.
+evidence_level: L4
+citations:
+- id: 10.3945/ajcn.114.084053
+  locator_quote: "new research suggests daily needs for older adults of \u22651.0\
+    \ g/kg and identifies anabolic and metabolic benefits to consuming at least 20-30\
+    \ g protein at a given meal."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Defining meal requirements for protein to optimize metabolic roles
+    of amino acids
+population_applicability:
+  age: adults (specifically older adults)
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: 20-30 g protein per meal
+  duration: acute (per meal)
+effect: anabolic and metabolic benefits
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

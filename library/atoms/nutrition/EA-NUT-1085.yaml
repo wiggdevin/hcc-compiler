@@ -1,0 +1,31 @@
+id: EA-NUT-1085
+domain: nutrition
+claim: The IronFEMME Study aims to determine the influence of different hormonal profiles
+  on iron metabolism in response to endurance exercise in eumenorrheic, oral contraceptive
+  users, and postmenopausal well-trained women.
+evidence_level: L3
+citations:
+- id: 10.3390/ijerph18020735
+  locator_quote: The purpose of the IronFEMME Study described in this protocol article
+    is to determine the influence of different hormonal profiles on iron metabolism
+    in response to endurance exercise, and the main markers of muscle damage in response
+    to resistance exercise; both in eumenorrheic, oral contraceptive (OC) users and
+    postmenopausal well-trained women.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Methodological Approach of the Iron and Muscular Damage: Female Metabolism
+    and Menstrual Cycle during Exercise Project (IronFEMME Study)'
+population_applicability:
+  age: adult (eumenorrheic, OC users, and postmenopausal)
+  sex: female
+  training_status: well-trained
+  dose_magnitude: N/A
+  duration: N/A
+effect: To determine the influence of hormonal profiles on iron metabolism in response
+  to endurance exercise.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

@@ -1,0 +1,27 @@
+id: EA-NUT-4538
+domain: nutrition
+claim: Total daily leucine intake is positively associated with quadriceps muscle
+  cross-sectional area and maximum dynamic muscle strength in healthy older adults.
+evidence_level: L3
+citations:
+- id: 10.3390/nu13103536
+  locator_quote: Our results demonstrate moderate associations between total daily
+    leucine and both quadriceps CSA (r = 0.42; p = 0.004) and 1-RM (r = 0.45; p =
+    0.001).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Daily Leucine Intake Is Positively Associated with Lower Limb Skeletal
+    Muscle Mass and Strength in the Elderly
+population_applicability:
+  age: older adults
+  sex: both sexes
+  training_status: healthy free-living
+  dose_magnitude: "~7.6-8.0 g\xB7day-1"
+  duration: cross-sectional
+effect: moderate positive association with muscle mass and strength
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

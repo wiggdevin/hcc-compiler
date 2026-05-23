@@ -1,0 +1,27 @@
+id: EA-NUT-7411
+domain: nutrition
+claim: Menstrual cycle phases may alter interleukin-6 production causing a higher
+  inflammation when progesterone levels are elevated (days 19-21).
+evidence_level: L3
+citations:
+- id: 10.1080/17461391.2020.1853816
+  locator_quote: We concluded that menstrual cycle phases may alter interleukin-6
+    production causing a higher inflammation when progesterone levels are elevated
+    (days 19-21).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Hepcidin and interleukin-6 responses to endurance exercise over the
+    menstrual cycle
+population_applicability:
+  age: adult women
+  sex: female
+  training_status: endurance trained
+  dose_magnitude: 40 min treadmill running at 75% vVO2peak
+  duration: acute exercise session
+effect: higher inflammation during luteal phase
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2028-01-01'

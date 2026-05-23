@@ -1,0 +1,33 @@
+id: EA-NUT-5299
+domain: nutrition
+claim: Combining exercise with amino acid-based nutrition is sufficient to induce
+  a comparable muscle protein synthesis response between young and older individuals,
+  provided the exercise volume and amino acid/protein dose exceed a certain threshold.
+evidence_level: L1
+citations:
+- id: 10.1152/ajpendo.00213.2016
+  locator_quote: Our results highlight that optimization of exercise and amino acid-based
+    nutrition is sufficient to induce a comparable MPS response between young and
+    older individuals. However, the exercise volume completed and/or the amino acid/protein
+    dose and leucine content must exceed a certain threshold to stimulate equivalent
+    MPS rates in young and older adults, below which age-related muscle anabolic resistance
+    may become apparent.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Does the muscle protein synthetic response to exercise and amino acid-based
+    nutrition diminish with advancing age? A systematic review
+population_applicability:
+  age: Older and young adults
+  sex: Not specified
+  training_status: Not specified
+  dose_magnitude: Exceeds a certain threshold
+  duration: Acute
+effect: Optimization of exercise and amino acid-based nutrition induces comparable
+  muscle protein synthesis rates in young and older individuals when thresholds are
+  met.
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2024-06-01'
+expiry: '2029-06-01'

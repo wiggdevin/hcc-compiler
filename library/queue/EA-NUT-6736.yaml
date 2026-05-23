@@ -1,0 +1,27 @@
+id: EA-NUT-6736
+domain: nutrition
+claim: Older adults with sarcopenia should consume at least 1.2 g of proteins/kg/d,
+  and this minimum threshold can be increased in the presence of catabolic or muscle
+  wasting.
+evidence_level: L4
+citations:
+- id: 10.4082/kjfm.22.0224
+  locator_quote: Many guidelines recommended that older people should consume at least
+    1.2 g of proteins/kg/d. This minimum threshold can be increased in the presence
+    of catabolic or muscle wasting.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Management of Sarcopenia in Primary Care Settings
+population_applicability:
+  age: older adults
+  sex: male/female
+  training_status: unspecified
+  dose_magnitude: "\u22651.2 g/kg/d"
+  duration: unspecified
+effect: management of sarcopenia
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

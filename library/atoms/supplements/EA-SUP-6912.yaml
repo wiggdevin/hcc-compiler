@@ -1,0 +1,28 @@
+id: EA-SUP-6912
+domain: supplements
+claim: Endurance performance in iron-deficient female athletes improves by 2%-20%
+  when treated with 100 mg/day of elemental iron for up to 56 days via oral supplementation,
+  or bi-daily via parenteral administration over 8-10 days.
+evidence_level: L1
+citations:
+- id: 10.1016/j.jshs.2024.101009
+  locator_quote: However, endurance performance improved by 2%-20% when ID athletes
+    were treated with 100 mg/day of elemental iron for up to 56 days via oral supplementation,
+    or bi-daily via parenteral administration over 8-10 days.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Iron deficiency, supplementation, and sports performance in female
+    athletes: A systematic review'
+population_applicability:
+  age: 13-47 years
+  sex: female
+  training_status: high-level (VO2max > 45 mL/kg/min or trained > 5 h/week)
+  dose_magnitude: 100 mg/day elemental iron (oral) or bi-daily (parenteral)
+  duration: up to 56 days (oral) or 8-10 days (parenteral)
+effect: Endurance performance improved by 2%-20%.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-04-10'
+expiry: '2028-04-10'

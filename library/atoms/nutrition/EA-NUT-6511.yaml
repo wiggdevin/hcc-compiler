@@ -1,0 +1,26 @@
+id: EA-NUT-6511
+domain: nutrition
+claim: Meeting a protein threshold of approximately 25-30 g per meal represents a
+  promising dietary strategy to help maintain muscle mass and function in older adults.
+evidence_level: L4
+citations:
+- id: 10.3945/ajcn.114.084061
+  locator_quote: "For example, meeting a protein threshold (\u223C25-30 g/meal) represents\
+    \ a promising, yet still largely unexplored dietary strategy to help maintain\
+    \ muscle mass and function."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Protein and healthy aging
+population_applicability:
+  age: older adults
+  sex: unspecified
+  training_status: unspecified
+  dose_magnitude: ~25-30 g/meal
+  duration: unspecified
+effect: maintain muscle mass and function
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

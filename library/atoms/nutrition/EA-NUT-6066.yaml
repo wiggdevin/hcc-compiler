@@ -1,0 +1,28 @@
+id: EA-NUT-6066
+domain: nutrition
+claim: In naturally menstruating women, resting energy expenditure is approximately
+  40-44 kcal higher in the luteal phase compared to the follicular phase.
+evidence_level: L3
+citations:
+- id: 10.1249/MSS.0000000000003518
+  locator_quote: "In the NoOC group, luteal phase REE was 40 kcal higher than follicular\
+    \ phase REE (95% confidence interval (CI), -2 to 82 kcal\xB7d -1 , d = 0.20, P\
+    \ = 0.061)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Resting Energy Expenditure, Metabolic and Sex Hormones in Two Phases
+    of the Menstrual and Hormonal Contraceptive Cycles
+population_applicability:
+  age: adults
+  sex: female
+  training_status: unspecified
+  dose_magnitude: N/A
+  duration: menstrual cycle phases
+effect: "Luteal phase REE was 40 kcal higher than follicular phase REE (95% CI, -2\
+  \ to 82 kcal\xB7d-1)."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-09'
+expiry: '2026-01-09'

@@ -1,0 +1,33 @@
+id: EA-NUT-7436
+domain: nutrition
+claim: The leucine trigger hypothesis is most applicable for regulating the post-prandial
+  response of muscle protein synthesis to ingested proteins in older adults and is
+  more relevant within the context of ingesting isolated protein sources rather than
+  protein-rich whole foods.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2021.685165
+  locator_quote: However, our data indicate that the leucine trigger hypothesis confers
+    most application in regulating the post-prandial response of MPS to ingested proteins
+    in older adults. Consistent with our hypothesis, we provide data to support the
+    idea that the leucine trigger hypothesis is more relevant within the context of
+    ingesting isolated protein sources rather than protein-rich whole foods.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Evaluating the Leucine Trigger Hypothesis to Explain the Post-prandial
+    Regulation of Muscle Protein Synthesis in Young and Older Adults: A Systematic
+    Review'
+population_applicability:
+  age: young and older adults
+  sex: not specified
+  training_status: rest and post-exercise
+  dose_magnitude: not specified
+  duration: acute
+effect: The leucine trigger hypothesis is most applicable in older adults and when
+  ingesting isolated protein sources rather than whole foods.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2026-01-01'

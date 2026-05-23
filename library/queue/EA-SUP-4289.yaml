@@ -1,0 +1,30 @@
+id: EA-SUP-4289
+domain: supplements
+claim: Probiotic supplementation significantly improves bone metabolism by increasing
+  bone formation markers (P1NP and osteocalcin) and reducing bone resorption markers
+  (CTX-I) in individuals with osteoporosis.
+evidence_level: L1
+citations:
+- id: 10.3389/fcimb.2025.1738378
+  locator_quote: "Probiotic supplementation significantly improved bone metabolism.\
+    \ Bone formation markers showed notable increases, including a significant rise\
+    \ in P1NP (MD = +8.4 \u03BCg/L; 95% CI: 3.1-13.7) and osteocalcin. Bone resorption\
+    \ markers, especially CTX-I, demonstrated significant reductions (SMD = -0.35;\
+    \ 95% CI: -0.52 to -0.18)."
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: Meta-analysis of the effects of probiotic supplementation on bone turnover
+    markers in middle-aged and elderly patients with osteoporosis
+population_applicability:
+  age: middle-aged and elderly
+  sex: postmenopausal women and mixed-gender groups
+  training_status: unspecified
+  dose_magnitude: various probiotic strains and dosages
+  duration: 8 weeks to 12 months
+effect: Enhanced bone formation and reduced bone resorption
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2030-01-01'

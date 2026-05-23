@@ -1,0 +1,31 @@
+id: EA-NUT-3504
+domain: nutrition
+claim: Combined lifestyle interventions including nutrition, exercise, and behavior
+  change improve physical function and may reduce body and fat mass without negatively
+  affecting fat-free mass or bone mineral density in older adults with obesity.
+evidence_level: L1
+citations:
+- id: 10.1111/obr.70123
+  locator_quote: NUT+EX+BCI improved physical function (performance batteries) compared
+    to control (SMD 3.37 [1.76;4.97]; high certainty of evidence). NUT+EX+BCI may
+    reduce body (MD -8.69 [-13.14;-4.25]) and fat mass (MD -6.58 [-10.44;-2.73]) while
+    not negatively affecting fat-free mass (MD -1.38 [-3.52;0.76]) or bone mineral
+    density (MD -0.01 [-0.05;0.02]) (evidence very uncertain).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'EffectS of Lifestyle Interventions in Older PEople With Obesity (Effective
+    SLOPE): a Systematic Review With Network Meta-Analyses'
+population_applicability:
+  age: older adults
+  sex: unspecified
+  training_status: community-dwelling
+  dose_magnitude: unspecified
+  duration: "\u2265 12 weeks"
+effect: Improved physical function and reduced body/fat mass without negative impact
+  on fat-free mass or bone mineral density.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2025-01-01'
+expiry: '2030-01-01'
