@@ -200,3 +200,96 @@ def test_warning_contains_matches_intake_suffix():
     warnings = check_contraindications(_creatine_atom(), _ckd_intake())
     for w in warnings:
         assert w.endswith("(matches intake)")
+
+
+def test_non_negotiable_constraint_does_not_match_non_hospitalized_atom():
+    """Regression for 2026-05-23 test_v2 batch (Bradley): a healthy intake
+    whose constraint detail contains 'non-negotiable' must NOT match an atom
+    contraindication mentioning 'non-hospitalized populations' on the shared
+    short token 'non'. 'non' is 3 chars — below the 5-char floor and not in
+    the clinical-abbreviation allow-list — so it must drop out of significant
+    tokens on both sides."""
+    intake = ClientIntake(
+        client_id="non-neg-001",
+        library_version="1.0.0",
+        demographics=_demographics(),
+        training_status="trained",
+        goals=["recomposition"],
+        contraindications=[],
+        constraints=[Constraint(type="dietary", detail="Mediterranean baseline is non-negotiable")],
+    )
+    atom = _creatine_atom(contraindications=["non-hospitalized populations"])
+    warnings = check_contraindications(atom, intake)
+    assert warnings == [], f"Expected no false-positive match on 'non' token, got: {warnings}"
+
+
+def test_fatty_liver_intake_does_not_match_renal_disease_atom():
+    """Regression for 2026-05-23 test_v2 batch (Tori): an intake with
+    'MASLD (fatty liver disease)' must NOT match an atom contraindication
+    'Pre-existing renal disease' on the shared token 'disease'. 'disease' is
+    clinical-narrative filler (in _STOPWORDS) — distinct organ systems must
+    not collide via generic words."""
+    intake = ClientIntake(
+        client_id="masld-001",
+        library_version="1.0.0",
+        demographics=_demographics(),
+        training_status="recreational",
+        goals=["weight_loss"],
+        contraindications=["MASLD (fatty liver disease)"],
+        constraints=[],
+    )
+    atom = _creatine_atom(contraindications=["Pre-existing renal disease"])
+    warnings = check_contraindications(atom, intake)
+    assert warnings == [], f"Expected no false-positive match on 'disease' token, got: {warnings}"
+
+
+def test_renal_single_token_match_via_high_specificity():
+    """Carl-CKD harm-reduction guardrail: a single shared token like 'renal'
+    (organ-system anatomical adjective in _CLINICAL_HIGH_SPECIFICITY) MUST
+    fire a contraindication match even when no other tokens overlap. Without
+    this gate, clinically meaningful organ-system flags ('Pre-existing renal
+    disease' atom contraindication vs 'renal insufficiency' intake) would
+    silently miss when generic descriptors like 'pre-existing' and 'disease'
+    get stopworded out. False-negative on a real safety signal is the worse
+    error than over-warning."""
+    intake = ClientIntake(
+        client_id="carl-like-001",
+        library_version="1.0.0",
+        demographics=_demographics(),
+        training_status="trained",
+        goals=["strength"],
+        contraindications=["renal insufficiency (CKD stage 2)"],
+        constraints=[],
+    )
+    atom = _creatine_atom(contraindications=["Pre-existing renal disease"])
+    warnings = check_contraindications(atom, intake)
+    assert len(warnings) >= 1, (
+        "Expected single-token match via 'renal' (high-specificity organ "
+        "system); this is the Carl-CKD harm-reduction guardrail"
+    )
+    assert any("renal disease" in w for w in warnings)
+
+
+def test_lone_generic_token_does_not_match():
+    """Regression for 2026-05-23 test_v2 batch (David): a single shared
+    generic word like 'weeks' (or 'weight', 'programming') from intake
+    constraints must NOT fire a match against atom pattern contraindications.
+    These tokens lack clinical specificity — the ≥2-token-or-high-specificity
+    rule kills the lone-generic-word false positive."""
+    intake = ClientIntake(
+        client_id="david-like-001",
+        library_version="1.0.0",
+        demographics=_demographics(),
+        training_status="trained",
+        goals=["weight_loss"],
+        contraindications=[],
+        constraints=[Constraint(type="schedule", detail="~10 days every 8 weeks unsupervised travel")],
+    )
+    pattern = _squat_pattern(
+        doesnt_apply_if="acute post-surgical rehabilitation within 6 weeks of procedure"
+    )
+    warnings = check_contraindications(pattern, intake)
+    assert warnings == [], (
+        f"Expected no false-positive on lone 'weeks' overlap; "
+        f"both contexts share only the generic word. got: {warnings}"
+    )
