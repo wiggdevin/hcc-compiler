@@ -33,6 +33,11 @@ class ClientIntake(BaseModel):
     current_regimen: str = Field(max_length=2000, default="")
     constraints: list[Constraint] = Field(default_factory=list)
     contraindications: list[str] = Field(default_factory=list)
+    # Measured metabolic inefficiency multiplier — when present, downstream
+    # caloric prescriptions derive from predicted_TDEE * metabolic_calibration
+    # rather than predicted_TDEE alone. Typical observed range is 0.5-1.5
+    # (David's measured ~22% inefficiency factor = 0.78). None = use predicted.
+    metabolic_calibration: float | None = Field(default=None, ge=0.5, le=1.5)
 
 
 def load_intake(path: Path) -> ClientIntake:

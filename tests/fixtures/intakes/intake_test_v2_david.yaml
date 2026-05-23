@@ -1,0 +1,30 @@
+client_id: test_v2_david
+library_version: "0.1.0"
+demographics:
+  age: 42
+  sex: M
+  weight_kg: 83.4
+  height_cm: 174.0
+training_status: trained
+goals:
+  - weight_loss
+  - recomposition
+current_regimen: |
+  5–7 hrs/week trainer-led: (1) Upper hypertrophy RIR 1–2, (2) Lower hypertrophy
+  with 2:4:2 tempo (eccentric-emphasis), (3) Full-body strength, (4) Boxing,
+  + HIIT 5–7 min appended weekly. Machine + cable + Smith-machine dominant
+  (no barbell 1RM logged). NEAT ~2,000 steps/day (chauffeured executive).
+  5 feedings/day (3 meals + 2 protein snacks) via on-site chef.
+  CRITICAL coach directive: David carries a measured ~22% metabolic
+  inefficiency factor — effective maintenance ~=1,808 kcal (NOT predicted
+  TDEE ~2,318). All caloric prescriptions must derive from effective
+  maintenance. Boxing is primary aerobic exposure; no VO2 or max-HR baseline.
+constraints:
+  - type: dietary
+    detail: "Mushroom allergy (strict); aversions to Indian / spicy foods"
+  - type: schedule
+    detail: "~10 days every 8 weeks unsupervised travel (chef + trainer absent — adherence-risk window)"
+  - type: equipment
+    detail: "Trainer's facility: machine / cable / Smith dominant; no free-weight barbell programming"
+contraindications: []
+metabolic_calibration: 0.78  # measured ~22% inefficiency (effective maintenance 1,808 kcal vs predicted TDEE 2,318)

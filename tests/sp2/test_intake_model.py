@@ -209,3 +209,36 @@ def test_yaml_loader_invalid_raises(tmp_path: Path):
 
     with pytest.raises(ValidationError):
         load_intake(yaml_file)
+
+
+# ── metabolic_calibration field ──────────────────────────────────────────────
+
+def test_metabolic_calibration_field():
+    """metabolic_calibration is optional, defaults to None, parses valid floats,
+    and rejects out-of-range values. Range [0.5, 1.5] covers realistic measured
+    inefficiency factors (David's measured ~22% inefficiency = 0.78) — a typo
+    outside this range MUST raise ValidationError so it doesn't silently corrupt
+    downstream caloric prescriptions (real harm-reduction stake)."""
+    # Defaults to None when omitted
+    intake = ClientIntake.model_validate(_valid_intake_data())
+    assert intake.metabolic_calibration is None
+
+    # Valid in-range value parses
+    data = _valid_intake_data()
+    data["metabolic_calibration"] = 0.78
+    intake = ClientIntake.model_validate(data)
+    assert intake.metabolic_calibration == 0.78
+
+    # Boundary values accepted
+    for v in (0.5, 1.5):
+        data = _valid_intake_data()
+        data["metabolic_calibration"] = v
+        intake = ClientIntake.model_validate(data)
+        assert intake.metabolic_calibration == v
+
+    # Out-of-range raises ValidationError
+    for bad in (0.49, 1.51, 0.0, -1.0, 2.0):
+        data = _valid_intake_data()
+        data["metabolic_calibration"] = bad
+        with pytest.raises(ValidationError):
+            ClientIntake.model_validate(data)
