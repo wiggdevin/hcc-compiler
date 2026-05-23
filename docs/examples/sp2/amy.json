@@ -1,7 +1,7 @@
 {
   "client_id": "amy_runner",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T02:54:45.895934Z",
+  "compiled_at": "2026-05-23T03:02:33.658842Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -265,6 +265,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-TRA-9632",
+          "similarity": 0.6572594380457206,
+          "claim": "Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance.",
+          "citations": [
+            {
+              "id": "10.3389/fpubh.2026.1707627",
+              "locator_quote": "The results showed that LP and UP had comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Comparison of linear and undulating periodization resistance training on athletic capacities and health promotion: a systematic review and meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-TRA-9659",
           "similarity": 0.5186141257510563,
           "claim": "Standalone plyometric training is effective for enhancing vertical jump performance in basketball players, particularly squat jump, but has limited transfer to 20-meter sprint performance.",
@@ -296,6 +313,40 @@
           ],
           "evidence_level": "L1",
           "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-1853",
+          "similarity": 0.6633848630168305,
+          "claim": "Nordic hamstring exercise training significantly improves eccentric and concentric strength, but meta-regressions show no association between strength gains and training volume variables (duration, frequency, sets, or repetitions) during the first 6-8 weeks.",
+          "citations": [
+            {
+              "id": "10.1519/JSC.0000000000005184",
+              "locator_quote": "Meta-regressions showed no association between strength gains and training volume-related variables (duration, frequency, number of sets or repetitions).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Dose-Response Relationship for Strength Gains From Nordic Hamstring Exercise: A Systematic Review, Meta-Analysis, and Meta-Regression"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-2176",
+          "similarity": 0.6781229837968396,
+          "claim": "Shorter eccentric phase durations (SEG) enhance countermovement jump height (CMJ) by a practically worthwhile degree with moderate certainty, whereas longer eccentric phase durations (LEG) may result in similar or higher strength increases in trained participants and volume-load matched conditions.",
+          "citations": [
+            {
+              "id": "10.1080/02640414.2025.2535198",
+              "locator_quote": "SEG enhanced CMJ by a practically worthwhile degree with moderate certainty (Hedge's g = -0.73 [90% CI = -1.34, -0.12; 90% PI = -1.34, -0.12]), while uncertain estimates were observed for maximal strength (g = 0.25 [90% CI = -0.17, 0.67; 90% PI = -0.86, 1.36]) and muscle hypertrophy (g = 0.05 [90% CI = -0.22, 0.33; 90% PI = -0.54, 0.64]). LEG led to practically equivalent or enhanced strength gains, compared to SEG, in trained participants (g = 0.33 [90% CI = 0.07, 0.60; 90% PI = 0.07, 0.60]) and volume-load matched trials (g = 0.25 [90% CI = 0.04, 0.45; 90% PI = 0.04, 0.45]) with moderate certainty in subgroup analyses.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The effect of eccentric phase duration on maximal strength, muscle hypertrophy and countermovement jump height: A systematic review and meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
           "warnings": []
         },
         {
@@ -888,7 +939,8 @@
       "training": [
         "resistance training program for endurance",
         "training volume recreational",
-        "avoiding left knee mild patellar tendinopathy"
+        "avoiding left knee mild patellar tendinopathy",
+        "tempo eccentric resistance training"
       ],
       "conditioning": [
         "cardiovascular conditioning for endurance",

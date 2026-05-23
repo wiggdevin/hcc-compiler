@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — amy_runner
 
-- Compiled at: 2026-05-23T02:54:45.895934+00:00
+- Compiled at: 2026-05-23T03:02:33.658842+00:00
 - Library version: 0.1.0
 
 ---
@@ -105,5 +105,5 @@
 
 - top_k_per_domain: 5
 - applicability_threshold: 0.4
-- total queries issued: 13
+- total queries issued: 14
 - total contraindication hits: 0

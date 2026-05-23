@@ -115,9 +115,9 @@ class TestInjuryConstraint:
 
 
 class TestDomainCap:
-    """Each domain must have ≤ 3 queries."""
+    """Each domain must have ≤ 5 queries (PRD spec)."""
 
-    def test_no_domain_exceeds_three_queries(self):
+    def test_no_domain_exceeds_five_queries(self):
         constraints = [
             Constraint(type="injury", detail="rotator cuff"),
             Constraint(type="injury", detail="ankle sprain"),
@@ -129,13 +129,13 @@ class TestDomainCap:
         )
         result = derive_queries(intake)
         for domain, queries in result.items():
-            assert len(queries) <= 3, f"{domain} has {len(queries)} queries (max 3)"
+            assert len(queries) <= 5, f"{domain} has {len(queries)} queries (max 5)"
 
 
 class TestTotalQueryCount:
-    """Total queries across all domains must be ≤ 18."""
+    """Total queries across all domains must be ≤ 30 (5 per domain × 6 domains)."""
 
-    def test_total_queries_at_most_18(self):
+    def test_total_queries_at_most_30(self):
         constraints = [
             Constraint(type="injury", detail="knee"),
             Constraint(type="dietary", detail="gluten"),
@@ -147,13 +147,13 @@ class TestTotalQueryCount:
         )
         result = derive_queries(intake)
         total = sum(len(qs) for qs in result.values())
-        assert total <= 18, f"Total queries {total} exceeds 18"
+        assert total <= 30, f"Total queries {total} exceeds 30"
 
     def test_single_goal_total_reasonable(self):
         intake = _make_intake(goals=["weight_loss"], training_status="recreational")
         result = derive_queries(intake)
         total = sum(len(qs) for qs in result.values())
-        assert 6 <= total <= 18
+        assert 6 <= total <= 30
 
 
 class TestHIITConditioning:
@@ -220,3 +220,68 @@ class TestReturnTypes:
             assert isinstance(queries, list), f"{domain} value is not a list"
             for q in queries:
                 assert isinstance(q, str), f"{domain} query {q!r} is not a str"
+
+
+def _make_intake_with_regimen(regimen: str, **kwargs) -> ClientIntake:
+    return ClientIntake(
+        client_id="test-client",
+        library_version="0.1.0",
+        demographics=Demographics(age=30, sex="F", weight_kg=65.0, height_cm=170.0),
+        training_status=kwargs.get("training_status", "trained"),
+        goals=list(kwargs.get("goals", ("recomposition",))),
+        current_regimen=regimen,
+        constraints=list(kwargs.get("constraints", ())),
+        contraindications=list(kwargs.get("contraindications", ())),
+    )
+
+
+def test_regimen_keywords_inject_queries():
+    """Regimen keywords inject domain-scoped queries, respect the per-domain cap of 5,
+    and produce zero regimen-derived queries when current_regimen is empty."""
+    kettle_intake = _make_intake_with_regimen(
+        "Mini-cut + kettlebell 4-week cycle Mon/Tue/Thu/Fri."
+    )
+    kettle_queries = derive_queries(kettle_intake)
+    assert any("kettlebell" in q.lower() for q in kettle_queries[Domain.TRAINING])
+
+    luteal_intake = _make_intake_with_regimen(
+        "Cycle-aware: luteal phase +150-200 kcal mostly carb.",
+        goals=["recomposition", "hypertrophy", "performance"],
+    )
+    luteal_queries = derive_queries(luteal_intake)
+    assert any("luteal" in q.lower() for q in luteal_queries[Domain.NUTRITION])
+
+    heavy_regimen = (
+        "kettlebell circuits + Peloton + rower + boxing + Bulgarian split squat "
+        "+ trap-bar deadlift + landmine press + front squat + SSB + HIIT + LISS "
+        "+ treadmill + tempo + eccentric work + corrective drills + yoga"
+    )
+    heavy_constraints = [
+        Constraint(type="injury", detail="left knee strain"),
+        Constraint(type="schedule", detail="45-min cap"),
+        Constraint(type="dietary", detail="lactose intolerance"),
+    ]
+    heavy_intake = _make_intake_with_regimen(
+        heavy_regimen,
+        goals=["weight_loss", "recomposition", "hypertrophy"],
+        constraints=heavy_constraints,
+    )
+    heavy_queries = derive_queries(heavy_intake)
+    for domain, queries in heavy_queries.items():
+        assert len(queries) <= 5, f"{domain} has {len(queries)} queries (max 5)"
+
+    empty_intake = _make_intake_with_regimen("")
+    empty_queries = derive_queries(empty_intake)
+    baseline_intake = ClientIntake(
+        client_id="baseline-no-regimen",
+        library_version="0.1.0",
+        demographics=Demographics(age=30, sex="F", weight_kg=65.0, height_cm=170.0),
+        training_status="trained",
+        goals=["recomposition"],
+    )
+    baseline_queries = derive_queries(baseline_intake)
+    for domain in Domain:
+        assert empty_queries[domain] == baseline_queries[domain], (
+            f"empty regimen produced extra {domain} queries: "
+            f"{empty_queries[domain]} vs baseline {baseline_queries[domain]}"
+        )
