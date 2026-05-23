@@ -1,7 +1,7 @@
 {
   "client_id": "amy_runner",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T03:02:33.658842Z",
+  "compiled_at": "2026-05-23T03:36:42.408099Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -55,23 +55,6 @@
       ],
       "atoms": [
         {
-          "atom_id": "EA-NUT-5322",
-          "similarity": 0.6230476690802113,
-          "claim": "Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults.",
-          "citations": [
-            {
-              "id": "10.3390/nu16173007",
-              "locator_quote": "Calorie restriction combined with exercise emerged as the most effective strategy for reducing weight and fat percentage while maintaining lean body mass.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Effects of Different Exercises Combined with Different Dietary Interventions on Body Composition: A Systematic Review and Network Meta-Analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
           "atom_id": "EA-NUT-1643",
           "similarity": 0.6922582630038299,
           "claim": "The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source.",
@@ -89,19 +72,36 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-NUT-9665",
-          "similarity": 0.6794339829281472,
-          "claim": "Protein supplementation may support improvements in body composition and functional capacity in CVD patients undergoing cardiovascular rehabilitation, but variability in protein types and dosages prevents a clear recommendation.",
+          "atom_id": "EA-NUT-6511",
+          "similarity": 0.7575125356464766,
+          "claim": "Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults.",
           "citations": [
             {
-              "id": "10.1016/j.nut.2025.112773",
-              "locator_quote": "In conclusion, while protein supplementation may support improvements in body composition and functional capacity, variability in protein types and dosages prevents a clear recommendation for CVD patients in cardiovascular rehabilitation.",
+              "id": "10.3945/ajcn.114.084061",
+              "locator_quote": "For example, meeting a protein threshold (∼25-30 g/meal) represents a promising, yet still largely unexplored dietary strategy to help maintain muscle mass and function.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effect of protein consumption and supplementation on body composition and functional capacity in cardiovascular disease patients undergoing cardiovascular rehabilitation: A systematic review and meta-analysis"
+              "cited_title": "Protein and healthy aging"
             }
           ],
-          "evidence_level": "L1",
+          "evidence_level": "L4",
+          "population_match_score": 0.68,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-4538",
+          "similarity": 0.628740400934305,
+          "claim": "Total daily leucine intake is positively associated with quadriceps muscle cross-sectional area and maximum dynamic muscle strength in healthy older adults.",
+          "citations": [
+            {
+              "id": "10.3390/nu13103536",
+              "locator_quote": "Our results demonstrate moderate associations between total daily leucine and both quadriceps CSA (r = 0.42; p = 0.004) and 1-RM (r = 0.45; p = 0.001).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Daily Leucine Intake Is Positively Associated with Lower Limb Skeletal Muscle Mass and Strength in the Elderly"
+            }
+          ],
+          "evidence_level": "L3",
           "population_match_score": 0.68,
           "warnings": []
         },

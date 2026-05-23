@@ -1,0 +1,31 @@
+client_id: test_v2_sebastian
+library_version: "0.1.0"
+demographics:
+  age: 43
+  sex: M
+  weight_kg: 91.4
+  height_cm: 185.4
+training_status: trained
+goals:
+  - recomposition
+  - performance
+current_regimen: |
+  6-day split: 3x strength circuits (eccentric/isometric/concentric, 5–10 rep
+  heavy), 1x LISS (stairs, build to 90 min), 1x HIIT, 1x metabolic circuits
+  + core. Post-refeed (Apr 23) phase: bodybuilding + metabolic conditioning,
+  5 weeks. RMR 1,797 kcal/day (Apr 30, treadmill modality after Jan-28 cycle
+  baseline). Currently ~2,200 kcal/day in extended deficit. Steps ~4,000/day
+  NEAT. HRrest 59–60, VO2max 61.3 mL/kg/min (treadmill), HRmax 169, VT1 121,
+  VT2 140. BF 13.4% (InBody 770 Apr 10). Sleep 7+ h, bedtime ~22:30.
+  Bloodwork Jan 28 favorable: free T 15.1 pg/mL, total T 866 ng/dL, TSH 1.53,
+  HbA1c 5.2%, fasting glucose 74, insulin 4.6. Watch-list: AST 43 (training-
+  induced muscle leakage; ALT 40 / GGT 20 normal), Estradiol 42.2 (ceiling),
+  LDL-C/LDL-P mildly elevated (116 / 1,046), ferritin halved 248->130, eGFR
+  declining slowly 102->91 over 4 yr (>59 cutoff). Repeat panel pending.
+  Goal: <=9% BF by Jul 1–3 for Batman II shirtless scene.
+constraints:
+  - type: schedule
+    detail: "Filming: Avengers May 27–31 (Wed–Sun, 5 days, 5 AM training shift), Jun 6 (Sat, 5 AM). Batman II shirtless scene Jul 1–3 — exact day across 3-day window unknown, rules out dehydration-based peak protocol."
+  - type: equipment
+    detail: "Full gym; LISS modality is treadmill or stairs (treadmill-specific HR-zone thresholds in use)"
+contraindications: []

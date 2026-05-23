@@ -1,0 +1,25 @@
+client_id: test_v2_sarah_nutrition
+library_version: "0.1.0"
+demographics:
+  age: 26               # INFERRED — Rise Movement athlete, cycle-aware protocol; exact DOB not in deliverables
+  sex: F
+  weight_kg: 57.7       # 127.3 lb (Mar 2026 InBody)
+  height_cm: 165.0      # INFERRED — estimated from BMR 1,420 kcal + LBM 107.1 lb; not in deliverables
+training_status: trained
+goals:
+  - recomposition
+  - hypertrophy
+  - performance
+current_regimen: |
+  5–6 days/week structured strength + conditioning at Rise Movement.
+  Trains 10–11 AM. BMR 1,420 kcal measured. Eating ~1,900–2,100 kcal/day
+  depending on training load. Cycle-aware: luteal phase +150–200 kcal mostly
+  carb. Currently lean (15.8% BF) but flagged for lean-mass loss despite
+  high volume -> underfueling at training due to compressed eating window.
+  Protein target 130 g/day; coach emphasizes structure over grazing.
+constraints:
+  - type: dietary
+    detail: "Menstrual-cycle-dependent macro/calorie needs; luteal +150–200 kcal carb"
+  - type: schedule
+    detail: "Late-morning training (10–11 AM); compressed eating window post-training risks underfueling"
+contraindications: []

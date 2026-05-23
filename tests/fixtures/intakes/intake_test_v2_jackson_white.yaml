@@ -1,0 +1,29 @@
+client_id: test_v2_jackson_white
+library_version: "0.1.0"
+demographics:
+  age: 30
+  sex: M
+  weight_kg: 83.9
+  height_cm: 185.4
+training_status: trained
+goals:
+  - hypertrophy
+  - recomposition
+current_regimen: |
+  3–4 sessions/week intermediate-advanced. Strength baselines: DB bench 80 lb x5
+  per hand, pull-ups 12 reps @ 185 BW. 8-week film role split into Pre-Film
+  Build (Wks 1–2.5, home gym) and On-Set Maintenance (Wks 3–8, 4 AM call times,
+  catering-truck nutrition). RPE-based programming. NO conventional barbell back
+  squat / deadlift / bent-over row — boxing-history low-back sensitivity.
+  Preferred: trap-bar DL, front squat, SSB, Bulgarian split squat, hack squat,
+  chest-supported row, landmine press, seated DB OHP. Anti-extension +
+  anti-rotation core 2x/week. Warm-up: 90/90 breathing, cat-camel, T-rotation,
+  glute bridge, hip-flexor stretch, banded hip CAR.
+constraints:
+  - type: injury
+    detail: "Low-back sensitivity from boxing; recurring tweaks under heavy axial load + rotation when fatigued. Hypertonic QL/erectors, glute inhibition, hip-flexor tightness pattern."
+  - type: schedule
+    detail: "8-week film role; Wks 3–8 on set: 4 AM call times, disrupted sleep, catering-truck meals"
+  - type: dietary
+    detail: "Minimal fish intake — omega-3 supplemented instead"
+contraindications: []

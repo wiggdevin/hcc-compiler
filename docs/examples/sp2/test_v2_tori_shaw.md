@@ -1,33 +1,33 @@
-# Personalized Evidence Pack — sam_recomp
+# Personalized Evidence Pack — test_v2_tori_shaw
 
-- Compiled at: 2026-05-23T03:36:43.431871+00:00
+- Compiled at: 2026-05-23T03:36:47.654476+00:00
 - Library version: 0.1.0
 
 ---
 
 ## Nutrition
 
-### Pattern: RP-NUT-caloric-restriction-rt-protein-body-comp (sim=0.70)
-
-**Applies because:** Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.
-**Parameterization:** Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kcal/day deficit, moderate-intensity resistance or aerobic exercise. Resistance-trained athletes during aggressive cuts: 2.3–3.1 g/kg/day protein, up to 750 kcal/day deficit, 60–80% 1RM resistance training. Older adults (≥60 years): whey protein ≥15 g/day combined with resistance plus multicomponent exercise; deficit ≤500 kcal/day to limit FFM loss. Postmenopausal women: 250–750 kcal/day deficit, protein ≥0.8 g/kg/day minimum but 1.6+ g/kg preferred for LBM retention. Very-low-energy-diet contexts (≤800 kcal/day): exercise component is mandatory to mitigate disproportionate FFM loss. Adults with prediabetes or T2DM: intermittent fasting formats are interchangeable with continuous restriction provided protein and training targets are met; target ≥5% weight loss for normoglycemia reversion benefit.
-**Safety bounds:** Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.
-
-**Backing evidence (top 3 by population match):**
-- The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
-- Protein supplementation may support improvements in body composition and functional capacity in CVD patients undergoing cardiovascular rehabilitation, but variability in protein types and dosages prevents a clear recommendation. ([10.1016/j.nut.2025.112773])
-- Whey protein combined with resistance training is the optimal regimen for improving muscle mass and leg strength in older adults, while whey protein combined with multicomponent exercise training is most effective for physical performance indicators like chair rise and timed up and go. ([10.3390/nu18091409])
-
-### Pattern: RP-NUT-protein-band (sim=0.70)
+### Pattern: RP-NUT-protein-band (sim=0.75)
 
 **Applies because:** Resistance-trained adults in an energy deficit.
 **Parameterization:** 2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.
 **Safety bounds:** Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.
 
 **Backing evidence (top 3 by population match):**
+- Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
 
-- **EA-NUT-6511** (sim 0.77, pop-match 0.68): Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults. ([10.3945/ajcn.114.084061])
-- **EA-NUT-4538** (sim 0.69, pop-match 0.68): Total daily leucine intake is positively associated with quadriceps muscle cross-sectional area and maximum dynamic muscle strength in healthy older adults. ([10.3390/nu13103536])
+### Pattern: RP-NUT-caloric-restriction-rt-protein-body-comp (sim=0.75)
+
+**Applies because:** Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.
+**Parameterization:** Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kcal/day deficit, moderate-intensity resistance or aerobic exercise. Resistance-trained athletes during aggressive cuts: 2.3–3.1 g/kg/day protein, up to 750 kcal/day deficit, 60–80% 1RM resistance training. Older adults (≥60 years): whey protein ≥15 g/day combined with resistance plus multicomponent exercise; deficit ≤500 kcal/day to limit FFM loss. Postmenopausal women: 250–750 kcal/day deficit, protein ≥0.8 g/kg/day minimum but 1.6+ g/kg preferred for LBM retention. Very-low-energy-diet contexts (≤800 kcal/day): exercise component is mandatory to mitigate disproportionate FFM loss. Adults with prediabetes or T2DM: intermittent fasting formats are interchangeable with continuous restriction provided protein and training targets are met; target ≥5% weight loss for normoglycemia reversion benefit.
+**Safety bounds:** Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.
+
+**Backing evidence (top 3 by population match):**
+- Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
+- Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
+- The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
+
+- **EA-NUT-6511** (sim 0.78, pop-match 0.68): Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults. ([10.3945/ajcn.114.084061])
 
 ## Training
 
@@ -38,9 +38,9 @@
 **Safety bounds:** Do not exceed 25–30 weekly sets per muscle group without experienced coach supervision; cap novice single-session volume at ≤6 sets per exercise; limit intensity to ≤80% 1RM in unsupervised older adults or those with cardiovascular comorbidities; require clinical clearance and supervised initiation for individuals with CAD, COPD, congenital heart disease, or sickle cell disease before commencing high-intensity or high-volume protocols.
 
 **Backing evidence (top 3 by population match):**
+- Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types. ([10.1007/s00520-026-10363-0])
+- Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS. ([10.61622/rbgo/2025rbgo56])
 - Increases in weekly training set volume are associated with increases in both muscle hypertrophy and strength, though both exhibit diminishing returns. ([10.1007/s40279-025-02344-w])
-- Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents. ([10.1111/sms.14764])
-- Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity. ([10.1249/MSS.0000000000003897])
 
 ## Conditioning
 
@@ -52,20 +52,23 @@
 
 **Backing evidence (top 3 by population match):**
 - In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory muscle training, high-intensity interval training, and combined aerobic and resistance exercise are the most effective interventions for improving aerobic capacity (VO2 peak). ([10.1097/CRD.0000000000000447])
-- Intermittent hypoxia (IH) protocols, including live high-train low (LHTL), repeated sprint training in hypoxia (RSH), and hypoxic interval training, effectively improve aerobic capacity, anaerobic performance, and muscular strength in both trained and untrained individuals. ([10.1186/s40798-025-00933-7])
-- High-intensity interval training (HIIT) is more effective than moderate-intensity continuous training (MICT) in improving oxygen consumption at peak (V̇O2-peak) and at ventilation threshold (VO2-VT) in patients after stroke. ([10.3389/fneur.2026.1727980])
+- High-intensity interval training (HIIT) performed under hypoxic conditions results in greater improvements in VO2 max compared to normoxic conditions in distance runners. ([10.14814/phy2.70349])
+- High-Intensity Interval Training (HIIT) improves VO2 max, running and repetitive sprint performance, jumping performance, and hitting speed in racket sports athletes. ([10.1371/journal.pone.0295362])
+
+- **EA-CON-9235** (sim 0.60, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
+- **EA-CON-9301** (sim 0.56, pop-match 0.56): Contemporary Olympic Cross-Country mountain biking requires exceptional aerobic capacity but places a greater importance on high-intensity, short-duration efforts and anaerobic contribution compared to the former version of the discipline. ([10.1186/s40798-026-00976-4])
 
 ## Supplements
 
-- **EA-SUP-8071** (sim 0.64, pop-match 1.00): Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects. ([10.7717/peerj.20380])
-- **EA-SUP-0001** (sim 0.65, pop-match 0.88): Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations. ([10.1186/s12970-017-0173-z])
-- **EA-SUP-5023** (sim 0.64, pop-match 0.88): Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes. ([10.1080/19390211.2025.2539880])
-- **EA-SUP-3039** (sim 0.64, pop-match 0.88): Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se. ([10.1080/15502783.2025.2605338])
-- **EA-SUP-4139** (sim 0.63, pop-match 0.68): Creatine supplementation combined with resistance training produces small but statistically significant improvements in upper-body strength (bench/chest press), lower-body strength (squat), vertical jump height, and Wingate peak power compared to placebo. ([10.3390/nu17172748])
+- **EA-SUP-2054** (sim 0.70, pop-match 1.00): Creatine supplementation significantly increases body mass and fat-free mass while reducing body fat percentage, with effects enhanced when combined with resistance training. ([10.1080/15502783.2024.2380058])
+- **EA-SUP-8825** (sim 0.67, pop-match 1.00): Nutritional supplementation combined with exercise does not significantly improve muscle mass or bone health outcomes in women across reproductive stages, though it may improve upper-body strength. ([10.7150/ijms.130435])
+- **EA-SUP-1368** (sim 0.66, pop-match 1.00): Creatine supplementation does not consistently improve exercise performance in active females, with most studies showing no improvement compared to placebo. ([10.3390/nu17020238])
+- **EA-SUP-8953** (sim 0.63, pop-match 1.00): Creatine supplementation does not significantly reduce inflammatory biomarkers in humans based on current evidence. ([10.3389/fimmu.2026.1743603])
+- **EA-SUP-5023** (sim 0.70, pop-match 0.88): Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes. ([10.1080/19390211.2025.2539880])
 
 ## Recovery
 
-### Pattern: RP-REC-exercise-sleep-quality (sim=0.60)
+### Pattern: RP-REC-exercise-sleep-quality (sim=0.63)
 
 **Applies because:** Multiple systematic reviews and meta-analyses consistently report significant SMD improvements in subjective sleep quality (range ~0.47–1.56 across modalities), likely mediated by thermoregulatory normalization, hypothalamic-pituitary-adrenal axis down-regulation, and circadian rhythm entrainment via timed physical stimulation.
 **Parameterization:** Adults ≥50 yr: combined aerobic + resistance training preferred (SMD −1.56); perinatal women: relaxation exercises 30–60 min/session, 1–2×/week, ≤4 weeks (SMD −2.54 to −3.13); cancer patients on chemotherapy: activity pacing plus progressive muscle relaxation first-line (ranked 98.6%), aerobic exercise or walking as alternatives; older adults with sleep disturbance or mild cognitive impairment: Tai Chi, Baduanjin-style Qigong (PSQI reduction −2.47), or rTMS+Tai Chi combination; perimenopausal women with insomnia: acupuncture or community-based traditional Chinese exercises as adjuncts; general adults: any aerobic, resistance, or mind-body modality scaled to baseline sleep impairment severity and intervention duration.
@@ -73,17 +76,17 @@
 
 **Backing evidence (top 3 by population match):**
 - Progressive muscle relaxation exercises are the preferred recommendation for sleep intervention in patients with cancer, with aerobic exercise and walking serving as alternative options. ([10.1002/pon.70466])
-- Routine acupuncture combined with auricular acupuncture may be an effective intervention for treating insomnia in perimenopausal women. ([10.3389/fneur.2025.1726927])
-- In older adults with sleep disturbances or disorders and/or mild cognitive impairment, active repetitive transcranial magnetic stimulation combined with Tai Chi probably improves sleep efficiency and likely reduces sleep onset latency. ([10.1016/j.exger.2026.113125])
+- Physical exercise programs (including aerobic, resistance, tai chi, and aquatic activities) significantly improve sleep latency and efficiency in non-hospitalized older adults. ([10.7717/peerj.20764])
+- Community-based traditional Chinese exercises (CTCEs), including Qigong and Tai Chi, are effective in reducing sleep disturbance among community-dwelling older adults. ([10.1177/10436596251412642])
 
 - **EA-REC-4676** (sim 0.63, pop-match 1.00): Physical post-exercise recovery techniques produce a small to moderate positive effect on vagally-mediated heart rate variability (RMSSD), with cold water immersion showing a moderate to large effect and techniques following resistance exercise demonstrating a larger positive effect than those following cardiovascular exercise. ([10.1111/cpf.12855])
 - **EA-REC-8562** (sim 0.59, pop-match 1.00): Cold-water immersion is significantly more effective than body cryotherapy for alleviating delayed onset muscle soreness within 24 hours post-exercise. ([10.1097/MD.0000000000046781])
 - **EA-REC-8163** (sim 0.61, pop-match 0.88): Cold water immersion (CWI) after exercise may have a positive acute effect on parasympathetic reactivation, as measured by heart rate variability (HRV). ([10.1002/pri.70033])
-- **EA-REC-8071** (sim 0.59, pop-match 0.68): In offshore sailing, optimal sleep management strategies vary by crew size and race duration: for short regattas, 'banking sleep' beforehand is beneficial, while for long races, 4.5-5.5 h of daily sleep, in 30-min to 1-h episodes, is optimal. ([10.1007/s40279-025-02389-x])
+- **EA-REC-8071** (sim 0.64, pop-match 0.68): In offshore sailing, optimal sleep management strategies vary by crew size and race duration: for short regattas, 'banking sleep' beforehand is beneficial, while for long races, 4.5-5.5 h of daily sleep, in 30-min to 1-h episodes, is optimal. ([10.1007/s40279-025-02389-x])
 
 ## Behavioral
 
-### Pattern: RP-BEH-multicomponent-exercise-adherence (sim=0.70)
+### Pattern: RP-BEH-multicomponent-exercise-adherence (sim=0.73)
 
 **Applies because:** COM-B model and TDF analyses establish that exercise adherence is co-determined by capability, opportunity, and motivational factors simultaneously, meaning isolated single-domain strategies produce insufficient and non-durable behavior change, while multi-component approaches address the full causal architecture of adherence.
 **Parameterization:** Scale social support modality by setting and age: older adults benefit from AI-assisted or robotic social prompting to extend training duration and engagement; T2D populations require integration of glycemic self-monitoring feedback (HbA1c, fasting glucose, waist circumference targets) as motivational anchors; chronic pain populations should pair adherence strategies with high-value physiotherapy protocols and technology-based delivery where in-person access is limited; autonomy support and emotional experience management should be weighted more heavily when extrinsic motivation is low.
@@ -91,9 +94,10 @@
 
 **Backing evidence (top 3 by population match):**
 - Flexible and personalized physical activity programs, multidimensional social support, participant education, enhancing self-efficacy and motivation, monitoring and feedback, and managing emotional experiences are key implementation strategies to improve adherence in individuals with type 2 diabetes. ([10.1007/s12529-025-10400-y])
+- Technology-based interventions can improve exercise adherence in patients with chronic pain undergoing high-value physiotherapy. ([10.1093/pm/pnad134])
 - Barriers and facilitators to exercise adherence in community-dwelling older adults can be categorized using the COM-B model and TDF, and effective implementation strategies include tailored exercise programs, appropriate environments, multidimensional social support, monitoring and feedback, managing emotional experiences, participant education, enhancing self-efficacy, and exerting participant autonomy. ([10.1016/j.ijnurstu.2024.104808])
 
-### Pattern: RP-BEH-multicomponent-bct-physical-activity (sim=0.67)
+### Pattern: RP-BEH-multicomponent-bct-physical-activity (sim=0.68)
 
 **Applies because:** BCTs target the psychological, social, and environmental determinants of behavior simultaneously; multicomponent designs reduce barriers across all three levels at once, producing additive or synergistic effects on motivation, habit formation, and sustained behavior change that single-component approaches cannot match.
 **Parameterization:** Adolescents (12–18 y): emphasize Social reward, Behavioral contract, and Prompts/cues alongside Social support for greatest effect on physical activity adherence; digital delivery of social support is a viable substitute when in-person access is limited. University students (18–25 y): structured physical activity programs alone yield large mental-health gains; pairing with self-monitoring apps amplifies wellbeing and depression/anxiety reductions. Middle-aged adults (40–60 y): add goal-setting and meditation BCTs to the core stack to generate co-benefits in sleep quality and cognitive function. Environmental or policy components (e.g., activity-friendly spaces, cue redesign) can be layered into any age cohort to further reduce sedentary behavior.
@@ -101,11 +105,9 @@
 
 **Backing evidence (top 3 by population match):**
 
-- **EA-BEH-6255** (sim 0.62, pop-match 0.80): Goal-setting guidelines for return-to-work rehabilitation in Australia are inconsistent and primarily based on SMART goal principles. ([10.1071/PY25160])
-
 ## Metadata
 
 - top_k_per_domain: 5
 - applicability_threshold: 0.4
-- total queries issued: 11
+- total queries issued: 18
 - total contraindication hits: 0

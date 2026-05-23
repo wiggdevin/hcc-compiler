@@ -1,0 +1,29 @@
+client_id: test_v2_bradley
+library_version: "0.1.0"
+demographics:
+  age: 51
+  sex: M
+  weight_kg: 86.4
+  height_cm: 185.4
+training_status: trained
+goals:
+  - weight_loss
+  - recomposition
+  - longevity
+current_regimen: |
+  Mini-cut at ~2,150 kcal/day, 195–205 g protein/day, Mediterranean framework.
+  Strength/bodybuilding 2–2.5x/week + conditioning 2–2.5x/week (kettlebell 4-week
+  cycle Mon/Tue/Thu/Fri, ab/yoga Wed) + hybrid 35-min strength + 35-min cardio
+  (rower / Peloton / DB thrusters). Home gym: kettlebells, PowerBlocks, bench,
+  Peloton, pulley, stairs. Wake 5:00, train 6:00–7:00, sleep 21:00–21:30.
+  Resting HR target <60, current HRV 46.9 ms (sympathetic-dominant).
+  InBody flags: BF 20.2%, SMM 39.2 kg (above-avg for age), visceral fat level 10
+  (upper safe range), eCW/TBW 0.376. Mask-compromised RMR test (1,074 measured
+  vs 1,871 predicted) — coach using 1,473 kcal conservative baseline.
+  Goal deadline: July shoot, 23 weeks out, target <=12% BF.
+constraints:
+  - type: dietary
+    detail: "Mediterranean preference; no low-carb; olive oil / fish / legumes anchored"
+  - type: schedule
+    detail: "Early-AM training window 6:00–7:00 non-negotiable; 23-week July shoot deadline"
+contraindications: []

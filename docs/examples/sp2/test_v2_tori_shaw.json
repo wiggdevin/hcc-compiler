@@ -1,13 +1,24 @@
 {
-  "client_id": "sam_recomp",
+  "client_id": "test_v2_tori_shaw",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T03:36:43.431871Z",
+  "compiled_at": "2026-05-23T03:36:47.654476Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
         {
+          "pattern_id": "RP-NUT-protein-band",
+          "similarity": 0.7517570307205638,
+          "applies_because": "Resistance-trained adults in an energy deficit.",
+          "parameterization": "2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.",
+          "safety_bounds": "Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.",
+          "backing_atom_ids": [
+            "EA-NUT-0001"
+          ],
+          "warnings": []
+        },
+        {
           "pattern_id": "RP-NUT-caloric-restriction-rt-protein-body-comp",
-          "similarity": 0.7017126644893066,
+          "similarity": 0.7471784060296853,
           "applies_because": "Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.",
           "parameterization": "Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kcal/day deficit, moderate-intensity resistance or aerobic exercise. Resistance-trained athletes during aggressive cuts: 2.3–3.1 g/kg/day protein, up to 750 kcal/day deficit, 60–80% 1RM resistance training. Older adults (≥60 years): whey protein ≥15 g/day combined with resistance plus multicomponent exercise; deficit ≤500 kcal/day to limit FFM loss. Postmenopausal women: 250–750 kcal/day deficit, protein ≥0.8 g/kg/day minimum but 1.6+ g/kg preferred for LBM retention. Very-low-energy-diet contexts (≤800 kcal/day): exercise component is mandatory to mitigate disproportionate FFM loss. Adults with prediabetes or T2DM: intermittent fasting formats are interchangeable with continuous restriction provided protein and training targets are met; target ≥5% weight loss for normoglycemia reversion benefit.",
           "safety_bounds": "Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.",
@@ -40,23 +51,46 @@
             "EA-NUT-9906"
           ],
           "warnings": []
-        },
-        {
-          "pattern_id": "RP-NUT-protein-band",
-          "similarity": 0.6999292225865265,
-          "applies_because": "Resistance-trained adults in an energy deficit.",
-          "parameterization": "2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.",
-          "safety_bounds": "Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.",
-          "backing_atom_ids": [
-            "EA-NUT-0001"
-          ],
-          "warnings": []
         }
       ],
       "atoms": [
         {
+          "atom_id": "EA-NUT-5322",
+          "similarity": 0.7195673709260099,
+          "claim": "Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults.",
+          "citations": [
+            {
+              "id": "10.3390/nu16173007",
+              "locator_quote": "Calorie restriction combined with exercise emerged as the most effective strategy for reducing weight and fat percentage while maintaining lean body mass.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Effects of Different Exercises Combined with Different Dietary Interventions on Body Composition: A Systematic Review and Network Meta-Analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-0001",
+          "similarity": 0.5617675621000778,
+          "claim": "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+          "citations": [
+            {
+              "id": "10.1186/s12970-017-0177-8",
+              "locator_quote": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": null
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-1643",
-          "similarity": 0.6882924410428832,
+          "similarity": 0.6941284059548847,
           "claim": "The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source.",
           "citations": [
             {
@@ -72,8 +106,93 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-8934",
+          "similarity": 0.6580452468727697,
+          "claim": "Time-restricted eating (TRE) results in significant reductions in body weight, fat mass, and fat-free mass compared to control groups, even when caloric intake is isocaloric.",
+          "citations": [
+            {
+              "id": "10.1093/nutrit/nuaf053",
+              "locator_quote": "In studies that used isocaloric control strategies, the TRE group showed significant reductions in BW (MD: -1.46 kg; 95% CI: -2.65, -0.26), FM (MD: -1.50 kg; 95% CI: -2.77, -0.24), and FFM (MD: -0.41 kg; 95% CI: -0.79, -0. 03).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing Time-Restricted Eating With and Without Caloric Restriction for Weight Loss"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-2097",
+          "similarity": 0.653676212834586,
+          "claim": "A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions.",
+          "citations": [
+            {
+              "id": "10.1007/s40279-025-02341-z",
+              "locator_quote": "A pooled analysis revealed no significant effect of carbohydrate intake on muscle hypertrophy (SMD = 0.15, p = 0.23), with negligible heterogeneity across studies.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The Effect of Carbohydrate Intake on Muscle Hypertrophy: A Systematic Review and Meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-7491",
+          "similarity": 0.652959910881328,
+          "claim": "Intermittent energy restriction (IER) diets combined result in comparable reductions in body weight and fat mass to continuous energy restriction (CER), but lead to slightly greater reductions in fat-free mass and waist circumference.",
+          "citations": [
+            {
+              "id": "10.1016/j.advnut.2023.10.003",
+              "locator_quote": "Changes in body weight [WMD: -0.42 kg; 95% confidence interval (CI): -0.96 to 0.13; P = 0.132] and fat mass (FM) (WMD: -0.31 kg; 95% CI: -0.98 to 0.36; P = 0.362) were comparable when results of the 3 IER diets were combined and compared with those of CER. All IER diets combined reduced fat-free mass (WMD: -0.20 kg; 95% CI: -0.39 to -0.01; P = 0.044) and waist circumference (WMD: -0.91 cm; 95% CI: -1.76 to -0.06; P = 0.036) more than CER.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of Intermittent Energy Restriction Compared with Those of Continuous Energy Restriction on Body Composition and Cardiometabolic Risk Markers - A Systematic Review and Meta-Analysis of Randomized Controlled Trials in Adults"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-6194",
+          "similarity": 0.6492707474093762,
+          "claim": "Time-restricted eating significantly reduces body weight and fasting insulin levels in overweight and obese women without negatively affecting lean body mass.",
+          "citations": [
+            {
+              "id": "10.3389/fnut.2025.1664412",
+              "locator_quote": "TRE significantly reduced body weight (WMD = -1.927 kg, 95% CI: -3.688 to -0.166, p = 0.032) and fasting insulin levels (WMD = -2.120 μU/mL, 95% CI: -4.172 to -0.069, p = 0.043), but showed no significant effects on BMI, fat mass, fat-free mass, visceral fat, blood lipids, glucose, HOMA-IR, or blood pressure (p > 0.05).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of time-restricted eating on body composition and metabolic parameters in overweight and obese women: a systematic review and meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-7175",
+          "similarity": 0.5898874146949844,
+          "claim": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
+          "citations": [
+            {
+              "id": "10.3390/nu17132070",
+              "locator_quote": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-6511",
-          "similarity": 0.7670713005160594,
+          "similarity": 0.7829515248799952,
           "claim": "Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults.",
           "citations": [
             {
@@ -106,25 +225,25 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-NUT-4538",
-          "similarity": 0.6887717662265047,
-          "claim": "Total daily leucine intake is positively associated with quadriceps muscle cross-sectional area and maximum dynamic muscle strength in healthy older adults.",
+          "atom_id": "EA-NUT-9353",
+          "similarity": 0.6441403329190196,
+          "claim": "Patient-accessible continuous glucose monitoring significantly reduces cardiometabolic risk factors in adults with type 2 diabetes, including HbA1c, non-HDL cholesterol, triglycerides, systolic blood pressure, weight, and BMI.",
           "citations": [
             {
-              "id": "10.3390/nu13103536",
-              "locator_quote": "Our results demonstrate moderate associations between total daily leucine and both quadriceps CSA (r = 0.42; p = 0.004) and 1-RM (r = 0.45; p = 0.001).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Daily Leucine Intake Is Positively Associated with Lower Limb Skeletal Muscle Mass and Strength in the Elderly"
+              "id": "10.1016/j.disamonth.2025.102043",
+              "locator_quote": "CGM lowered non-HDL cholesterol (-9.31 mg/dL), triglycerides (-32.17 mg/dL), systolic blood pressure (-3.47 mmHg), weight (-3.26 kg), and BMI (-0.87 kg/m²).",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Patient-accessible continuous glucose monitoring for cardiometabolic risk reduction in type 2 diabetes: A meta-analysis of randomized controlled trials"
             }
           ],
-          "evidence_level": "L3",
+          "evidence_level": "L1",
           "population_match_score": 0.68,
           "warnings": []
         },
         {
           "atom_id": "EA-NUT-4009",
-          "similarity": 0.7175680207695726,
+          "similarity": 0.7288748169231968,
           "claim": "Whey protein combined with resistance training is the optimal regimen for improving muscle mass and leg strength in older adults, while whey protein combined with multicomponent exercise training is most effective for physical performance indicators like chair rise and timed up and go.",
           "citations": [
             {
@@ -214,6 +333,40 @@
       ],
       "atoms": [
         {
+          "atom_id": "EA-TRA-9029",
+          "similarity": 0.7547464771139506,
+          "claim": "Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types.",
+          "citations": [
+            {
+              "id": "10.1007/s00520-026-10363-0",
+              "locator_quote": "Structured aerobic and resistance exercise showed to significantly improve QoL, fatigue, body composition, and functional capacity in cancer patients.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The effects of aerobic and resistance training across eight cancer types: a systematic review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-8671",
+          "similarity": 0.7322008728363277,
+          "claim": "Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS.",
+          "citations": [
+            {
+              "id": "10.61622/rbgo/2025rbgo56",
+              "locator_quote": "Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of physical activity in women with polycystic ovary syndrome: a systematic review and meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-TRA-3037",
           "similarity": 0.7017382075642898,
           "claim": "Increases in weekly training set volume are associated with increases in both muscle hypertrophy and strength, though both exhibit diminishing returns.",
@@ -224,23 +377,6 @@
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
               "cited_title": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-8105",
-          "similarity": 0.6925363194185407,
-          "claim": "Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents.",
-          "citations": [
-            {
-              "id": "10.1111/sms.14764",
-              "locator_quote": "In contrast, CT significantly improved countermovement jump (CMJ) compared to RT alone (SMD = 0.19; 95% CI: 0.01-0.36; p = 0.04).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Synergistic Effects of Concurrent Aerobic and Strength Training on Fitness in Children and Adolescents: A Multivariate and Network Meta-Analysis"
             }
           ],
           "evidence_level": "L1",
@@ -265,16 +401,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-9029",
-          "similarity": 0.6860818910073213,
-          "claim": "Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types.",
+          "atom_id": "EA-TRA-1931",
+          "similarity": 0.6189494513911764,
+          "claim": "Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect.",
           "citations": [
             {
-              "id": "10.1007/s00520-026-10363-0",
-              "locator_quote": "Structured aerobic and resistance exercise showed to significantly improve QoL, fatigue, body composition, and functional capacity in cancer patients.",
+              "id": "10.1080/02640414.2024.2425536",
+              "locator_quote": "The overall analyses showed trivial differences in 1RM favouring RTH over RTN (SMD = 0.18 [CI: 0.04; 0.31]; p = 0.030). Sub-analyses revealed that a RT programme of a non-full-body routine, including 9 or more sets per exercise/week of multi-joint exercises performed to non-failure, favoured RTH for enhancing 1RM (p < 0.10).",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The effects of aerobic and resistance training across eight cancer types: a systematic review"
+              "cited_title": "The influence of specific resistance training methodological prescription variables on strength development under hypoxic conditions: A systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -299,33 +435,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-4772",
-          "similarity": 0.6305117457359191,
-          "claim": "High-intensity interval training (HIIT) is more effective than moderate-intensity continuous training (MICT) for improving athletes' VO2max and anaerobic threshold (AT) when applied for short durations (1-3 weeks for AT; 1-9 weeks for VO2max), while both modalities yield similar effects on running economy.",
+          "atom_id": "EA-TRA-4939",
+          "similarity": 0.6108050008646827,
+          "claim": "Higher resistance training volume yields better outcomes for pain intensity and disability compared to lower volume in individuals with patellofemoral pain.",
           "citations": [
             {
-              "id": "10.1007/s00421-024-05532-0",
-              "locator_quote": "There was no significant difference between the effects of HIIT and MICT on the enhancement of athletes' running economy (RE) (P > 0.05); 1-3 weeks and 4-9 weeks of HIIT were more effective in improving athletes' maximum oxygen uptake (VO2max) (P < 0.05), and 10 weeks and above were not significant (P > 0.05); 1-3 weeks of HIIT was more effective in improving athletes' anaerobic threshold (AT) (P < 0.05), and 4-10 weeks was not significant (P > 0.05)",
+              "id": "10.2519/jospt.2025.13062",
+              "locator_quote": "There was very low-certainty evidence that higher resistance training volume yielded better outcomes for pain intensity and disability compared to a lower volume.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The effects of high-intensity interval training versus moderate-intensity continuous training on athletes' aerobic endurance performance parameters"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8800000000000001,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-4779",
-          "similarity": 0.6230930576420599,
-          "claim": "High-intensity interval training (HIIT) significantly improves cardiorespiratory fitness (VO2max) in patients with coronary artery disease, with a minimum effective dose identified at approximately 620 MET-min/week.",
-          "citations": [
-            {
-              "id": "10.1080/09638288.2025.2591827",
-              "locator_quote": "Meta-analysis demonstrated that HIIT significantly improved VO2max compared to controls (mean difference [MD] = 3.20 mL/kg/min; 95% credible interval [CrI]: 2.78-3.61). Dose-response analysis revealed a nonlinear relationship, with the minimum effective dose identified at approximately 620 MET-min/week.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "High-intensity interval training dose and cardiorespiratory fitness in coronary artery disease: a systematic review and dose-response meta-analysis"
+              "cited_title": "Effect of Equalized and Nonequalized Resistance Training Volumes on Pain and Disability in Patients With Patellofemoral Pain: A Systematic Review With Meta-Analyses"
             }
           ],
           "evidence_level": "L1",
@@ -333,20 +452,20 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-5190",
-          "similarity": 0.6135679868384147,
-          "claim": "Mind-body exercise therapies lasting over 40 hours show greater improvements in fibromyalgia impact than shorter durations.",
+          "atom_id": "EA-TRA-0309",
+          "similarity": 0.7354311091785755,
+          "claim": "In older adults with sarcopenic obesity, resistance training is the most effective intervention for improving handgrip strength and reducing fat mass, while multicomponent training is superior for reducing BMI and percentage body fat.",
           "citations": [
             {
-              "id": "10.1123/jpah.2025-0207",
-              "locator_quote": "A potential dose-response relationship was observed, with interventions lasting over 40 hours showing greater improvements in FIQ.",
+              "id": "10.3389/fpubh.2026.1775783",
+              "locator_quote": "For handgrip strength, both resistance training (RT) (MD = 3.96, 95% CI 2.15-5.77) and MC (MD = 2.13, 95% CI 0.25-4.01) were superior to UC, with RT ranking first (SUCRA 90.9%). For fat mass, only RT significantly reduced FM compared with UC (MD = -2.30, 95% CI -3.63 to -0.98) and achieved the highest ranking (SUCRA 79.0%). For PBF, both MC (MD = -3.53, 95% CI -5.70 to -1.36) and RT (MD = -2.30, 95% CI -3.98 to -0.62) were effective, with MC ranking highest (SUCRA 77.1%).",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effects of Mind-Body Exercise Therapies on Patients With Fibromyalgia: A Systematic Review and Meta-analysis"
+              "cited_title": "Comparative effectiveness of exercise modalities and nutritional supplementation for sarcopenic obesity in older adults: a network meta-analysis based on randomized controlled trials"
             }
           ],
           "evidence_level": "L1",
-          "population_match_score": 0.8,
+          "population_match_score": 0.68,
           "warnings": []
         },
         {
@@ -367,16 +486,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-2799",
-          "similarity": 0.6808418375275365,
-          "claim": "Eccentric resistance training yields slightly greater muscle strength gains than traditional resistance training in older adults, though both modalities produce comparable effects on functional capacity, muscle power, and hypertrophy.",
+          "atom_id": "EA-TRA-1619",
+          "similarity": 0.631749611793715,
+          "claim": "Multicomponent training programs combining strength, balance, and aerobic exercises are more effective than single-component regimens at improving functional parameters like Timed Up and Go, balance, and chair stand performance in older adults.",
           "citations": [
             {
-              "id": "10.1016/j.arr.2025.102933",
-              "locator_quote": "In summary, ERT yields slightly greater muscle strength gains than TRT in older adults, while both produced comparable effects on functional capacity, muscle power, and hypertrophy.",
+              "id": "10.3389/fpubh.2025.1636439",
+              "locator_quote": "Multicomponent programs surpassed single-component interventions, producing a ~ 1-s faster TUG, an 8-20% improvement in SEBT reach, and a 55% increase in CS-30 repetitions.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The effects of eccentric versus traditional resistance training on muscle strength, power, hypertrophy, and functional performance in older adults: A systematic review with multilevel meta-analysis of randomized controlled trials"
+              "cited_title": "A systematic review of multicomponent vs. single-component training programs for fall prevention in older adults"
             }
           ],
           "evidence_level": "L1",
@@ -384,42 +503,25 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-1711",
-          "similarity": 0.6199094751737579,
-          "claim": "The optimal dose of resistance training to improve handgrip strength in older adults with sarcopenia is 3 times per week, 49% 1RM, for 19 weeks, featuring 15 exercises, 6 sets, and 16 repetitions per exercise, totaling up to 1,400 reps weekly.",
+          "atom_id": "EA-TRA-4241",
+          "similarity": 0.6105098401499742,
+          "claim": "Strength training in older people with osteosarcopenia increases skeletal muscle mass index, maximal isometric handgrip strength, and protein intake.",
           "citations": [
             {
-              "id": "10.3389/fphys.2025.1564988",
-              "locator_quote": "The optimal dose of resistance training to improve handgrip strength in older adults with sarcopenia is 3 times per week (MD = 7.02, 95% CrI [4.62, 9.42]), 49% 1RM (MD = 7.11, 95% CrI [2.69, 11.52]), 19 weeks (MD = 7.87, 95% CrI [3.89, 11.85]), 15 exercises (MD = 8.16, 95% CrI [3.65, 12.66]), 16 reps (MD = 7.62; 95% CrI [4.77, 10.46]), 6 sets (MD = 8.63; 95% CrI [5.06, 12.21]), 1,400 reps/week (MD = 8.45; 95% CrI [5.50, 11.40]).",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Optimal dose of resistance training to improve handgrip strength in older adults with sarcopenia: a systematic review and Bayesian model-based network meta-analysis"
+              "id": "10.3390/nu17172852",
+              "locator_quote": "Conclusions: ST in older people with osteosarcopenia conditions increases SMMI, MIHS, and protein intake.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of Strength Training on Body Composition, Physical Performance, and Protein or Calcium Intake in Older People with Osteosarcopenia: A Meta-Analysis"
             }
           ],
           "evidence_level": "L1",
           "population_match_score": 0.68,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-1916",
-          "similarity": 0.7415970289655996,
-          "claim": "Advanced resistance training methods do not provide a clear benefit over traditional resistance training for inducing adaptations in untrained to moderately trained individuals.",
-          "citations": [
-            {
-              "id": "10.1007/s40279-026-02428-1",
-              "locator_quote": "When aiming to develop a range of physical capacities, there is no clear benefit from using advanced methods over traditional resistance training for inducing adaptation in untrained to moderately trained individuals.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The Effects of Advanced Resistance Training Prescription Methods on Strength, Power, Hypertrophy, and Performance Adaptations in Healthy Adults: A Systematic Review and Bayesian Network Meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.6799999999999999,
           "warnings": []
         },
         {
           "atom_id": "EA-TRA-3375",
-          "similarity": 0.7283553381765339,
+          "similarity": 0.7460279213232563,
           "claim": "Supersets provide a time-efficient alternative to traditional resistance training, reducing session duration without compromising training volume, muscle activation, perceived recovery, or chronic adaptations in maximal strength, strength endurance, and muscle hypertrophy.",
           "citations": [
             {
@@ -433,6 +535,23 @@
           "evidence_level": "L1",
           "population_match_score": 0.6799999999999999,
           "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-1916",
+          "similarity": 0.7371962484009645,
+          "claim": "Advanced resistance training methods do not provide a clear benefit over traditional resistance training for inducing adaptations in untrained to moderately trained individuals.",
+          "citations": [
+            {
+              "id": "10.1007/s40279-026-02428-1",
+              "locator_quote": "When aiming to develop a range of physical capacities, there is no clear benefit from using advanced methods over traditional resistance training for inducing adaptation in untrained to moderately trained individuals.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The Effects of Advanced Resistance Training Prescription Methods on Strength, Power, Hypertrophy, and Performance Adaptations in Healthy Adults: A Systematic Review and Bayesian Network Meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.6799999999999999,
+          "warnings": []
         }
       ],
       "gaps": []
@@ -441,7 +560,7 @@
       "patterns": [
         {
           "pattern_id": "RP-CON-hiit-vo2max-broad-population",
-          "similarity": 0.6407933362663628,
+          "similarity": 0.6416290219748484,
           "applies_because": "HIIT drives superior mitochondrial biogenesis, stroke volume augmentation, and peripheral oxygen extraction versus lower-intensity modalities by repeatedly stressing the oxygen transport chain near its ceiling, as corroborated by consistent effect-size advantages (SMD/g 0.37–3.6 for VO2-related outcomes) across diverse meta-analyses spanning clinical, youth, and performance populations.",
           "parameterization": "Healthy endurance athletes: standard normoxic HIIT; add hypoxic stimulus (live-high-train-low or hypoxic intervals) for an incremental VO2max gain of ~SMD 0.26 over normoxic HIIT alone. Racket-sport and team-sport athletes: HIIT or small-sided games (SSG) are interchangeable for VO2max; HIIT favored when sprint and power outcomes are co-primary. Youth athletes: apply age-appropriate volume scaling; effect sizes are large (g ≈ 0.97) so moderate session counts (2–3×/week) suffice. Post-stroke patients: begin at 50–60% HRR and progress to ≥80% HRR under supervised conditions; target VO2-VT improvements first (MD +2.20 mL/kg/min vs. MICT). HFpEF patients: combine HIIT with inspiratory muscle training (IMT) for additive VO2 peak benefit (IMT SMD 3.6, HIIT SMD 3.5 mL/kg·min); reduce session duration and increase rest intervals relative to healthy cohorts.",
           "safety_bounds": "Clinical populations require physician clearance before initiating HIIT; absolute contraindications include unstable angina, decompensated heart failure (NYHA IV), acute arrhythmia, or recent (≤3 months) cardiovascular event. Maximum session intensity should not exceed 90% HRmax without on-site medical supervision for cardiac patients. Hypoxic protocols are contraindicated in individuals with sickle-cell trait, severe anemia (Hb < 8 g/dL), or symptomatic pulmonary hypertension. Youth athletes: cap work intervals at ≤95% HRmax; mandatory warm-up ≥10 min.",
@@ -461,7 +580,7 @@
       "atoms": [
         {
           "atom_id": "EA-CON-0247",
-          "similarity": 0.6610699007039589,
+          "similarity": 0.7005361688163017,
           "claim": "In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory muscle training, high-intensity interval training, and combined aerobic and resistance exercise are the most effective interventions for improving aerobic capacity (VO2 peak).",
           "citations": [
             {
@@ -477,8 +596,76 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-CON-9235",
+          "similarity": 0.6025588914797305,
+          "claim": "Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals.",
+          "citations": [
+            {
+              "id": "10.1002/nbm.70023",
+              "locator_quote": "Greater age was associated with longer PCr recovery in upper leg muscles among both healthy (ρ = 0.387, p < 0.05) and diseased (ρ = 0.733, p < 0.05) individuals. Additionally, longer PCr recovery time was correlated with more acidic end-of-exercise pH in all three muscle groups among healthy individuals.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "(31)P-MRS-Measured Phosphocreatine Recovery Kinetics in Human Muscles in Health and Disease-A Systematic Review and Meta-Analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-CON-2262",
+          "similarity": 0.5905594989684333,
+          "claim": "High-intensity interval training (HIIT) performed under hypoxic conditions results in greater improvements in VO2 max compared to normoxic conditions in distance runners.",
+          "citations": [
+            {
+              "id": "10.14814/phy2.70349",
+              "locator_quote": "The results revealed that VO2 max improved more in hypoxic (4.4%-13%) HIIT than in normoxic (1%-8.3%) HIIT. The meta-analysis results revealed that the effect of HIIT under hypoxia on the VO2 max overall standardized mean difference (SMD) was 0.68, with a 95% confidence interval [0.3, 1.06], p < 0.001.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Methodological and aerobic capacity adaptations of high-intensity interval training at different altitudes in distance runners: A comprehensive meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-CON-0964",
+          "similarity": 0.5607545910138243,
+          "claim": "High-Intensity Interval Training (HIIT) improves VO2 max, running and repetitive sprint performance, jumping performance, and hitting speed in racket sports athletes.",
+          "citations": [
+            {
+              "id": "10.1371/journal.pone.0295362",
+              "locator_quote": "HIIT was found to improve racket players' VO2 max (maximum oxygen uptake), running and repetitive sprint performance, jumping performance, and hitting speed during play.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of high-intensity interval training on strength, speed, and endurance performance among racket sports players: A systematic review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-CON-8559",
+          "similarity": 0.5272535273248764,
+          "claim": "Small-sided games (SSGs) and high-intensity interval training (HIIT) produce similar effects on improving endurance performance and VO2max in soccer players.",
+          "citations": [
+            {
+              "id": "10.1055/a-2171-3255",
+              "locator_quote": "Despite the very low certainty of evidence, the findings suggest similar effects induced by both SSG and HIIT on improving endurance performance and VO2max.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Endurance Performance Adaptations between SSG and HIIT in Soccer Players: A Meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-CON-6779",
-          "similarity": 0.6145645786349773,
+          "similarity": 0.6316525386899541,
           "claim": "Intermittent hypoxia (IH) protocols, including live high-train low (LHTL), repeated sprint training in hypoxia (RSH), and hypoxic interval training, effectively improve aerobic capacity, anaerobic performance, and muscular strength in both trained and untrained individuals.",
           "citations": [
             {
@@ -495,7 +682,7 @@
         },
         {
           "atom_id": "EA-CON-6998",
-          "similarity": 0.6060040071541152,
+          "similarity": 0.6004081371545649,
           "claim": "High-intensity interval training (HIIT) is more effective than moderate-intensity continuous training (MICT) in improving oxygen consumption at peak (V̇O2-peak) and at ventilation threshold (VO2-VT) in patients after stroke.",
           "citations": [
             {
@@ -511,20 +698,20 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-CON-7623",
-          "similarity": 0.5808495721401588,
-          "claim": "Repeated-sprint training in hypoxia provides a moderate performance advantage over normoxic training, particularly for repeated-sprint ability.",
+          "atom_id": "EA-CON-9301",
+          "similarity": 0.555147063534643,
+          "claim": "Contemporary Olympic Cross-Country mountain biking requires exceptional aerobic capacity but places a greater importance on high-intensity, short-duration efforts and anaerobic contribution compared to the former version of the discipline.",
           "citations": [
             {
-              "id": "10.3389/fspor.2025.1641379",
-              "locator_quote": "This meta-analysis confirms that RSH provides a moderate performance advantage over RSN, particularly for repeated-sprint ability.",
+              "id": "10.1186/s40798-026-00976-4",
+              "locator_quote": "Findings highlight that XCO athletes maintain exceptional aerobic capacity as in the former version of the discipline, but evidence points to a greater importance of high-intensity, short-duration efforts.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "A multilevel meta-analysis of the effects of repeated sprint training in hypoxia on athletic performance"
+              "cited_title": "The Physiology of Contemporary Olympic Cross-Country Mountain Biking: A Systematic Review"
             }
           ],
           "evidence_level": "L1",
-          "population_match_score": 0.6799999999999999,
+          "population_match_score": 0.56,
           "warnings": []
         }
       ],
@@ -534,16 +721,16 @@
       "patterns": [],
       "atoms": [
         {
-          "atom_id": "EA-SUP-8071",
-          "similarity": 0.6443721626104927,
-          "claim": "Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects.",
+          "atom_id": "EA-SUP-2054",
+          "similarity": 0.7014190047228348,
+          "claim": "Creatine supplementation significantly increases body mass and fat-free mass while reducing body fat percentage, with effects enhanced when combined with resistance training.",
           "citations": [
             {
-              "id": "10.7717/peerj.20380",
-              "locator_quote": "Cr supplementation significantly improves muscle strength in the general population. Specifically: untrained individuals show greater muscle strength improvements; low-dose supplementation combined with high-intensity exercise yields better effects",
+              "id": "10.1080/15502783.2024.2380058",
+              "locator_quote": "Creatine supplementation increased body mass (WMD: 0.86 kg; 95% CI: 0.76 to 0.96, I2 = 0%) and fat-free mass (WMD: 0.82 kg; 95% CI: 0.57 to 1.06, I2 = 0%) while reducing body fat percentage (WMD: -0.28 %; 95% CI: -0.47 to -0.09; I2 = 0%). Studies that incorporated a maintenance dose of creatine or performed resistance training in conjunction with supplementation had greater effects on body composition.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effects of creatine supplementation on muscle strength gains-a meta-analysis and systematic review"
+              "cited_title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -551,25 +738,59 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-SUP-0001",
-          "similarity": 0.6537697538034388,
-          "claim": "Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations.",
+          "atom_id": "EA-SUP-8825",
+          "similarity": 0.6694970228602121,
+          "claim": "Nutritional supplementation combined with exercise does not significantly improve muscle mass or bone health outcomes in women across reproductive stages, though it may improve upper-body strength.",
           "citations": [
             {
-              "id": "10.1186/s12970-017-0173-z",
-              "locator_quote": "Studies have consistently shown that creatine supplementation increases intramuscular creatine concentrations which may help explain the observed improvements in high intensity exercise performance leading to greater training adaptations.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": null
+              "id": "10.7150/ijms.130435",
+              "locator_quote": "The combined intervention showed no significant effects on muscle mass measures: skeletal muscle mass (g=0.065, 95% CI: -0.353 to 0.482, p=0.762), appendicular lean mass (g=0.197, 95% CI: -0.177 to 0.571, p=0.302), or fat-free mass (g=0.069, 95% CI: -0.110 to 0.249, p=0.447). Significant improvements occurred in bench press (g=0.279, 95% CI: 0.008 to 0.550, p=0.043) and handgrip strength (g=0.412, 95% CI: 0.039 to 0.786, p=0.031). No significant effects emerged for bone mineral content (g=0.195, 95% CI: -0.281 to 0.671, p=0.421) or bone mineral density (g=0.087, 95% CI: -0.129 to 0.303, p=0.430).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Nutritional Supplementation Combined with Exercise for Musculoskeletal Health in Women: A Systematic Review and Meta-Analysis Evaluating Proteins, Amino Acids, and Creatine across Reproductive Stages"
             }
           ],
           "evidence_level": "L1",
-          "population_match_score": 0.8800000000000001,
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-SUP-1368",
+          "similarity": 0.6605436322200497,
+          "claim": "Creatine supplementation does not consistently improve exercise performance in active females, with most studies showing no improvement compared to placebo.",
+          "citations": [
+            {
+              "id": "10.3390/nu17020238",
+              "locator_quote": "Compared to placebo, 3/11 studies showed an improvement in strength/power outcomes, 4/17 showed an improvement in anaerobic outcomes, and 1/5 showed an improvement in aerobic outcomes. Study quality varied, but methodological considerations for research with female athletes were poorly addressed by most studies. Although some benefits were reported, most studies showed no improvement in performance compared to placebo.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Does Creatine Supplementation Enhance Performance in Active Females? A Systematic Review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-SUP-8953",
+          "similarity": 0.6347556214522989,
+          "claim": "Creatine supplementation does not significantly reduce inflammatory biomarkers in humans based on current evidence.",
+          "citations": [
+            {
+              "id": "10.3389/fimmu.2026.1743603",
+              "locator_quote": "Creatine supplementation does not significantly reduce inflammatory biomarkers in humans based on current evidence.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Impact of creatine supplementation on inflammation: evidence from a systematic review and meta-analysis of randomized double-blind placebo trials"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
           "warnings": []
         },
         {
           "atom_id": "EA-SUP-5023",
-          "similarity": 0.642600549301017,
+          "similarity": 0.6981620885002302,
           "claim": "Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes.",
           "citations": [
             {
@@ -586,7 +807,7 @@
         },
         {
           "atom_id": "EA-SUP-3039",
-          "similarity": 0.6413759246763807,
+          "similarity": 0.6705112220504506,
           "claim": "Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se.",
           "citations": [
             {
@@ -602,16 +823,50 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-SUP-4139",
-          "similarity": 0.6323144966013292,
-          "claim": "Creatine supplementation combined with resistance training produces small but statistically significant improvements in upper-body strength (bench/chest press), lower-body strength (squat), vertical jump height, and Wingate peak power compared to placebo.",
+          "atom_id": "EA-SUP-4168",
+          "similarity": 0.6790173730237836,
+          "claim": "Creatine supplementation combined with resistance training increases lean body mass and reduces body fat percentage and mass compared to resistance training alone.",
           "citations": [
             {
-              "id": "10.3390/nu17172748",
-              "locator_quote": "Creatine plus resistance training produced small but statistically significant improvements in bench and chest press strength [WMD = 1.43 kg, p = 0.002], squat strength [WMD = 5.64 kg, p = 0.001], vertical jump [WMD = 1.48 cm, p = 0.01], and Wingate peak power [WMD = 47.81 Watts, p = 0.004] when compared to the placebo.",
+              "id": "10.1519/JSC.0000000000004862",
+              "locator_quote": "Compared with resistance training (RT) alone, creatine supplementation increased LBM by 1.14 kg (95% CI 0.69 to 1.59), and reduced body fat percentage by -0.88% (95% CI -1.66 to -0.11) and body fat mass by -0.73 kg (95% CI -1.34 to -0.11).",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis"
+              "cited_title": "The Effect of Creatine Supplementation on Resistance Training-Based Changes to Body Composition: A Systematic Review and Meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-SUP-7640",
+          "similarity": 0.6733011749596053,
+          "claim": "Combining high-intensity interval training (HIIT) with dietary supplementation such as green tea or ginger can enhance reductions in body fat and improvements in metabolic health and aerobic capacity in adults with overweight and obesity, though the combination is not strictly necessary for benefits.",
+          "citations": [
+            {
+              "id": "10.3390/nu16030355",
+              "locator_quote": "Almost all studies (93%) demonstrated effectiveness of high-intensity interval training of various protocols in reducing body fat, improving metabolic health and aerobic capacity of adults with overweight and obesity. These effects were enhanced by an addition of a dietary supplement, such as green tea or ginger or other.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The Combined Effects of High-Intensity Interval Exercise Training and Dietary Supplementation on Reduction of Body Fat in Adults with Overweight and Obesity: A Systematic Review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-SUP-1930",
+          "similarity": 0.6508430536988541,
+          "claim": "In postmenopausal women, creatine supplementation at doses of at least 5 g/day combined with resistance training yields small but meaningful gains in lean mass and strength without evidence of harm.",
+          "citations": [
+            {
+              "id": "10.1080/15502783.2026.2668435",
+              "locator_quote": "In postmenopausal women, creatine, particularly ≥ 5 g·day⁻¹ with RT, yields small but meaningful gains in lean mass and strength without evidence of harm.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Creatine monohydrate for lean mass, strength, and bone density in postmenopausal women: a systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -625,7 +880,7 @@
       "patterns": [
         {
           "pattern_id": "RP-REC-exercise-sleep-quality",
-          "similarity": 0.6005707053475169,
+          "similarity": 0.6316519428424008,
           "applies_because": "Multiple systematic reviews and meta-analyses consistently report significant SMD improvements in subjective sleep quality (range ~0.47–1.56 across modalities), likely mediated by thermoregulatory normalization, hypothalamic-pituitary-adrenal axis down-regulation, and circadian rhythm entrainment via timed physical stimulation.",
           "parameterization": "Adults ≥50 yr: combined aerobic + resistance training preferred (SMD −1.56); perinatal women: relaxation exercises 30–60 min/session, 1–2×/week, ≤4 weeks (SMD −2.54 to −3.13); cancer patients on chemotherapy: activity pacing plus progressive muscle relaxation first-line (ranked 98.6%), aerobic exercise or walking as alternatives; older adults with sleep disturbance or mild cognitive impairment: Tai Chi, Baduanjin-style Qigong (PSQI reduction −2.47), or rTMS+Tai Chi combination; perimenopausal women with insomnia: acupuncture or community-based traditional Chinese exercises as adjuncts; general adults: any aerobic, resistance, or mind-body modality scaled to baseline sleep impairment severity and intervention duration.",
           "safety_bounds": "Avoid vigorous exercise within 2–3 hours of intended sleep onset; obtain medical clearance before initiating resistance or aerobic programs in cancer patients, frail older adults, or individuals with cardiopulmonary comorbidities; rTMS must be administered by a licensed clinician and is contraindicated in individuals with implanted metallic devices, cochlear implants, or a personal or family history of seizures.",
@@ -699,7 +954,7 @@
         },
         {
           "atom_id": "EA-REC-7475",
-          "similarity": 0.5773063513980967,
+          "similarity": 0.6634832984340908,
           "claim": "Progressive muscle relaxation exercises are the preferred recommendation for sleep intervention in patients with cancer, with aerobic exercise and walking serving as alternative options.",
           "citations": [
             {
@@ -715,42 +970,8 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-REC-9976",
-          "similarity": 0.5677318118631677,
-          "claim": "Routine acupuncture combined with auricular acupuncture may be an effective intervention for treating insomnia in perimenopausal women.",
-          "citations": [
-            {
-              "id": "10.3389/fneur.2025.1726927",
-              "locator_quote": "This network meta-analysis suggests that routine acupuncture combined with auricular acupuncture may be an effective intervention treatment for treating insomnia in perimenopausal women.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "A network meta-analysis of acupuncture therapy for female insomnia and negative emotions from the perspective of the perimenopausal window"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-REC-1190",
-          "similarity": 0.5654634128446854,
-          "claim": "In older adults with sleep disturbances or disorders and/or mild cognitive impairment, active repetitive transcranial magnetic stimulation combined with Tai Chi probably improves sleep efficiency and likely reduces sleep onset latency.",
-          "citations": [
-            {
-              "id": "10.1016/j.exger.2026.113125",
-              "locator_quote": "The meta-analysis showed that active rTMS + TC probably improves sleep efficiency (MD = 1.53%, 95% CI 0.00 to 3.05; I2 = 0%; p (overall) = 0.05; moderate certainty), likely reduces sleep onset latency (MD = -2.71 min, 95% CI -5.79 to 0.36; I2 = 45%; p (overall) = 0.08; moderate certainty)",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effects of non-invasive brain stimulation combined with Tai Chi on the physical, cognitive, emotional, sleep, and quality-of-life outcomes in older adults: A systematic review and meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.68,
-          "warnings": []
-        },
-        {
           "atom_id": "EA-REC-7231",
-          "similarity": 0.5568832285660575,
+          "similarity": 0.6499256954940594,
           "claim": "Physical exercise programs (including aerobic, resistance, tai chi, and aquatic activities) significantly improve sleep latency and efficiency in non-hospitalized older adults.",
           "citations": [
             {
@@ -766,8 +987,25 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-REC-3843",
+          "similarity": 0.624700132475024,
+          "claim": "Community-based traditional Chinese exercises (CTCEs), including Qigong and Tai Chi, are effective in reducing sleep disturbance among community-dwelling older adults.",
+          "citations": [
+            {
+              "id": "10.1177/10436596251412642",
+              "locator_quote": "CTCEs are effective in reducing sleep disturbance among older adults. Both Qigong and tai chi improved sleep; Qigong showed a slightly larger effect size than tai chi, but the difference between modality was not significant.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Beneficial Effects of Community-Based Traditional Chinese Exercises on Sleep Disturbance Among Older Adults: Systematic Review, Meta-Analysis, and Meta-Regression of Randomized Controlled Trials"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.68,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-REC-8071",
-          "similarity": 0.5920374934093294,
+          "similarity": 0.6412007730940948,
           "claim": "In offshore sailing, optimal sleep management strategies vary by crew size and race duration: for short regattas, 'banking sleep' beforehand is beneficial, while for long races, 4.5-5.5 h of daily sleep, in 30-min to 1-h episodes, is optimal.",
           "citations": [
             {
@@ -789,7 +1027,7 @@
       "patterns": [
         {
           "pattern_id": "RP-BEH-multicomponent-exercise-adherence",
-          "similarity": 0.7027267010857012,
+          "similarity": 0.7251024597171288,
           "applies_because": "COM-B model and TDF analyses establish that exercise adherence is co-determined by capability, opportunity, and motivational factors simultaneously, meaning isolated single-domain strategies produce insufficient and non-durable behavior change, while multi-component approaches address the full causal architecture of adherence.",
           "parameterization": "Scale social support modality by setting and age: older adults benefit from AI-assisted or robotic social prompting to extend training duration and engagement; T2D populations require integration of glycemic self-monitoring feedback (HbA1c, fasting glucose, waist circumference targets) as motivational anchors; chronic pain populations should pair adherence strategies with high-value physiotherapy protocols and technology-based delivery where in-person access is limited; autonomy support and emotional experience management should be weighted more heavily when extrinsic motivation is low.",
           "safety_bounds": "Exercise intensity must remain within individually medically cleared ranges; patients with uncontrolled HbA1c >10%, unstable cardiovascular disease, acute musculoskeletal injury, or severe unmanaged chronic pain flares require direct clinical supervision before program enrollment; AI/robotic-assisted interventions must include human clinical oversight protocols.",
@@ -804,7 +1042,7 @@
         },
         {
           "pattern_id": "RP-BEH-multicomponent-bct-physical-activity",
-          "similarity": 0.666098513746774,
+          "similarity": 0.6848934199730176,
           "applies_because": "BCTs target the psychological, social, and environmental determinants of behavior simultaneously; multicomponent designs reduce barriers across all three levels at once, producing additive or synergistic effects on motivation, habit formation, and sustained behavior change that single-component approaches cannot match.",
           "parameterization": "Adolescents (12–18 y): emphasize Social reward, Behavioral contract, and Prompts/cues alongside Social support for greatest effect on physical activity adherence; digital delivery of social support is a viable substitute when in-person access is limited. University students (18–25 y): structured physical activity programs alone yield large mental-health gains; pairing with self-monitoring apps amplifies wellbeing and depression/anxiety reductions. Middle-aged adults (40–60 y): add goal-setting and meditation BCTs to the core stack to generate co-benefits in sleep quality and cognitive function. Environmental or policy components (e.g., activity-friendly spaces, cue redesign) can be layered into any age cohort to further reduce sedentary behavior.",
           "safety_bounds": "BCT-based behavioral programs carry no known pharmacological risk; however, prescribed exercise intensity should remain within age-appropriate aerobic guidelines (moderate–vigorous, ≤60 min/day for youth per WHO) and must not substitute for clinical care in participants with diagnosed psychiatric or sleep disorders requiring pharmacological or psychotherapeutic treatment.",
@@ -820,25 +1058,8 @@
       ],
       "atoms": [
         {
-          "atom_id": "EA-BEH-6255",
-          "similarity": 0.6214250703603487,
-          "claim": "Goal-setting guidelines for return-to-work rehabilitation in Australia are inconsistent and primarily based on SMART goal principles.",
-          "citations": [
-            {
-              "id": "10.1071/PY25160",
-              "locator_quote": "This study suggests that goal-setting guidelines for return-to-work rehabilitation in Australia are inconsistent and primarily based on SMART goal principles.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "A systematic-narrative review of goal-setting guidelines in workers' compensation rehabilitation in Australia"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
           "atom_id": "EA-BEH-4318",
-          "similarity": 0.603426374459675,
+          "similarity": 0.6654734515499036,
           "claim": "Flexible and personalized physical activity programs, multidimensional social support, participant education, enhancing self-efficacy and motivation, monitoring and feedback, and managing emotional experiences are key implementation strategies to improve adherence in individuals with type 2 diabetes.",
           "citations": [
             {
@@ -854,8 +1075,25 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-BEH-9242",
+          "similarity": 0.6386991984583288,
+          "claim": "Technology-based interventions can improve exercise adherence in patients with chronic pain undergoing high-value physiotherapy.",
+          "citations": [
+            {
+              "id": "10.1093/pm/pnad134",
+              "locator_quote": "Of these, evidence from 4 randomized controlled trials of technology-based interventions demonstrated improved exercise adherence among intervention groups compared with controls.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Patient-related barriers and enablers to the implementation of high-value physiotherapy for chronic pain: a systematic review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 0.8,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-BEH-3146",
-          "similarity": 0.7047190945478259,
+          "similarity": 0.7405012772170053,
           "claim": "Barriers and facilitators to exercise adherence in community-dwelling older adults can be categorized using the COM-B model and TDF, and effective implementation strategies include tailored exercise programs, appropriate environments, multidimensional social support, monitoring and feedback, managing emotional experiences, participant education, enhancing self-efficacy, and exerting participant autonomy.",
           "citations": [
             {
@@ -881,27 +1119,34 @@
     "preemptive_contraindications": [],
     "queries_issued": {
       "nutrition": [
+        "protein intake for weight_loss in recreational adults",
         "protein intake for recomposition in recreational adults",
-        "protein intake for longevity in recreational adults",
-        "macronutrient timing for recreational adults"
+        "protein intake for hypertrophy in recreational adults",
+        "avoiding NDT timing: 4-hour separation from food around Armour Thyroid dose",
+        "avoiding Gut sensitivities with elevated systemic inflammation; refined-carb and liquid-fructose restrictions"
       ],
       "training": [
-        "resistance training program for recomposition",
+        "resistance training program for weight_loss",
         "training volume recreational",
-        "training with 45-minute session cap"
+        "avoiding Post-lumbar-spinal-fusion (~4 yr); cleared for lifting but requires corrective/stability focus, no heavy axial loading without medical clearance",
+        "post-lumbar-fusion training programming",
+        "spinal fusion return-to-lifting programming"
       ],
       "conditioning": [
-        "cardiovascular conditioning for recomposition"
+        "cardiovascular conditioning for weight_loss",
+        "HIIT for weight_loss",
+        "avoiding Post-lumbar-spinal-fusion (~4 yr); cleared for lifting but requires corrective/stability focus, no heavy axial loading without medical clearance"
       ],
       "supplements": [
-        "supplements for recomposition recreational"
+        "supplements for weight_loss recreational",
+        "perimenopausal supplementation evidence"
       ],
       "recovery": [
         "recovery between sessions recreational",
-        "sleep for recomposition"
+        "sleep for weight_loss"
       ],
       "behavioral": [
-        "adherence in recreational adults pursuing recomposition"
+        "adherence in recreational adults pursuing weight_loss"
       ]
     }
   }

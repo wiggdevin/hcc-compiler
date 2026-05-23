@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — amy_runner
 
-- Compiled at: 2026-05-23T03:02:33.658842+00:00
+- Compiled at: 2026-05-23T03:36:42.408099+00:00
 - Library version: 0.1.0
 
 ---
@@ -22,9 +22,11 @@
 **Safety bounds:** Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.
 
 **Backing evidence (top 3 by population match):**
-- Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
 - The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
-- Protein supplementation may support improvements in body composition and functional capacity in CVD patients undergoing cardiovascular rehabilitation, but variability in protein types and dosages prevents a clear recommendation. ([10.1016/j.nut.2025.112773])
+- Whey protein combined with resistance training is the optimal regimen for improving muscle mass and leg strength in older adults, while whey protein combined with multicomponent exercise training is most effective for physical performance indicators like chair rise and timed up and go. ([10.3390/nu18091409])
+
+- **EA-NUT-6511** (sim 0.76, pop-match 0.68): Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults. ([10.3945/ajcn.114.084061])
+- **EA-NUT-4538** (sim 0.63, pop-match 0.68): Total daily leucine intake is positively associated with quadriceps muscle cross-sectional area and maximum dynamic muscle strength in healthy older adults. ([10.3390/nu13103536])
 
 ## Training
 

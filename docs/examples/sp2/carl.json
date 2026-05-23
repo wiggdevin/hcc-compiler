@@ -1,7 +1,7 @@
 {
   "client_id": "carl_strength",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T03:02:34.033872Z",
+  "compiled_at": "2026-05-23T03:36:42.902377Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -77,7 +77,7 @@
         },
         {
           "atom_id": "EA-NUT-1643",
-          "similarity": 0.6978812528873021,
+          "similarity": 0.6495874512154128,
           "claim": "The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source.",
           "citations": [
             {
@@ -86,23 +86,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Nitrogen Requirements in Healthy Adults: A Systematic Review and Meta-Analysis of Nitrogen Balance Studies"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-7175",
-          "similarity": 0.6453918050083346,
-          "claim": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-          "citations": [
-            {
-              "id": "10.3390/nu17132070",
-              "locator_quote": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis"
             }
           ],
           "evidence_level": "L1",
@@ -124,6 +107,23 @@
           ],
           "evidence_level": "L1",
           "population_match_score": 0.8800000000000001,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-6511",
+          "similarity": 0.7802701823719222,
+          "claim": "Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults.",
+          "citations": [
+            {
+              "id": "10.3945/ajcn.114.084061",
+              "locator_quote": "For example, meeting a protein threshold (∼25-30 g/meal) represents a promising, yet still largely unexplored dietary strategy to help maintain muscle mass and function.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Protein and healthy aging"
+            }
+          ],
+          "evidence_level": "L4",
+          "population_match_score": 0.8,
           "warnings": []
         },
         {
