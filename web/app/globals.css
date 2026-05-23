@@ -209,3 +209,30 @@ body {
     transform: none !important;
   }
 }
+
+/* ---------- Print ---------- */
+
+@media print {
+  body { background: white !important; color: #111 !important; }
+
+  /* hide chrome — only the app shell header (carries .no-print) plus nav */
+  nav, .no-print { display: none !important; }
+
+  /* expand all collapsibles */
+  details > summary { display: none !important; }
+  details[open] > *, details > *:not(summary) { display: block !important; }
+  details { display: block !important; }
+
+  /* page breaks before each prescription section */
+  [data-prescription-section] { page-break-before: always; }
+  [data-prescription-section]:first-of-type { page-break-before: auto; }
+
+  /* readable typography */
+  body { font-family: Inter, sans-serif; font-size: 11pt; line-height: 1.45; }
+  a { color: #111; text-decoration: underline; }
+
+  /* unflatten ambient backdrop */
+  .glass-shell, .glass-shell > *, [class*="bg-zinc"], [class*="bg-black"] {
+    background: white !important; color: #111 !important; border-color: #ddd !important;
+  }
+}

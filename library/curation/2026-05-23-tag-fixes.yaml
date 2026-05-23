@@ -1,0 +1,131 @@
+# Tag curation diff — 2026-05-23
+# Purpose: correct mis-tagged population_applicability fields that depress
+# pop_match scores for trained/young intake personas (Carl, Tori, Sarah).
+#
+# Each entry retags ONE field of ONE atom. Reversible via
+# scripts/apply_curation.py --undo.
+#
+# Hard cap: 25 entries (PRD §2.1, no-i-want-everything-piped-bear.md).
+# This diff: 17 entries.
+#
+# Two failure modes addressed:
+#
+# 1. SCORE-AFFECTING (tier 1+2, 4 entries):
+#    training_status holds a mixed-cohort phrase ("trained and untrained",
+#    "untrained to moderately trained", "trained or untrained") OR plain
+#    "untrained" when the claim text does not actually describe an untrained
+#    cohort. score.py's _TRAINING_KEYWORD_MAP lists "untrained" before the
+#    mixed phrases, so any substring containing "untrained" normalizes to
+#    "untrained" rank — depressing pop_match for trained intakes (Carl) by
+#    ~0.24 per atom.
+#
+# 2. DATA-QUALITY CLEANUP (tier 3, 13 entries):
+#    training_status field holds an AGE-POPULATION or CLINICAL label
+#    (e.g. "older adults", "sarcopenic older adults", "community-dwelling
+#    older adults", "Sarcopenic obesity"). score.py currently keyword-maps
+#    these to "any", so the live score is unchanged. But the raw tag is
+#    semantically wrong (it's an age/clinical descriptor, not a training
+#    rank) and fragile against future normalizer edits. Retagging to "any"
+#    matches the existing effective behavior and removes the silent bug.
+
+- atom_id: EA-NUT-4009
+  field: population_applicability.training_status
+  old: "untrained"
+  new: "any"
+  reason: "tag 'untrained' but claim is a network meta-analysis of older adults across regimens; training status not actually specified by the source"
+
+- atom_id: EA-SUP-3021
+  field: population_applicability.training_status
+  old: "trained and untrained"
+  new: "any"
+  reason: "mixed-cohort phrasing; score.py normalizer mismaps to 'untrained' due to keyword order"
+
+- atom_id: EA-TRA-1916
+  field: population_applicability.training_status
+  old: "untrained to moderately trained"
+  new: "any"
+  reason: "mixed-cohort phrasing; score.py normalizer mismaps to 'untrained' due to keyword order"
+
+- atom_id: EA-SUP-4445
+  field: population_applicability.training_status
+  old: "trained or untrained"
+  new: "any"
+  reason: "mixed-cohort phrasing; score.py normalizer mismaps to 'untrained' due to keyword order"
+
+- atom_id: EA-TRA-1619
+  field: population_applicability.training_status
+  old: "older adults"
+  new: "any"
+  reason: "training_status field held age label 'older adults' instead of a training rank"
+
+- atom_id: EA-TRA-1711
+  field: population_applicability.training_status
+  old: "Sarcopenic older adults"
+  new: "any"
+  reason: "training_status field held clinical+age label 'Sarcopenic older adults' instead of a training rank"
+
+- atom_id: EA-TRA-2799
+  field: population_applicability.training_status
+  old: "healthy older adults"
+  new: "any"
+  reason: "training_status field held age label 'healthy older adults' instead of a training rank"
+
+- atom_id: EA-TRA-3057
+  field: population_applicability.training_status
+  old: "community-dwelling older adults"
+  new: "any"
+  reason: "training_status field held age+setting label 'community-dwelling older adults' instead of a training rank"
+
+- atom_id: EA-TRA-5023
+  field: population_applicability.training_status
+  old: "Older adults (physically healthy)"
+  new: "any"
+  reason: "training_status field held age label 'Older adults (physically healthy)' instead of a training rank"
+
+- atom_id: EA-TRA-5271
+  field: population_applicability.training_status
+  old: "sarcopenic or non-sarcopenic older adults"
+  new: "any"
+  reason: "training_status field held clinical+age label instead of a training rank"
+
+- atom_id: EA-TRA-5305
+  field: population_applicability.training_status
+  old: "Sarcopenic older adults"
+  new: "any"
+  reason: "training_status field held clinical+age label 'Sarcopenic older adults' instead of a training rank"
+
+- atom_id: EA-TRA-9806
+  field: population_applicability.training_status
+  old: "unspecified/older adults"
+  new: "any"
+  reason: "training_status field held age label fragment instead of a training rank"
+
+- atom_id: EA-TRA-0309
+  field: population_applicability.training_status
+  old: "Sarcopenic obesity"
+  new: "any"
+  reason: "training_status field held clinical condition 'Sarcopenic obesity' instead of a training rank"
+
+- atom_id: EA-TRA-4241
+  field: population_applicability.training_status
+  old: "osteosarcopenic"
+  new: "any"
+  reason: "training_status field held clinical condition 'osteosarcopenic' instead of a training rank"
+
+- atom_id: EA-TRA-3683
+  field: population_applicability.training_status
+  old: "sarcopenic"
+  new: "any"
+  reason: "training_status field held clinical condition 'sarcopenic' instead of a training rank"
+
+- atom_id: EA-TRA-5420
+  field: population_applicability.training_status
+  old: "Sarcopenic"
+  new: "any"
+  reason: "training_status field held clinical condition 'Sarcopenic' instead of a training rank"
+
+- atom_id: EA-NUT-5978
+  field: population_applicability.training_status
+  old: "Sarcopenic"
+  new: "any"
+  reason: "training_status field held clinical condition 'Sarcopenic' instead of a training rank"

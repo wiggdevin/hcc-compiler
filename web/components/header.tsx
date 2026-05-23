@@ -11,7 +11,7 @@ interface Props {
 
 export function Header({ persona, section }: Props) {
   return (
-    <header className="fixed left-0 top-0 z-40 w-full border-b border-white/[0.06] bg-[#09090b]/70 backdrop-blur-xl">
+    <header className="no-print fixed left-0 top-0 z-40 w-full border-b border-white/[0.06] bg-[#09090b]/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link
           href={`/clients/${persona.slug}/overview`}

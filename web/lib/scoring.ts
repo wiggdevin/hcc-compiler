@@ -10,9 +10,9 @@ import { DOMAIN_ORDER } from "./data/domains";
 
 const EVIDENCE_WEIGHT: Record<EvidenceLevel, number> = {
   L1: 1.0,
-  L2: 0.85,
-  L3: 0.7,
-  L4: 0.55,
+  L2: 0.92,
+  L3: 0.78,
+  L4: 0.65,
 };
 
 function mean(xs: number[]): number {
@@ -20,25 +20,30 @@ function mean(xs: number[]): number {
   return xs.reduce((a, b) => a + b, 0) / xs.length;
 }
 
+function gmean(xs: number[]): number {
+  if (xs.length === 0) return 0;
+  const sum = xs.reduce((a, b) => a + Math.log(b), 0);
+  return Math.exp(sum / xs.length);
+}
+
 /**
  * Per-atom confidence: applicability × evidence weight × similarity.
- * Similarity gets a soft weight (0.5 floor) so a perfectly applicable
- * L1 result with mediocre cosine still scores well.
+ * Similarity gets a soft weight (0.6 floor) so a perfectly applicable
+ * L1 result with mediocre cosine still scores well. Per-atom floor 0.55.
  */
 export function atomConfidence(atom: AtomMatch): number {
-  const ev = EVIDENCE_WEIGHT[atom.evidence_level] ?? 0.55;
-  const sim = Math.max(0.5, atom.similarity); // soft floor
-  return atom.population_match_score * ev * sim;
+  const ev = EVIDENCE_WEIGHT[atom.evidence_level] ?? 0.65;
+  const sim = Math.max(0.6, atom.similarity); // soft floor
+  return Math.max(0.55, atom.population_match_score * ev * sim);
 }
 
 export function domainConfidence(block: DomainBlock): number {
   const atomScores = block.atoms.map(atomConfidence);
   const patternScore = mean(block.patterns.map((p) => p.similarity));
-  // If there are no atoms, fall back to patterns; if neither, zero.
   if (atomScores.length === 0 && block.patterns.length === 0) return 0;
   if (atomScores.length === 0) return patternScore;
-  // Patterns inform but don't dominate — 70 / 30 split
-  return mean(atomScores) * 0.7 + patternScore * 0.3;
+  if (block.patterns.length === 0) return gmean(atomScores);
+  return gmean(atomScores) * 0.65 + patternScore * 0.35;
 }
 
 export interface DomainConfidence {

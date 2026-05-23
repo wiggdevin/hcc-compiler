@@ -15,43 +15,44 @@ import {
 import { SectionHeader } from "@/components/section-header";
 import { GlassCard } from "@/components/glass-card";
 import { ScoreCluster } from "@/components/score-cluster";
-import type {
-  ExistenceVerdict,
-  FaithfulnessVerdict,
-} from "@/lib/data/types";
+import type { Citation } from "@/lib/data/types";
 import { cn } from "@/lib/utils";
 
-const EXISTENCE_DOT: Record<ExistenceVerdict, string> = {
-  VERIFIED: "bg-emerald-400",
-  PLAUSIBLE: "bg-amber-300",
-  UNVERIFIABLE: "bg-zinc-500",
-  DOI_MISMATCH: "bg-rose-400",
-  FABRICATED: "bg-rose-500",
+type VerificationVerdict = "verified" | "partial" | "plausible" | "unverifiable";
+
+interface VerificationMeta {
+  label: string;
+  className: string;
+}
+
+const VERIFICATION_STYLES: Record<VerificationVerdict, VerificationMeta> = {
+  verified: {
+    label: "✓ Verified",
+    className:
+      "border-emerald-400/30 bg-emerald-400/[0.08] text-emerald-200",
+  },
+  partial: {
+    label: "◐ Partially verified",
+    className: "border-amber-300/30 bg-amber-300/[0.08] text-amber-100",
+  },
+  plausible: {
+    label: "◐ Plausible",
+    className: "border-amber-300/30 bg-amber-300/[0.06] text-amber-100",
+  },
+  unverifiable: {
+    label: "✗ Unverifiable",
+    className: "border-rose-400/30 bg-rose-400/[0.08] text-rose-100",
+  },
 };
 
-const FAITHFULNESS_DOT: Record<FaithfulnessVerdict, string> = {
-  VERIFIED: "bg-emerald-400",
-  MINOR_DISTORTION: "bg-amber-300",
-  MAJOR_DISTORTION: "bg-orange-400",
-  UNSUPPORTED: "bg-rose-400",
-  ACCESS_LIMITED: "bg-zinc-500",
-};
-
-const EXISTENCE_LABEL: Record<ExistenceVerdict, string> = {
-  VERIFIED: "Verified",
-  PLAUSIBLE: "Plausible",
-  UNVERIFIABLE: "Unverifiable",
-  DOI_MISMATCH: "DOI mismatch",
-  FABRICATED: "Fabricated",
-};
-
-const FAITHFULNESS_LABEL: Record<FaithfulnessVerdict, string> = {
-  VERIFIED: "Verified",
-  MINOR_DISTORTION: "Minor distortion",
-  MAJOR_DISTORTION: "Major distortion",
-  UNSUPPORTED: "Unsupported",
-  ACCESS_LIMITED: "Access limited",
-};
+function verificationOf(citation: Citation): VerificationVerdict {
+  const exVerified = citation.existence === "VERIFIED";
+  const faVerified = citation.faithfulness === "VERIFIED";
+  if (exVerified && faVerified) return "verified";
+  if (exVerified || faVerified) return "partial";
+  if (citation.existence === "PLAUSIBLE") return "plausible";
+  return "unverifiable";
+}
 
 export default async function LiteraturePage({
   params,
@@ -119,31 +120,56 @@ export default async function LiteraturePage({
         </GlassCard>
       </div>
 
-      <GlassCard innerClassName="overflow-hidden">
-        <div className="hidden grid-cols-[1fr_2fr_120px_120px_56px] gap-4 border-b border-white/[0.05] px-6 py-3 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-zinc-500 md:grid">
-          <span>Identifier / Refs</span>
-          <span>Cited claim</span>
-          <span>Existence</span>
-          <span>Faithfulness</span>
-          <span className="text-right">Open</span>
-        </div>
-        <ul className="divide-y divide-white/[0.05]">
-          {entries.map(({ citation, referencedBy }) => {
-            const kind = citationKind(citation.id);
-            return (
-              <li
-                key={citation.id}
-                className="grid grid-cols-1 gap-3 px-6 py-4 transition-colors hover:bg-white/[0.02] md:grid-cols-[1fr_2fr_120px_120px_56px] md:items-start md:gap-4"
-              >
-                <div className="flex flex-col gap-1.5">
-                  <span className="font-mono text-[0.7rem] text-white">
-                    <span className="text-[0.55rem] uppercase tracking-wider text-zinc-500 mr-1.5">
-                      {kind}
-                    </span>
-                    {citation.id}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {entries.map(({ citation, referencedBy }) => {
+          const kind = citationKind(citation.id);
+          const verdict = verificationOf(citation);
+          const style = VERIFICATION_STYLES[verdict];
+          return (
+            <GlassCard
+              key={citation.id}
+              innerClassName="flex flex-col gap-3 p-5"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <span className="font-mono text-xs text-white">
+                  <span className="text-[0.55rem] uppercase tracking-wider text-zinc-500 mr-1.5">
+                    {kind}
                   </span>
-                  <div className="flex flex-wrap gap-1">
-                    {referencedBy.slice(0, 3).map((aid) => (
+                  {citation.id}
+                </span>
+                <a
+                  href={citationHref(citation.id)}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${citation.id}`}
+                  className="inline-grid h-7 w-7 shrink-0 place-items-center rounded-md border border-white/[0.06] bg-white/[0.02] text-zinc-400 transition-colors hover:border-white/20 hover:text-white"
+                >
+                  <ExternalLink className="h-3 w-3" strokeWidth={1.5} />
+                </a>
+              </div>
+
+              {citation.cited_title ? (
+                <p className="line-clamp-2 text-sm font-semibold leading-snug text-white">
+                  {citation.cited_title}
+                </p>
+              ) : null}
+
+              <p className="line-clamp-3 text-[0.7rem] italic leading-relaxed text-zinc-400">
+                “{truncate(citation.locator_quote, 240)}”
+              </p>
+
+              <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-1">
+                <span
+                  className={cn(
+                    "inline-flex items-center rounded-md border px-2 py-0.5 text-[0.65rem] font-medium",
+                    style.className,
+                  )}
+                >
+                  {style.label}
+                </span>
+                {referencedBy.length > 0 ? (
+                  <div className="flex flex-wrap items-center gap-1">
+                    {referencedBy.slice(0, 2).map((aid) => (
                       <span
                         key={aid}
                         className="rounded border border-white/[0.08] bg-white/[0.02] px-1.5 py-0.5 font-mono text-[0.55rem] text-zinc-400"
@@ -151,59 +177,18 @@ export default async function LiteraturePage({
                         {aid}
                       </span>
                     ))}
-                    {referencedBy.length > 3 ? (
-                      <span className="self-center text-[0.55rem] text-zinc-500">
-                        +{referencedBy.length - 3}
+                    {referencedBy.length > 2 ? (
+                      <span className="text-[0.55rem] text-zinc-500">
+                        +{referencedBy.length - 2}
                       </span>
                     ) : null}
                   </div>
-                </div>
-
-                <div className="flex flex-col gap-1">
-                  {citation.cited_title ? (
-                    <p className="text-xs text-white">
-                      {citation.cited_title}
-                    </p>
-                  ) : null}
-                  <p className="text-[0.7rem] italic leading-relaxed text-zinc-400">
-                    “{truncate(citation.locator_quote, 220)}”
-                  </p>
-                </div>
-
-                <Verdict
-                  dot={EXISTENCE_DOT[citation.existence]}
-                  label={EXISTENCE_LABEL[citation.existence]}
-                />
-                <Verdict
-                  dot={FAITHFULNESS_DOT[citation.faithfulness]}
-                  label={FAITHFULNESS_LABEL[citation.faithfulness]}
-                />
-
-                <div className="md:text-right">
-                  <a
-                    href={citationHref(citation.id)}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open ${citation.id}`}
-                    className="inline-grid h-7 w-7 place-items-center rounded-md border border-white/[0.06] bg-white/[0.02] text-zinc-400 transition-colors hover:border-white/20 hover:text-white"
-                  >
-                    <ExternalLink className="h-3 w-3" strokeWidth={1.5} />
-                  </a>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </GlassCard>
-    </div>
-  );
-}
-
-function Verdict({ dot, label }: { dot: string; label: string }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className={cn("inline-block h-1.5 w-1.5 rounded-full", dot)} />
-      <span className="text-[0.7rem] text-zinc-300">{label}</span>
+                ) : null}
+              </div>
+            </GlassCard>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -34,17 +34,23 @@ export function DomainSection({ icon: Icon, label, block, id }: Props) {
         <>
           {block.patterns.length > 0 ? (
             <div className="stagger mb-8 flex flex-col gap-4">
-              {block.patterns.map((p) => (
-                <PatternCard key={p.pattern_id} pattern={p} />
+              {block.patterns.map((p, i) => (
+                <PatternCard
+                  key={p.pattern_id}
+                  pattern={p}
+                  defaultOpen={i === 0}
+                />
               ))}
             </div>
           ) : null}
 
           {block.atoms.length > 0 ? (
-            <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
-              {block.atoms.map((a, i) => (
-                <AtomCard key={`${a.atom_id}-${i}`} atom={a} />
-              ))}
+            <div className="max-w-[1000px] mx-auto">
+              <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
+                {block.atoms.map((a, i) => (
+                  <AtomCard key={`${a.atom_id}-${i}`} atom={a} />
+                ))}
+              </div>
             </div>
           ) : null}
         </>

@@ -28,8 +28,8 @@ class LibraryVersionMismatch(RuntimeError):
 def compile(
     intake: ClientIntake,
     db_path: Path,
-    top_k: int = 5,
-    applicability_threshold: float = 0.4,
+    top_k: int = 15,
+    applicability_threshold: float = 0.5,
     *,
     version_check: bool = True,
 ) -> EvidencePack:
@@ -180,9 +180,18 @@ def compile(
                 warnings=warnings,
             ))
 
+        # 8b. Top-N rerank by combined pop_score × similarity (PRD §2.2).
+        # Sort by combined score desc, keep top-7 per domain. Patterns capped at 3.
+        atom_matches.sort(
+            key=lambda x: x.population_match_score * x.similarity,
+            reverse=True,
+        )
+        atom_matches = atom_matches[:7]
+
         # 10. Sort: atoms by (pop_score desc, sim desc); patterns by sim desc.
         atom_matches.sort(key=lambda x: (x.population_match_score, x.similarity), reverse=True)
         pattern_matches.sort(key=lambda x: x.similarity, reverse=True)
+        pattern_matches = pattern_matches[:3]
 
         # 11. Build DomainBlock (gaps empty for now).
         domain_blocks[domain] = DomainBlock(
