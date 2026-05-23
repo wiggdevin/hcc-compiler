@@ -7,3 +7,9 @@ __pycache__/
 harvest-output/
 draft-output/
 verify-output/
+
+# Next.js sub-app
+web/node_modules/
+web/.next/
+web/.turbo/
+web/next-env.d.ts

@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --bg: #09090b;
+  --surface: #09090b;
+  --surface-elevated: #0f0f10;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #71717a;
+  --text-tertiary: #a1a1aa;
+  --text-quaternary: #52525b;
+
+  /* Borders + accent */
+  --border-glass: rgba(255, 255, 255, 0.10);
+  --border-glass-strong: rgba(255, 255, 255, 0.20);
+  --accent: #3b82f6;
+  --accent-tertiary: #7c3ffc;
+
+  /* Radii */
+  --r-card: 12px;
+  --r-inner: 11px;
+  --r-control: 6px;
+
+  /* Font stacks (variables provided by next/font) */
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-foreground: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-muted-strong: var(--text-tertiary);
+  --color-border-glass: var(--border-glass);
+  --color-accent: var(--accent);
+  --color-accent-tertiary: var(--accent-tertiary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11", "tnum";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Tabular numerics for data-dense layouts */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hairline divider helper */
+.hairline {
+  border-color: var(--border-glass);
+}
+
+/* Subtle hover lift for glass shells */
+.glass-shell {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: background 240ms ease;
+}
+
+.glass-shell:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.07) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Score ring conic gradient — driven by --value (0..1) */
+.score-ring-track {
+  background: conic-gradient(
+    var(--accent) calc(var(--value, 0) * 360deg),
+    rgba(255, 255, 255, 0.06) 0deg
+  );
+}
+
+/* Bio-line: hairline anchor from element edge */
+.bio-line {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+}
+
+/* Hide the browser scrollbar but keep functionality */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawBioLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes maskedWord {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  opacity: 0;
+  transform: scale(0.94);
+  animation: scaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-masked-word {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: maskedWord 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-bio-line {
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: drawBioLine 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Stagger utility */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.00s; }
+.stagger > *:nth-child(2) { animation-delay: 0.08s; }
+.stagger > *:nth-child(3) { animation-delay: 0.16s; }
+.stagger > *:nth-child(4) { animation-delay: 0.24s; }
+.stagger > *:nth-child(5) { animation-delay: 0.32s; }
+.stagger > *:nth-child(6) { animation-delay: 0.40s; }
+.stagger > *:nth-child(7) { animation-delay: 0.48s; }
+.stagger > *:nth-child(8) { animation-delay: 0.56s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-scale-in,
+  .animate-masked-word,
+  .animate-bio-line,
+  .stagger > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
