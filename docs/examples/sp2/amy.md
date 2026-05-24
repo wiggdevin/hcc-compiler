@@ -1,9 +1,16 @@
 # Personalized Evidence Pack — amy_runner
 
-- Compiled at: 2026-05-23T08:51:41.451330+00:00
+- Compiled at: 2026-05-24T18:27:31.928668+00:00
 - Library version: 0.1.0
 
 ---
+
+## Client context
+
+- **Profile:** F, 32y, 58.0 kg, 168 cm, training status: recreational
+- **Goals:** endurance, performance
+- **Constraints:**
+  - *injury*: left knee mild patellar tendinopathy
 
 ## Nutrition
 
@@ -24,14 +31,30 @@
 
 **Backing evidence (top 3 by population match):**
 - Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
-- Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
-- The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
+- Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss. ([10.1016/j.orcp.2025.10.001])
+- Interventions leveraging gamification, social interaction, and goal-setting have shown greater efficacy in improving body-nutrition profile. ([10.3390/nu17223542])
 
-- **EA-NUT-6511** (sim 0.76, pop-match 0.68): Meeting a protein threshold of approximately 25-30 g per meal represents a promising dietary strategy to help maintain muscle mass and function in older adults. ([10.3945/ajcn.114.084061])
+- **EA-NUT-4389** (sim 0.63, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
+- **EA-NUT-7737** (sim 0.58, pop-match 1.00): Even mild iron deficiency may result in decreased endurance and increased irritability and withdrawal behavior among women. ([10.1016/j.physbeh.2018.09.012])
 
 ## Training
 
-### Pattern: RP-TRA-resistance-volume-hypertrophy-dose-response (sim=0.68)
+**For this client — constraint-aware notes:**
+- Patellar tendinopathy: emphasize slow eccentric tempo (3-5s down) on lower-body work; avoid plyometric volume escalation until pain-free; consider isometric loading for rehab phases.
+- Knee constraint: reduce impact volume; emphasize controlled eccentric tempo; avoid jumping volume escalation in tendinopathy contexts.
+
+### Pattern: RP-TRA-endurance-concurrent-trained (sim=0.80)
+
+**Applies because:** Concurrent endurance and resistance training trigger conflicting intracellular signaling cascades (AMPK vs mTOR) that can attenuate hypertrophic adaptations from resistance training when scheduled too closely; this interference effect is dose-dependent and modifiable by session separation, intensity selection, and exercise specificity, allowing trained adults to develop both strength and endurance capacities concurrently with appropriate programming.
+**Parameterization:** Endurance-trained adults adding resistance training (e.g., distance runners, cyclists, triathletes): 2 strength sessions per week, 30-45 min each, focused on compound movements (squat, deadlift, lunge, single-leg work) at 4-8 reps and 75-85% 1RM; cap weekly resistance volume at 8-12 hard sets per major lower-body muscle group during peak endurance training phases. Concurrent training schedule: separate endurance and strength sessions by at least 6 hours, ideally morning endurance / evening strength or alternate days; if same-day required, strength should precede endurance for maximal-strength outcomes or follow for endurance-priority outcomes. Athletes in offseason / build phase: temporarily increase strength volume to 15-18 weekly sets per muscle and reduce endurance volume by 30-50% to drive strength adaptations before returning to specificity. Performance-oriented hybrid (e.g., bradley pattern, sebastian pattern): pair 2.5x strength + 2.5x conditioning weekly with one full rest day; use heart rate variability and session RPE to autoregulate weekly load.
+**Safety bounds:** Cap weekly concurrent training hours at 10-12 without dedicated recovery protocols; require sleep monitoring at >= 7 h/night sustained or reduce overall training volume; halt strength volume escalation if endurance performance regresses by more than 5% over 3 weeks; do not add high-impact running or jumping volume in trainees with prior tendinopathy without progressive return-to-impact program.
+
+**Backing evidence (top 3 by population match):**
+- Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types. ([10.1007/s00520-026-10363-0])
+- Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity. ([10.1249/MSS.0000000000003897])
+- Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents. ([10.1111/sms.14764])
+
+### Pattern: RP-TRA-resistance-volume-hypertrophy-dose-response (sim=0.74)
 
 **Applies because:** A graded dose-response links weekly resistance-training set volume to muscle hypertrophy (ES increment ≈0.023 per set; higher vs. lower volume grouping ES difference = 0.241), mediated by cumulative mechanical tension and metabolic stress that upregulate muscle protein synthesis proportionally to training stimulus up to the individual's recoverable threshold.
 **Parameterization:** Older adults with sarcopenia: start low volume (≥2 sessions/week, ~49% 1RM, 3×/week for ≥19 weeks with 15 exercises, 6 sets, ~16 reps) and add balance/aerobic components for functional gains (TUG, chair-stand); metabolic disease (T2D, PCOS, CAD): use concurrent aerobic+resistance programming; untrained individuals: traditional progressive overload—advanced methods confer no added benefit; advanced athletes: higher volumes tolerated but with pronounced diminishing returns; patellofemoral pain: favor higher volume over lower volume; older adults targeting grip strength specifically: multicomponent or resistance-only at prescribed dose.
@@ -39,7 +62,22 @@
 
 **Backing evidence (top 3 by population match):**
 - Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types. ([10.1007/s00520-026-10363-0])
+- Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity. ([10.1249/MSS.0000000000003897])
 - Low-intensity endurance training (LIT) produces a large effect on relative VO2max and a moderate effect on the first lactate/ventilatory threshold (VT1) in healthy adults. ([10.1111/sms.70208])
+
+### Pattern: RP-TRA-hypertrophy-frequency-volume-trained (sim=0.74)
+
+**Applies because:** In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery.
+**For this client (F, 32y, recreational):** Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.
+<details><summary>All populations covered by this pattern</summary>
+
+Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.
+
+</details>
+**Safety bounds:** Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably.
+
+**Backing evidence (top 3 by population match):**
+- Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity. ([10.1249/MSS.0000000000003897])
 - Increases in weekly training set volume are associated with increases in both muscle hypertrophy and strength, though both exhibit diminishing returns. ([10.1007/s40279-025-02344-w])
 
 ## Conditioning
@@ -63,7 +101,7 @@
 - **EA-SUP-8071** (sim 0.70, pop-match 1.00): Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects. ([10.7717/peerj.20380])
 - **EA-SUP-7073** (sim 0.66, pop-match 1.00): Caffeine supplementation enhances athletic performance in individuals with the CYP1A2 AA genotype, shows marginal improvement in AC individuals, and has null or detrimental effects in CC individuals. ([10.1016/j.nutres.2025.10.005])
 - **EA-SUP-1368** (sim 0.66, pop-match 1.00): Creatine supplementation does not consistently improve exercise performance in active females, with most studies showing no improvement compared to placebo. ([10.3390/nu17020238])
-- **EA-SUP-3039** (sim 0.74, pop-match 0.88): Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se. ([10.1080/15502783.2025.2605338])
+- **EA-SUP-8400** (sim 0.65, pop-match 1.00): Creatine use during resistance training can safely increase total and lean body mass, strength, and performance in high-intensity, short-duration, repetitive tasks. ([10.1177/19417381231197389])
 
 ## Recovery
 
@@ -110,7 +148,7 @@
 
 ## Metadata
 
-- top_k_per_domain: 15
+- top_k_per_domain: 30
 - applicability_threshold: 0.5
-- total queries issued: 14
+- total queries issued: 22
 - total contraindication hits: 0

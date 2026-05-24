@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_sarah_nutrition",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T08:51:44.319866Z",
+  "compiled_at": "2026-05-24T18:27:37.371867Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -18,7 +18,7 @@
         },
         {
           "pattern_id": "RP-NUT-caloric-restriction-rt-protein-body-comp",
-          "similarity": 0.7530429049968925,
+          "similarity": 0.7764364162527193,
           "applies_because": "Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.",
           "parameterization": "Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kcal/day deficit, moderate-intensity resistance or aerobic exercise. Resistance-trained athletes during aggressive cuts: 2.3–3.1 g/kg/day protein, up to 750 kcal/day deficit, 60–80% 1RM resistance training. Older adults (≥60 years): whey protein ≥15 g/day combined with resistance plus multicomponent exercise; deficit ≤500 kcal/day to limit FFM loss. Postmenopausal women: 250–750 kcal/day deficit, protein ≥0.8 g/kg/day minimum but 1.6+ g/kg preferred for LBM retention. Very-low-energy-diet contexts (≤800 kcal/day): exercise component is mandatory to mitigate disproportionate FFM loss. Adults with prediabetes or T2DM: intermittent fasting formats are interchangeable with continuous restriction provided protein and training targets are met; target ≥5% weight loss for normoglycemia reversion benefit.",
           "safety_bounds": "Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.",
@@ -55,6 +55,23 @@
       ],
       "atoms": [
         {
+          "atom_id": "EA-NUT-0001",
+          "similarity": 0.7030296074553577,
+          "claim": "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+          "citations": [
+            {
+              "id": "10.1186/s12970-017-0177-8",
+              "locator_quote": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": null
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-5322",
           "similarity": 0.6897815629095767,
           "claim": "Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults.",
@@ -72,16 +89,50 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-NUT-0001",
-          "similarity": 0.682415854469458,
-          "claim": "Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+          "atom_id": "EA-NUT-3103",
+          "similarity": 0.6349682534270269,
+          "claim": "Intermittent fasting and calorie restriction combined with exercise can be effectively integrated without negatively impacting most measures of physical performance, while significantly enhancing weight loss and adiposity-related outcomes.",
           "citations": [
             {
-              "id": "10.1186/s12970-017-0177-8",
-              "locator_quote": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": null
+              "id": "10.3390/nu17121992",
+              "locator_quote": "Conclusions: IF (hypocaloric or eucaloric) and CR can be effectively integrated into exercise training without negatively impacting most measures of physical performance, while significantly enhancing weight loss and adiposity-related outcomes.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of Intermittent Fasting and Calorie Restriction on Exercise Performance: A Systematic Review and Meta-Analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-4389",
+          "similarity": 0.6288992972260518,
+          "claim": "Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models.",
+          "citations": [
+            {
+              "id": "10.1088/2516-1091/ae39b9",
+              "locator_quote": "The resulting meta-analysis quantifies the accuracy of prediction models for the various prediction horizons (15, 30, 45, 60, and 120 min) and the performance of meal and physical activity detection models using sensitivity and metrics related to false-positivity.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Meta-analysis of technologies for diabetes treatment: glycemic control, prediction, meal and physical activity detection"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-3698",
+          "similarity": 0.6281727071254911,
+          "claim": "Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss.",
+          "citations": [
+            {
+              "id": "10.1016/j.orcp.2025.10.001",
+              "locator_quote": "A meta-analysis of five studies (n = 241) showed that VLED with exercise resulted in a higher retention of FFM compared to VLED alone (mean difference = 0.83 kg, 95 % CI 0.17-1.49, p = 0.01).",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The impact of exercise on fat free mass reduction during very low energy diet-induced weight loss in adults with overweight or obesity: A systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -106,67 +157,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-NUT-3698",
-          "similarity": 0.6003357497622543,
-          "claim": "Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss.",
+          "atom_id": "EA-NUT-0496",
+          "similarity": 0.7627991283005359,
+          "claim": "Combining moderate- or low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass.",
           "citations": [
             {
-              "id": "10.1016/j.orcp.2025.10.001",
-              "locator_quote": "A meta-analysis of five studies (n = 241) showed that VLED with exercise resulted in a higher retention of FFM compared to VLED alone (mean difference = 0.83 kg, 95 % CI 0.17-1.49, p = 0.01).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The impact of exercise on fat free mass reduction during very low energy diet-induced weight loss in adults with overweight or obesity: A systematic review and meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-6066",
-          "similarity": 0.736842548572824,
-          "claim": "In naturally menstruating women, resting energy expenditure is approximately 40-44 kcal higher in the luteal phase compared to the follicular phase.",
-          "citations": [
-            {
-              "id": "10.1249/MSS.0000000000003518",
-              "locator_quote": "In the NoOC group, luteal phase REE was 40 kcal higher than follicular phase REE (95% confidence interval (CI), -2 to 82 kcal·d -1 , d = 0.20, P = 0.061).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Resting Energy Expenditure, Metabolic and Sex Hormones in Two Phases of the Menstrual and Hormonal Contraceptive Cycles"
-            }
-          ],
-          "evidence_level": "L3",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-9579",
-          "similarity": 0.7275409445396669,
-          "claim": "Iron, ferritin, and transferrin saturation levels are lower during the early-follicular phase compared to the late-follicular and mid-luteal phases in endurance-trained women.",
-          "citations": [
-            {
-              "id": "10.1007/s00421-022-05048-5",
-              "locator_quote": "Ferritin were lower in the EFP than the LFP (34.82 ± 16.44 vs 40.90 ± 23.91 ng/ml, p = 0.003), while iron and transferrin saturation were lower during the EFP (58.04 ± 19.70 µg/dl, 14.71 ± 5.47%) compared to the LFP (88.67 ± 36.38 µg/dl, 22.22 ± 9.54%; p < 0.001) and the MLP (80.20 ± 42.05 µg/dl, 19.87 ± 10.37%; p = 0.024 and p = 0.045, respectively).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Menstrual cycle affects iron homeostasis and hepcidin following interval running exercise in endurance-trained women"
-            }
-          ],
-          "evidence_level": "L3",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-2097",
-          "similarity": 0.7221197726140867,
-          "claim": "A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions.",
-          "citations": [
-            {
-              "id": "10.1007/s40279-025-02341-z",
-              "locator_quote": "A pooled analysis revealed no significant effect of carbohydrate intake on muscle hypertrophy (SMD = 0.15, p = 0.23), with negligible heterogeneity across studies.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The Effect of Carbohydrate Intake on Muscle Hypertrophy: A Systematic Review and Meta-analysis"
+              "id": "10.3389/fnut.2025.1579024",
+              "locator_quote": "In summary, LR + CR, MA + CR and MR + CR are at an advantageous level in improving various indicators. Combining moderate-and low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass, making it a superior strategy for body composition improvement.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Comparing exercise modalities during caloric restriction: a systematic review and network meta-analysis on body composition"
             }
           ],
           "evidence_level": "L1",
@@ -179,74 +179,86 @@
     "training": {
       "patterns": [
         {
-          "pattern_id": "RP-TRA-resistance-volume-hypertrophy-dose-response",
-          "similarity": 0.6707892507854664,
-          "applies_because": "A graded dose-response links weekly resistance-training set volume to muscle hypertrophy (ES increment ≈0.023 per set; higher vs. lower volume grouping ES difference = 0.241), mediated by cumulative mechanical tension and metabolic stress that upregulate muscle protein synthesis proportionally to training stimulus up to the individual's recoverable threshold.",
-          "parameterization": "Older adults with sarcopenia: start low volume (≥2 sessions/week, ~49% 1RM, 3×/week for ≥19 weeks with 15 exercises, 6 sets, ~16 reps) and add balance/aerobic components for functional gains (TUG, chair-stand); metabolic disease (T2D, PCOS, CAD): use concurrent aerobic+resistance programming; untrained individuals: traditional progressive overload—advanced methods confer no added benefit; advanced athletes: higher volumes tolerated but with pronounced diminishing returns; patellofemoral pain: favor higher volume over lower volume; older adults targeting grip strength specifically: multicomponent or resistance-only at prescribed dose.",
-          "safety_bounds": "Do not exceed 25–30 weekly sets per muscle group without experienced coach supervision; cap novice single-session volume at ≤6 sets per exercise; limit intensity to ≤80% 1RM in unsupervised older adults or those with cardiovascular comorbidities; require clinical clearance and supervised initiation for individuals with CAD, COPD, congenital heart disease, or sickle cell disease before commencing high-intensity or high-volume protocols.",
+          "pattern_id": "RP-TRA-recomposition-progressive-overload-trained",
+          "similarity": 0.8398214619734233,
+          "applies_because": "Body recomposition requires simultaneous mechanical-tension stimulus to preserve / build muscle protein synthesis AND caloric deficit to drive fat oxidation; resistance-trained adults retain lean mass under deficit primarily by maintaining training load and protein intake, whereas reducing volume disproportionately accelerates lean mass loss while only modestly increasing rate of fat loss.",
+          "parameterization": "Resistance-trained adults pursuing body recomposition under moderate caloric deficit (250-500 kcal/day): maintain 10-15 weekly hard sets per major muscle group at 6-12 rep range; keep heavy compound exposures at 4-8 reps weekly to preserve strength; protein intake 2.0-2.4 g/kg/day. Trained adults in aggressive deficit (500-750 kcal/day): reduce weekly accessory volume by 20-30% but preserve heavy compound exposures and rep ranges; sleep and stress management become limiting factors. Concurrent body recomposition + conditioning (e.g., hybrid weekly schedule): separate resistance sessions from high-intensity conditioning by at least 6 h or alternate days; cap conditioning at 2-3 sessions weekly to limit interference effect on strength retention. Older trained adults (50+ y): emphasize the upper end of the rep range (8-12 reps) and 2-3 sessions per week per muscle to support recovery; consider 10-15% lower deficit than younger adults; resistance volume retention is the highest predictor of lean mass preservation. Trained females in recomposition: cycle-aware micro-loading is reasonable but recomposition timeline should plan for 4-8% body composition shift over 12-20 weeks at sustainable deficit rates.",
+          "safety_bounds": "Cap deficit at 750 kcal/day without clinical supervision; halt aggressive volume reduction if strength regression exceeds 10% on primary lifts within 4 weeks; require body-composition tracking (DXA, InBody, or consistent skinfold protocol) every 4-6 weeks to verify lean mass retention; do not initiate recomposition in adults with active eating disorder history without clinical co-management.",
           "backing_atom_ids": [
             "EA-TRA-0001",
-            "EA-TRA-0227",
-            "EA-TRA-0309",
-            "EA-TRA-0722",
-            "EA-TRA-1619",
-            "EA-TRA-1711",
-            "EA-TRA-1853",
-            "EA-TRA-1916",
-            "EA-TRA-1931",
-            "EA-TRA-2176",
-            "EA-TRA-2215",
-            "EA-TRA-2772",
-            "EA-TRA-2799",
-            "EA-TRA-3030",
-            "EA-TRA-3037",
-            "EA-TRA-3057",
-            "EA-TRA-3375",
             "EA-TRA-3416",
-            "EA-TRA-3683",
-            "EA-TRA-3771",
-            "EA-TRA-4241",
-            "EA-TRA-4294",
-            "EA-TRA-4379",
-            "EA-TRA-4554",
-            "EA-TRA-4675",
-            "EA-TRA-4688",
-            "EA-TRA-4772",
-            "EA-TRA-4779",
-            "EA-TRA-4939",
-            "EA-TRA-5023",
-            "EA-TRA-5190",
             "EA-TRA-5271",
-            "EA-TRA-5305",
-            "EA-TRA-5364",
-            "EA-TRA-5420",
-            "EA-TRA-5422",
-            "EA-TRA-6351",
-            "EA-TRA-6688",
             "EA-TRA-6707",
-            "EA-TRA-6804",
-            "EA-TRA-7176",
-            "EA-TRA-7544",
-            "EA-TRA-7564",
-            "EA-TRA-7657",
-            "EA-TRA-8105",
-            "EA-TRA-8464",
-            "EA-TRA-8671",
-            "EA-TRA-8718",
-            "EA-TRA-8790",
-            "EA-TRA-8910",
-            "EA-TRA-8975",
-            "EA-TRA-9029",
-            "EA-TRA-9632",
-            "EA-TRA-9659",
-            "EA-TRA-9798",
-            "EA-TRA-9806",
-            "EA-TRA-9824"
+            "EA-TRA-3037"
+          ],
+          "warnings": []
+        },
+        {
+          "pattern_id": "RP-TRA-hypertrophy-frequency-volume-trained",
+          "similarity": 0.7789025979927027,
+          "applies_because": "In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery.",
+          "parameterization": "Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.",
+          "safety_bounds": "Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably.",
+          "backing_atom_ids": [
+            "EA-TRA-0001",
+            "EA-TRA-3037",
+            "EA-TRA-3416",
+            "EA-TRA-6707",
+            "EA-TRA-3375"
+          ],
+          "warnings": []
+        },
+        {
+          "pattern_id": "RP-TRA-maximal-strength-low-rep-trained",
+          "similarity": 0.7652635947451838,
+          "applies_because": "Maximal strength adaptation is mediated by neural drive and motor unit recruitment, which are preferentially stimulated by high-load (>= 85% 1RM) low-rep contractions; resistance-trained adults have the connective tissue and motor control to safely tolerate near-maximal loads and require this intensity stimulus to drive further strength gains beyond the moderate-load hypertrophy zone.",
+          "parameterization": "Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets. Powerlifting-style athletes: squat / bench / deadlift centric, 1-3 reps at 90-100% on top sets, accessory work 5-10 reps at 70-85% 1RM. Strength + hypertrophy concurrent (e.g., Carl pattern): pair heavy compound 3-5 reps with hypertrophy accessory work 8-12 reps, total weekly hard sets 12-18 per major muscle. Older trained adults (50+ y): cap top-set intensity at 80-85% 1RM unless under direct supervision; extend warm-up sequence to 3-4 ramp-up sets; recovery 72 h between primary lift exposures. Trained females: same percent-1RM prescriptions; absolute strength progression rate may be slower but relative gains comparable to males in the literature. Strength athletes preparing for competition: peak with 1-3 weeks of higher intensity (90-100% 1RM) at reduced volume, then taper 4-7 days pre-meet.",
+          "safety_bounds": "Require medical clearance before initiating 1-3 rep maximal loads in adults with hypertension, cardiac history, or prior musculoskeletal injury; mandatory spotter or safety pins for back squat / bench press above 85% 1RM; halt session and reassess if technique breakdown occurs on top sets; avoid concurrent maximal strength testing across multiple compound lifts in the same week.",
+          "backing_atom_ids": [
+            "EA-TRA-3416",
+            "EA-TRA-2799",
+            "EA-TRA-1916",
+            "EA-TRA-5271",
+            "EA-TRA-3037"
           ],
           "warnings": []
         }
       ],
       "atoms": [
+        {
+          "atom_id": "EA-TRA-3416",
+          "similarity": 0.8024202447830465,
+          "claim": "Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity.",
+          "citations": [
+            {
+              "id": "10.1249/MSS.0000000000003897",
+              "locator_quote": "Compared with no exercise (control), RT significantly improved muscle strength, size (hypertrophy), power, endurance, contraction velocity, gait speed, balance, and multiple physical function outcomes.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-0001",
+          "similarity": 0.7303214003476625,
+          "claim": "Higher weekly resistance-training volume produces greater muscle hypertrophy in a graded dose-response, with each additional weekly set associated with ~0.37% greater gain.",
+          "citations": [
+            {
+              "id": "10.1080/02640414.2016.1210197",
+              "locator_quote": "The findings indicate a graded dose-response relationship whereby increases in RT volume produce greater gains in muscle hypertrophy.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": null
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
         {
           "atom_id": "EA-TRA-3037",
           "similarity": 0.709217595441831,
@@ -258,6 +270,23 @@
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
               "cited_title": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-8671",
+          "similarity": 0.7062476403390859,
+          "claim": "Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS.",
+          "citations": [
+            {
+              "id": "10.61622/rbgo/2025rbgo56",
+              "locator_quote": "Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effects of physical activity in women with polycystic ovary syndrome: a systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -299,67 +328,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-3030",
-          "similarity": 0.6866003312196426,
-          "claim": "Low-intensity endurance training (LIT) produces a large effect on relative VO2max and a moderate effect on the first lactate/ventilatory threshold (VT1) in healthy adults.",
+          "atom_id": "EA-TRA-9632",
+          "similarity": 0.6922498976257154,
+          "claim": "Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance.",
           "citations": [
             {
-              "id": "10.1111/sms.70208",
-              "locator_quote": "LIT had a large effect on relative VO2max (ES = 0.94, p < 0.001, I2 = 0.73) and a moderate effect (ES = 0.74, p = 0.003, I2 = 0.57) on VT1 compared with the control group.",
+              "id": "10.3389/fpubh.2026.1707627",
+              "locator_quote": "The results showed that LP and UP had comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance.",
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effects of Low-Intensity Endurance Training on Aerobic Fitness and Risk Factors of Cardiometabolic Health in Working-Age Adults: A Systematic Review and Meta-Analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-9029",
-          "similarity": 0.6860818910073213,
-          "claim": "Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types.",
-          "citations": [
-            {
-              "id": "10.1007/s00520-026-10363-0",
-              "locator_quote": "Structured aerobic and resistance exercise showed to significantly improve QoL, fatigue, body composition, and functional capacity in cancer patients.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The effects of aerobic and resistance training across eight cancer types: a systematic review"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-6351",
-          "similarity": 0.6845216103811332,
-          "claim": "Interval training combined with blood flow restriction (IT+BFR) significantly improves maximal oxygen uptake (VO2max), mean power during the Wingate 30-s test, muscle strength, muscle endurance, time to fatigue, and maximal aerobic speed compared to interval training alone.",
-          "citations": [
-            {
-              "id": "10.1016/j.jshs.2025.101030",
-              "locator_quote": "IT combined with BFR (IT+BFR) significantly improved maximal oxygen uptake (VO2max) (g = 0.63, I2 = 63%), mean power during the Wingate 30-s test (g = 0.70, I2 = 47%), muscle strength (g = 0.88, I2 = 64%), muscle endurance (g = 0.43, I2 = 0%), time to fatigue (g = 1.26, I2 = 86%), and maximal aerobic speed (g = 0.74, I2 = 0%) compared to IT alone.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Physiological adaptations and performance enhancement with combined blood flow restricted and interval training: A systematic review with meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-3416",
-          "similarity": 0.6830209325543865,
-          "claim": "Resistance training significantly improves muscle strength, hypertrophy, power, and physical function in healthy adults, with specific adaptations enhanced by manipulating load, volume, and velocity.",
-          "citations": [
-            {
-              "id": "10.1249/MSS.0000000000003897",
-              "locator_quote": "Compared with no exercise (control), RT significantly improved muscle strength, size (hypertrophy), power, endurance, contraction velocity, gait speed, balance, and multiple physical function outcomes.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews"
+              "cited_title": "Comparison of linear and undulating periodization resistance training on athletic capacities and health promotion: a systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -1001,7 +979,7 @@
     }
   },
   "compile_metadata": {
-    "top_k_per_domain": 15,
+    "top_k_per_domain": 30,
     "applicability_threshold": 0.5,
     "contraindication_hits": [],
     "preemptive_contraindications": [],
@@ -1010,12 +988,22 @@
         "protein intake for recomposition in trained adults",
         "protein intake for hypertrophy in trained adults",
         "protein intake for performance in trained adults",
+        "dietary protein muscle protein synthesis meta-analysis",
+        "energy balance body composition trained adults",
+        "body composition caloric restriction protein resistance training",
+        "muscle protein synthesis dietary protein resistance training",
+        "macronutrient periodization athletic performance",
         "avoiding Menstrual-cycle-dependent macro/calorie needs; luteal +150–200 kcal carb",
         "luteal phase macronutrient adjustment trained females"
       ],
       "training": [
         "resistance training program for recomposition",
         "training volume trained",
+        "muscle hypertrophy trained adults",
+        "resistance exercise dose response meta-analysis",
+        "body recomposition lean mass resistance trained adults",
+        "muscle hypertrophy systematic review trained adults",
+        "athletic performance resistance training dose response",
         "training with Late-morning training (10–11 AM); compressed eating window post-training risks underfueling"
       ],
       "conditioning": [

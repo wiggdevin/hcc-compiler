@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_david",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-23T08:51:43.387853Z",
+  "compiled_at": "2026-05-24T18:27:35.569579Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -55,8 +55,42 @@
       ],
       "atoms": [
         {
+          "atom_id": "EA-NUT-0496",
+          "similarity": 0.7627991283005359,
+          "claim": "Combining moderate- or low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass.",
+          "citations": [
+            {
+              "id": "10.3389/fnut.2025.1579024",
+              "locator_quote": "In summary, LR + CR, MA + CR and MR + CR are at an advantageous level in improving various indicators. Combining moderate-and low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass, making it a superior strategy for body composition improvement.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Comparing exercise modalities during caloric restriction: a systematic review and network meta-analysis on body composition"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-1139",
+          "similarity": 0.7241115560557817,
+          "claim": "Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults.",
+          "citations": [
+            {
+              "id": "10.1080/07315724.2021.1958719",
+              "locator_quote": "Our analysis indicates that TRF can reduce BM and improve nutrient metabolism in both normal- and over-weight individuals. TRF does not appear to alter protein synthesis and fat-free mass nor hamper aerobic fitness and muscular performance among physically active individuals including athletes.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Effect of Time-Restricted Feeding on Anthropometric, Metabolic, and Fitness Parameters: A Systematic Review"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-7354",
-          "similarity": 0.7172053768697039,
+          "similarity": 0.7176942656611746,
           "claim": "While lean mass loss is substantial during significant weight reduction, the proportion of weight lost as lean mass is broadly comparable between incretin-based pharmacotherapy and lifestyle interventions, and muscle mass can be significantly preserved by integrating resistance training, adequate protein intake, and body composition monitoring.",
           "citations": [
             {
@@ -65,6 +99,23 @@
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
               "cited_title": "Lean Mass Changes With Incretin Therapy Versus Lifestyle Intervention: A Systematic Review and Meta-Analysis of Randomised Controlled Trials"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-2097",
+          "similarity": 0.7052153458814029,
+          "claim": "A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions.",
+          "citations": [
+            {
+              "id": "10.1007/s40279-025-02341-z",
+              "locator_quote": "A pooled analysis revealed no significant effect of carbohydrate intake on muscle hypertrophy (SMD = 0.15, p = 0.23), with negligible heterogeneity across studies.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "The Effect of Carbohydrate Intake on Muscle Hypertrophy: A Systematic Review and Meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -121,57 +172,6 @@
           "evidence_level": "L1",
           "population_match_score": 1.0,
           "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-4512",
-          "similarity": 0.6555804296248624,
-          "claim": "Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes.",
-          "citations": [
-            {
-              "id": "10.1016/j.tjnut.2025.08.036",
-              "locator_quote": "In nonathletes, protein requirements were significantly higher by 36% with IAAO [mean: 0.88 g/kg/d; 95% confidence interval (CI): 0.85, 0.90] than with NB (mean: 0.64 g/kg/d; 95% CI: 0.61, 0.68). In athletes, protein requirements were significantly higher by 27% with IAAO (mean: 1.61 g/kg/d; 95% CI: 1.44, 1.78) than with NB (mean: 1.27 g/kg/d; 95% CI: 1.06, 1.47).",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Comparison of Protein Requirements Based on the Nitrogen Balance and Indicator Amino Acid Oxidation Methods: An Umbrella Review and Meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-7175",
-          "similarity": 0.6453918050083346,
-          "claim": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-          "citations": [
-            {
-              "id": "10.3390/nu17132070",
-              "locator_quote": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-5482",
-          "similarity": 0.730209077796882,
-          "claim": "In postmenopausal women engaging in strength training, adding a calorie deficit of 250-750 kcal/day enhances the reduction of fat mass, while protein intake at a minimum of 0.8 g/kg bodyweight shows no significant additional effect on muscle strength or lean body mass.",
-          "citations": [
-            {
-              "id": "10.1186/s40798-025-00954-2",
-              "locator_quote": "Eleven studies focused on an additional calorie deficit (250-750 kcal/day) which enhanced the reduction of fat mass. Protein intake was examined in nine studies and has no significant additional effect on muscle strength and lean body mass with a minimal intake of 0.8 g/kg bodyweight.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Analysis of the Additive Effects of Nutritional Strategies in Strength Training Interventions on Body Composition, Muscle Strength and Bone Mineral Density in Postmenopausal Women: A Systematic Review"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8800000000000001,
-          "warnings": []
         }
       ],
       "gaps": []
@@ -179,74 +179,86 @@
     "training": {
       "patterns": [
         {
-          "pattern_id": "RP-TRA-resistance-volume-hypertrophy-dose-response",
-          "similarity": 0.7156875132614134,
-          "applies_because": "A graded dose-response links weekly resistance-training set volume to muscle hypertrophy (ES increment ≈0.023 per set; higher vs. lower volume grouping ES difference = 0.241), mediated by cumulative mechanical tension and metabolic stress that upregulate muscle protein synthesis proportionally to training stimulus up to the individual's recoverable threshold.",
-          "parameterization": "Older adults with sarcopenia: start low volume (≥2 sessions/week, ~49% 1RM, 3×/week for ≥19 weeks with 15 exercises, 6 sets, ~16 reps) and add balance/aerobic components for functional gains (TUG, chair-stand); metabolic disease (T2D, PCOS, CAD): use concurrent aerobic+resistance programming; untrained individuals: traditional progressive overload—advanced methods confer no added benefit; advanced athletes: higher volumes tolerated but with pronounced diminishing returns; patellofemoral pain: favor higher volume over lower volume; older adults targeting grip strength specifically: multicomponent or resistance-only at prescribed dose.",
-          "safety_bounds": "Do not exceed 25–30 weekly sets per muscle group without experienced coach supervision; cap novice single-session volume at ≤6 sets per exercise; limit intensity to ≤80% 1RM in unsupervised older adults or those with cardiovascular comorbidities; require clinical clearance and supervised initiation for individuals with CAD, COPD, congenital heart disease, or sickle cell disease before commencing high-intensity or high-volume protocols.",
+          "pattern_id": "RP-TRA-recomposition-progressive-overload-trained",
+          "similarity": 0.8398214619734233,
+          "applies_because": "Body recomposition requires simultaneous mechanical-tension stimulus to preserve / build muscle protein synthesis AND caloric deficit to drive fat oxidation; resistance-trained adults retain lean mass under deficit primarily by maintaining training load and protein intake, whereas reducing volume disproportionately accelerates lean mass loss while only modestly increasing rate of fat loss.",
+          "parameterization": "Resistance-trained adults pursuing body recomposition under moderate caloric deficit (250-500 kcal/day): maintain 10-15 weekly hard sets per major muscle group at 6-12 rep range; keep heavy compound exposures at 4-8 reps weekly to preserve strength; protein intake 2.0-2.4 g/kg/day. Trained adults in aggressive deficit (500-750 kcal/day): reduce weekly accessory volume by 20-30% but preserve heavy compound exposures and rep ranges; sleep and stress management become limiting factors. Concurrent body recomposition + conditioning (e.g., hybrid weekly schedule): separate resistance sessions from high-intensity conditioning by at least 6 h or alternate days; cap conditioning at 2-3 sessions weekly to limit interference effect on strength retention. Older trained adults (50+ y): emphasize the upper end of the rep range (8-12 reps) and 2-3 sessions per week per muscle to support recovery; consider 10-15% lower deficit than younger adults; resistance volume retention is the highest predictor of lean mass preservation. Trained females in recomposition: cycle-aware micro-loading is reasonable but recomposition timeline should plan for 4-8% body composition shift over 12-20 weeks at sustainable deficit rates.",
+          "safety_bounds": "Cap deficit at 750 kcal/day without clinical supervision; halt aggressive volume reduction if strength regression exceeds 10% on primary lifts within 4 weeks; require body-composition tracking (DXA, InBody, or consistent skinfold protocol) every 4-6 weeks to verify lean mass retention; do not initiate recomposition in adults with active eating disorder history without clinical co-management.",
           "backing_atom_ids": [
             "EA-TRA-0001",
-            "EA-TRA-0227",
-            "EA-TRA-0309",
-            "EA-TRA-0722",
-            "EA-TRA-1619",
-            "EA-TRA-1711",
-            "EA-TRA-1853",
-            "EA-TRA-1916",
-            "EA-TRA-1931",
-            "EA-TRA-2176",
-            "EA-TRA-2215",
-            "EA-TRA-2772",
-            "EA-TRA-2799",
-            "EA-TRA-3030",
-            "EA-TRA-3037",
-            "EA-TRA-3057",
-            "EA-TRA-3375",
             "EA-TRA-3416",
-            "EA-TRA-3683",
-            "EA-TRA-3771",
-            "EA-TRA-4241",
-            "EA-TRA-4294",
-            "EA-TRA-4379",
-            "EA-TRA-4554",
-            "EA-TRA-4675",
-            "EA-TRA-4688",
-            "EA-TRA-4772",
-            "EA-TRA-4779",
-            "EA-TRA-4939",
-            "EA-TRA-5023",
-            "EA-TRA-5190",
             "EA-TRA-5271",
-            "EA-TRA-5305",
-            "EA-TRA-5364",
-            "EA-TRA-5420",
-            "EA-TRA-5422",
-            "EA-TRA-6351",
-            "EA-TRA-6688",
             "EA-TRA-6707",
-            "EA-TRA-6804",
-            "EA-TRA-7176",
-            "EA-TRA-7544",
-            "EA-TRA-7564",
-            "EA-TRA-7657",
-            "EA-TRA-8105",
-            "EA-TRA-8464",
-            "EA-TRA-8671",
-            "EA-TRA-8718",
+            "EA-TRA-3037"
+          ],
+          "warnings": []
+        },
+        {
+          "pattern_id": "RP-TRA-hypertrophy-frequency-volume-trained",
+          "similarity": 0.7789025979927027,
+          "applies_because": "In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery.",
+          "parameterization": "Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.",
+          "safety_bounds": "Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably.",
+          "backing_atom_ids": [
+            "EA-TRA-0001",
+            "EA-TRA-3037",
+            "EA-TRA-3416",
+            "EA-TRA-6707",
+            "EA-TRA-3375"
+          ],
+          "warnings": []
+        },
+        {
+          "pattern_id": "RP-TRA-weight-loss-resistance-training-adults",
+          "similarity": 0.7768899719893974,
+          "applies_because": "Caloric deficit alone induces negative nitrogen balance and accelerates lean mass loss especially in untrained or low-protein conditions; resistance training combined with adequate protein provides the mechanical stimulus to maintain muscle protein synthesis and defend lean body mass, preserving resting metabolic rate during weight loss and improving body composition outcomes vs caloric restriction alone.",
+          "parameterization": "Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: maintain 10-15 weekly hard sets per major muscle group at 6-12 reps, with at least one heavy session per week per muscle at 4-6 reps; 2-3 full-body or upper/lower splits per week minimum. Trained adults in aggressive deficit (500-750 kcal/day): preserve heavy load exposures (4-6 reps), reduce accessory volume by 20-25%, monitor for strength regression. Recreational lifters pursuing weight loss: prioritize 2-3 full-body resistance sessions per week with compound focus (squat, hinge, push, pull, carry); progressive overload by adding load before adding volume. Older adults pursuing weight loss (50+ y): mandatory 2-3 resistance sessions weekly to defend muscle mass and metabolic rate; cap aerobic volume at 150-250 min/week of moderate intensity; protein 2.0-2.4 g/kg/day. Post-bariatric or significant weight-loss maintenance phase: emphasize resistance training over additional cardiovascular volume; volume-driven protein turnover is the metabolic protector at the new body weight.",
+          "safety_bounds": "Require clinical clearance for resistance training in adults with uncontrolled hypertension, recent cardiac event (<6 months), or CAD without prior cardiac rehab clearance; cap aerobic + resistance combined weekly minutes at 5-6 hours total without supervised programming; halt program adjustment if rapid weight loss exceeds 1% body weight per week sustained over 4 weeks (suggests insufficient protein, sleep, or recovery).",
+          "backing_atom_ids": [
+            "EA-TRA-5271",
+            "EA-TRA-3416",
             "EA-TRA-8790",
-            "EA-TRA-8910",
-            "EA-TRA-8975",
-            "EA-TRA-9029",
-            "EA-TRA-9632",
-            "EA-TRA-9659",
-            "EA-TRA-9798",
-            "EA-TRA-9806",
-            "EA-TRA-9824"
+            "EA-TRA-6707",
+            "EA-TRA-9029"
           ],
           "warnings": []
         }
       ],
       "atoms": [
+        {
+          "atom_id": "EA-TRA-7354",
+          "similarity": 0.7817198963564089,
+          "claim": "In adults with overweight or obesity undergoing significant weight reduction, adding resistance training to lifestyle intervention produces the most favourable lean-mass preservation profile, with only 17.5% (95% CI: 14.2–20.8%) of total weight lost attributable to lean mass, compared to 26.2% for lifestyle alone and 25.4–35.2% for incretin-based pharmacotherapy.",
+          "citations": [
+            {
+              "id": "10.1111/dom.70666",
+              "locator_quote": "lifestyle plus resistance training demonstrated the most favourable profile (17.5% [14.2-20.8])",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Lean Mass Changes With Incretin Therapy Versus Lifestyle Intervention: A Systematic Review and Meta-Analysis of Randomised Controlled Trials"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-TRA-0496",
+          "similarity": 0.770497003882438,
+          "claim": "Combining moderate- and low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass, representing a superior body composition strategy compared to caloric restriction alone.",
+          "citations": [
+            {
+              "id": "10.3389/fnut.2025.1579024",
+              "locator_quote": "Combining moderate-and low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass, making it a superior strategy for body composition improvement.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Comparing exercise modalities during caloric restriction: a systematic review and network meta-analysis on body composition"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
         {
           "atom_id": "EA-TRA-9029",
           "similarity": 0.7547464771139506,
@@ -282,23 +294,6 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-1916",
-          "similarity": 0.7371962484009645,
-          "claim": "Advanced resistance training methods do not provide a clear benefit over traditional resistance training for inducing adaptations in untrained to moderately trained individuals.",
-          "citations": [
-            {
-              "id": "10.1007/s40279-026-02428-1",
-              "locator_quote": "When aiming to develop a range of physical capacities, there is no clear benefit from using advanced methods over traditional resistance training for inducing adaptation in untrained to moderately trained individuals.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The Effects of Advanced Resistance Training Prescription Methods on Strength, Power, Hypertrophy, and Performance Adaptations in Healthy Adults: A Systematic Review and Bayesian Network Meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
           "atom_id": "EA-TRA-9632",
           "similarity": 0.7154950242500423,
           "claim": "Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance.",
@@ -316,16 +311,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-8105",
-          "similarity": 0.6823638429069981,
-          "claim": "Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents.",
+          "atom_id": "EA-TRA-2215",
+          "similarity": 0.7048413284683488,
+          "claim": "Concurrent exercise training is effective in improving metabolic markers, body composition, lipid profile, inflammation, and cardiorespiratory fitness in people with type 2 diabetes.",
           "citations": [
             {
-              "id": "10.1111/sms.14764",
-              "locator_quote": "In contrast, CT significantly improved countermovement jump (CMJ) compared to RT alone (SMD = 0.19; 95% CI: 0.01-0.36; p = 0.04).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Synergistic Effects of Concurrent Aerobic and Strength Training on Fitness in Children and Adolescents: A Multivariate and Network Meta-Analysis"
+              "id": "10.1080/09593985.2023.2225717",
+              "locator_quote": "The CET is effective in improving metabolic markers, body composition, lipid profile, inflammation, and CRF in people with T2DM and can be included in the management of T2DM.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Effectiveness of concurrent exercise training in people with type 2 diabetes: A systematic review and meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -333,33 +328,16 @@
           "warnings": []
         },
         {
-          "atom_id": "EA-TRA-4939",
-          "similarity": 0.679331633492616,
-          "claim": "Higher resistance training volume yields better outcomes for pain intensity and disability compared to lower volume in individuals with patellofemoral pain.",
+          "atom_id": "EA-TRA-4675",
+          "similarity": 0.6905538083467802,
+          "claim": "Combined aerobic and muscle strength training is more effective than aerobic training alone at increasing cardiorespiratory fitness and lean body mass and reducing percent body fat in patients with coronary artery disease.",
           "citations": [
             {
-              "id": "10.2519/jospt.2025.13062",
-              "locator_quote": "There was very low-certainty evidence that higher resistance training volume yielded better outcomes for pain intensity and disability compared to a lower volume.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Effect of Equalized and Nonequalized Resistance Training Volumes on Pain and Disability in Patients With Patellofemoral Pain: A Systematic Review With Meta-Analyses"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-TRA-1931",
-          "similarity": 0.6687454118675764,
-          "claim": "Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect.",
-          "citations": [
-            {
-              "id": "10.1080/02640414.2024.2425536",
-              "locator_quote": "The overall analyses showed trivial differences in 1RM favouring RTH over RTN (SMD = 0.18 [CI: 0.04; 0.31]; p = 0.030). Sub-analyses revealed that a RT programme of a non-full-body routine, including 9 or more sets per exercise/week of multi-joint exercises performed to non-failure, favoured RTH for enhancing 1RM (p < 0.10).",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "The influence of specific resistance training methodological prescription variables on strength development under hypoxic conditions: A systematic review and meta-analysis"
+              "id": "10.1136/bjsports-2024-108530",
+              "locator_quote": "Combined training was more effective in increasing CRF (standard mean difference (SMD) 0.26, 95% CI 0.02 to 0.49, p=0.03) and lean body mass (mean difference (MD) 0.78 kg, 95% CI 0.39 kg to 1.17 kg, p<0.001), and reducing per cent body fat (MD -2.2%, 95% CI -3.5% to -0.9%, p=0.001) compared with aerobic training alone.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Effects of muscle strength training combined with aerobic training versus aerobic training alone on cardiovascular disease risk indicators in patients with coronary artery disease: a systematic review and meta-analysis of randomised clinical trials"
             }
           ],
           "evidence_level": "L1",
@@ -514,7 +492,65 @@
       "gaps": []
     },
     "supplements": {
-      "patterns": [],
+      "patterns": [
+        {
+          "pattern_id": "RP-SUP-creatine-resistance-body-composition",
+          "similarity": 0.6567808816924195,
+          "applies_because": "Creatine supplementation saturates intramuscular phosphocreatine stores, accelerating ATP resynthesis during repeated high-intensity bouts and enabling higher training volumes, thereby amplifying the anabolic stimulus of resistance training and producing consistent meta-analytic gains in fat-free mass (+0.82–1.39 kg) and strength across diverse populations.",
+          "parameterization": "Postmenopausal women: ≥5 g/day required to elicit lean mass gains (+0.37 kg) and lower-body strength (+7.5 kg leg-press 1RM); untrained individuals: expect larger absolute strength gains than trained athletes, who show greater absolute FFM gains (1.82 kg vs 1.23 kg); active females: performance responses are inconsistent and clients should set conservative expectations; combat sport and swimming athletes: use for sport-specific power and ergogenic outcomes; co-supplementation with β-alanine (divided 4–6.4 g/day) may further enhance repeated high-intensity bout performance without adding to maximal strength beyond creatine alone.",
+          "safety_bounds": "Loading phase ceiling: 20 g/day for ≤7 days in 4 divided doses; maintenance ceiling: 5 g/day for healthy adults; expect a transient, clinically non-significant serum creatinine rise (~0.07 µmol/L) with no meaningful GFR change in healthy kidneys; clinical supervision and eGFR monitoring required if baseline eGFR < 60 mL/min/1.73 m²; do not use loading phase without medical clearance in individuals with hypertension or fluid-sensitive conditions.",
+          "backing_atom_ids": [
+            "EA-SUP-0001",
+            "EA-SUP-0398",
+            "EA-SUP-0510",
+            "EA-SUP-0822",
+            "EA-SUP-1084",
+            "EA-SUP-1351",
+            "EA-SUP-1368",
+            "EA-SUP-1449",
+            "EA-SUP-1930",
+            "EA-SUP-2054",
+            "EA-SUP-2412",
+            "EA-SUP-2459",
+            "EA-SUP-2597",
+            "EA-SUP-2701",
+            "EA-SUP-3021",
+            "EA-SUP-3039",
+            "EA-SUP-3594",
+            "EA-SUP-3993",
+            "EA-SUP-4083",
+            "EA-SUP-4139",
+            "EA-SUP-4168",
+            "EA-SUP-4341",
+            "EA-SUP-4445",
+            "EA-SUP-4525",
+            "EA-SUP-5023",
+            "EA-SUP-5676",
+            "EA-SUP-5761",
+            "EA-SUP-6155",
+            "EA-SUP-6467",
+            "EA-SUP-7073",
+            "EA-SUP-7092",
+            "EA-SUP-7180",
+            "EA-SUP-7507",
+            "EA-SUP-7536",
+            "EA-SUP-7640",
+            "EA-SUP-7825",
+            "EA-SUP-8071",
+            "EA-SUP-8319",
+            "EA-SUP-8400",
+            "EA-SUP-8455",
+            "EA-SUP-8548",
+            "EA-SUP-8825",
+            "EA-SUP-8953",
+            "EA-SUP-9218",
+            "EA-SUP-9444",
+            "EA-SUP-9818",
+            "EA-SUP-9880"
+          ],
+          "warnings": []
+        }
+      ],
       "atoms": [
         {
           "atom_id": "EA-SUP-4168",
@@ -527,23 +563,6 @@
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
               "cited_title": "The Effect of Creatine Supplementation on Resistance Training-Based Changes to Body Composition: A Systematic Review and Meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-SUP-3021",
-          "similarity": 0.7596061293444837,
-          "claim": "Creatine supplementation combined with resistance training significantly increases fat-free mass and body mass, with trained individuals exhibiting greater gains in fat-free mass compared to untrained individuals.",
-          "citations": [
-            {
-              "id": "10.1080/15502783.2025.2586523",
-              "locator_quote": "A pooled analysis of 61 trials revealed that Cr supplementation significantly increased FFM (weighted mean difference [WMD]: 1.39 kg; 95% confidence intereval (CI): 1.07,1.70; p < 0.001) and body mass (WMD: 0.89 kg; 95% CI: 0.76,1.01; p < 0.001) without significant effects on FM, BMI, and BFP. Trained individuals exhibited greater, though non-significant, gains in FFM (1.82 vs. 1.23 kg) compared with untrained participants, despite similar increases in total body mass.",
-              "existence": "UNVERIFIABLE",
-              "faithfulness": "ACCESS_LIMITED",
-              "cited_title": "Creatine supplementation and resistance training: a comparison between novice and experienced lifters - a systematic review and dose-response meta-analysis"
             }
           ],
           "evidence_level": "L1",
@@ -629,6 +648,23 @@
               "existence": "UNVERIFIABLE",
               "faithfulness": "ACCESS_LIMITED",
               "cited_title": "Comparative Effects of Dietary Protein, Creatine, and Omega-3 Supplementation on Muscle Strength, Endurance, and Recovery in Trained Athletes: A Systematic Review and Network Meta-Analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-SUP-0510",
+          "similarity": 0.6742488047283564,
+          "claim": "Individual studies indicate that sodium citrate, creatine monohydrate, spirulina, green tea and oolong tea extracts, and branched-chain amino acids can significantly affect body mass or composition in wrestlers.",
+          "citations": [
+            {
+              "id": "10.1007/s13668-025-00672-x",
+              "locator_quote": "Individual studies revealed significant effects of sodium citrate, creatine monohydrate, spirulina, green tea and oolong tea extracts, and branched-chain amino acids on body mass or composition.",
+              "existence": "UNVERIFIABLE",
+              "faithfulness": "ACCESS_LIMITED",
+              "cited_title": "Evidence-Based Supplementation Strategies for Wrestlers: A Systematic Review"
             }
           ],
           "evidence_level": "L1",
@@ -943,7 +979,7 @@
     }
   },
   "compile_metadata": {
-    "top_k_per_domain": 15,
+    "top_k_per_domain": 30,
     "applicability_threshold": 0.5,
     "contraindication_hits": [],
     "preemptive_contraindications": [],
@@ -952,15 +988,24 @@
         "protein intake for weight_loss in trained adults",
         "protein intake for recomposition in trained adults",
         "macronutrient timing for trained adults",
+        "dietary protein muscle protein synthesis meta-analysis",
+        "energy balance body composition trained adults",
+        "lean body mass preservation hypocaloric diet protein",
+        "body composition caloric restriction protein resistance training",
         "avoiding Mushroom allergy (strict); aversions to Indian / spicy foods",
         "chef-prepared meal adherence weight management"
       ],
       "training": [
         "resistance training program for weight_loss",
         "training volume trained",
+        "muscle hypertrophy trained adults",
+        "resistance exercise dose response meta-analysis",
+        "resistance training body composition fat mass reduction",
+        "body recomposition lean mass resistance trained adults",
         "training with ~10 days every 8 weeks unsupervised travel (chef + trainer absent — adherence-risk window)",
         "Smith machine hypertrophy programming",
-        "machine-based resistance training hypertrophy"
+        "machine-based resistance training hypertrophy",
+        "tempo eccentric resistance training"
       ],
       "conditioning": [
         "cardiovascular conditioning for weight_loss",
