@@ -5,7 +5,30 @@ from hcc_compiler.sp2.intake import ClientIntake
 
 _CONDITIONING_GOALS = {"endurance", "weight_loss", "performance"}
 
-_PER_DOMAIN_CAP = 5
+_PER_DOMAIN_CAP = 10
+
+
+# Goal -> scientific-language training query (matches atom phrasing more directly than
+# coaching language). Added 2026-05-24 to lift atom retrieval similarity.
+_TRAINING_GOAL_SCIENTIFIC: dict[str, str] = {
+    "strength": "maximal strength resistance training meta-analysis",
+    "hypertrophy": "muscle hypertrophy systematic review trained adults",
+    "weight_loss": "resistance training body composition fat mass reduction",
+    "recomposition": "body recomposition lean mass resistance trained adults",
+    "endurance": "concurrent endurance strength training interference",
+    "performance": "athletic performance resistance training dose response",
+    "longevity": "muscle mass strength health outcomes adults",
+}
+
+_NUTRITION_GOAL_SCIENTIFIC: dict[str, str] = {
+    "strength": "dietary protein resistance trained adults",
+    "hypertrophy": "muscle protein synthesis dietary protein resistance training",
+    "weight_loss": "lean body mass preservation hypocaloric diet protein",
+    "recomposition": "body composition caloric restriction protein resistance training",
+    "endurance": "carbohydrate periodization endurance athletes",
+    "performance": "macronutrient periodization athletic performance",
+    "longevity": "dietary protein health outcomes older adults",
+}
 
 _REGIMEN_KEYWORDS: dict[str, dict[Domain, list[str]]] = {
     "mediterranean": {
@@ -162,12 +185,32 @@ def derive_queries(intake: ClientIntake) -> dict[Domain, list[str]]:
             break
     if len(nut) < 3:
         nut.append(f"macronutrient timing for {ts} adults")
+    # Scientific-language queries (retrieve atoms phrased as SR/MA findings).
+    nut.append("dietary protein muscle protein synthesis meta-analysis")
+    nut.append(f"energy balance body composition {ts} adults")
+    # Goal-specific scientific query for EACH goal (not just primary).
+    for g in goals:
+        sci = _NUTRITION_GOAL_SCIENTIFIC.get(g)
+        if sci and sci not in nut:
+            nut.append(sci)
+            if len(nut) >= _PER_DOMAIN_CAP:
+                break
     result[Domain.NUTRITION] = nut
 
-    result[Domain.TRAINING] = [
+    training: list[str] = [
         f"resistance training program for {primary}",
         f"training volume {ts}",
+        f"muscle hypertrophy {ts} adults",
+        "resistance exercise dose response meta-analysis",
     ]
+    # Goal-specific scientific query for EACH goal (not just primary).
+    for g in goals:
+        sci = _TRAINING_GOAL_SCIENTIFIC.get(g)
+        if sci and sci not in training:
+            training.append(sci)
+            if len(training) >= _PER_DOMAIN_CAP:
+                break
+    result[Domain.TRAINING] = training
 
     con: list[str] = [f"cardiovascular conditioning for {primary}"]
     for g in goals:

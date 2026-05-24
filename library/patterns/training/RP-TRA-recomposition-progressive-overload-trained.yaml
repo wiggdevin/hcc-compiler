@@ -1,0 +1,17 @@
+id: RP-TRA-recomposition-progressive-overload-trained
+domain: training
+pattern: "Resistance training program for body recomposition in trained adults: preserve or moderately increase weekly training volume during caloric deficit while maintaining heavy compound loads at 6-10 reps, prioritizing protein intake and progressive overload to drive simultaneous fat loss and lean mass retention."
+parameterization: "Resistance-trained adults pursuing body recomposition under moderate caloric deficit (250-500 kcal/day): maintain 10-15 weekly hard sets per major muscle group at 6-12 rep range; keep heavy compound exposures at 4-8 reps weekly to preserve strength; protein intake 2.0-2.4 g/kg/day. Trained adults in aggressive deficit (500-750 kcal/day): reduce weekly accessory volume by 20-30% but preserve heavy compound exposures and rep ranges; sleep and stress management become limiting factors. Concurrent body recomposition + conditioning (e.g., hybrid weekly schedule): separate resistance sessions from high-intensity conditioning by at least 6 h or alternate days; cap conditioning at 2-3 sessions weekly to limit interference effect on strength retention. Older trained adults (50+ y): emphasize the upper end of the rep range (8-12 reps) and 2-3 sessions per week per muscle to support recovery; consider 10-15% lower deficit than younger adults; resistance volume retention is the highest predictor of lean mass preservation. Trained females in recomposition: cycle-aware micro-loading is reasonable but recomposition timeline should plan for 4-8% body composition shift over 12-20 weeks at sustainable deficit rates."
+backing_atom_ids:
+  - EA-TRA-0001
+  - EA-TRA-3416
+  - EA-TRA-5271
+  - EA-TRA-6707
+  - EA-TRA-3037
+falsification_signal: "An RCT (n >= 100, >= 16 weeks) in resistance-trained adults under moderate caloric deficit showing that maintaining heavy compound loads at 6-10 reps produces no advantage over generalized higher-rep volume reduction for preserving lean body mass under matched protein intake."
+safety_bounds: "Cap deficit at 750 kcal/day without clinical supervision; halt aggressive volume reduction if strength regression exceeds 10% on primary lifts within 4 weeks; require body-composition tracking (DXA, InBody, or consistent skinfold protocol) every 4-6 weeks to verify lean mass retention; do not initiate recomposition in adults with active eating disorder history without clinical co-management."
+applies_because: "Body recomposition requires simultaneous mechanical-tension stimulus to preserve / build muscle protein synthesis AND caloric deficit to drive fat oxidation; resistance-trained adults retain lean mass under deficit primarily by maintaining training load and protein intake, whereas reducing volume disproportionately accelerates lean mass loss while only modestly increasing rate of fat loss."
+doesnt_apply_if: "Untrained or recently resumed trainees — recomposition is more readily achieved here but follows different volume / load progression rules; adults with very low body fat (<8% males, <16% females) where further deficit risks endocrine disruption; pregnancy or active anorexia treatment."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-24"
+version: "0.1.0"

@@ -1,0 +1,17 @@
+id: RP-TRA-endurance-concurrent-trained
+domain: training
+pattern: "Resistance training program for endurance and performance in trained adults minimizes the interference effect by reducing concurrent strength volume by 20-30% during peak endurance phases, scheduling strength at least 6 hours from endurance sessions, and prioritizing low-velocity compound movements over hypertrophy-style accessory work."
+parameterization: "Endurance-trained adults adding resistance training (e.g., distance runners, cyclists, triathletes): 2 strength sessions per week, 30-45 min each, focused on compound movements (squat, deadlift, lunge, single-leg work) at 4-8 reps and 75-85% 1RM; cap weekly resistance volume at 8-12 hard sets per major lower-body muscle group during peak endurance training phases. Concurrent training schedule: separate endurance and strength sessions by at least 6 hours, ideally morning endurance / evening strength or alternate days; if same-day required, strength should precede endurance for maximal-strength outcomes or follow for endurance-priority outcomes. Athletes in offseason / build phase: temporarily increase strength volume to 15-18 weekly sets per muscle and reduce endurance volume by 30-50% to drive strength adaptations before returning to specificity. Performance-oriented hybrid (e.g., bradley pattern, sebastian pattern): pair 2.5x strength + 2.5x conditioning weekly with one full rest day; use heart rate variability and session RPE to autoregulate weekly load."
+backing_atom_ids:
+  - EA-TRA-8105
+  - EA-TRA-9029
+  - EA-TRA-3416
+  - EA-TRA-1619
+  - EA-TRA-6688
+falsification_signal: "An RCT (n >= 80, >= 10 weeks) in endurance-trained adults demonstrating that concurrent resistance training does not impair endurance adaptations (VO2max, lactate threshold, time-trial performance) regardless of session scheduling, OR that the molecular interference between strength and endurance signaling pathways does not manifest as measurable performance attenuation."
+safety_bounds: "Cap weekly concurrent training hours at 10-12 without dedicated recovery protocols; require sleep monitoring at >= 7 h/night sustained or reduce overall training volume; halt strength volume escalation if endurance performance regresses by more than 5% over 3 weeks; do not add high-impact running or jumping volume in trainees with prior tendinopathy without progressive return-to-impact program."
+applies_because: "Concurrent endurance and resistance training trigger conflicting intracellular signaling cascades (AMPK vs mTOR) that can attenuate hypertrophic adaptations from resistance training when scheduled too closely; this interference effect is dose-dependent and modifiable by session separation, intensity selection, and exercise specificity, allowing trained adults to develop both strength and endurance capacities concurrently with appropriate programming."
+doesnt_apply_if: "Pure strength or pure hypertrophy goals without endurance demands — conventional resistance training prescriptions apply; recreational lifters without concurrent endurance training — interference effect is not a programming variable in their case; acute periodization phase prioritizing one capacity exclusively over the other."
+tier: routine
+approval: "Dev Wiggins 2026-05-24"
+version: "0.1.0"

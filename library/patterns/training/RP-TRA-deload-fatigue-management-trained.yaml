@@ -1,0 +1,17 @@
+id: RP-TRA-deload-fatigue-management-trained
+domain: training
+pattern: "Trained adults running multi-month resistance training programs integrate planned 1-week deloads every 4-8 weeks at 40-60% normal training volume and 70-80% normal training intensity to dissipate accumulated fatigue and re-establish progressive overload trajectory."
+parameterization: "Trained adults in linear or block-periodized resistance training (1+ year consistent volume): deload every 4-6 weeks during heavy intensification phases, every 6-8 weeks during hypertrophy phases; cut weekly hard sets to 40-60% baseline and top-set intensity to 70-80% baseline 1RM; maintain frequency (sessions per week) but shorten duration. Advanced trainees (3+ years, multi-year progression): use autoregulated deloads triggered by stalled progression (no PR or volume increase across 2-3 weeks), elevated session RPE (>= 8.5 across multiple compound lifts), or HRV / sleep deterioration trending below personal baseline. Trained athletes in competition prep: scheduled taper (1-2 weeks pre-event) replaces standard deload, with volume reduced 50-65% and intensity maintained or briefly elevated. Older trained adults (50+ y): more frequent deloads (every 3-4 weeks during heavier blocks) to manage longer recovery windows. Returning from illness, injury, or 2+ week training break: treat first week back as a deload by design (50% normal volume) before resuming standard progression."
+backing_atom_ids:
+  - EA-TRA-0001
+  - EA-TRA-3037
+  - EA-TRA-3416
+  - EA-TRA-3375
+  - EA-TRA-1916
+falsification_signal: "An RCT (n >= 60, >= 16 weeks) in resistance-trained adults demonstrating that uninterrupted progressive overload without scheduled deload weeks produces equal or greater chronic strength and hypertrophy gains vs matched volume protocols with planned deload weeks, OR that fatigue management is unnecessary for sustained adaptation in trained populations."
+safety_bounds: "Do not skip a planned deload when scheduled regardless of subjective readiness; mandatory deload after 2+ consecutive weeks of any of: sleep <6 h/night sustained, resting HR elevated >10% above baseline, or strength regression on primary lifts; deloads are not optional during heavy block-periodization phases for advanced trainees."
+applies_because: "Accumulated training fatigue from progressive overload eventually outpaces between-session recovery in trained adults, manifesting as stalled strength progression, elevated session RPE, and rising injury risk; planned deloads dissipate this fatigue while preserving the strength-fitness ratio, allowing the resumption of progressive overload at a higher trajectory and reducing the cumulative injury rate over multi-year training careers."
+doesnt_apply_if: "Untrained or novice trainees in linear progression phase (typically first 12-26 weeks) where neural adaptation outpaces fatigue accumulation; recreational lifters training <3x per week at submaximal intensities where between-session recovery is sufficient; acute injury or illness phases requiring full programming pause (not a deload)."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-24"
+version: "0.1.0"

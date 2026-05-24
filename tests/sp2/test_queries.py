@@ -115,7 +115,7 @@ class TestInjuryConstraint:
 
 
 class TestDomainCap:
-    """Each domain must have ≤ 5 queries (PRD spec)."""
+    """Each domain must have ≤ 10 queries (cap raised 2026-05-24 for scientific-language enrichment + multi-goal coverage)."""
 
     def test_no_domain_exceeds_five_queries(self):
         constraints = [
@@ -129,7 +129,7 @@ class TestDomainCap:
         )
         result = derive_queries(intake)
         for domain, queries in result.items():
-            assert len(queries) <= 5, f"{domain} has {len(queries)} queries (max 5)"
+            assert len(queries) <= 10, f"{domain} has {len(queries)} queries (max 10)"
 
 
 class TestTotalQueryCount:
@@ -268,7 +268,7 @@ def test_regimen_keywords_inject_queries():
     )
     heavy_queries = derive_queries(heavy_intake)
     for domain, queries in heavy_queries.items():
-        assert len(queries) <= 5, f"{domain} has {len(queries)} queries (max 5)"
+        assert len(queries) <= 10, f"{domain} has {len(queries)} queries (max 10)"
 
     empty_intake = _make_intake_with_regimen("")
     empty_queries = derive_queries(empty_intake)

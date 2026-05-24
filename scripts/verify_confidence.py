@@ -4,13 +4,13 @@
 Ports the math from web/lib/scoring.ts so CI/automation can verify pack
 confidence without booting the TS runtime. Two formula variants:
 
-  v1 — current TS values (baseline)
-  v2 — Phase 2 formula tweaks
+  v1 — legacy TS values
+  v2 — current TS values (default; matches web/lib/scoring.ts since 2026-05-23)
 
 CLI:
   python scripts/verify_confidence.py <pack.json>
-      [--min-overall FLOAT] [--min-domain FLOAT]
-      [--print-medians] [--formula v1|v2]
+      [--min-overall FLOAT] [--min-domain FLOAT] [--domains nutrition,training]
+      [--print-medians] [--breakdown] [--formula v1|v2]
 """
 
 from __future__ import annotations
@@ -21,6 +21,7 @@ import math
 import statistics
 import sys
 from collections import Counter
+from pathlib import Path
 from typing import Any
 
 DOMAIN_ORDER = [
@@ -114,6 +115,30 @@ def compute(pack: dict[str, Any], cfg: dict[str, Any]) -> tuple[list[dict[str, A
     return rows, overall_confidence(rows)
 
 
+def domain_stats(block: dict[str, Any], cfg: dict[str, Any]) -> dict[str, Any]:
+    atoms = block.get("atoms", []) or []
+    patterns = block.get("patterns", []) or []
+    atom_scores = [atom_confidence(a, cfg) for a in atoms]
+    pattern_sims = [p.get("similarity", 0.0) for p in patterns]
+    if cfg["atom_aggregator"] == "geomean":
+        gmean_atoms = geomean(atom_scores)
+    else:
+        gmean_atoms = mean(atom_scores)
+    sims = [a.get("similarity", 0.0) for a in atoms]
+    pops = [a.get("population_match_score", 0.0) for a in atoms]
+    ev_dist = Counter(a.get("evidence_level") for a in atoms)
+    return {
+        "gmean_atoms": gmean_atoms,
+        "mean_pattern_sim": mean(pattern_sims),
+        "median_sim": statistics.median(sims) if sims else 0.0,
+        "median_pop_match": statistics.median(pops) if pops else 0.0,
+        "L1": ev_dist.get("L1", 0),
+        "L2": ev_dist.get("L2", 0),
+        "L3": ev_dist.get("L3", 0),
+        "L4": ev_dist.get("L4", 0),
+    }
+
+
 def collect_atoms(pack: dict[str, Any]) -> list[dict[str, Any]]:
     out = []
     for block in pack.get("domain_recommendations", {}).values():
@@ -126,20 +151,78 @@ def main() -> int:
     ap.add_argument("pack", help="path to pack JSON")
     ap.add_argument("--min-overall", type=float, default=None)
     ap.add_argument("--min-domain", type=float, default=None)
+    ap.add_argument(
+        "--domains",
+        type=str,
+        default=None,
+        help="Comma-separated domain filter for --min-domain (e.g. 'nutrition,training').",
+    )
     ap.add_argument("--print-medians", action="store_true")
-    ap.add_argument("--formula", choices=list(FORMULAS), default="v1")
+    ap.add_argument(
+        "--breakdown",
+        action="store_true",
+        help="Emit expanded per-domain TSV: persona, gmean_atoms, mean_pattern_sim, evidence dist, median pop/sim.",
+    )
+    ap.add_argument(
+        "--formula",
+        choices=list(FORMULAS),
+        default="v2",
+        help="Formula variant (default: v2 — matches web/lib/scoring.ts).",
+    )
+    ap.add_argument(
+        "--no-header",
+        action="store_true",
+        help="Suppress TSV header (use when concatenating multiple --breakdown runs).",
+    )
     args = ap.parse_args()
 
     with open(args.pack) as f:
         pack = json.load(f)
     cfg = FORMULAS[args.formula]
+    persona = Path(args.pack).stem
 
     rows, overall = compute(pack, cfg)
 
-    print("domain\tconfidence\tatomCount\tpatternCount")
-    for r in rows:
-        print(f"{r['domain']}\t{r['confidence']:.4f}\t{r['atomCount']}\t{r['patternCount']}")
-    print(f"overall\t{overall:.4f}\tformula={args.formula}")
+    if args.breakdown:
+        headers = [
+            "persona", "domain", "confidence", "gmean_atoms", "mean_pattern_sim",
+            "atom_count", "pattern_count", "L1", "L2", "L3", "L4",
+            "median_pop_match", "median_sim",
+        ]
+        if not args.no_header:
+            print("\t".join(headers))
+        dr = pack.get("domain_recommendations", {})
+        for r in rows:
+            block = dr.get(r["domain"], {"atoms": [], "patterns": []})
+            s = domain_stats(block, cfg)
+            print(
+                "\t".join([
+                    persona,
+                    r["domain"],
+                    f"{r['confidence']:.4f}",
+                    f"{s['gmean_atoms']:.4f}",
+                    f"{s['mean_pattern_sim']:.4f}",
+                    str(r["atomCount"]),
+                    str(r["patternCount"]),
+                    str(s["L1"]), str(s["L2"]), str(s["L3"]), str(s["L4"]),
+                    f"{s['median_pop_match']:.4f}",
+                    f"{s['median_sim']:.4f}",
+                ])
+            )
+        total_atoms = sum(r["atomCount"] for r in rows)
+        total_patterns = sum(r["patternCount"] for r in rows)
+        print(
+            "\t".join([
+                persona, "OVERALL", f"{overall:.4f}", "", "",
+                str(total_atoms), str(total_patterns),
+                "", "", "", "", "", "",
+            ])
+        )
+    else:
+        print("domain\tconfidence\tatomCount\tpatternCount")
+        for r in rows:
+            print(f"{r['domain']}\t{r['confidence']:.4f}\t{r['atomCount']}\t{r['patternCount']}")
+        print(f"overall\t{overall:.4f}\tformula={args.formula}")
 
     if args.print_medians:
         atoms = collect_atoms(pack)
@@ -153,15 +236,21 @@ def main() -> int:
         for lvl in ("L1", "L2", "L3", "L4"):
             print(f"evidence_{lvl}\t{ev_dist.get(lvl, 0)}")
 
+    allowed_domains: set[str] | None = None
+    if args.domains:
+        allowed_domains = {d.strip() for d in args.domains.split(",") if d.strip()}
+
     failed = False
     if args.min_overall is not None and overall < args.min_overall:
-        print(f"FAIL: overall {overall:.4f} < min-overall {args.min_overall}", file=sys.stderr)
+        print(f"FAIL: {persona} overall {overall:.4f} < min-overall {args.min_overall}", file=sys.stderr)
         failed = True
     if args.min_domain is not None:
         for r in rows:
+            if allowed_domains and r["domain"] not in allowed_domains:
+                continue
             if (r["atomCount"] or r["patternCount"]) and r["confidence"] < args.min_domain:
                 print(
-                    f"FAIL: domain {r['domain']} {r['confidence']:.4f} < min-domain {args.min_domain}",
+                    f"FAIL: {persona} domain {r['domain']} {r['confidence']:.4f} < min-domain {args.min_domain}",
                     file=sys.stderr,
                 )
                 failed = True

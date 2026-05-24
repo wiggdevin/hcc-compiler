@@ -1,0 +1,17 @@
+id: RP-TRA-hypertrophy-frequency-volume-trained
+domain: training
+pattern: "Resistance-trained adults pursuing hypertrophy or body recomposition should train each major muscle group 2-3 times per week with 10-20 weekly hard sets in the 6-15 rep range at RIR 1-3 to drive muscle protein synthesis."
+parameterization: "Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume."
+backing_atom_ids:
+  - EA-TRA-0001
+  - EA-TRA-3037
+  - EA-TRA-3416
+  - EA-TRA-6707
+  - EA-TRA-3375
+falsification_signal: "A well-powered RCT (n >= 100, >= 12 weeks) in resistance-trained adults demonstrating that weekly frequency 1x vs 2-3x/week per muscle at matched total weekly volume produces no hypertrophic difference, OR that volumes above 20 sets/muscle/week produce no additional hypertrophy over 10-20 sets when recovery is matched."
+safety_bounds: "Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably."
+applies_because: "In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery."
+doesnt_apply_if: "Acute or recent musculoskeletal injury restricting volume tolerance; untrained or sedentary individuals (initiate with linear progression at lower volume first); acute illness or severely compromised sleep limiting recovery capacity; advanced cardiovascular or pulmonary disease without clinical clearance and supervised initiation."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-24"
+version: "0.1.0"

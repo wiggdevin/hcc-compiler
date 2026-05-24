@@ -1,0 +1,17 @@
+id: RP-TRA-weight-loss-resistance-training-adults
+domain: training
+pattern: "Resistance training program for weight loss in adults: preserve or moderately reduce weekly training volume, maintain heavy compound loads to defend lean mass, prioritize 2-3 sessions per week minimum, paired with caloric deficit and protein 1.6-2.4 g/kg/day."
+parameterization: "Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: maintain 10-15 weekly hard sets per major muscle group at 6-12 reps, with at least one heavy session per week per muscle at 4-6 reps; 2-3 full-body or upper/lower splits per week minimum. Trained adults in aggressive deficit (500-750 kcal/day): preserve heavy load exposures (4-6 reps), reduce accessory volume by 20-25%, monitor for strength regression. Recreational lifters pursuing weight loss: prioritize 2-3 full-body resistance sessions per week with compound focus (squat, hinge, push, pull, carry); progressive overload by adding load before adding volume. Older adults pursuing weight loss (50+ y): mandatory 2-3 resistance sessions weekly to defend muscle mass and metabolic rate; cap aerobic volume at 150-250 min/week of moderate intensity; protein 2.0-2.4 g/kg/day. Post-bariatric or significant weight-loss maintenance phase: emphasize resistance training over additional cardiovascular volume; volume-driven protein turnover is the metabolic protector at the new body weight."
+backing_atom_ids:
+  - EA-TRA-5271
+  - EA-TRA-3416
+  - EA-TRA-8790
+  - EA-TRA-6707
+  - EA-TRA-9029
+falsification_signal: "An RCT (n >= 100, >= 12 weeks) in adults pursuing weight loss showing that resistance training is unnecessary for lean mass preservation under matched protein intake and caloric deficit, OR that resistance training during deficit provides no metabolic benefit over equivalent aerobic exercise volume."
+safety_bounds: "Require clinical clearance for resistance training in adults with uncontrolled hypertension, recent cardiac event (<6 months), or CAD without prior cardiac rehab clearance; cap aerobic + resistance combined weekly minutes at 5-6 hours total without supervised programming; halt program adjustment if rapid weight loss exceeds 1% body weight per week sustained over 4 weeks (suggests insufficient protein, sleep, or recovery)."
+applies_because: "Caloric deficit alone induces negative nitrogen balance and accelerates lean mass loss especially in untrained or low-protein conditions; resistance training combined with adequate protein provides the mechanical stimulus to maintain muscle protein synthesis and defend lean body mass, preserving resting metabolic rate during weight loss and improving body composition outcomes vs caloric restriction alone."
+doesnt_apply_if: "Active musculoskeletal injury restricting volume tolerance; acute decompensation of chronic conditions (heart failure, severe COPD, uncontrolled diabetes); active eating disorder requiring clinical co-management; weight loss target less than 5% body weight in already-lean individuals (recomposition pattern more appropriate)."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-24"
+version: "0.1.0"
