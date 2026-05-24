@@ -1,0 +1,36 @@
+id: EA-SUP-9665
+domain: supplements
+claim: In CVD patients undergoing cardiovascular rehabilitation, protein supplementation
+  combined with resistance training may improve lean body mass, though low certainty
+  of evidence and heterogeneity in protein types and dosages prevent a definitive
+  recommendation.
+evidence_level: L1
+citations:
+- id: 10.1016/j.nut.2025.112773
+  locator_quote: Lean body mass improvements were observed in several trials, particularly
+    when protein intake was combined with resistance training.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of protein consumption and supplementation on body composition
+    and functional capacity in cardiovascular disease patients undergoing cardiovascular
+    rehabilitation: A systematic review and meta-analysis'
+population_applicability:
+  age: "55\u201380 years (mean ages across included RCTs)"
+  sex: not reported separately
+  training_status: CVD patients enrolled in cardiovascular rehabilitation programmes
+  dose_magnitude: variable; heterogeneity in protein types and dosages across included
+    trials
+  duration: variable; heterogeneity in study durations across included trials
+effect: Protein supplementation, especially whey or leucine-enriched formulas combined
+  with resistance training, was associated with lean body mass gains in several trials;
+  adipose tissue reductions were inconsistent; handgrip strength and 10-metre walk
+  test performance improved in some trials; VO2 peak findings were inconclusive (some
+  trials reported improvements, others showed no significant effect); evidence certainty
+  rated very low for BMI, 6-minute walk test, and VO2 peak, and low for handgrip strength,
+  fat mass, and lean body mass.
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

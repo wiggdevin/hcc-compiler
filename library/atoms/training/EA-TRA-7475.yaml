@@ -1,0 +1,35 @@
+id: EA-TRA-7475
+domain: training
+claim: Adding exercise to a hypocaloric diet does not produce statistically significant
+  additional reductions in body weight, body composition, or glycaemic control compared
+  to hypocaloric diet alone in adults with overweight or obesity and type 2 diabetes,
+  although cardiorespiratory fitness (VO2max) significantly improves.
+evidence_level: L1
+citations:
+- id: 10.1111/dme.15096
+  locator_quote: Based on limited data, we did not find additional effects of exercise
+    to hypocaloric diet in adults with overweight or obesity and type 2 diabetes on
+    body weight, body composition or glycaemic control, while cardio-respiratory fitness
+    improved.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Additional effects of exercise to hypocaloric diet on body weight,
+    body composition, glycaemic control and cardio-respiratory fitness in adults with
+    overweight or obesity and type 2 diabetes: A systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: not specified (mixed)
+  training_status: overweight or obese with type 2 diabetes
+  dose_magnitude: 'varied modalities: walking/jogging, cycle ergometer, football training,
+    or resistance training'
+  duration: 2 to 52 weeks
+effect: "No statistically significant additional benefit of exercise over hypocaloric\
+  \ diet alone for body weight (MD \u22120.77 kg [95% CI \u22122.03; 0.50]), BMI,\
+  \ waist circumference, fat mass, fat-free mass, fasting glucose, HbA1c, or HOMA-IR;\
+  \ two studies showed significant VO2max increases with the combined intervention."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

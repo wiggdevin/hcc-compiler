@@ -1,0 +1,34 @@
+id: EA-NUT-4730
+domain: nutrition
+claim: In active-duty military personnel experiencing energy deficit, dietary protein
+  intake greater than 0.8 g/kg/day is necessary to mitigate declines in lean body
+  mass, with intakes up to 1.6 g/kg/day potentially preferred.
+evidence_level: L1
+citations:
+- id: 10.3390/nu15183948
+  locator_quote: Results support the recommendation that greater than 0.8 g/kg/day
+    is necessary to mitigate the impact of energy deficit on a decline in lean body
+    mass, while intakes up to 1.6 g/kg/day may be preferred.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The Role of Dietary Protein in Body Weight Regulation among Active-Duty
+    Military Personnel during Energy Deficit: A Systematic Review'
+population_applicability:
+  age: "active-duty military adults (typical range ~18\u201345 years)"
+  sex: mixed (military personnel, sex distribution not specified in abstract)
+  training_status: active-duty military undergoing intense physical training
+  dose_magnitude: "protein intake range studied: 0.5\u20132.4 g/kg/day; recommended\
+    \ threshold: >0.8 g/kg/day; preferred upper target: up to 1.6 g/kg/day"
+  duration: 8 days to 6 months across included studies
+effect: "Protein intakes exceeding 0.8 g/kg/day attenuate lean body mass loss during\
+  \ sustained energy deficit; up to 1.6 g/kg/day may further preserve fat-free mass.\
+  \ All 8 included studies reported mean weight loss (maximum 4.0 kg) and 6 reported\
+  \ mean fat mass reductions (maximum 4.5 kg); exact dose\u2013response cannot be\
+  \ fully quantified due to heterogeneity in deficit severity and duration across\
+  \ studies."
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

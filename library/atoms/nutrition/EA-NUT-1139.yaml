@@ -1,0 +1,32 @@
+id: EA-NUT-1139
+domain: nutrition
+claim: Time-restricted feeding reduces body mass and improves nutrient metabolism
+  in both normal-weight and overweight individuals without altering fat-free mass
+  or impairing aerobic fitness and muscular performance among physically active adults.
+evidence_level: L1
+citations:
+- id: 10.1080/07315724.2021.1958719
+  locator_quote: Our analysis indicates that TRF can reduce BM and improve nutrient
+    metabolism in both normal- and over-weight individuals. TRF does not appear to
+    alter protein synthesis and fat-free mass nor hamper aerobic fitness and muscular
+    performance among physically active individuals including athletes.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effect of Time-Restricted Feeding on Anthropometric, Metabolic, and
+    Fitness Parameters: A Systematic Review'
+population_applicability:
+  age: adults
+  sex: not specified
+  training_status: physically active individuals including athletes; normal-weight
+    and overweight/obese
+  dose_magnitude: eating window restriction without explicit caloric restriction target
+  duration: longitudinal; randomized and nonrandomized controlled studies (N=23)
+effect: TRF reduces body mass and improves nutrient metabolism while preserving fat-free
+  mass and protein synthesis, with no impairment to aerobic fitness or muscular performance
+  in physically active populations.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

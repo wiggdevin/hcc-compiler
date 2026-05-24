@@ -1,0 +1,34 @@
+id: EA-TRA-3698
+domain: training
+claim: Adding exercise to a very low energy diet (VLED) results in significantly greater
+  fat-free mass retention compared to VLED alone, with a mean difference of approximately
+  0.83 kg in adults with overweight or obesity.
+evidence_level: L1
+citations:
+- id: 10.1016/j.orcp.2025.10.001
+  locator_quote: A meta-analysis of five studies (n = 241) showed that VLED with exercise
+    resulted in a higher retention of FFM compared to VLED alone (mean difference
+    = 0.83 kg, 95 % CI 0.17-1.49, p = 0.01).
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'The impact of exercise on fat free mass reduction during very low
+    energy diet-induced weight loss in adults with overweight or obesity: A systematic
+    review and meta-analysis'
+population_applicability:
+  age: "18\u201365 years"
+  sex: not specified (mixed)
+  training_status: adults with overweight or obesity; baseline exercise status not
+    standardised across included trials
+  dose_magnitude: VLED (very low energy diet) combined with exercise; specific exercise
+    type and volume varied across included RCTs
+  duration: duration varied across included studies; specific lengths not pooled in
+    abstract
+effect: "Exercise added to VLED preserved approximately 0.83 kg more fat-free mass\
+  \ than VLED alone (95% CI 0.17\u20131.49 kg; p = 0.01) in a meta-analysis of 5 RCTs\
+  \ (n = 241); no differential effect detected by exercise modality subgroup."
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

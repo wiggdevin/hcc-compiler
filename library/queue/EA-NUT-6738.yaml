@@ -1,0 +1,34 @@
+id: EA-NUT-6738
+domain: nutrition
+claim: Intermittent fasting reduces body weight, waist circumference, and fat mass
+  more effectively than a non-intervention diet without adversely affecting lean mass,
+  and improves insulin resistance and blood lipid profiles, but confers no significant
+  advantage over caloric restriction except for greater waist circumference reduction.
+evidence_level: L1
+citations:
+- id: 10.3389/fnut.2022.871682
+  locator_quote: Intermittent fasting was more beneficial in reducing body weight,
+    WC, and FM without affecting lean mass compared to the non-intervention diet.
+    IF also effectively improved insulin resistance and blood lipid conditions compared
+    with non-intervention diets. However, IF showed less benefit over CR.
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Effects of Intermittent Fasting in Human Compared to a Non-intervention
+    Diet and Caloric Restriction: A Meta-Analysis of Randomized Controlled Trials'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: general population, overweight or metabolically at-risk
+  dose_magnitude: "various IF protocols; intervention duration \u22651 month"
+  duration: median 3 months across 43 RCTs (n=2,483)
+effect: "Versus non-intervention diet: weight \u22121.10 kg (WMD, 95% CI 0.09\u2013\
+  2.12, p=0.03), BMI \u22120.38 (p=0.01), WC \u22121.02 cm (p=0.04), fat mass \u2212\
+  0.74 kg (p=0.01), fat-free mass preserved (WMD=\u22120.73, p=0.05), HOMA-IR \u2212\
+  0.35 (p=0.03), cholesterol SMD=0.22 (p=0.001), TG SMD=0.13 (p=0.05). Versus caloric\
+  \ restriction: no significant differences except greater WC reduction with IF."
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'

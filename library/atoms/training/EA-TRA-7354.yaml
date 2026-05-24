@@ -1,0 +1,33 @@
+id: EA-TRA-7354
+domain: training
+claim: "In adults with overweight or obesity undergoing significant weight reduction,\
+  \ adding resistance training to lifestyle intervention produces the most favourable\
+  \ lean-mass preservation profile, with only 17.5% (95% CI: 14.2\u201320.8%) of total\
+  \ weight lost attributable to lean mass, compared to 26.2% for lifestyle alone and\
+  \ 25.4\u201335.2% for incretin-based pharmacotherapy."
+evidence_level: L1
+citations:
+- id: 10.1111/dom.70666
+  locator_quote: lifestyle plus resistance training demonstrated the most favourable
+    profile (17.5% [14.2-20.8])
+  existence: UNVERIFIABLE
+  faithfulness: ACCESS_LIMITED
+  cited_title: 'Lean Mass Changes With Incretin Therapy Versus Lifestyle Intervention:
+    A Systematic Review and Meta-Analysis of Randomised Controlled Trials'
+population_applicability:
+  age: adults
+  sex: not specified
+  training_status: overweight or obese, not otherwise specified
+  dose_magnitude: N/A
+  duration: varies across 20 included RCTs (inception through January 2026)
+effect: "Resistance training added to a lifestyle intervention limits lean mass loss\
+  \ to ~17.5% of total weight lost, versus ~26.2% for lifestyle alone and ~25.4\u2013\
+  35.2% for incretin agonists (semaglutide 35.2%, tirzepatide 25.4%, liraglutide 26.8%);\
+  \ comparison between pharmacotherapy and lifestyle alone was non-significant (p\
+  \ = 0.42); heterogeneity moderate (I\xB2 = 68%); 20 RCTs, n = 15 782."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-24'
+expiry: '2028-05-24'
