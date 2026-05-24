@@ -100,7 +100,7 @@ def _cli_main(argv: list[str] | None = None) -> int:
 
     # Step 5: write markdown.
     try:
-        out_md.write_text(render_markdown(pack), encoding="utf-8")
+        out_md.write_text(render_markdown(pack, intake=intake), encoding="utf-8")
     except Exception as exc:
         print(f"error writing markdown: {exc}", file=sys.stderr)
         return 2
