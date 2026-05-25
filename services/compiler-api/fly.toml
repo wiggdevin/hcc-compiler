@@ -2,12 +2,11 @@ app = "hcc-compiler-api"
 primary_region = "iad"
 
 [build]
-  dockerfile = "../../Dockerfile"
-  # Build context is the repo root so COPY library/ and COPY src/ resolve correctly.
-  # Pass --config services/compiler-api/fly.toml to flyctl and set build context below.
-
-[build.args]
-  # No build-time args required; secrets set at runtime via fly secrets set.
+  dockerfile = "Dockerfile"
+  # The Dockerfile lives next to this fly.toml. Build context MUST be the
+  # repo root so COPY pyproject.toml / src/ / library/ / services/ resolve.
+  # Deploy from repo root:
+  #   fly deploy --config services/compiler-api/fly.toml --dockerfile services/compiler-api/Dockerfile
 
 [[mounts]]
   source = "library_data"
