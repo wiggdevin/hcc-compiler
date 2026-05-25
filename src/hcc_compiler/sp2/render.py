@@ -67,10 +67,19 @@ _CONSTRAINT_ANNOTATIONS: dict[str, dict[Domain, str]] = {
         Domain.SUPPLEMENTS: "CKD: do NOT initiate creatine loading without nephrology clearance and baseline + 4-week eGFR + serum creatinine; standard creatine doses generally safe in CKD 1-2 but require monitoring.",
     },
     "menstrual": {
-        Domain.NUTRITION: "Cycle-aware nutrition: follicular phase = baseline calories + standard macros; luteal phase = +150-300 kcal mostly carb (palatable carb timed around training); monitor for late-luteal craving + fluid retention.",
+        Domain.NUTRITION: "Cycle-aware nutrition: follicular = baseline calories + standard macros; luteal += 150-300 kcal mostly carb timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred); track late-luteal craving + fluid retention.",
     },
     "luteal": {
-        Domain.NUTRITION: "Cycle-aware nutrition: luteal phase += 150-300 kcal mostly carb, timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred).",
+        Domain.NUTRITION: "Cycle-aware nutrition: follicular = baseline calories + standard macros; luteal += 150-300 kcal mostly carb timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred); track late-luteal craving + fluid retention.",
+    },
+    "masld": {
+        Domain.NUTRITION: "MASLD / fatty liver: cap added sugar + refined carbs (≤10% kcal); prioritize fiber 30-40 g/day, omega-3 1-2 g EPA+DHA/day, protein 1.4-1.8 g/kg/day; eliminate alcohol; flag any hepatotoxic supplement (high-dose niacin, kava, comfrey). Monitor ALT/AST every 8-12 weeks during weight loss.",
+    },
+    "fatty liver": {
+        Domain.NUTRITION: "MASLD / fatty liver: cap added sugar + refined carbs (≤10% kcal); prioritize fiber 30-40 g/day, omega-3 1-2 g EPA+DHA/day, protein 1.4-1.8 g/kg/day; eliminate alcohol; flag any hepatotoxic supplement (high-dose niacin, kava, comfrey). Monitor ALT/AST every 8-12 weeks during weight loss.",
+    },
+    "iron deficiency": {
+        Domain.NUTRITION: "Iron deficiency: time iron supplementation ≥2 h before/after NDT dose and ≥1 h away from coffee/tea/calcium; pair with 200-500 mg vitamin C or orange juice. Recheck ferritin + transferrin saturation at 8 weeks; target ferritin ≥40 ng/mL for menstruating active women.",
     },
     "compressed eating window": {
         Domain.NUTRITION: "Compressed eating window: front-load protein to 0.4-0.5 g/kg/meal across the window; consume the largest carbohydrate-protein meal within 90 min post-training; rule out chronic underfueling by tracking energy availability (target ≥40 kcal/kg FFM/day for active females).",
