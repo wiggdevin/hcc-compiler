@@ -328,9 +328,10 @@ Provision via Stripe dashboard:
 
 ### Resend
 
-- Sign up for Resend free tier (3k emails/mo).
-- Verify sender domain (or use Resend's `onresend.dev` for dev).
-- Save API key to `zsvault add resend-hcc` and set `RESEND_API_KEY` env var.
+- ✅ Existing verified domain: `zerosumsolutions.com` (Resend domain id `6cf54e2e-8a6b-42ec-ad45-9b3ee0fdce5b`).
+- ✅ API key already in vault: `zsvault get resend_api_key` → `RESEND_API_KEY`.
+- Plan deviation: original plan called for `hcc.zerosumsolutions.com` subdomain. **Free tier = 1 domain.** Use sender address `hcc@zerosumsolutions.com` (or `noreply@zerosumsolutions.com`) on the existing verified domain instead. No DNS / upgrade work needed.
+- Set `RESEND_FROM=hcc@zerosumsolutions.com` in web env.
 
 ### Vercel deploy (web)
 
