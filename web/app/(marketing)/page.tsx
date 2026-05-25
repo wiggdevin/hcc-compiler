@@ -78,7 +78,7 @@ export default function LandingPage() {
             Sign up — free during beta
           </Link>
           <Link
-            href="/api/sample/carl.md"
+            href="/samples/carl-sample-plan.md"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-zinc-200 transition-colors hover:border-white/20 hover:text-white"
