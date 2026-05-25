@@ -1,0 +1,48 @@
+id: RP-NUT-hydration-electrolyte-training
+domain: nutrition
+# needs harvest: dedicated hydration RCTs; sodium/potassium/magnesium exercise protocols; sweat-rate euhydration studies
+pattern: "Implement structured pre-, intra-, and post-training hydration with sodium\
+  \ (500-1000 mg/L), potassium (150-250 mg/L), and magnesium (5-10 mg/L) electrolyte\
+  \ replacement scaled to sweat rate and session duration to maintain euhydration\
+  \ and support neuromuscular performance."
+parameterization: "Sedentary or lightly active adults (<45 min sessions): 400-600\
+  \ mL water 2 h pre-training, sip 150-250 mL every 20 min intra-session, replace\
+  \ 150% of sweat losses post-session using plain water or low-electrolyte drinks;\
+  \ no additional sodium required for sessions under 60 min in temperate conditions.\
+  \ Resistance-trained adults (45-90 min sessions): 500-750 mL water 2 h pre-training;\
+  \ intra-session 200-300 mL every 15-20 min; post-session electrolyte drink with\
+  \ 500-700 mg sodium, 200 mg potassium per liter; sodium is the critical electrolyte\
+  \ for plasma volume maintenance and glucose cotransport. Endurance-trained adults\
+  \ (>90 min sessions): fluid intake 0.4-0.8 L/h matched to sweat rate (avoid overdrinking);\
+  \ sodium 1000-1500 mg/h in high-heat conditions; potassium 300-500 mg/h; magnesium\
+  \ 10 mg/h; carbohydrate-electrolyte solutions preferred for sessions >60 min.\
+  \ Older adults (>=60 y): heightened dehydration risk due to blunted thirst; schedule\
+  \ 200-250 mL pre-session and every 20 min regardless of thirst; increase sodium\
+  \ density relative to younger adults to counteract reduced renal sodium conservation;\
+  \ monitor for orthostatic hypotension risk with aggressive post-session rehydration.\
+  \ Trained females: sweat rate is typically 20-30% lower than males but electrolyte\
+  \ losses per unit sweat are comparable; adjust fluid volumes by body weight rather\
+  \ than absolute targets; luteal-phase plasma volume shifts may warrant modest additional\
+  \ sodium intake on high-training days."
+backing_atom_ids:
+  - EA-NUT-9906
+falsification_signal: "A powered crossover RCT (n >= 30, >=4 weeks) in trained adults\
+  \ demonstrating that ad-libitum water intake without structured electrolyte replacement\
+  \ produces no significant differences in neuromuscular performance, session RPE,\
+  \ or post-exercise recovery markers versus a structured hydration protocol."
+safety_bounds: "Do not exceed fluid intake beyond sweat rate in endurance athletes\
+  \ (hyponatremia risk); total sodium above 3000 mg/session requires medical oversight\
+  \ in hypertensive individuals; magnesium supplementation above 350 mg/day from\
+  \ supplements requires monitoring for GI side effects and is not recommended in\
+  \ renal impairment."
+applies_because: "Dehydration of even 2% body mass impairs aerobic performance, strength\
+  \ output, and cognitive function; sodium is the primary driver of plasma volume\
+  \ maintenance and glucose cotransport during exercise; potassium and magnesium\
+  \ support neuromuscular excitability and muscle contraction efficiency."
+doesnt_apply_if: "Hyponatremia history or current hyponatremia (sodium supplementation\
+  \ contraindicated); renal disease or on fluid-restricted protocol; heart failure\
+  \ with physician-imposed fluid limits; sessions under 30 min at low-to-moderate\
+  \ intensity in temperate conditions (plain water adequate)."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

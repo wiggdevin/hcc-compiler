@@ -1,0 +1,51 @@
+id: RP-NUT-post-workout-recovery-nutrition
+domain: nutrition
+pattern: "Consume 20-40 g of high-quality protein combined with 0.5-1.2 g/kg carbohydrate\
+  \ within 2 hours post-resistance or high-intensity training to support muscle protein\
+  \ synthesis and glycogen resynthesis; the acute anabolic window is real but narrow\
+  \ primarily for those training in a fasted state or with long gaps since the prior\
+  \ meal."
+parameterization: "Sedentary or untrained adults (new to resistance training): 20-25\
+  \ g whey or equivalent complete protein within 2 h post-session; carbohydrate 0.5\
+  \ g/kg body weight to support glycogen restoration; the anabolic window effect is\
+  \ most pronounced in this group due to lower basal MPS rates. Resistance-trained\
+  \ adults (18-49 y, fed pre-workout): 25-40 g protein post-session; carbohydrate\
+  \ 0.5-0.8 g/kg; if a protein-containing pre-workout meal was consumed 1-2 h before,\
+  \ the urgency of post-workout timing is reduced; focus on total daily targets over\
+  \ precise window. Resistance-trained adults (fasted training): 30-40 g protein\
+  \ immediately post-session; carbohydrate 0.8-1.2 g/kg; fasted training confers\
+  \ similar hypertrophy and strength gains but may reduce fat mass to a greater degree;\
+  \ post-session nutrition becomes more time-sensitive. Older adults (>=60 y): 30-40\
+  \ g whey protein post-session preferred over whole-food protein due to superior\
+  \ leucine content and digestion kinetics; carbohydrate 0.5-0.8 g/kg; combine with\
+  \ multicomponent or resistance exercise for best physical function outcomes.\
+  \ Endurance athletes (>90 min session): carbohydrate dominates the recovery window;\
+  \ 1.0-1.2 g/kg carbohydrate in first 30-60 min post-session; add 20-25 g protein\
+  \ to co-ingest with carbs to reduce muscle damage markers and support glycogen\
+  \ resynthesis rate when next session is within 8 h."
+backing_atom_ids:
+  - EA-NUT-4009
+  - EA-NUT-6673
+  - EA-NUT-2097
+  - EA-NUT-7175
+falsification_signal: "A powered RCT (n >= 60, >= 8 weeks) in resistance-trained adults\
+  \ consuming equivalent total daily protein and calories demonstrating no difference\
+  \ in lean mass, strength, or recovery markers between immediate post-workout protein\
+  \ ingestion (within 30 min) versus consumption 3+ h post-workout."
+safety_bounds: "Protein doses above 40 g per meal show diminishing MPS returns for\
+  \ most adults; carbohydrate loading above 1.5 g/kg is not supported for strength\
+  \ training recovery (relevant only in multi-session endurance contexts); avoid\
+  \ high-fat post-workout meals as fat slows gastric emptying and may blunt early\
+  \ glycogen and amino acid uptake."
+applies_because: "Post-exercise, muscle is in an insulin-sensitized state with elevated\
+  \ GLUT4 translocation facilitating rapid glycogen resynthesis; simultaneously,\
+  \ mechanical disruption and hormonal signaling upregulate mTORC1-mediated MPS\
+  \ when amino acids are available; combining both substrates is mechanistically\
+  \ additive for recovery quality."
+doesnt_apply_if: "Not applicable when training goal is fat adaptation or metabolic\
+  \ flexibility training (deliberate post-exercise fasting may be appropriate); not\
+  \ applicable in very-low-carbohydrate or ketogenic protocols where glycogen\
+  \ resynthesis is not the goal; CKD patients requiring protein restriction."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

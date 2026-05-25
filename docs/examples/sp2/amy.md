@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — amy_runner
 
-- Compiled at: 2026-05-24T18:27:31.928668+00:00
+- Compiled at: 2026-05-25T10:29:35.168421+00:00
 - Library version: 0.1.0
 
 ---
@@ -14,6 +14,32 @@
 
 ## Nutrition
 
+### Pattern: RP-NUT-endurance-fueling-performance (sim=0.82)
+
+**Applies because:** Carbohydrate availability is the primary limiter of high-intensity endurance performance; periodic training in a low-carbohydrate state upregulates fat oxidation enzymes and mitochondrial biogenesis signals, improving metabolic flexibility; iron is the rate-limiting micronutrient for oxygen-carrying capacity in endurance athletes, and its deficiency — even subclinical — demonstrably impairs endurance and behavioral markers in women.
+**For this client (F, 32y, recreational):** Recreational endurance athletes (5-10 h/week training): train-high on interval and threshold sessions (>=6 g/kg/day carbohydrate on key days); train-low on 1-2 easy aerobic sessions per week (carbohydrate <2 g/kg the day before or low-glycogen morning sessions); do not exceed 2 train-low sessions per week to avoid overreaching; total carbohydrate average 5-7 g/kg/day.
+<details><summary>All populations covered by this pattern</summary>
+
+Sedentary adults beginning endurance training (0-6 months, <5 h/week): carbohydrate periodization is premature at this stage; consume 4-5 g/kg/day total carbohydrate; prioritize consistent fueling over train-low strategies; iron status screening is warranted (especially females) as even mild iron deficiency impairs aerobic endurance in this group. Recreational endurance athletes (5-10 h/week training): train-high on interval and threshold sessions (>=6 g/kg/day carbohydrate on key days); train-low on 1-2 easy aerobic sessions per week (carbohydrate <2 g/kg the day before or low-glycogen morning sessions); do not exceed 2 train-low sessions per week to avoid overreaching; total carbohydrate average 5-7 g/kg/day. Trained endurance athletes (>10 h/week): systematic train-low periodization aligned with training blocks; carbohydrate 6-10 g/kg/day during high-load phases; race fueling 60-90 g/h from a glucose:fructose 2:1 ratio blend for sessions >60-75 min; gut training required to tolerate high intra-race carbohydrate rates. Older endurance athletes (>=60 y): glycogen synthesis rate and storage capacity decline with age; prioritize carbohydrate intake within 60 min post-session for replenishment; train-low protocols should be less aggressive due to higher muscle protein catabolism risk at low fuel availability; co-ingest protein (20-25 g) with post-session carbohydrate. Female endurance athletes: iron deficiency is a high-prevalence performance limiter; monitor serum ferritin proactively (target >30 ng/mL); early-follicular phase iron status is at nadir and may impair response to high-intensity sessions; carbohydrate periodization targets are comparable to males when weight-adjusted.
+
+</details>
+**Safety bounds:** Train-low sessions must not be used on high-intensity interval days or competition simulation days — impaired glycolytic fuel availability during high-intensity work increases injury risk and training quality is severely compromised; do not exceed 90 g/h intra-race carbohydrate without prior gut adaptation training; iron supplementation above 45 mg/day requires physician oversight.
+
+**Backing evidence (top 3 by population match):**
+
+### Pattern: RP-NUT-meal-timing-protein-distribution (sim=0.74)
+
+**Applies because:** Skeletal muscle protein synthesis is acutely stimulated by a leucine threshold-dependent mechanism per meal; distributing protein across multiple feedings captures repeated MPS pulses throughout the day rather than relying on a single large bolus, which saturates the response and leaves the muscle in a relative fasting state between feedings.
+**For this client (F, 32y, recreational):** Trained females (18-49 y): same per-meal dose structure as resistance-trained adults; body weight-adjusted targets land at 25-35 g/meal for most women; no evidence of sex-specific meal frequency interaction on MPS rate.
+<details><summary>All populations covered by this pattern</summary>
+
+Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30 g protein per meal from high-leucine sources (dairy, eggs, lean meat), total daily intake 0.8-1.2 g/kg; leucine threshold easily met with whole-food protein sources at these doses. Resistance-trained adults (18-49 y): 4-5 meals daily, 0.4 g/kg/meal (typically 30-45 g per meal for a 75 kg adult), total 1.6-2.2 g/kg/day; spacing meals 3-5 h apart to allow MPS refractory period recovery. Older adults (>=60 y): 4-5 meals with >=25-30 g protein per meal using leucine-enriched or isolated protein sources (whey preferred); whole-food leucine trigger is less reliable in this population so isolated protein supplements are more applicable; total 1.2-1.6 g/kg/day minimum. Trained females (18-49 y): same per-meal dose structure as resistance-trained adults; body weight-adjusted targets land at 25-35 g/meal for most women; no evidence of sex-specific meal frequency interaction on MPS rate. Older adults post-resistance training: whey protein >=20 g within 2 h post-session as one of the distributed feedings; leucine co-ingestion may augment response when whole-food protein is the primary source.
+
+</details>
+**Safety bounds:** No upper safety limit on meal frequency at physiological protein doses; protein per meal above 0.6 g/kg has not been shown to produce further MPS benefit and represents unnecessary intake cost; do not exceed total daily intake upper bounds (3.1 g/kg) without renal screening.
+
+**Backing evidence (top 3 by population match):**
+
 ### Pattern: RP-NUT-protein-band (sim=0.73)
 
 **Applies because:** Resistance-trained adults in an energy deficit.
@@ -23,19 +49,11 @@
 **Backing evidence (top 3 by population match):**
 - Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
 
-### Pattern: RP-NUT-caloric-restriction-rt-protein-body-comp (sim=0.71)
-
-**Applies because:** Caloric restriction alone induces negative nitrogen balance and upregulates muscle-protein catabolism, while resistance training activates mTOR-mediated myofibrillar synthesis and high protein intake saturates muscle fractional synthetic rate, together creating a net anabolic intramuscular environment that counteracts the catabolic energy deficit.
-**Parameterization:** Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kcal/day deficit, moderate-intensity resistance or aerobic exercise. Resistance-trained athletes during aggressive cuts: 2.3–3.1 g/kg/day protein, up to 750 kcal/day deficit, 60–80% 1RM resistance training. Older adults (≥60 years): whey protein ≥15 g/day combined with resistance plus multicomponent exercise; deficit ≤500 kcal/day to limit FFM loss. Postmenopausal women: 250–750 kcal/day deficit, protein ≥0.8 g/kg/day minimum but 1.6+ g/kg preferred for LBM retention. Very-low-energy-diet contexts (≤800 kcal/day): exercise component is mandatory to mitigate disproportionate FFM loss. Adults with prediabetes or T2DM: intermittent fasting formats are interchangeable with continuous restriction provided protein and training targets are met; target ≥5% weight loss for normoglycemia reversion benefit.
-**Safety bounds:** Caloric deficit must not exceed 1,000 kcal/day without clinical supervision and body composition monitoring. Protein above 3.5 g/kg/day is not recommended without prior renal function screening (eGFR, serum creatinine). Resistance training load must be individualized; do not prescribe 60–80% 1RM to individuals with uncontrolled hypertension, acute musculoskeletal injury, or recent cardiac event without medical clearance.
-
-**Backing evidence (top 3 by population match):**
-- Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
-- Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss. ([10.1016/j.orcp.2025.10.001])
-- Interventions leveraging gamification, social interaction, and goal-setting have shown greater efficacy in improving body-nutrition profile. ([10.3390/nu17223542])
-
+- **EA-NUT-5322** (sim 0.69, pop-match 1.00): Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
 - **EA-NUT-4389** (sim 0.63, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
-- **EA-NUT-7737** (sim 0.58, pop-match 1.00): Even mild iron deficiency may result in decreased endurance and increased irritability and withdrawal behavior among women. ([10.1016/j.physbeh.2018.09.012])
+- **EA-NUT-3698** (sim 0.61, pop-match 1.00): Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss. ([10.1016/j.orcp.2025.10.001])
+- **EA-NUT-5593** (sim 0.60, pop-match 1.00): Interventions leveraging gamification, social interaction, and goal-setting have shown greater efficacy in improving body-nutrition profile. ([10.3390/nu17223542])
+- **EA-NUT-1643** (sim 0.69, pop-match 0.80): The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
 
 ## Training
 
@@ -43,10 +61,10 @@
 - Patellar tendinopathy: emphasize slow eccentric tempo (3-5s down) on lower-body work; avoid plyometric volume escalation until pain-free; consider isometric loading for rehab phases.
 - Knee constraint: reduce impact volume; emphasize controlled eccentric tempo; avoid jumping volume escalation in tendinopathy contexts.
 
-### Pattern: RP-TRA-endurance-concurrent-trained (sim=0.80)
+### Pattern: RP-TRA-endurance-concurrent-trained (sim=0.79)
 
 **Applies because:** Concurrent endurance and resistance training trigger conflicting intracellular signaling cascades (AMPK vs mTOR) that can attenuate hypertrophic adaptations from resistance training when scheduled too closely; this interference effect is dose-dependent and modifiable by session separation, intensity selection, and exercise specificity, allowing trained adults to develop both strength and endurance capacities concurrently with appropriate programming.
-**Parameterization:** Endurance-trained adults adding resistance training (e.g., distance runners, cyclists, triathletes): 2 strength sessions per week, 30-45 min each, focused on compound movements (squat, deadlift, lunge, single-leg work) at 4-8 reps and 75-85% 1RM; cap weekly resistance volume at 8-12 hard sets per major lower-body muscle group during peak endurance training phases. Concurrent training schedule: separate endurance and strength sessions by at least 6 hours, ideally morning endurance / evening strength or alternate days; if same-day required, strength should precede endurance for maximal-strength outcomes or follow for endurance-priority outcomes. Athletes in offseason / build phase: temporarily increase strength volume to 15-18 weekly sets per muscle and reduce endurance volume by 30-50% to drive strength adaptations before returning to specificity. Performance-oriented hybrid (e.g., bradley pattern, sebastian pattern): pair 2.5x strength + 2.5x conditioning weekly with one full rest day; use heart rate variability and session RPE to autoregulate weekly load.
+**Parameterization:** Endurance-trained adults adding resistance training (e.g., distance runners, cyclists, triathletes): 2 strength sessions per week, 30-45 min each, focused on compound movements (squat, deadlift, lunge, single-leg work) at 4-8 reps and 75-85% 1RM; cap weekly resistance volume at 8-12 hard sets per major lower-body muscle group during peak endurance training phases. Concurrent training schedule: separate endurance and strength sessions by at least 6 hours, ideally morning endurance / evening strength or alternate days; if same-day required, strength should precede endurance for maximal-strength outcomes or follow for endurance-priority outcomes. Athletes in offseason / build phase: temporarily increase strength volume to 15-18 weekly sets per muscle and reduce endurance volume by 30-50% to drive strength adaptations before returning to specificity. Performance-oriented hybrid trained adults (combining strength + conditioning for sport carryover): pair 2.5x strength + 2.5x conditioning weekly with one full rest day; use heart rate variability and session RPE to autoregulate weekly load.
 **Safety bounds:** Cap weekly concurrent training hours at 10-12 without dedicated recovery protocols; require sleep monitoring at >= 7 h/night sustained or reduce overall training volume; halt strength volume escalation if endurance performance regresses by more than 5% over 3 weeks; do not add high-impact running or jumping volume in trainees with prior tendinopathy without progressive return-to-impact program.
 
 **Backing evidence (top 3 by population match):**

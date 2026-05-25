@@ -1,0 +1,57 @@
+id: RP-NUT-female-cycle-aware-nutrition
+domain: nutrition
+pattern: "Align caloric intake and carbohydrate distribution with menstrual cycle\
+  \ phases: maintain or slightly reduce calories and carbohydrates in the follicular\
+  \ phase (days 1-14), and increase total calories by approximately 150-250 kcal/day\
+  \ and carbohydrates by 20-40 g/day in the luteal phase (days 15-28) to match\
+  \ the phase-specific 40-44 kcal/day elevation in resting energy expenditure and\
+  \ support hormonal context-driven performance and recovery."
+parameterization: "Sedentary or lightly active naturally menstruating women: follicular\
+  \ phase — standard caloric target; luteal phase — add 150-200 kcal/day from carbohydrate\
+  \ and protein sources to offset elevated REE; this reduces cravings, supports mood\
+  \ stability, and prevents inadvertent deficit deepening. Active and resistance-trained\
+  \ women (18-49 y): follicular phase — higher training load is well-tolerated;\
+  \ standard carbohydrate intake; luteal phase — increase carbohydrate by 30-40 g/day\
+  \ and total calories by 200-250 kcal to match elevated REE; prioritize iron-rich\
+  \ foods in days 1-5 (early follicular/menstruation) when iron, ferritin, and\
+  \ transferrin saturation are at cycle nadir. Endurance-trained women (>= 5 h/week):\
+  \ early-follicular phase iron depletion risk is meaningful; supplement iron if\
+  \ serum ferritin <30 ng/mL; continue high-carbohydrate fueling through menstruation\
+  \ as iron-deficiency impairs endurance capacity; luteal phase — reduce training\
+  \ intensity in final days before menstruation if PRE/PMS symptoms impair output.\
+  \ Perimenopausal women (40-55 y): cycle irregularity makes precise phase periodization\
+  \ difficult; apply a general 150-200 kcal increase on high-fatigue days and\
+  \ increase protein to 1.6-2.0 g/kg/day to offset accelerating lean mass loss;\
+  \ iron status monitoring remains important during irregular cycles with heavier\
+  \ bleeding episodes. Oral contraceptive users: the synthetic hormone cycle\
+  \ attenuates natural REE fluctuation (luteal REE elevation is blunted or absent);\
+  \ cycle-aware periodization is less applicable; maintain consistent daily caloric\
+  \ targets; iron status monitoring is still warranted during the placebo-pill\
+  \ menstrual phase."
+backing_atom_ids:
+  - EA-NUT-6066
+  - EA-NUT-9579
+  - EA-NUT-7737
+  - EA-NUT-1085
+falsification_signal: "A powered parallel-group RCT (n >= 80, >= 3 full menstrual\
+  \ cycles) in naturally menstruating resistance-trained women demonstrating no\
+  \ significant difference in body composition, training performance, or hormonal\
+  \ markers between cycle-phase-aware nutritional periodization and a flat-calorie\
+  \ matched daily intake protocol."
+safety_bounds: "Do not restrict calories in the luteal phase to counteract the REE\
+  \ increase — doing so deepens effective deficit and may worsen hormonal disruption;\
+  \ iron supplementation above 45 mg/day requires physician oversight and\
+  \ gastrointestinal monitoring; do not apply oral-contraceptive users' flat-calorie\
+  \ protocol to naturally cycling women."
+applies_because: "Resting energy expenditure in the luteal phase is measurably elevated\
+  \ by 40-44 kcal/day; ignoring this elevation creates an unintended caloric deficit\
+  \ that exacerbates luteal-phase fatigue, cravings, and perceived recovery difficulty;\
+  \ iron homeostasis fluctuates with cycle phase, with early-follicular levels lowest,\
+  \ creating a performance-limiting micronutrient window in endurance-trained women."
+doesnt_apply_if: "Amenorrhea or anovulatory cycles (nutritional periodization is moot\
+  \ without phase reference; address underlying cause first); oral contraceptive\
+  \ users (luteal REE elevation is pharmacologically suppressed); postmenopausal\
+  \ women (separate pattern applies); male athletes or non-cycling populations."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

@@ -1,0 +1,59 @@
+id: RP-NUT-endurance-fueling-performance
+domain: nutrition
+pattern: "Periodize carbohydrate intake around endurance training using a train-high\
+  \ (high-carbohydrate availability) approach for quality sessions and race simulation,\
+  \ and a train-low (low carbohydrate availability) approach selectively for easy/moderate\
+  \ aerobic sessions to enhance metabolic adaptations; fuel race-intensity efforts\
+  \ at 60-90 g carbohydrate/hour from multi-transportable carbohydrate sources."
+parameterization: "Sedentary adults beginning endurance training (0-6 months, <5 h/week):\
+  \ carbohydrate periodization is premature at this stage; consume 4-5 g/kg/day total\
+  \ carbohydrate; prioritize consistent fueling over train-low strategies; iron\
+  \ status screening is warranted (especially females) as even mild iron deficiency\
+  \ impairs aerobic endurance in this group. Recreational endurance athletes (5-10\
+  \ h/week training): train-high on interval and threshold sessions (>=6 g/kg/day\
+  \ carbohydrate on key days); train-low on 1-2 easy aerobic sessions per week\
+  \ (carbohydrate <2 g/kg the day before or low-glycogen morning sessions); do not\
+  \ exceed 2 train-low sessions per week to avoid overreaching; total carbohydrate\
+  \ average 5-7 g/kg/day. Trained endurance athletes (>10 h/week): systematic\
+  \ train-low periodization aligned with training blocks; carbohydrate 6-10 g/kg/day\
+  \ during high-load phases; race fueling 60-90 g/h from a glucose:fructose 2:1\
+  \ ratio blend for sessions >60-75 min; gut training required to tolerate high\
+  \ intra-race carbohydrate rates. Older endurance athletes (>=60 y): glycogen\
+  \ synthesis rate and storage capacity decline with age; prioritize carbohydrate\
+  \ intake within 60 min post-session for replenishment; train-low protocols should\
+  \ be less aggressive due to higher muscle protein catabolism risk at low fuel\
+  \ availability; co-ingest protein (20-25 g) with post-session carbohydrate.\
+  \ Female endurance athletes: iron deficiency is a high-prevalence performance\
+  \ limiter; monitor serum ferritin proactively (target >30 ng/mL); early-follicular\
+  \ phase iron status is at nadir and may impair response to high-intensity sessions;\
+  \ carbohydrate periodization targets are comparable to males when weight-adjusted."
+backing_atom_ids:
+  - EA-NUT-9906
+  - EA-NUT-7737
+  - EA-NUT-9579
+  - EA-NUT-3103
+falsification_signal: "A powered crossover or parallel RCT (n >= 40, >= 8 weeks)\
+  \ in trained endurance athletes demonstrating that a flat high-carbohydrate diet\
+  \ (no train-low sessions) produces equivalent improvements in VO2max, time-trial\
+  \ performance, and mitochondrial enzyme activity as a periodized train-high/train-low\
+  \ protocol at matched total weekly carbohydrate intake."
+safety_bounds: "Train-low sessions must not be used on high-intensity interval days\
+  \ or competition simulation days — impaired glycolytic fuel availability during\
+  \ high-intensity work increases injury risk and training quality is severely compromised;\
+  \ do not exceed 90 g/h intra-race carbohydrate without prior gut adaptation training;\
+  \ iron supplementation above 45 mg/day requires physician oversight."
+applies_because: "Carbohydrate availability is the primary limiter of high-intensity\
+  \ endurance performance; periodic training in a low-carbohydrate state upregulates\
+  \ fat oxidation enzymes and mitochondrial biogenesis signals, improving metabolic\
+  \ flexibility; iron is the rate-limiting micronutrient for oxygen-carrying capacity\
+  \ in endurance athletes, and its deficiency — even subclinical — demonstrably\
+  \ impairs endurance and behavioral markers in women."
+doesnt_apply_if: "Ketogenic dietary protocols where glycogen dependence is deliberately\
+  \ minimized (conflicting paradigm); sprint or powerlifting athletes with minimal\
+  \ aerobic component (<30% training volume aerobic); athletes with irritable bowel\
+  \ syndrome or diagnosed carbohydrate malabsorption (glucose-fructose blend tolerance\
+  \ impaired); clinical iron overload (hemochromatosis) where iron monitoring\
+  \ guidance is inverted."
+tier: routine
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

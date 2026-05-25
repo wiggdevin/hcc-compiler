@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_tori_shaw",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-24T18:27:39.369826Z",
+  "compiled_at": "2026-05-25T10:29:42.746416Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -38,6 +38,21 @@
             "EA-NUT-9353",
             "EA-NUT-9665",
             "EA-NUT-9906"
+          ],
+          "warnings": []
+        },
+        {
+          "pattern_id": "RP-NUT-hypertrophy-surplus-lean-mass",
+          "similarity": 0.7760480743245615,
+          "applies_because": "Positive energy balance provides substrate availability that allows mTOR-mediated MPS to exceed muscle protein breakdown without substrate competition; elevated protein intake across the day saturates fractional synthetic rate repeatedly; resistance training creates the mechanical stimulus that directs surplus calories toward lean tissue rather than adipose deposition.",
+          "parameterization": "Untrained adults (0-12 months resistance training): 10-15% caloric surplus above TDEE; protein 1.6-1.8 g/kg/day; untrained responders gain lean mass rapidly even at lower surpluses due to high neuromuscular adaptation rate; do not exceed 20% surplus as excess fat gain is disproportionate to lean mass benefit at this stage. Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect. Advanced resistance-trained adults (3+ years, hypertrophy plateau): 15-20% surplus; protein 2.0-2.2 g/kg/day; lean mass gain rate slows to 0.5-1 kg/month max; minimize surplus duration to 6-12 week mesocycles to control fat accretion; monitor body composition with DEXA or skinfold every 4-6 weeks. Older adults (>=60 y): protein requirements are higher per unit of lean mass stimulus; 1.6-2.0 g/kg/day minimum; surplus 10-15% above maintenance; combine with whey protein and resistance training for optimal anabolic biomarker response including IGF-1 upregulation and myostatin suppression. Trained females (18-49 y): surplus 10-15% above TDEE; protein 1.6-2.0 g/kg/day; lean mass gain rates are lower than males but relative rate of improvement is comparable; carbohydrate periodization around training sessions improves performance without requiring higher absolute surplus.",
+          "safety_bounds": "Caloric surplus should not exceed 500 kcal/day without monthly body composition monitoring; individuals with metabolic syndrome, T2DM, or significant cardiovascular risk should not pursue aggressive bulking phases without clinical guidance; protein above 3.1 g/kg/day offers no additional lean mass benefit and requires renal screening.",
+          "backing_atom_ids": [
+            "EA-NUT-0001",
+            "EA-NUT-0266",
+            "EA-NUT-2097",
+            "EA-NUT-4512",
+            "EA-NUT-4538"
           ],
           "warnings": []
         },
@@ -107,7 +122,7 @@
         },
         {
           "atom_id": "EA-NUT-5593",
-          "similarity": 0.6138009444651249,
+          "similarity": 0.5989167792905555,
           "claim": "Interventions leveraging gamification, social interaction, and goal-setting have shown greater efficacy in improving body-nutrition profile.",
           "citations": [
             {

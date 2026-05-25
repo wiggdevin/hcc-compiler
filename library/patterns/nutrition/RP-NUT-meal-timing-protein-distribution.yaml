@@ -1,0 +1,49 @@
+id: RP-NUT-meal-timing-protein-distribution
+domain: nutrition
+pattern: "Distribute daily protein intake across 3-5 meals providing 0.4 g/kg/meal\
+  \ (or approximately 25-40 g/meal) to maximally stimulate muscle protein synthesis\
+  \ at each feeding; ensure each meal meets the leucine threshold of approximately\
+  \ 2-3 g to trigger anabolic signaling."
+parameterization: "Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30\
+  \ g protein per meal from high-leucine sources (dairy, eggs, lean meat), total daily\
+  \ intake 0.8-1.2 g/kg; leucine threshold easily met with whole-food protein sources\
+  \ at these doses. Resistance-trained adults (18-49 y): 4-5 meals daily, 0.4 g/kg/meal\
+  \ (typically 30-45 g per meal for a 75 kg adult), total 1.6-2.2 g/kg/day; spacing\
+  \ meals 3-5 h apart to allow MPS refractory period recovery. Older adults (>=60 y):\
+  \ 4-5 meals with >=25-30 g protein per meal using leucine-enriched or isolated protein\
+  \ sources (whey preferred); whole-food leucine trigger is less reliable in this\
+  \ population so isolated protein supplements are more applicable; total 1.2-1.6\
+  \ g/kg/day minimum. Trained females (18-49 y): same per-meal dose structure as\
+  \ resistance-trained adults; body weight-adjusted targets land at 25-35 g/meal for\
+  \ most women; no evidence of sex-specific meal frequency interaction on MPS rate.\
+  \ Older adults post-resistance training: whey protein >=20 g within 2 h post-session\
+  \ as one of the distributed feedings; leucine co-ingestion may augment response\
+  \ when whole-food protein is the primary source."
+backing_atom_ids:
+  - EA-NUT-4538
+  - EA-NUT-7436
+  - EA-NUT-6511
+  - EA-NUT-7175
+  - EA-NUT-4512
+falsification_signal: "A powered RCT (n >= 60, >= 12 weeks, resistance-trained adults)\
+  \ demonstrating that 1-2 large daily protein boluses produce statistically equivalent\
+  \ lean mass accrual and MPS AUC as 4-5 distributed equal doses at matched total\
+  \ daily intake."
+safety_bounds: "No upper safety limit on meal frequency at physiological protein doses;\
+  \ protein per meal above 0.6 g/kg has not been shown to produce further MPS benefit\
+  \ and represents unnecessary intake cost; do not exceed total daily intake upper\
+  \ bounds (3.1 g/kg) without renal screening."
+applies_because: "Skeletal muscle protein synthesis is acutely stimulated by a leucine\
+  \ threshold-dependent mechanism per meal; distributing protein across multiple feedings\
+  \ captures repeated MPS pulses throughout the day rather than relying on a single\
+  \ large bolus, which saturates the response and leaves the muscle in a relative\
+  \ fasting state between feedings."
+doesnt_apply_if: "Protein timing flexibility applies — EA-NUT-7175 establishes that\
+  \ per-meal distribution does not importantly modify long-term lean body mass outcomes\
+  \ when total daily protein is met; this pattern is most relevant for optimizing\
+  \ MPS signal frequency in older adults and during aggressive hypertrophy phases\
+  \ rather than as a hard rule for all contexts; not applicable in clinical settings\
+  \ requiring protein restriction."
+tier: high-impact
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

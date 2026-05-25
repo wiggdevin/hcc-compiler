@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_sarah_nutrition
 
-- Compiled at: 2026-05-24T18:27:37.371867+00:00
+- Compiled at: 2026-05-25T10:29:40.727536+00:00
 - Library version: 0.1.0
 
 ---
@@ -16,10 +16,23 @@
 ## Nutrition
 
 **For this client — constraint-aware notes:**
-- Cycle-aware nutrition: follicular phase = baseline calories + standard macros; luteal phase = +150-300 kcal mostly carb (palatable carb timed around training); monitor for late-luteal craving + fluid retention.
-- Cycle-aware nutrition: luteal phase += 150-300 kcal mostly carb, timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred).
+- Cycle-aware nutrition: follicular = baseline calories + standard macros; luteal += 150-300 kcal mostly carb timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred); track late-luteal craving + fluid retention.
 - Compressed eating window: front-load protein to 0.4-0.5 g/kg/meal across the window; consume the largest carbohydrate-protein meal within 90 min post-training; rule out chronic underfueling by tracking energy availability (target ≥40 kcal/kg FFM/day for active females).
 - Underfueling flag: target energy availability ≥40 kcal/kg FFM/day for active female athletes; lean mass loss despite high volume is a primary EA marker. Audit pre/intra/post-training carbohydrate exposure first.
+
+### Pattern: RP-NUT-hypertrophy-surplus-lean-mass (sim=0.80)
+
+**Applies because:** Positive energy balance provides substrate availability that allows mTOR-mediated MPS to exceed muscle protein breakdown without substrate competition; elevated protein intake across the day saturates fractional synthetic rate repeatedly; resistance training creates the mechanical stimulus that directs surplus calories toward lean tissue rather than adipose deposition.
+**For this client (F, 26y, trained):** Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect.
+<details><summary>All populations covered by this pattern</summary>
+
+Untrained adults (0-12 months resistance training): 10-15% caloric surplus above TDEE; protein 1.6-1.8 g/kg/day; untrained responders gain lean mass rapidly even at lower surpluses due to high neuromuscular adaptation rate; do not exceed 20% surplus as excess fat gain is disproportionate to lean mass benefit at this stage. Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect. Advanced resistance-trained adults (3+ years, hypertrophy plateau): 15-20% surplus; protein 2.0-2.2 g/kg/day; lean mass gain rate slows to 0.5-1 kg/month max; minimize surplus duration to 6-12 week mesocycles to control fat accretion; monitor body composition with DEXA or skinfold every 4-6 weeks. Older adults (>=60 y): protein requirements are higher per unit of lean mass stimulus; 1.6-2.0 g/kg/day minimum; surplus 10-15% above maintenance; combine with whey protein and resistance training for optimal anabolic biomarker response including IGF-1 upregulation and myostatin suppression. Trained females (18-49 y): surplus 10-15% above TDEE; protein 1.6-2.0 g/kg/day; lean mass gain rates are lower than males but relative rate of improvement is comparable; carbohydrate periodization around training sessions improves performance without requiring higher absolute surplus.
+
+</details>
+**Safety bounds:** Caloric surplus should not exceed 500 kcal/day without monthly body composition monitoring; individuals with metabolic syndrome, T2DM, or significant cardiovascular risk should not pursue aggressive bulking phases without clinical guidance; protein above 3.1 g/kg/day offers no additional lean mass benefit and requires renal screening.
+
+**Backing evidence (top 3 by population match):**
+- Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
 
 ### Pattern: RP-NUT-protein-band (sim=0.80)
 
@@ -89,7 +102,7 @@ Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets 
 **For this client (F, 26y, trained):** Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets.
 <details><summary>All populations covered by this pattern</summary>
 
-Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets. Powerlifting-style athletes: squat / bench / deadlift centric, 1-3 reps at 90-100% on top sets, accessory work 5-10 reps at 70-85% 1RM. Strength + hypertrophy concurrent (e.g., Carl pattern): pair heavy compound 3-5 reps with hypertrophy accessory work 8-12 reps, total weekly hard sets 12-18 per major muscle. Older trained adults (50+ y): cap top-set intensity at 80-85% 1RM unless under direct supervision; extend warm-up sequence to 3-4 ramp-up sets; recovery 72 h between primary lift exposures. Trained females: same percent-1RM prescriptions; absolute strength progression rate may be slower but relative gains comparable to males in the literature. Strength athletes preparing for competition: peak with 1-3 weeks of higher intensity (90-100% 1RM) at reduced volume, then taper 4-7 days pre-meet.
+Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets. Powerlifting-style athletes: squat / bench / deadlift centric, 1-3 reps at 90-100% on top sets, accessory work 5-10 reps at 70-85% 1RM. Strength + hypertrophy concurrent (powerbuilding-style): pair heavy compound 3-5 reps with hypertrophy accessory work 8-12 reps, total weekly hard sets 12-18 per major muscle. Older trained adults (50+ y): cap top-set intensity at 80-85% 1RM unless under direct supervision; extend warm-up sequence to 3-4 ramp-up sets; recovery 72 h between primary lift exposures. Trained females: same percent-1RM prescriptions; absolute strength progression rate may be slower but relative gains comparable to males in the literature. Strength athletes preparing for competition: peak with 1-3 weeks of higher intensity (90-100% 1RM) at reduced volume, then taper 4-7 days pre-meet.
 
 </details>
 **Safety bounds:** Require medical clearance before initiating 1-3 rep maximal loads in adults with hypertension, cardiac history, or prior musculoskeletal injury; mandatory spotter or safety pins for back squat / bench press above 85% 1RM; halt session and reassess if technique breakdown occurs on top sets; avoid concurrent maximal strength testing across multiple compound lifts in the same week.

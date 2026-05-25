@@ -1,0 +1,56 @@
+id: RP-NUT-refeed-diet-break-protocol
+domain: nutrition
+pattern: "During extended caloric deficit phases (>8 weeks), insert planned refeeds\
+  \ (1-2 days at or near maintenance calories, primarily carbohydrate-based) every\
+  \ 2-4 weeks, or a structured diet break (1-2 weeks at maintenance) after every\
+  \ 6-12 weeks of continuous deficit, to mitigate metabolic adaptation, partially\
+  \ restore leptin and anabolic hormones, and improve long-term adherence."
+parameterization: "Sedentary or lightly active adults in continuous caloric restriction:\
+  \ 1-day refeed at maintenance calories every 2-3 weeks; carbohydrate-focused (aim\
+  \ for pre-deficit carb intake level); evidence shows intermittent energy restriction\
+  \ achieves comparable weight loss to continuous restriction with modest FFM\
+  \ advantage; refeeds improve psychological adherence in this population more\
+  \ than metabolic adaptation correction. Resistance-trained adults during body-recomposition\
+  \ cuts (6-20 weeks): 1-2 day refeed every 2-4 weeks; calories at maintenance;\
+  \ protein held constant at deficit targets; carbohydrate increase of 100-200 g/day\
+  \ on refeed days to partially restore glycogen, leptin, and thyroid hormones; reduces\
+  \ training performance decline during prolonged cuts. Competitive physique athletes\
+  \ (>12 weeks out): structured diet break of 1-2 weeks at maintenance every 8-12\
+  \ weeks of deficit; protein maintained; this approach is associated with comparable\
+  \ total fat loss to continuous restriction while better preserving lean mass per\
+  \ EA-NUT-7491. Older adults (>=60 y) in extended deficit: avoid continuous restriction\
+  \ beyond 8 weeks without periodic maintenance weeks; FFM is more vulnerable to\
+  \ extended deficit in this population; 1-week maintenance break every 6-8 weeks\
+  \ combined with resistance training is preferred protocol. Post-bariatric or\
+  \ post-VLED adults: refeeds serve a different function; the priority is maintaining\
+  \ adequate protein during reintroduction; carbohydrate escalation should be gradual\
+  \ (50 g increments per refeed day) to avoid reactive hypoglycemia and GI distress."
+backing_atom_ids:
+  - EA-NUT-1676
+  - EA-NUT-7491
+  - EA-NUT-3103
+  - EA-NUT-5322
+falsification_signal: "A powered RCT (n >= 80, >= 16 weeks) in adults demonstrating\
+  \ that continuous caloric restriction without refeeds produces equivalent fat mass\
+  \ loss and lean mass retention at 6-month follow-up as an intermittent energy\
+  \ restriction protocol with identical total energy deficit, while also showing\
+  \ equivalent adherence and hormonal adaptation markers."
+safety_bounds: "Refeed calories should not exceed 110% of estimated TDEE to prevent\
+  \ inadvertent fat regain during the refeed; do not use refeed days as license for\
+  \ high-fat caloric excess; individuals with binge eating disorder or disordered\
+  \ eating history should consult a registered dietitian before implementing refeed\
+  \ protocols as scheduled overeating may trigger maladaptive behavior."
+applies_because: "Continuous caloric restriction triggers compensatory reductions in\
+  \ thyroid hormones (T3), leptin, and NEAT that collectively reduce metabolic rate\
+  \ by 10-25% over 8-16 weeks; structured refeeds transiently restore leptin signaling\
+  \ and partially reverse adaptive thermogenesis, while intermittent energy restriction\
+  \ formats demonstrate comparable or marginally superior lean mass retention versus\
+  \ continuous restriction at matched total deficits."
+doesnt_apply_if: "Deficit phase under 6 weeks (insufficient time for meaningful metabolic\
+  \ adaptation to accumulate); individuals who have demonstrated inability to return\
+  \ to caloric deficit after maintenance periods (adherence failure pattern); eating\
+  \ disorder history requiring clinical supervision; not applicable during active\
+  \ muscle-building surplus phases."
+tier: routine
+approval: "Dev Wiggins 2026-05-25"
+version: "0.1.0"

@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_sebastian
 
-- Compiled at: 2026-05-24T18:27:38.323490+00:00
+- Compiled at: 2026-05-25T10:29:41.696507+00:00
 - Library version: 0.1.0
 
 ---
@@ -31,13 +31,34 @@ Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kca
 - A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions. ([10.1007/s40279-025-02341-z])
 - Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
 
-### Pattern: RP-NUT-protein-band (sim=0.76)
+### Pattern: RP-NUT-hypertrophy-surplus-lean-mass (sim=0.78)
 
-**Applies because:** Resistance-trained adults in an energy deficit.
-**Parameterization:** 2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.
-**Safety bounds:** Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.
+**Applies because:** Positive energy balance provides substrate availability that allows mTOR-mediated MPS to exceed muscle protein breakdown without substrate competition; elevated protein intake across the day saturates fractional synthetic rate repeatedly; resistance training creates the mechanical stimulus that directs surplus calories toward lean tissue rather than adipose deposition.
+**For this client (M, 43y, trained):** Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect.
+<details><summary>All populations covered by this pattern</summary>
+
+Untrained adults (0-12 months resistance training): 10-15% caloric surplus above TDEE; protein 1.6-1.8 g/kg/day; untrained responders gain lean mass rapidly even at lower surpluses due to high neuromuscular adaptation rate; do not exceed 20% surplus as excess fat gain is disproportionate to lean mass benefit at this stage. Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect. Advanced resistance-trained adults (3+ years, hypertrophy plateau): 15-20% surplus; protein 2.0-2.2 g/kg/day; lean mass gain rate slows to 0.5-1 kg/month max; minimize surplus duration to 6-12 week mesocycles to control fat accretion; monitor body composition with DEXA or skinfold every 4-6 weeks. Older adults (>=60 y): protein requirements are higher per unit of lean mass stimulus; 1.6-2.0 g/kg/day minimum; surplus 10-15% above maintenance; combine with whey protein and resistance training for optimal anabolic biomarker response including IGF-1 upregulation and myostatin suppression. Trained females (18-49 y): surplus 10-15% above TDEE; protein 1.6-2.0 g/kg/day; lean mass gain rates are lower than males but relative rate of improvement is comparable; carbohydrate periodization around training sessions improves performance without requiring higher absolute surplus.
+
+</details>
+**Safety bounds:** Caloric surplus should not exceed 500 kcal/day without monthly body composition monitoring; individuals with metabolic syndrome, T2DM, or significant cardiovascular risk should not pursue aggressive bulking phases without clinical guidance; protein above 3.1 g/kg/day offers no additional lean mass benefit and requires renal screening.
 
 **Backing evidence (top 3 by population match):**
+- A higher carbohydrate intake does not significantly enhance muscle hypertrophy during resistance training under isonitrogenous conditions. ([10.1007/s40279-025-02341-z])
+- Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
+
+### Pattern: RP-NUT-meal-timing-protein-distribution (sim=0.77)
+
+**Applies because:** Skeletal muscle protein synthesis is acutely stimulated by a leucine threshold-dependent mechanism per meal; distributing protein across multiple feedings captures repeated MPS pulses throughout the day rather than relying on a single large bolus, which saturates the response and leaves the muscle in a relative fasting state between feedings.
+**For this client (M, 43y, trained):** Trained females (18-49 y): same per-meal dose structure as resistance-trained adults; body weight-adjusted targets land at 25-35 g/meal for most women; no evidence of sex-specific meal frequency interaction on MPS rate.
+<details><summary>All populations covered by this pattern</summary>
+
+Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30 g protein per meal from high-leucine sources (dairy, eggs, lean meat), total daily intake 0.8-1.2 g/kg; leucine threshold easily met with whole-food protein sources at these doses. Resistance-trained adults (18-49 y): 4-5 meals daily, 0.4 g/kg/meal (typically 30-45 g per meal for a 75 kg adult), total 1.6-2.2 g/kg/day; spacing meals 3-5 h apart to allow MPS refractory period recovery. Older adults (>=60 y): 4-5 meals with >=25-30 g protein per meal using leucine-enriched or isolated protein sources (whey preferred); whole-food leucine trigger is less reliable in this population so isolated protein supplements are more applicable; total 1.2-1.6 g/kg/day minimum. Trained females (18-49 y): same per-meal dose structure as resistance-trained adults; body weight-adjusted targets land at 25-35 g/meal for most women; no evidence of sex-specific meal frequency interaction on MPS rate. Older adults post-resistance training: whey protein >=20 g within 2 h post-session as one of the distributed feedings; leucine co-ingestion may augment response when whole-food protein is the primary source.
+
+</details>
+**Safety bounds:** No upper safety limit on meal frequency at physiological protein doses; protein per meal above 0.6 g/kg has not been shown to produce further MPS benefit and represents unnecessary intake cost; do not exceed total daily intake upper bounds (3.1 g/kg) without renal screening.
+
+**Backing evidence (top 3 by population match):**
+- Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
 
 - **EA-NUT-1139** (sim 0.70, pop-match 1.00): Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults. ([10.1080/07315724.2021.1958719])
 - **EA-NUT-1085** (sim 0.70, pop-match 1.00): The IronFEMME Study aims to determine the influence of different hormonal profiles on iron metabolism in response to endurance exercise in eumenorrheic, oral contraceptive users, and postmenopausal well-trained women. ([10.3390/ijerph18020735])
@@ -77,7 +98,7 @@ Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets 
 **For this client (M, 43y, trained):** Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets.
 <details><summary>All populations covered by this pattern</summary>
 
-Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets. Powerlifting-style athletes: squat / bench / deadlift centric, 1-3 reps at 90-100% on top sets, accessory work 5-10 reps at 70-85% 1RM. Strength + hypertrophy concurrent (e.g., Carl pattern): pair heavy compound 3-5 reps with hypertrophy accessory work 8-12 reps, total weekly hard sets 12-18 per major muscle. Older trained adults (50+ y): cap top-set intensity at 80-85% 1RM unless under direct supervision; extend warm-up sequence to 3-4 ramp-up sets; recovery 72 h between primary lift exposures. Trained females: same percent-1RM prescriptions; absolute strength progression rate may be slower but relative gains comparable to males in the literature. Strength athletes preparing for competition: peak with 1-3 weeks of higher intensity (90-100% 1RM) at reduced volume, then taper 4-7 days pre-meet.
+Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets. Powerlifting-style athletes: squat / bench / deadlift centric, 1-3 reps at 90-100% on top sets, accessory work 5-10 reps at 70-85% 1RM. Strength + hypertrophy concurrent (powerbuilding-style): pair heavy compound 3-5 reps with hypertrophy accessory work 8-12 reps, total weekly hard sets 12-18 per major muscle. Older trained adults (50+ y): cap top-set intensity at 80-85% 1RM unless under direct supervision; extend warm-up sequence to 3-4 ramp-up sets; recovery 72 h between primary lift exposures. Trained females: same percent-1RM prescriptions; absolute strength progression rate may be slower but relative gains comparable to males in the literature. Strength athletes preparing for competition: peak with 1-3 weeks of higher intensity (90-100% 1RM) at reduced volume, then taper 4-7 days pre-meet.
 
 </details>
 **Safety bounds:** Require medical clearance before initiating 1-3 rep maximal loads in adults with hypertension, cardiac history, or prior musculoskeletal injury; mandatory spotter or safety pins for back squat / bench press above 85% 1RM; halt session and reassess if technique breakdown occurs on top sets; avoid concurrent maximal strength testing across multiple compound lifts in the same week.
