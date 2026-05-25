@@ -4,6 +4,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { canCompile, consumeCredit } from "@/lib/billing";
 
 export async function POST(
   _request: Request,
@@ -33,6 +34,11 @@ export async function POST(
 
   if (intake.status === "compiling") {
     return NextResponse.json({ error: "Already compiling" }, { status: 409 });
+  }
+
+  const billing = await canCompile(user.id);
+  if (!billing.ok) {
+    return NextResponse.json({ error: billing.reason }, { status: 402 });
   }
 
   // Mark as compiling (use admin to bypass any partial RLS on status updates).
@@ -118,6 +124,10 @@ export async function POST(
     .from("intakes")
     .update({ status: "compiled", compiled_at: new Date().toISOString() })
     .eq("id", id);
+
+  if (billing.remaining !== undefined) {
+    await consumeCredit(user.id);
+  }
 
   return NextResponse.json({ ok: true, intake_id: id });
 }
