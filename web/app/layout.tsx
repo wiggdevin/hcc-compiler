@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AmbientBg } from "@/components/ambient-bg";
+import { TopNav } from "@/components/top-nav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="min-h-full bg-[var(--bg)] text-[var(--text-primary)]">
         <AmbientBg />
         <div className="relative z-10 flex min-h-screen flex-col">
+          <TopNav />
           {children}
         </div>
       </body>

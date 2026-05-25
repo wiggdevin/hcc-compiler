@@ -1,0 +1,39 @@
+# Supabase project config — hcc-compiler
+# Apply with: supabase db push  (or paste migration in Dashboard > SQL editor)
+
+[auth]
+# Enable email magic-link (OTP) sign-in.
+# Google OAuth is enabled in the Supabase Dashboard under Auth > Providers.
+enabled = true
+site_url = "http://localhost:3010"
+additional_redirect_urls = [
+  "https://hccompiler.com",
+  "https://hcc-compiler.vercel.app",
+]
+
+[auth.email]
+enable_signup   = true
+enable_confirmations = false  # magic-link is confirmation-free (OTP)
+double_confirm_changes = false
+
+[storage]
+# Buckets are created in the Supabase Dashboard or via CLI:
+#   supabase storage create intakes --public false
+#   supabase storage create packs   --public false
+#
+# Both buckets must have RLS enabled (the migration above adds the policies).
+# Max file size: 50 MB is sufficient for YAML intakes + MD/PDF packs.
+[storage.buckets.intakes]
+public = false
+file_size_limit = "50MiB"
+allowed_mime_types = ["text/yaml", "text/plain", "application/octet-stream"]
+
+[storage.buckets.packs]
+public = false
+file_size_limit = "50MiB"
+allowed_mime_types = [
+  "application/json",
+  "text/markdown",
+  "text/plain",
+  "application/pdf",
+]

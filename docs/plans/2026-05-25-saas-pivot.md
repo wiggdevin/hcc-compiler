@@ -255,6 +255,77 @@ Breakeven at 1 active coach sub.
 
 ---
 
+## Provisioning runbook (manual steps the code can't auto-do)
+
+### Supabase — known blocker
+
+Devin's `vpzwurcxuliwzumdinwn` org currently has 2 active free projects (`scriptcompass`, `reaper-console`) — that's the free-tier limit. Adding `hcc-compiler` requires ONE of:
+
+- **Pause** one of the active projects in the Supabase dashboard (`reaper-console` if no traffic; `scriptcompass` is live). Free, reversible.
+- **Upgrade** the org to Pro tier ($25/mo) which removes the 2-project limit.
+- **Delete** an inactive project that's no longer needed (`offeafzjrkwqavrhwvqg "wiggdevin's Project"` is INACTIVE and was a placeholder).
+
+Recommended: delete `wiggdevin's Project` (inactive placeholder), then create `hcc-compiler` via `mcp__claude_ai_Supabase__create_project` with `region=us-west-1`, `organization_id=vpzwurcxuliwzumdinwn`.
+
+After project is live:
+```bash
+# Get connection details
+NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon-key from dashboard>
+SUPABASE_SERVICE_ROLE_KEY=<service-role-key from dashboard>
+
+# Apply migrations
+supabase link --project-ref <project-ref>
+supabase db push  # applies 0001_initial.sql + 0002_billing.sql
+
+# Storage buckets (run in SQL editor or via supabase storage CLI)
+insert into storage.buckets (id, name, public) values ('intakes', 'intakes', false);
+insert into storage.buckets (id, name, public) values ('packs', 'packs', false);
+```
+
+### Fly.io compiler API
+
+```bash
+fly launch --name hcc-compiler-api --region iad --no-deploy --config services/compiler-api/fly.toml
+fly volume create library_data --app hcc-compiler-api --region iad --size 1
+fly secrets set --app hcc-compiler-api SUPABASE_JWT_SECRET="$(zsvault get supabase-hcc-jwt-secret)"
+fly deploy --app hcc-compiler-api --config services/compiler-api/fly.toml --dockerfile services/compiler-api/Dockerfile --build-context .
+```
+
+### Stripe
+
+Provision via Stripe dashboard:
+- Product: "Active Coach" — recurring $79/mo → save price ID as `STRIPE_PRICE_ACTIVE_COACH`
+- Product: "Single Plan Credit" — one-time $29 → save price ID as `STRIPE_PRICE_SINGLE_PLAN_CREDIT`
+- Webhook endpoint: `https://<app-url>/api/webhooks/stripe` listening for `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`. Copy the signing secret to `STRIPE_WEBHOOK_SECRET`.
+
+### Resend
+
+- Sign up for Resend free tier (3k emails/mo).
+- Verify sender domain (or use Resend's `onresend.dev` for dev).
+- Save API key to `zsvault add resend-hcc` and set `RESEND_API_KEY` env var.
+
+### Vercel deploy (web)
+
+```bash
+cd web
+vercel link --project hcc-compiler-web
+vercel env add NEXT_PUBLIC_SUPABASE_URL
+vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY
+# ... all env vars from web/.env.example
+vercel --prod
+```
+
+### Cloudflared tunnel for LLM proxy (harvest path, optional)
+
+```bash
+cloudflared tunnel route dns zsa-tutor zsa-tutor.zerosumsolutions.com
+# Confirm http://127.0.0.1:11455 is exposed via tunnel
+# Set ANTHROPIC_BASE_URL=https://zsa-tutor.zerosumsolutions.com on the harvest worker
+```
+
+---
+
 ## Out of scope for v1
 
 - Mobile app

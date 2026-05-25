@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 import {
   ALL_GOALS,
   ALL_SEX,
@@ -51,8 +53,19 @@ function Chip({
 }
 
 export default function NewClientPage() {
+  const router = useRouter();
   const [intake, setIntake] = useState<ClientIntake>(blankIntake);
   const [showYaml, setShowYaml] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsSignedIn(!!user);
+    });
+  }, []);
 
   const errors = useMemo(() => validateIntake(intake), [intake]);
   const yamlText = useMemo(() => intakeToYaml(intake), [intake]);
@@ -137,6 +150,43 @@ export default function NewClientPage() {
       await navigator.clipboard.writeText(yamlText);
     } catch {
       /* ignore — fallback would be a textarea select */
+    }
+  }
+
+  async function submitAndCompile() {
+    if (errors.length > 0) return;
+    setSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const resp = await fetch("/api/intakes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(intake),
+      });
+
+      if (resp.status === 401) {
+        router.push("/sign-in?next=/new-client");
+        return;
+      }
+
+      if (!resp.ok) {
+        const body = await resp.json().catch(() => ({}));
+        throw new Error(body.error ?? `HTTP ${resp.status}`);
+      }
+
+      const { intake: created } = await resp.json();
+
+      // Trigger compile immediately (fire-and-forget — dashboard shows status)
+      fetch(`/api/intakes/${created.id}/compile`, { method: "POST" }).catch(
+        () => {},
+      );
+
+      router.push(`/dashboard?compiled=${created.id}`);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -416,6 +466,16 @@ export default function NewClientPage() {
           >
             Download YAML
           </button>
+          {isSignedIn && (
+            <button
+              type="button"
+              onClick={submitAndCompile}
+              disabled={errors.length > 0 || submitting}
+              className="inline-flex items-center justify-center rounded-lg border border-blue-400/40 bg-blue-500/20 px-5 py-2.5 text-sm font-semibold text-blue-100 transition hover:bg-blue-500/30 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {submitting ? "Submitting…" : "Submit & compile"}
+            </button>
+          )}
           <button type="button" onClick={copyYaml} className={buttonClass}>
             Copy to clipboard
           </button>
@@ -423,6 +483,12 @@ export default function NewClientPage() {
             {showYaml ? "Hide" : "Preview"} YAML
           </button>
         </div>
+
+        {submitError && (
+          <div className="rounded-xl border border-red-400/30 bg-red-500/10 p-3 text-xs text-red-300">
+            {submitError}
+          </div>
+        )}
 
         {showYaml && (
           <section className={sectionClass}>

@@ -1,0 +1,11 @@
+// POST /auth/sign-out — signs the user out and redirects to /sign-in.
+import { NextResponse } from "next/server";
+import { createClient } from "@/lib/supabase/server";
+
+export async function POST(request: Request) {
+  const supabase = await createClient();
+  await supabase.auth.signOut();
+
+  const origin = new URL(request.url).origin;
+  return NextResponse.redirect(`${origin}/sign-in`, { status: 303 });
+}
