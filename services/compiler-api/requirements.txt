@@ -1,0 +1,13 @@
+# FastAPI stack
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+
+# JWT verification (Supabase HS256 tokens)
+PyJWT==2.10.1
+
+# YAML parsing (intake_yaml field)
+pyyaml==6.0.2
+
+# hcc-compiler is installed editable from repo root in the Docker image;
+# its transitive deps (pydantic, pyyaml) are already listed above.

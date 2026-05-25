@@ -1,0 +1,45 @@
+app = "hcc-compiler-api"
+primary_region = "iad"
+
+[build]
+  dockerfile = "../../Dockerfile"
+  # Build context is the repo root so COPY library/ and COPY src/ resolve correctly.
+  # Pass --config services/compiler-api/fly.toml to flyctl and set build context below.
+
+[build.args]
+  # No build-time args required; secrets set at runtime via fly secrets set.
+
+[[mounts]]
+  source = "library_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  max_machines = 2
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 80
+    hard_limit = 120
+
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "15s"
+  method = "GET"
+  path = "/healthz"
+  timeout = "5s"
+
+[vm]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[env]
+  LIBRARY_DB_PATH = "/data/library.db"
+  HCC_LIBRARY_ROOT = "/app/library"
+  PORT = "8080"
+  LOG_LEVEL = "INFO"
