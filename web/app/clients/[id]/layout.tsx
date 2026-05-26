@@ -1,5 +1,4 @@
-import { notFound } from "next/navigation";
-import { getPersona } from "@/lib/data/personas";
+import { loadPackForView } from "@/lib/data/pack-loader";
 import { Header } from "@/components/header";
 
 interface Props {
@@ -9,8 +8,7 @@ interface Props {
 
 export default async function ClientShellLayout({ children, params }: Props) {
   const { id } = await params;
-  const persona = getPersona(id);
-  if (!persona) notFound();
+  const { persona } = await loadPackForView(id);
 
   // The "section" key is used by the persona switcher to keep the user on
   // the same view when switching personas. We can't access pathname in a

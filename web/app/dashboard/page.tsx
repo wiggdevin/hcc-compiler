@@ -4,6 +4,8 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
+// packs.intake_id is unique (one pack per intake) so PostgREST returns
+// the embedded `packs` resource as a single object, not an array.
 type IntakeRow = {
   id: string;
   client_id: string;
@@ -11,7 +13,7 @@ type IntakeRow = {
   status: string;
   created_at: string;
   compiled_at: string | null;
-  packs: { id: string; overall_confidence: number | null }[];
+  packs: { id: string; overall_confidence: number | null } | null;
 };
 
 export default async function DashboardPage({
@@ -121,7 +123,7 @@ export default async function DashboardPage({
             </thead>
             <tbody className="divide-y divide-white/[0.06]">
               {intakes.map((intake) => {
-                const pack = intake.packs?.[0];
+                const pack = intake.packs ?? null;
                 const confidence =
                   pack?.overall_confidence != null
                     ? `${Math.round(pack.overall_confidence * 100)}%`
@@ -153,7 +155,7 @@ export default async function DashboardPage({
                     <td className="px-4 py-3 text-right">
                       {intake.status === "compiled" && pack ? (
                         <Link
-                          href={`/clients/${intake.client_id}/overview`}
+                          href={`/clients/${pack.id}/overview`}
                           className="text-xs text-emerald-300/80 hover:text-emerald-200"
                         >
                           View pack

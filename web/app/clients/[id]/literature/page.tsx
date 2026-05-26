@@ -1,7 +1,5 @@
-import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
-import { getPersona } from "@/lib/data/personas";
-import { loadEvidencePack } from "@/lib/data/loader";
+import { loadPackForView } from "@/lib/data/pack-loader";
 import {
   citationStats,
   uniqueCitations,
@@ -60,9 +58,7 @@ export default async function LiteraturePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const persona = getPersona(id);
-  if (!persona) notFound();
-  const pack = await loadEvidencePack(id);
+  const { persona, pack } = await loadPackForView(id);
   const stats = citationStats(pack);
   const entries = uniqueCitations(pack).sort((a, b) => {
     // Verified first

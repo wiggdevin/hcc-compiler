@@ -1,6 +1,4 @@
-import { notFound } from "next/navigation";
-import { getPersona } from "@/lib/data/personas";
-import { loadEvidencePack } from "@/lib/data/loader";
+import { loadPackForView } from "@/lib/data/pack-loader";
 import { DOMAIN_META } from "@/lib/data/domains";
 import { SectionHeader } from "@/components/section-header";
 import { DomainSection } from "@/components/domain-section";
@@ -11,8 +9,7 @@ export default async function DietPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  if (!getPersona(id)) notFound();
-  const pack = await loadEvidencePack(id);
+  const { pack } = await loadPackForView(id);
   const block = pack.domain_recommendations.nutrition;
   const meta = DOMAIN_META.nutrition;
 

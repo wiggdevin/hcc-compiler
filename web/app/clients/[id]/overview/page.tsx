@@ -1,7 +1,5 @@
-import { notFound } from "next/navigation";
 import { Download, ShieldCheck, AlertTriangle } from "lucide-react";
-import { getPersona } from "@/lib/data/personas";
-import { loadEvidencePack, loadIntake } from "@/lib/data/loader";
+import { loadPackForView } from "@/lib/data/pack-loader";
 import {
   domainConfidences,
   overallConfidence,
@@ -31,10 +29,7 @@ export default async function OverviewPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const persona = getPersona(id);
-  if (!persona) notFound();
-  const pack = await loadEvidencePack(id);
-  const intake = await loadIntake(id);
+  const { persona, pack, intake } = await loadPackForView(id);
 
   const overall = overallConfidence(pack);
   const perDomain = domainConfidences(pack);

@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import {
   IdCard,
   ClipboardList,
@@ -6,8 +5,7 @@ import {
   AlertTriangle,
   Activity,
 } from "lucide-react";
-import { getPersona } from "@/lib/data/personas";
-import { loadEvidencePack, loadIntake } from "@/lib/data/loader";
+import { loadPackForView } from "@/lib/data/pack-loader";
 import { GlassCard } from "@/components/glass-card";
 import { IntakePanel } from "@/components/intake-panel";
 import {
@@ -25,13 +23,7 @@ export default async function IntakePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const persona = getPersona(id);
-  if (!persona) notFound();
-
-  const [intake, pack] = await Promise.all([
-    loadIntake(id),
-    loadEvidencePack(id),
-  ]);
+  const { persona, intake, pack } = await loadPackForView(id);
 
   const goalLabels = intake.goals.map((g) => g.replace(/_/g, " "));
   const calibration = intake.metabolic_calibration ?? null;
