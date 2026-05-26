@@ -59,15 +59,9 @@ export async function POST(
     );
   }
 
-  let compileResult: {
-    json_path: string;
-    md_path: string;
-    pdf_path?: string;
-    overall_confidence?: number;
-    pattern_count?: number;
-    atom_count?: number;
-    warnings_count?: number;
-  };
+  // Fly compiler-api is stateless — it returns inline {json, md}.
+  // We write the output to Supabase Storage and record the paths.
+  let compileResult: { json: Record<string, unknown>; md: string };
 
   try {
     const resp = await fetch(`${compilerUrl}/compile`, {
@@ -76,11 +70,7 @@ export async function POST(
         "Content-Type": "application/json",
         ...(compilerToken ? { Authorization: `Bearer ${compilerToken}` } : {}),
       },
-      body: JSON.stringify({
-        intake_id: intake.id,
-        coach_id: intake.coach_id,
-        payload: intake.payload,
-      }),
+      body: JSON.stringify({ intake: intake.payload }),
     });
 
     if (!resp.ok) {
@@ -98,18 +88,53 @@ export async function POST(
     return NextResponse.json({ error: msg }, { status: 502 });
   }
 
-  // Persist pack row + mark intake compiled.
+  // Upload artifacts to the `packs` storage bucket.
+  const jsonPath = `${intake.coach_id}/${intake.id}.json`;
+  const mdPath = `${intake.coach_id}/${intake.id}.md`;
+
+  const [{ error: jsonUpErr }, { error: mdUpErr }] = await Promise.all([
+    admin.storage.from("packs").upload(
+      jsonPath,
+      new Blob([JSON.stringify(compileResult.json, null, 2)], {
+        type: "application/json",
+      }),
+      { upsert: true, contentType: "application/json" },
+    ),
+    admin.storage.from("packs").upload(
+      mdPath,
+      new Blob([compileResult.md], { type: "text/markdown" }),
+      { upsert: true, contentType: "text/markdown" },
+    ),
+  ]);
+
+  if (jsonUpErr || mdUpErr) {
+    const msg = jsonUpErr?.message ?? mdUpErr?.message ?? "storage upload failed";
+    await admin
+      .from("intakes")
+      .update({ status: "failed", error: msg })
+      .eq("id", id);
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
+
+  // Derive summary stats from the compiled JSON when present.
+  const j = compileResult.json as {
+    overall_confidence?: number;
+    patterns?: unknown[];
+    atoms?: unknown[];
+    warnings?: unknown[];
+  };
+
   const { error: packError } = await admin.from("packs").insert({
     intake_id: intake.id,
     coach_id: intake.coach_id,
     library_version: intake.library_version,
-    json_path: compileResult.json_path,
-    md_path: compileResult.md_path,
-    pdf_path: compileResult.pdf_path ?? null,
-    overall_confidence: compileResult.overall_confidence ?? null,
-    pattern_count: compileResult.pattern_count ?? null,
-    atom_count: compileResult.atom_count ?? null,
-    warnings_count: compileResult.warnings_count ?? null,
+    json_path: jsonPath,
+    md_path: mdPath,
+    pdf_path: null,
+    overall_confidence: j?.overall_confidence ?? null,
+    pattern_count: Array.isArray(j?.patterns) ? j.patterns.length : null,
+    atom_count: Array.isArray(j?.atoms) ? j.atoms.length : null,
+    warnings_count: Array.isArray(j?.warnings) ? j.warnings.length : null,
   });
 
   if (packError) {

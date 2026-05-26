@@ -1,51 +1,42 @@
-"""Supabase JWT verification for the compiler API.
+"""Bearer-token auth for the compiler API.
 
-Tokens are HS256-signed by Supabase using the project's JWT secret.
-The `sub` claim is the coach UUID (Supabase user id).
+The web edge (Vercel `/api/intakes/[id]/compile`) authenticates the coach
+via Supabase before forwarding to this service with a shared
+`COMPILER_API_TOKEN` bearer. We trust that auth and only verify the static
+bearer matches. The coach UUID is read from the request body, not the
+token, since the bearer is shared across all coaches.
+
+Rejecting requests without a valid bearer prevents arbitrary public
+compile traffic; coach-level authorization is the edge's job.
 """
 from __future__ import annotations
 
 import os
 
-import jwt
 from fastapi import Header, HTTPException
 
 
-def _jwt_secret() -> str:
-    secret = os.environ.get("SUPABASE_JWT_SECRET", "")
-    if not secret:
-        raise RuntimeError("SUPABASE_JWT_SECRET is not set")
-    return secret
+def _expected_token() -> str:
+    tok = os.environ.get("COMPILER_API_TOKEN", "")
+    if not tok:
+        raise RuntimeError("COMPILER_API_TOKEN is not set")
+    return tok
 
 
-async def get_current_coach(authorization: str = Header(...)) -> str:
-    """Return coach UUID from a validated Supabase JWT.
+async def require_bearer(authorization: str = Header(...)) -> None:
+    """Validate the request carries the shared service bearer.
 
-    Raises HTTPException(401) if the header is missing, malformed, expired,
-    or the signature does not verify.
+    Raises HTTPException(401) on missing / malformed / mismatched bearer.
     """
     if not authorization.startswith("Bearer "):
-        raise HTTPException(status_code=401, detail="Authorization header must use Bearer scheme")
+        raise HTTPException(
+            status_code=401,
+            detail="Authorization header must use Bearer scheme",
+        )
 
     token = authorization.removeprefix("Bearer ").strip()
     if not token:
         raise HTTPException(status_code=401, detail="Bearer token is empty")
 
-    try:
-        secret = _jwt_secret()
-        payload = jwt.decode(
-            token,
-            secret,
-            algorithms=["HS256"],
-            options={"verify_aud": False},  # Supabase tokens have audience=authenticated
-        )
-    except jwt.ExpiredSignatureError:
-        raise HTTPException(status_code=401, detail="Token has expired")
-    except jwt.InvalidTokenError as exc:
-        raise HTTPException(status_code=401, detail=f"Invalid token: {exc}")
-
-    sub = payload.get("sub")
-    if not sub:
-        raise HTTPException(status_code=401, detail="Token missing sub claim")
-
-    return str(sub)
+    if token != _expected_token():
+        raise HTTPException(status_code=401, detail="Invalid bearer token")

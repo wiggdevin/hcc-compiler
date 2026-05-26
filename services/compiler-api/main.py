@@ -19,7 +19,7 @@ from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ValidationError
 
-from auth import get_current_coach
+from auth import require_bearer
 from compile_runner import run_compile
 from hcc_compiler.sp2.compile import LibraryVersionMismatch
 
@@ -36,7 +36,7 @@ logger = logging.getLogger("compiler-api")
 # ---------------------------------------------------------------------------
 # Startup validation
 # ---------------------------------------------------------------------------
-_REQUIRED_ENV = ["SUPABASE_JWT_SECRET"]
+_REQUIRED_ENV = ["COMPILER_API_TOKEN"]
 
 
 def _validate_env() -> None:
@@ -113,9 +113,9 @@ async def library_version() -> dict:
 @app.post("/compile", response_model=CompileResponse)
 async def compile_endpoint(
     body: CompileRequest,
-    coach_id: str = Depends(get_current_coach),
+    _: None = Depends(require_bearer),
 ) -> CompileResponse:
-    logger.info("POST /compile coach=%s top_k=%d threshold=%.2f", coach_id, body.top_k, body.applicability_threshold)
+    logger.info("POST /compile top_k=%d threshold=%.2f", body.top_k, body.applicability_threshold)
 
     # Resolve intake dict from either JSON or YAML field.
     if body.intake is not None:
