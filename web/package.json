@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "mkdir -p public/sp2 public/intakes && cp -R ../docs/examples/sp2/. public/sp2/ && cp -R ../tests/fixtures/intakes/. public/intakes/",
+    "prebuild": "mkdir -p public/sp2 public/intakes && { test -d ../docs/examples/sp2 && cp -R ../docs/examples/sp2/. public/sp2/ || true; } && { test -d ../tests/fixtures/intakes && cp -R ../tests/fixtures/intakes/. public/intakes/ || true; }",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
