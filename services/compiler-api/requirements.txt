@@ -9,5 +9,9 @@ PyJWT==2.10.1
 # YAML parsing (intake_yaml field)
 pyyaml==6.0.2
 
+# In-process embeddings (avoids needing an Ollama sidecar on Fly).
+# Loads nomic-embed-text-v1.5 ONNX weights once at first request.
+fastembed==0.8.0
+
 # hcc-compiler is installed editable from repo root in the Docker image;
 # its transitive deps (pydantic, pyyaml) are already listed above.

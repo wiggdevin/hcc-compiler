@@ -13,6 +13,21 @@ _DEFAULT_TIMEOUT = 15.0
 _MAX_ATTEMPTS = 3
 _BACKOFF_BASE = 0.5  # seconds; attempt 2 sleeps ~0.5s, attempt 3 sleeps ~1.0s
 
+# FastEmbed (Python-native, no server) is used when EMBED_BACKEND=fastembed.
+# Cached at module level so the ONNX model loads once.
+_fastembed_model = None
+
+
+def _fastembed_embed(text: str) -> list[float]:
+    """In-process nomic-embed-text via FastEmbed (no Ollama server needed)."""
+    global _fastembed_model
+    if _fastembed_model is None:
+        from fastembed import TextEmbedding
+
+        _fastembed_model = TextEmbedding(model_name="nomic-ai/nomic-embed-text-v1.5")
+    vec = next(_fastembed_model.embed([text]))
+    return vec.tolist()
+
 
 @dataclass
 class EmbedRequest:
@@ -21,6 +36,9 @@ class EmbedRequest:
 
 
 def embed(req: EmbedRequest, timeout: float = _DEFAULT_TIMEOUT) -> list[float]:
+    if os.environ.get("EMBED_BACKEND", "ollama").lower() == "fastembed":
+        return _fastembed_embed(req.text)
+
     base = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
     url = f"{base}/api/embeddings"
     body = {"model": req.model, "prompt": req.text}

@@ -33,12 +33,13 @@ primary_region = "iad"
   timeout = "5s"
 
 [vm]
-  memory = "512mb"
+  memory = "2gb"
   cpu_kind = "shared"
   cpus = 1
 
 [env]
-  LIBRARY_DB_PATH = "/data/library.db"
+  LIBRARY_DB_PATH = "/data-seed/library.db"
   HCC_LIBRARY_ROOT = "/app/library"
   PORT = "8080"
   LOG_LEVEL = "INFO"
+  EMBED_BACKEND = "fastembed"
