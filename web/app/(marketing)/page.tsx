@@ -79,6 +79,7 @@ export default function LandingPage() {
           </Link>
           <Link
             href="/samples/carl-sample-plan.md"
+            prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-zinc-200 transition-colors hover:border-white/20 hover:text-white"
