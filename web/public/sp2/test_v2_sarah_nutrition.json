@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_sarah_nutrition",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:11.749501Z",
+  "compiled_at": "2026-05-26T15:06:35.173333Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -82,6 +82,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.7022342088346222,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-4389",
           "similarity": 0.6560735653697228,
           "claim": "Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models.",
@@ -112,23 +129,6 @@
             }
           ],
           "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-7737",
-          "similarity": 0.5977742124350683,
-          "claim": "Even mild iron deficiency may result in decreased endurance and increased irritability and withdrawal behavior among women.",
-          "citations": [
-            {
-              "id": "10.1016/j.physbeh.2018.09.012",
-              "locator_quote": "Therefore, even mild iron deficiency (ID) may result in decreased endurance, increased irritability and withdrawal behavior among women.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Mild iron deficiency may affect female endurance and behavior"
-            }
-          ],
-          "evidence_level": "L3",
           "population_match_score": 1.0,
           "warnings": []
         },

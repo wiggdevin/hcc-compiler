@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_bradley
 
-- Compiled at: 2026-05-26T13:35:09.771818+00:00
+- Compiled at: 2026-05-26T15:06:33.242073+00:00
 - Library version: 0.1.0
 
 ---
@@ -59,9 +59,9 @@ Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30 g protein per mea
 
 **Backing evidence (top 3 by population match):**
 - Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
-- Protein timing does not importantly modify exercise-induced changes in lean body mass. ([10.3390/nu17132070])
 
 - **EA-NUT-1139** (sim 0.73, pop-match 1.00): Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults. ([10.1080/07315724.2021.1958719])
+- **EA-NUT-0926** (sim 0.70, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
 
 ## Training
 
@@ -138,6 +138,8 @@ Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets 
 - Creatine supplementation combined with resistance training increases lean body mass and reduces body fat percentage and mass compared to resistance training alone. ([10.1519/JSC.0000000000004862])
 - Combining high-intensity interval training (HIIT) with dietary supplementation such as green tea or ginger can enhance reductions in body fat and improvements in metabolic health and aerobic capacity in adults with overweight and obesity, though the combination is not strictly necessary for benefits. ([10.3390/nu16030355])
 - Creatine supplementation significantly increases body mass and fat-free mass while reducing body fat percentage, with effects enhanced when combined with resistance training. ([10.1080/15502783.2024.2380058])
+
+- **EA-SUP-4514** (sim 0.66, pop-match 1.00): HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone. ([10.1093/ageing/afag073])
 
 ## Recovery
 

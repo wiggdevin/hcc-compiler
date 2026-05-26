@@ -1,0 +1,30 @@
+id: EA-NUT-5819
+domain: nutrition
+claim: In older adults (>60 years), meals providing at least 2.8 g of leucine (~30
+  g of protein) are required to stimulate muscle protein synthesis, a leucine threshold
+  not observed in younger adults (<30 years) who show a nearly linear MPS response
+  proportional to meal protein content.
+evidence_level: L4
+citations:
+- id: 10.3389/fnut.2024.1388986
+  locator_quote: older adults (>60 years) require meals with at least 2.8 g of leucine
+    (~30 g of protein) to stimulate MPS
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: Impacts of protein quantity and distribution on body composition
+population_applicability:
+  age: 'primary: older adults >60 years; comparison: younger adults <30 years'
+  sex: not specified
+  training_status: not specified
+  dose_magnitude: "\u22652.8 g leucine (~30 g protein) per meal"
+  duration: acute (per meal)
+effect: "Meals meeting the leucine threshold (\u22652.8 g leucine, ~30 g protein)\
+  \ stimulate MPS in older adults despite age-related decline in protein synthesis\
+  \ efficiency; younger adults retain MPS responsiveness across lower protein doses\
+  \ in a near-linear dose-response pattern."
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2028-05-26'

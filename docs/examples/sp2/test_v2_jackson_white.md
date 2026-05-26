@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_jackson_white
 
-- Compiled at: 2026-05-26T13:35:11.130878+00:00
+- Compiled at: 2026-05-26T15:06:34.588853+00:00
 - Library version: 0.1.0
 
 ---
@@ -55,6 +55,7 @@ Sedentary or untrained healthy adults: 1.6–2.0 g/kg/day protein, 250–500 kca
 - Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
 - Intermittent fasting and calorie restriction combined with exercise can be effectively integrated without negatively impacting most measures of physical performance, while significantly enhancing weight loss and adiposity-related outcomes. ([10.3390/nu17121992])
 
+- **EA-NUT-0926** (sim 0.70, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
 - **EA-NUT-4389** (sim 0.66, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
 - **EA-NUT-1139** (sim 0.73, pop-match 0.80): Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults. ([10.1080/07315724.2021.1958719])
 
@@ -142,6 +143,8 @@ Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: m
 - Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations. ([10.1186/s12970-017-0173-z])
 - Individual studies indicate that sodium citrate, creatine monohydrate, spirulina, green tea and oolong tea extracts, and branched-chain amino acids can significantly affect body mass or composition in wrestlers. ([10.1007/s13668-025-00672-x])
 - Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects. ([10.7717/peerj.20380])
+
+- **EA-SUP-4514** (sim 0.68, pop-match 1.00): HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone. ([10.1093/ageing/afag073])
 
 ## Recovery
 

@@ -1,0 +1,36 @@
+id: EA-NUT-3936
+domain: nutrition
+claim: In older adults performing resistance exercise, increased protein intake produces
+  significantly greater gains in appendicular lean mass and handgrip strength compared
+  with lower protein controls, whereas protein supplementation alone confers no additional
+  benefit on lean body mass or strength outcomes.
+evidence_level: L1
+citations:
+- id: 10.1093/ajcn/nqab355
+  locator_quote: In older adults performing RE, increased protein intake leads to
+    greater ALM and HG strength compared with lower protein controls. Without RE,
+    protein has no additional benefit on changes in total LBM, ALM, or HG strength.
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: 'Protein interventions augment the effect of resistance exercise on
+    appendicular lean mass and handgrip strength in older adults: a systematic review
+    and meta-analysis of randomized controlled trials'
+population_applicability:
+  age: "\u226550 years (older adults)"
+  sex: mixed (not restricted)
+  training_status: performing resistance exercise (required for positive effect);
+    sedentary/non-RE subgroup shows null effect
+  dose_magnitude: whole protein supplementation or higher-protein diet; per-meal dose
+    not a significant moderator by meta-regression
+  duration: "January 1990\u2013July 2021 trial range; duration not a significant moderator\
+    \ by meta-regression"
+effect: 'Combined protein + resistance exercise: ALM WMD +0.54 kg (95% CI: 0.03, 1.05);
+  HG strength WMD +1.71 kg (95% CI: 0.12, 3.30) vs. lower-protein controls. ALM effect
+  significant only in sarcopenic/frail subgroup (WMD +0.88 kg; 95% CI: 0.51, 1.25).
+  Protein alone: no significant effect on total LBM, ALM, HG, or KE strength.'
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2029-05-26'

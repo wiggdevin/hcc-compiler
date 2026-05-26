@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_sarah_nutrition
 
-- Compiled at: 2026-05-26T13:35:11.749501+00:00
+- Compiled at: 2026-05-26T15:06:35.173333+00:00
 - Library version: 0.1.0
 
 ---
@@ -32,7 +32,6 @@ Sedentary or lightly active naturally menstruating women: follicular phase — s
 **Safety bounds:** Do not restrict calories in the luteal phase to counteract the REE increase — doing so deepens effective deficit and may worsen hormonal disruption; iron supplementation above 45 mg/day requires physician oversight and gastrointestinal monitoring; do not apply oral-contraceptive users' flat-calorie protocol to naturally cycling women.
 
 **Backing evidence (top 3 by population match):**
-- Even mild iron deficiency may result in decreased endurance and increased irritability and withdrawal behavior among women. ([10.1016/j.physbeh.2018.09.012])
 - In naturally menstruating women, resting energy expenditure is approximately 40-44 kcal higher in the luteal phase compared to the follicular phase. ([10.1249/MSS.0000000000003518])
 
 ### Pattern: RP-NUT-protein-band (sim=0.80)
@@ -59,6 +58,7 @@ Untrained adults (0-12 months resistance training): 10-15% caloric surplus above
 - Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
 
 - **EA-NUT-5322** (sim 0.70, pop-match 1.00): Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
+- **EA-NUT-0926** (sim 0.70, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
 - **EA-NUT-4389** (sim 0.66, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
 - **EA-NUT-3103** (sim 0.62, pop-match 1.00): Intermittent fasting and calorie restriction combined with exercise can be effectively integrated without negatively impacting most measures of physical performance, while significantly enhancing weight loss and adiposity-related outcomes. ([10.3390/nu17121992])
 - **EA-NUT-0496** (sim 0.75, pop-match 0.80): Combining moderate- or low-intensity resistance or aerobic exercise with caloric restriction optimizes fat loss while preserving lean body mass. ([10.3389/fnut.2025.1579024])

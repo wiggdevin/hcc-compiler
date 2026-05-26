@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_jackson_white",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:11.130878Z",
+  "compiled_at": "2026-05-26T15:06:34.588853Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -104,6 +104,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.7022342088346222,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-4389",
           "similarity": 0.6560735653697228,
           "claim": "Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models.",
@@ -131,23 +148,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Effects of Intermittent Fasting and Calorie Restriction on Exercise Performance: A Systematic Review and Meta-Analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-5593",
-          "similarity": 0.5851409197110223,
-          "claim": "Interventions leveraging gamification, social interaction, and goal-setting have shown greater efficacy in improving body-nutrition profile.",
-          "citations": [
-            {
-              "id": "10.3390/nu17223542",
-              "locator_quote": "Interventions leveraging gamification, social interaction, and goal-setting (6/27) have shown greater efficacy in improving body-nutrition profile.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Empowering Health Through Digital Lifelong Prevention: An Umbrella Review of Apps and Wearables for Nutritional Management"
             }
           ],
           "evidence_level": "L1",
@@ -568,6 +568,23 @@
       ],
       "atoms": [
         {
+          "atom_id": "EA-SUP-4514",
+          "similarity": 0.6827781552884127,
+          "claim": "HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone.",
+          "citations": [
+            {
+              "id": "10.1093/ageing/afag073",
+              "locator_quote": "The combination of HMB supplementation and resistance training does not improve body composition or muscle strength in adults aged 50 years and older.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Efficacy of HMB supplementation as an adjunct to resistance training in older adults: a comprehensive meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-SUP-0001",
           "similarity": 0.6804468214673597,
           "claim": "Creatine supplementation increases intramuscular creatine concentrations and improves high-intensity exercise performance, leading to greater training adaptations.",
@@ -663,23 +680,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Creatine Supplementation in Combat Sport Athletes: A Narrative Systematic Review"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-SUP-8400",
-          "similarity": 0.6363405963159303,
-          "claim": "Creatine use during resistance training can safely increase total and lean body mass, strength, and performance in high-intensity, short-duration, repetitive tasks.",
-          "citations": [
-            {
-              "id": "10.1177/19417381231197389",
-              "locator_quote": "Creatine use during resistance training can safely increase total and lean body mass, strength, and performance in high-intensity, short-duration, repetitive tasks.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Performance-Enhancing Drugs in Healthy Athletes: An Umbrella Review of Systematic Reviews and Meta-analyses"
             }
           ],
           "evidence_level": "L1",

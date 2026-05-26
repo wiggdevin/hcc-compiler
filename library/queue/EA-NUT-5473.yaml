@@ -1,0 +1,31 @@
+id: EA-NUT-5473
+domain: nutrition
+claim: Among six nutrition-related indicators assessed in community-dwelling older
+  adults, the Geriatric Nutritional Risk Index (GNRI) demonstrates the highest discriminative
+  performance for predicting 3-year all-cause mortality.
+evidence_level: L3
+citations:
+- id: 10.1097/MD.0000000000048952
+  locator_quote: Among these indicators, GNRI demonstrated the highest discriminative
+    performance.
+  existence: VERIFIED
+  faithfulness: MAJOR_DISTORTION
+  cited_title: 'Six novel nutritional-related indicators predict 3-year all-cause
+    mortality among community-dwelling older adults in China: A cohort study based
+    on CLHLS from 2014 to 2018'
+population_applicability:
+  age: "older adults (community-dwelling, China; CLHLS 2014\u20132018)"
+  sex: mixed (not stratified)
+  training_status: not applicable
+  dose_magnitude: N/A
+  duration: median follow-up 3.3 years; 578 deaths in 1691 participants
+effect: GNRI outperformed HALP score, PNI, CPNI, TCBI, and BUN-to-albumin ratio in
+  discriminating 3-year all-cause mortality risk; highest GNRI tertile was associated
+  with lower mortality risk, while highest CPNI and BUN-to-albumin ratio tertiles
+  predicted higher mortality risk.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2029-05-26'

@@ -1,0 +1,37 @@
+id: EA-SUP-9365
+domain: supplements
+claim: Daily iron supplementation (42 mg elemental Fe/d for 8 weeks) increases endurance
+  performance at both submaximal and near-maximal (VO2peak) exercise intensities in
+  iron-depleted, nonanemic sedentary women, without improving estimated maximal oxygen
+  consumption (eVO2max).
+evidence_level: L2
+citations:
+- id: 10.1093/jn/nxy271
+  locator_quote: Iron supplementation increases endurance performance at submaximal
+    and maximal (VO2peak) exercise intensities in IDNA women. However, increasing
+    iron status does not increase eVO2max.
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: Increasing Iron Status through Dietary Supplementation in Iron-Depleted,
+    Sedentary Women Increases Endurance Performance at Both Near-Maximal and Submaximal
+    Exercise Intensities
+population_applicability:
+  age: "18\u201326 years"
+  sex: female
+  training_status: sedentary, previously untrained
+  dose_magnitude: 42 mg elemental Fe/d
+  duration: 8 weeks
+effect: "Iron supplementation produced a significant improvement in VO2peak (mean\
+  \ difference: 1.87 mL/kg/min; 95% CI: 0.15, 3.60; P = 0.03) and ventilatory threshold\
+  \ performance compared with placebo in iron-depleted nonanemic women; no significant\
+  \ benefit was observed for estimated VO2max (mean difference: 0.53; 95% CI: \u2212\
+  0.75, 1.81; P = 0.42)."
+contraindications:
+- "Iron-sufficient or iron-overloaded individuals (serum ferritin \u226525 \xB5g/L):\
+  \ findings apply exclusively to iron-depleted, nonanemic (IDNA) women and should\
+  \ not be generalized to iron-replete populations."
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2029-05-26'

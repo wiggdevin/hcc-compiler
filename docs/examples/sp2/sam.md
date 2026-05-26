@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — sam_recomp
 
-- Compiled at: 2026-05-26T13:35:09.002484+00:00
+- Compiled at: 2026-05-26T15:06:32.505361+00:00
 - Library version: 0.1.0
 
 ---
@@ -43,6 +43,7 @@
 **Backing evidence (top 3 by population match):**
 - Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
 
+- **EA-NUT-0926** (sim 0.66, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
 - **EA-NUT-4389** (sim 0.66, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
 
 ## Training

@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_bradley",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:09.771818Z",
+  "compiled_at": "2026-05-26T15:06:33.242073Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -159,6 +159,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.6989526888355434,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-6673",
           "similarity": 0.6932991455241867,
           "claim": "Resistance training performed in a fasted state results in similar gains in fat-free mass, muscle hypertrophy, and strength compared to training in a fed state, but may be associated with greater reductions in body fat mass.",
@@ -169,23 +186,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Resistance training performed in the fasted state compared to the fed state on body composition and strength in adults: A systematic review with meta-analysis"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-7175",
-          "similarity": 0.6927111839325751,
-          "claim": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-          "citations": [
-            {
-              "id": "10.3390/nu17132070",
-              "locator_quote": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis"
             }
           ],
           "evidence_level": "L1",
@@ -657,6 +657,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-SUP-4514",
+          "similarity": 0.6599930296009061,
+          "claim": "HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone.",
+          "citations": [
+            {
+              "id": "10.1093/ageing/afag073",
+              "locator_quote": "The combination of HMB supplementation and resistance training does not improve body composition or muscle strength in adults aged 50 years and older.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Efficacy of HMB supplementation as an adjunct to resistance training in older adults: a comprehensive meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-SUP-3039",
           "similarity": 0.6588107646775514,
           "claim": "Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se.",
@@ -667,23 +684,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "The effectiveness of protein supplements on athletic performance and post-exercise recovery - a Bayesian multilevel meta-analysis of randomized controlled trials"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-SUP-5023",
-          "similarity": 0.6383330341291974,
-          "claim": "Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes.",
-          "citations": [
-            {
-              "id": "10.1080/19390211.2025.2539880",
-              "locator_quote": "Creatine supplementation enhances body mass, FFM, muscle strength and power in combat sport athletes.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Creatine Supplementation in Combat Sport Athletes: A Narrative Systematic Review"
             }
           ],
           "evidence_level": "L1",

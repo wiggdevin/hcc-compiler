@@ -1,7 +1,7 @@
 {
   "client_id": "test_v2_tori_shaw",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:13.103041Z",
+  "compiled_at": "2026-05-26T15:06:36.500295Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -87,6 +87,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.7001750798483162,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-4389",
           "similarity": 0.6560735653697228,
           "claim": "Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models.",
@@ -105,7 +122,7 @@
         },
         {
           "atom_id": "EA-NUT-3698",
-          "similarity": 0.6349907673246306,
+          "similarity": 0.6237182361635966,
           "claim": "Combining exercise with very low energy diets (VLEDs) results in higher retention of fat free mass (FFM) compared to VLED alone during rapid weight loss.",
           "citations": [
             {
@@ -165,23 +182,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Comparing exercise modalities during caloric restriction: a systematic review and network meta-analysis on body composition"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-1139",
-          "similarity": 0.7154976401479923,
-          "claim": "Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults.",
-          "citations": [
-            {
-              "id": "10.1080/07315724.2021.1958719",
-              "locator_quote": "Our analysis indicates that TRF can reduce BM and improve nutrient metabolism in both normal- and over-weight individuals. TRF does not appear to alter protein synthesis and fat-free mass nor hamper aerobic fitness and muscular performance among physically active individuals including athletes.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Effect of Time-Restricted Feeding on Anthropometric, Metabolic, and Fitness Parameters: A Systematic Review"
             }
           ],
           "evidence_level": "L1",
@@ -636,6 +636,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-SUP-4514",
+          "similarity": 0.5979985732392974,
+          "claim": "HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone.",
+          "citations": [
+            {
+              "id": "10.1093/ageing/afag073",
+              "locator_quote": "The combination of HMB supplementation and resistance training does not improve body composition or muscle strength in adults aged 50 years and older.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Efficacy of HMB supplementation as an adjunct to resistance training in older adults: a comprehensive meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-SUP-1368",
           "similarity": 0.589602534470338,
           "claim": "Creatine supplementation does not consistently improve exercise performance in active females, with most studies showing no improvement compared to placebo.",
@@ -646,23 +663,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Does Creatine Supplementation Enhance Performance in Active Females? A Systematic Review"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-SUP-8071",
-          "similarity": 0.581706826285092,
-          "claim": "Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects.",
-          "citations": [
-            {
-              "id": "10.7717/peerj.20380",
-              "locator_quote": "Cr supplementation significantly improves muscle strength in the general population. Specifically: untrained individuals show greater muscle strength improvements; low-dose supplementation combined with high-intensity exercise yields better effects",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Effects of creatine supplementation on muscle strength gains-a meta-analysis and systematic review"
             }
           ],
           "evidence_level": "L1",

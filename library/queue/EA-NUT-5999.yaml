@@ -1,0 +1,35 @@
+id: EA-NUT-5999
+domain: nutrition
+claim: Chronically increasing leucine intake via an overall increase in dietary protein
+  is the most effective dietary intervention for increasing or attenuating lean mass
+  loss during aging.
+evidence_level: L4
+citations:
+- id: 10.1007/s00726-017-2390-9
+  locator_quote: chronically increasing leucine intake via the consumption of an overall
+    increase in dietary protein appears to be the most effective dietary intervention
+    toward increasing or attenuating lean mass during aging; however, more research
+    investigating the optimal dose and timing of protein ingestion is necessary
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: 'Dietary proteins and amino acids in the control of the muscle mass
+    during immobilization and aging: role of the MPS response'
+population_applicability:
+  age: older adults and aging populations; also applicable to immobilization/bed-rest
+    scenarios
+  sex: not specified
+  training_status: sedentary to immobilized
+  dose_magnitude: not precisely specified; optimal dose described as requiring further
+    research
+  duration: chronic supplementation; acute effects also noted for postprandial MPS
+    restoration
+effect: Higher dietary protein intake that chronically elevates leucine availability
+  increases or attenuates lean mass loss during aging; free leucine supplementation
+  alone shows equivocal chronic effects on muscle mass, and anabolic resistance during
+  disuse/aging may further blunt the MPS response to dietary EAAs.
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2029-05-26'

@@ -1,7 +1,7 @@
 {
   "client_id": "sam_recomp",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:09.002484Z",
+  "compiled_at": "2026-05-26T15:06:32.505361Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -87,6 +87,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.6637586221744471,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-4389",
           "similarity": 0.6560735653697228,
           "claim": "Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models.",
@@ -165,23 +182,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Comparing exercise modalities during caloric restriction: a systematic review and network meta-analysis on body composition"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-5482",
-          "similarity": 0.7145542705582806,
-          "claim": "In postmenopausal women engaging in strength training, adding a calorie deficit of 250-750 kcal/day enhances the reduction of fat mass, while protein intake at a minimum of 0.8 g/kg bodyweight shows no significant additional effect on muscle strength or lean body mass.",
-          "citations": [
-            {
-              "id": "10.1186/s40798-025-00954-2",
-              "locator_quote": "Eleven studies focused on an additional calorie deficit (250-750 kcal/day) which enhanced the reduction of fat mass. Protein intake was examined in nine studies and has no significant additional effect on muscle strength and lean body mass with a minimal intake of 0.8 g/kg bodyweight.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Analysis of the Additive Effects of Nutritional Strategies in Strength Training Interventions on Body Composition, Muscle Strength and Bone Mineral Density in Postmenopausal Women: A Systematic Review"
             }
           ],
           "evidence_level": "L1",

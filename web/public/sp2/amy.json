@@ -1,7 +1,7 @@
 {
   "client_id": "amy_runner",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:08.118286Z",
+  "compiled_at": "2026-05-26T15:06:31.584364Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -61,6 +61,23 @@
             }
           ],
           "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.6572796187732753,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
           "population_match_score": 1.0,
           "warnings": []
         },
@@ -143,23 +160,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Nitrogen Requirements in Healthy Adults: A Systematic Review and Meta-Analysis of Nitrogen Balance Studies"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 0.8,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-1139",
-          "similarity": 0.6893378804615319,
-          "claim": "Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults.",
-          "citations": [
-            {
-              "id": "10.1080/07315724.2021.1958719",
-              "locator_quote": "Our analysis indicates that TRF can reduce BM and improve nutrient metabolism in both normal- and over-weight individuals. TRF does not appear to alter protein synthesis and fat-free mass nor hamper aerobic fitness and muscular performance among physically active individuals including athletes.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Effect of Time-Restricted Feeding on Anthropometric, Metabolic, and Fitness Parameters: A Systematic Review"
             }
           ],
           "evidence_level": "L1",

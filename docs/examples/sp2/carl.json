@@ -1,7 +1,7 @@
 {
   "client_id": "carl_strength",
   "library_version": "0.1.0",
-  "compiled_at": "2026-05-26T13:35:08.534301Z",
+  "compiled_at": "2026-05-26T15:06:32.025656Z",
   "domain_recommendations": {
     "nutrition": {
       "patterns": [
@@ -104,6 +104,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-NUT-0926",
+          "similarity": 0.7022342088346222,
+          "claim": "In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity.",
+          "citations": [
+            {
+              "id": "10.1007/s40200-025-01746-x",
+              "locator_quote": "Factor 1 highlighted the role of insulin resistance-related amino acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism and its association with muscle loss and adiposity primarily in men.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Amino acid metabolic signatures of dynapenic obesity in older adults: a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr elderly health program"
+            }
+          ],
+          "evidence_level": "L3",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-NUT-1643",
           "similarity": 0.6957000498954684,
           "claim": "The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source.",
@@ -148,23 +165,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Meta-analysis of technologies for diabetes treatment: glycemic control, prediction, meal and physical activity detection"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-NUT-7175",
-          "similarity": 0.6546390531294135,
-          "claim": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-          "citations": [
-            {
-              "id": "10.3390/nu17132070",
-              "locator_quote": "Protein timing does not importantly modify exercise-induced changes in lean body mass.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Does Protein Ingestion Timing Affect Exercise-Induced Adaptations? A Systematic Review with Meta-Analysis"
             }
           ],
           "evidence_level": "L1",
@@ -636,6 +636,23 @@
           "warnings": []
         },
         {
+          "atom_id": "EA-SUP-4514",
+          "similarity": 0.684485812172701,
+          "claim": "HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone.",
+          "citations": [
+            {
+              "id": "10.1093/ageing/afag073",
+              "locator_quote": "The combination of HMB supplementation and resistance training does not improve body composition or muscle strength in adults aged 50 years and older.",
+              "existence": "VERIFIED",
+              "faithfulness": "VERIFIED",
+              "cited_title": "Efficacy of HMB supplementation as an adjunct to resistance training in older adults: a comprehensive meta-analysis"
+            }
+          ],
+          "evidence_level": "L1",
+          "population_match_score": 1.0,
+          "warnings": []
+        },
+        {
           "atom_id": "EA-SUP-5023",
           "similarity": 0.6837282833829633,
           "claim": "Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes.",
@@ -646,23 +663,6 @@
               "existence": "VERIFIED",
               "faithfulness": "VERIFIED",
               "cited_title": "Creatine Supplementation in Combat Sport Athletes: A Narrative Systematic Review"
-            }
-          ],
-          "evidence_level": "L1",
-          "population_match_score": 1.0,
-          "warnings": []
-        },
-        {
-          "atom_id": "EA-SUP-2054",
-          "similarity": 0.6643686447618851,
-          "claim": "Creatine supplementation significantly increases body mass and fat-free mass while reducing body fat percentage, with effects enhanced when combined with resistance training.",
-          "citations": [
-            {
-              "id": "10.1080/15502783.2024.2380058",
-              "locator_quote": "Creatine supplementation increased body mass (WMD: 0.86\u2009kg; 95% CI: 0.76 to 0.96, I2\u2009=\u20090%) and fat-free mass (WMD: 0.82\u2009kg; 95% CI: 0.57 to 1.06, I2\u2009=\u20090%) while reducing body fat percentage (WMD: -0.28 %; 95% CI: -0.47 to -0.09; I2\u2009=\u20090%). Studies that incorporated a maintenance dose of creatine or performed resistance training in conjunction with supplementation had greater effects on body composition.",
-              "existence": "VERIFIED",
-              "faithfulness": "VERIFIED",
-              "cited_title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis"
             }
           ],
           "evidence_level": "L1",

@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — carl_strength
 
-- Compiled at: 2026-05-26T13:35:08.534301+00:00
+- Compiled at: 2026-05-26T15:06:32.025656+00:00
 - Library version: 0.1.0
 
 ---
@@ -66,9 +66,9 @@ Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30 g protein per mea
 
 **Backing evidence (top 3 by population match):**
 - Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
-- Protein timing does not importantly modify exercise-induced changes in lean body mass. ([10.3390/nu17132070])
 
 - **EA-NUT-1139** (sim 0.73, pop-match 1.00): Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults. ([10.1080/07315724.2021.1958719])
+- **EA-NUT-0926** (sim 0.70, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
 - **EA-NUT-1643** (sim 0.70, pop-match 1.00): The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
 - **EA-NUT-6673** (sim 0.67, pop-match 1.00): Resistance training performed in a fasted state results in similar gains in fat-free mass, muscle hypertrophy, and strength compared to training in a fed state, but may be associated with greater reductions in body fat mass. ([10.1016/j.jbmt.2025.08.003])
 - **EA-NUT-4389** (sim 0.66, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
@@ -152,6 +152,8 @@ Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets 
 - Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects. ([10.7717/peerj.20380])
 - Creatine supplementation demonstrated superior effects for muscle strength, protein supplementation proved most effective for endurance performance, and omega-3 supplementation yielded the greatest benefits for recovery outcomes in trained athletes. ([10.3390/nu18060909])
 - Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se. ([10.1080/15502783.2025.2605338])
+
+- **EA-SUP-4514** (sim 0.68, pop-match 1.00): HMB supplementation combined with resistance training does not improve fat mass, muscle mass, or muscle strength in adults aged 50 years and older compared with resistance training alone. ([10.1093/ageing/afag073])
 
 ## Recovery
 

@@ -1,0 +1,36 @@
+id: EA-NUT-0926
+domain: nutrition
+claim: In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting
+  insulin resistance-related branched-chain and aromatic amino acids is positively
+  associated with nondynapenic obesity in both sexes, while sex-specific nitrogen
+  metabolism patterns are differentially linked to dynapenia and adiposity.
+evidence_level: L3
+citations:
+- id: 10.1007/s40200-025-01746-x
+  locator_quote: Factor 1 highlighted the role of insulin resistance-related amino
+    acids in obesity across both genders, while Factor 2 emphasized nitrogen metabolism
+    and its association with muscle loss and adiposity primarily in men.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Amino acid metabolic signatures of dynapenic obesity in older adults:
+    a (principal component analysis) PCA-based sex-stratified analysis in the Bushehr
+    elderly health program'
+population_applicability:
+  age: "50 years or older (mean 61.6 \xB1 7.7 years)"
+  sex: male and female (sex-stratified analysis)
+  training_status: community-dwelling older adults; no specific training status required
+  dose_magnitude: "N/A \u2014 observational serum amino acid profiling via UPLC-MS/MS"
+  duration: cross-sectional
+effect: "Factor 1 (Leucine, Valine, Tyrosine, Alanine, Methionine, Tryptophan, Proline)\
+  \ raised nondynapenic obesity risk in women (RR 1.55, 95% CI 1.15\u20132.08) and\
+  \ men (RR 1.27, 95% CI 1.08\u20131.50). Factor 2 (Aspartic acid, Glutamic acid,\
+  \ Phenylalanine, Serine, Glycine, Arginine) increased risk of dynapenia/non-obesity\
+  \ (RR 1.34) and nondynapenic obesity (RR 1.24) in men. Factor 4 (Citrulline, Ornithine,\
+  \ Threonine) was protective against obesity in women (RR 0.75, 95% CI 0.58\u2013\
+  0.98)."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-26'
+expiry: '2028-05-26'
