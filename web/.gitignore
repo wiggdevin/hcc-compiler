@@ -40,7 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Demo persona fixtures bundled into web/public/ at build time via web/package.json prebuild.
-# Source of truth is docs/examples/sp2/ and tests/fixtures/intakes/.
-public/sp2/
-public/intakes/
+# Demo persona fixtures live at web/public/{sp2,intakes}/ — committed to git
+# because Vercel rootDirectory=web/ can't reach ../docs/ at build time.
+# Run `pnpm prebuild` after editing docs/examples/sp2/ or tests/fixtures/intakes/
+# to refresh the bundled copies.

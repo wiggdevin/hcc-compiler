@@ -1,0 +1,31 @@
+client_id: test_v2_tori_shaw
+library_version: "0.1.0"
+demographics:
+  age: 30
+  sex: F
+  weight_kg: 77.1       # 170 lb
+  height_cm: 152.4      # 5'0"
+training_status: recreational
+goals:
+  - weight_loss
+  - recomposition
+  - hypertrophy
+current_regimen: |
+  Resistance training 2x/week (strength + corrective focus) + uphill walking
+  3x/week. Post-lumbar-spinal-fusion ~4 yr ago, healed and cleared for
+  lifting but program biased toward stability/corrective work. Currently
+  ~2,000 kcal/day; lost 30 lb over 1 yr at that intake. InBody: SMM 56 lb,
+  visceral fat level 10 (high). NDT (Armour Thyroid) — food-drug separation
+  of 4 hr required around dose. Pending labs: full iron panel (ferritin
+  suspected low), perimenopausal hormone profile.
+constraints:
+  - type: injury
+    detail: "Post-lumbar-spinal-fusion (~4 yr); cleared for lifting but requires corrective/stability focus, no heavy axial loading without medical clearance"
+  - type: dietary
+    detail: "NDT timing: 4-hour separation from food around Armour Thyroid dose"
+  - type: dietary
+    detail: "Gut sensitivities with elevated systemic inflammation; refined-carb and liquid-fructose restrictions"
+contraindications:
+  - "hypothyroidism (NDT-treated)"
+  - "MASLD (fatty liver disease)"
+  - "iron deficiency (suspected, pending labs)"
