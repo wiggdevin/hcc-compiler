@@ -19,8 +19,8 @@ citations:
     \ CI [-0.38, 1.25]), second intensity threshold (g\u2009=\u20090.06, 95% CI [-0.25,\
     \ 0.36]), exercise economy (g\u2009=\u20090.26, 95% CI [-0.03, 0.54]), and on\
     \ indices of physical performance (g\u2009=\u20090.04, 95% CI [-0.46, 0.54])."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'One Size Does Not Fit All: A Meta-Analysis of 115 Trials Comparing
     High-Intensity Interval and Moderate-to-Vigorous-Intensity Continuous Training
     Across Diverse Participants, Protocols, and Outcomes'

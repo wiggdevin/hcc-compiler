@@ -11,8 +11,8 @@ citations:
     \ diseased (\u03C1\u2009=\u20090.733, p\u2009<\u20090.05) individuals. Additionally,\
     \ longer PCr recovery time was correlated with more acidic end-of-exercise pH\
     \ in all three muscle groups among healthy individuals."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: (31)P-MRS-Measured Phosphocreatine Recovery Kinetics in Human Muscles
     in Health and Disease-A Systematic Review and Meta-Analysis
 population_applicability:

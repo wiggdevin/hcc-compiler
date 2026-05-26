@@ -13,8 +13,8 @@ citations:
     led to moderate reductions in anxiety (SMD = -0.62, 95% CI: -0.84 to -0.41), depression
     (SMD = -0.67, 95% CI: -0.91 to -0.43), and stress (SMD = -0.46, 95% CI: -0.64
     to -0.28).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effectiveness of physical exercise on mental health among university
     students: a systematic review and meta-analysis'
 population_applicability:

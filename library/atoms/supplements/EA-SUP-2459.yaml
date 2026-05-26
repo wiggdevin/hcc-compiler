@@ -9,8 +9,8 @@ citations:
     \ credible positive effect on anaerobic capacity (g\u2009=\u20090.46, 95% CrI\
     \ [0.19, 0.71]) and reaction time (g\u2009=\u20090.75, 95% CrI [0.29, 1.18]) compared\
     \ to CAF or TAU alone."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Caffeine and taurine: a systematic review and network meta-analysis
     of their individual and combined effects on physical capacity, cognitive function,
     and physiological markers'

@@ -10,8 +10,8 @@ citations:
     and physical tests in individuals with the AA genotype, may also demonstrate marginal
     improvement in AC individuals, and has null or detrimental effects on individuals
     with the CC genotype.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Influence of the CYP1A2 genotype on the exercise performance of physically
     active individuals under caffeine supplementation: a systematic review'
 population_applicability:

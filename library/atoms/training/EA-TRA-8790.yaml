@@ -10,8 +10,8 @@ citations:
     (HVRT = -1.19; 95%CI: -1.63 to -0.74; LVRT = -0.78; 95%CI:-1.15 to -0.41) and
     C-reactive protein (HVRT = -1.00; 95%CI: -1.32 to -0.67; LVRT = -0.34; 95%CI,
     -0.63 to -0.04)) when compared to CG.'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effect of resistance training volume on body adiposity, metabolic
     risk, and inflammation in postmenopausal and older females: Systematic review
     and meta-analysis of randomized controlled trials'

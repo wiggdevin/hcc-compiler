@@ -9,8 +9,8 @@ citations:
   locator_quote: In conclusion, while protein supplementation may support improvements
     in body composition and functional capacity, variability in protein types and
     dosages prevents a clear recommendation for CVD patients in cardiovascular rehabilitation.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effect of protein consumption and supplementation on body composition
     and functional capacity in cardiovascular disease patients undergoing cardiovascular
     rehabilitation: A systematic review and meta-analysis'

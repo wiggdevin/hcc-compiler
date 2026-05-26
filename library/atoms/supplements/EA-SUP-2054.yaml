@@ -12,8 +12,8 @@ citations:
     \ (WMD: -0.28 %; 95% CI: -0.47 to -0.09; I2\u2009=\u20090%). Studies that incorporated\
     \ a maintenance dose of creatine or performed resistance training in conjunction\
     \ with supplementation had greater effects on body composition."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Creatine supplementation protocols with or without training interventions
     on body composition: a GRADE-assessed systematic review and dose-response meta-analysis'
 population_applicability:

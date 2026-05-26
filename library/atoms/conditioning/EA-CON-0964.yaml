@@ -8,8 +8,8 @@ citations:
   locator_quote: HIIT was found to improve racket players' VO2 max (maximum oxygen
     uptake), running and repetitive sprint performance, jumping performance, and hitting
     speed during play.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of high-intensity interval training on strength, speed, and
     endurance performance among racket sports players: A systematic review'
 population_applicability:

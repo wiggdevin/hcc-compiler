@@ -9,8 +9,8 @@ citations:
   locator_quote: "Higher adherence was observed in interventions that were shorter,\
     \ did not have home exercise components, had more weekly sessions (\u22652 times/wk),\
     \ and used fewer behavior change techniques."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Adherence to Supervised Falls Prevention Exercise in Community-Dwelling
     Older Adults: Secondary Analysis of a Systematic Review'
 population_applicability:

@@ -12,8 +12,8 @@ citations:
     % CI: -0.399 to 1.228; p = 0.318). However, the fasted state was associated with
     greater changes in body fat mass (SMD: -1.001; 95 % CI: -1.970 to -0.032; p =
     0.043).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Resistance training performed in the fasted state compared to the
     fed state on body composition and strength in adults: A systematic review with
     meta-analysis'

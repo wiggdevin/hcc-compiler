@@ -8,8 +8,8 @@ citations:
 - id: 10.1007/s12529-025-10419-1
   locator_quote: Additionally, higher quality HC interventions appeared to be associated
     with a greater proportion of positive outcomes.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Development of the Health Coaching Quality Index: A Proposed Method
     for Evaluating Health Coaching Interventions'
 population_applicability:

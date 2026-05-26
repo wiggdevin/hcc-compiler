@@ -11,8 +11,8 @@ citations:
     (-0.98, -0.21), p = 0.002, I 2 = 88.7]. Subgroup analysis revealed that prenatal
     aromatherapy effectively reduced anxiety [SMD = -0.75, 95% CI (-0.97, -0.52),
     p = 0.000, I 2 = 0]
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'The effects of aromatherapy on anxiety and sleep quality in maternal
     women: a systematic review and meta-analysis'
 population_applicability:

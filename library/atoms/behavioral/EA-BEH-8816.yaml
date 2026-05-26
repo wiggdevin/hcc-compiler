@@ -9,8 +9,8 @@ citations:
   locator_quote: CAs show promising potential to improve dietary behaviors, with evidence
     of gains in fruit and vegetable intake, Mediterranean diet adherence, nutritional
     knowledge, physical activity, and modest weight loss.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Interactive Conversational Agents to Improve Dietary Behaviors for
     Health Promotion: Mixed Systematic Review'
 population_applicability:

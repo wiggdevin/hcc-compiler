@@ -10,8 +10,8 @@ citations:
     sleep efficiency (MD = 1.53%, 95% CI 0.00 to 3.05; I2 = 0%; p (overall) = 0.05;
     moderate certainty), likely reduces sleep onset latency (MD = -2.71 min, 95% CI
     -5.79 to 0.36; I2 = 45%; p (overall) = 0.08; moderate certainty)
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of non-invasive brain stimulation combined with Tai Chi on
     the physical, cognitive, emotional, sleep, and quality-of-life outcomes in older
     adults: A systematic review and meta-analysis'

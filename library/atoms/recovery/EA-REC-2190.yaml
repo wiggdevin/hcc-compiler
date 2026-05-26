@@ -9,8 +9,8 @@ citations:
   locator_quote: "The findings revealed that RE lasting\u2009\u2264\u20094 weeks,\
     \ performed 1-2 times per week, and 30-60\_min per session, was the relatively\
     \ effective."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Optimal types and doses of exercise for improving sleep quality in
     perinatal women: a systematic review and network meta-analysis based on randomized
     controlled trials'

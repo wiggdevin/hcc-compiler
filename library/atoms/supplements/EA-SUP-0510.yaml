@@ -9,8 +9,8 @@ citations:
   locator_quote: Individual studies revealed significant effects of sodium citrate,
     creatine monohydrate, spirulina, green tea and oolong tea extracts, and branched-chain
     amino acids on body mass or composition.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Evidence-Based Supplementation Strategies for Wrestlers: A Systematic
     Review'
 population_applicability:

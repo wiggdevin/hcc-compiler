@@ -9,8 +9,8 @@ citations:
 - id: 10.1519/JSC.0000000000005184
   locator_quote: Meta-regressions showed no association between strength gains and
     training volume-related variables (duration, frequency, number of sets or repetitions).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Dose-Response Relationship for Strength Gains From Nordic Hamstring
     Exercise: A Systematic Review, Meta-Analysis, and Meta-Regression'
 population_applicability:

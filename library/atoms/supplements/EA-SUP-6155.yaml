@@ -9,8 +9,8 @@ citations:
   locator_quote: "our synthesis highlights that well-formulated plant protein blends\
     \ (e.g., combinations of pea, rice, and canola) can stimulate MPS at levels comparable\
     \ to whey when consumed at adequate doses (\u226530 g with ~2.5 g leucine)"
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Effect of Plant-Based Proteins on Recovery from Resistance Exercise-Induced
     Muscle Damage in Healthy Young Adults-A Systematic Review
 population_applicability:

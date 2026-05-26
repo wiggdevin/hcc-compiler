@@ -8,8 +8,8 @@ citations:
   locator_quote: This network meta-analysis suggests that routine acupuncture combined
     with auricular acupuncture may be an effective intervention treatment for treating
     insomnia in perimenopausal women.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: A network meta-analysis of acupuncture therapy for female insomnia
     and negative emotions from the perspective of the perimenopausal window
 population_applicability:

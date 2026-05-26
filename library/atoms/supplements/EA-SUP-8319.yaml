@@ -8,8 +8,8 @@ citations:
 - id: 10.3390/nu16193352
   locator_quote: CAF+nitrates did not offer further benefits on exercise performance
     or physiological variables from the isolated intake of CAF and nitrates.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effect of Caffeine and Nitrates Combination on Exercise Performance,
     Heart Rate and Oxygen Uptake: A Systematic Review and Meta-Analysis'
 population_applicability:

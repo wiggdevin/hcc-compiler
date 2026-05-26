@@ -126,3 +126,42 @@ def test_routed_draft_removed_from_source(tmp_path):
     route_draft(draft, verify, library)
     assert not draft_path.exists()
     assert (library / "atoms" / "nutrition" / "EA-NUT-0103.yaml").exists()
+
+
+def test_admitted_atom_carries_gate_verdicts_not_llm_placeholders(tmp_path):
+    """Extract LLM stamps placeholder verdicts; route_draft must merge the
+    gate's real verdicts from verify-output before persisting to library/."""
+    draft = tmp_path / "draft-output"
+    verify = tmp_path / "verify-output"
+    library = tmp_path / "library"
+    draft.mkdir(); verify.mkdir()
+
+    atom_id = "EA-NUT-0105"
+    citation_id = "10.1234/test"
+    draft_atom = _atom_yaml(atom_id, "routine")
+    draft_atom["citations"] = [{
+        "id": citation_id,
+        "locator_quote": "q",
+        "existence": "UNVERIFIABLE",
+        "faithfulness": "ACCESS_LIMITED",
+        "cited_title": "t",
+    }]
+    (draft / f"{atom_id}.yaml").write_text(yaml.safe_dump(draft_atom))
+    (verify / f"{atom_id}.json").write_text(json.dumps({
+        "atom_id": atom_id,
+        "overall": "PASS",
+        "citations": [{
+            "id": citation_id,
+            "existence": "VERIFIED",
+            "faithfulness": "VERIFIED",
+        }],
+    }))
+
+    route_draft(draft, verify, library)
+
+    admitted = yaml.safe_load(
+        (library / "atoms" / "nutrition" / f"{atom_id}.yaml").read_text(encoding="utf-8")
+    )
+    citation = admitted["citations"][0]
+    assert citation["existence"] == "VERIFIED"
+    assert citation["faithfulness"] == "VERIFIED"

@@ -7,8 +7,8 @@ citations:
 - id: 10.1007/s00520-026-10754-3
   locator_quote: AP-related interventions may provide some benefit in improving CRF,
     particularly during chemotherapy.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of activity pacing-related interventions on cancer-related
     fatigue and classification of behavior change techniques: A systematic review
     and meta-analysis'

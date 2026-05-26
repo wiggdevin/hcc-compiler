@@ -8,8 +8,8 @@ citations:
   locator_quote: "In the NoOC group, luteal phase REE was 40 kcal higher than follicular\
     \ phase REE (95% confidence interval (CI), -2 to 82 kcal\xB7d -1 , d = 0.20, P\
     \ = 0.061)."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Resting Energy Expenditure, Metabolic and Sex Hormones in Two Phases
     of the Menstrual and Hormonal Contraceptive Cycles
 population_applicability:

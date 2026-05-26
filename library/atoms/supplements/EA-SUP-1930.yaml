@@ -9,8 +9,8 @@ citations:
   locator_quote: "In postmenopausal women, creatine, particularly \u2265 5 g\xB7day\u207B\
     \xB9 with RT, yields small but meaningful gains in lean mass and strength without\
     \ evidence of harm."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Creatine monohydrate for lean mass, strength, and bone density in
     postmenopausal women: a systematic review and meta-analysis'
 population_applicability:

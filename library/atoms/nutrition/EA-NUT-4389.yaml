@@ -9,8 +9,8 @@ citations:
     \ models for the various prediction horizons (15, 30, 45, 60, and 120\u2009min)\
     \ and the performance of meal and physical activity detection models using sensitivity\
     \ and metrics related to false-positivity."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Meta-analysis of technologies for diabetes treatment: glycemic control,
     prediction, meal and physical activity detection'
 population_applicability:

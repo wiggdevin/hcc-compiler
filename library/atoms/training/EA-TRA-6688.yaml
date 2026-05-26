@@ -9,8 +9,8 @@ citations:
   locator_quote: "This network meta-analysis demonstrates that aerobic training is\
     \ most effective for reducing BF%, while strength training shows superior effectiveness\
     \ for improving VO\u2082max in sedentary adults."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of exercise on body fat percentage and cardiorespiratory fitness
     in sedentary adults: a systematic review and network meta-analysis'
 population_applicability:

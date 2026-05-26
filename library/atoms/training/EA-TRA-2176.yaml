@@ -15,8 +15,8 @@ citations:
     strength gains, compared to SEG, in trained participants (g = 0.33 [90% CI = 0.07,
     0.60; 90% PI = 0.07, 0.60]) and volume-load matched trials (g = 0.25 [90% CI =
     0.04, 0.45; 90% PI = 0.04, 0.45]) with moderate certainty in subgroup analyses.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'The effect of eccentric phase duration on maximal strength, muscle
     hypertrophy and countermovement jump height: A systematic review and meta-analysis'
 population_applicability:

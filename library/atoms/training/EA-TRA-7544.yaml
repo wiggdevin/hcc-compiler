@@ -10,8 +10,8 @@ citations:
     = -0.17 mmol/L), MAGE (WMD = -0.27 mmol/L), MAX (WMD = -0.63 mmol/L), and 4-6-h
     iAUC (standardized mean difference [SMD] = -0.60), while increasing TIR (WMD =
     6.22%), compared to non-exercise or usual activity controls.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of exercise interventions on 24-h continuous glucose profiles
     in non-diabetic populations: A systematic review and meta-analysis'
 population_applicability:

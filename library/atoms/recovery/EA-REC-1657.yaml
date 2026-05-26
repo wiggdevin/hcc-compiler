@@ -8,8 +8,8 @@ citations:
   locator_quote: "The results of the meta-analysis showed that sleep and circadian\
     \ interventions had a more substantial impact on positive affect compared to negative\
     \ (\u03B2\u2009=\u20090.68, p\u2009<\u20090.001)."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Sleep and Circadian Interventions to Improve Athletes'' Mental Health,
     Mood and Well-Being: A Systematic Review and Meta-Analysis'
 population_applicability:

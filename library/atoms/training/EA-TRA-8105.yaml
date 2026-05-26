@@ -7,8 +7,8 @@ citations:
 - id: 10.1111/sms.14764
   locator_quote: 'In contrast, CT significantly improved countermovement jump (CMJ)
     compared to RT alone (SMD = 0.19; 95% CI: 0.01-0.36; p = 0.04).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Synergistic Effects of Concurrent Aerobic and Strength Training on
     Fitness in Children and Adolescents: A Multivariate and Network Meta-Analysis'
 population_applicability:

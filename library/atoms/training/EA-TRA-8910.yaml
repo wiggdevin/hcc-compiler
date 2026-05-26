@@ -10,8 +10,8 @@ citations:
     \ Interval Training (HIIT) had the highest probability of being the most effective\
     \ intervention for improving VO\u2082max levels (SUCRA\u2009=\u200974.3; SMD\u2009\
     =\u20090.53, 95% CI [0.15, 0.91], p\u2009=\u20090.007)."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Comparative efficacy of different training modes on physical fitness
     in soccer (football) players: a systematic review and network meta-analysis incorporating
     randomized controlled trials'

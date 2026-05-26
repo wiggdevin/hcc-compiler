@@ -7,8 +7,8 @@ citations:
 - id: 10.3389/fspor.2025.1641379
   locator_quote: This meta-analysis confirms that RSH provides a moderate performance
     advantage over RSN, particularly for repeated-sprint ability.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: A multilevel meta-analysis of the effects of repeated sprint training
     in hypoxia on athletic performance
 population_applicability:

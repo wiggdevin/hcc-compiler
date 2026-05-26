@@ -9,8 +9,8 @@ citations:
   locator_quote: Combining moderate-and low-intensity resistance or aerobic exercise
     with caloric restriction optimizes fat loss while preserving lean body mass, making
     it a superior strategy for body composition improvement.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Comparing exercise modalities during caloric restriction: a systematic
     review and network meta-analysis on body composition'
 population_applicability:

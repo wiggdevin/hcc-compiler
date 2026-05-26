@@ -13,8 +13,8 @@ citations:
     0.90) or the combined supplement intake (CAF-SB/PLA: SMD = 0.43, 95% CI [-0.05,
     0.91], p = 0.08; CAF-BJ/PLA: SMD = 0.33, 95% CI [-0.03, 0.69], p = 0.07) compared
     with the PLA trial.'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Ergogenic effects of supplement combinations on endurance performance:
     a systematic review and meta-analysis of randomized controlled trials'
 population_applicability:

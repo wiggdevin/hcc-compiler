@@ -9,8 +9,8 @@ citations:
   locator_quote: Widely adopted exercise prescription apps meet fundamental structural
     requirements but do not fully support the progressive and individualized processes
     central to clinical exercise prescription.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Clinical Usability of Exercise Prescription Apps for Professional
     Use: Systematic Review and Multidimensional Evaluation'
 population_applicability:

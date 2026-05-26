@@ -10,8 +10,8 @@ citations:
     = -2.47, 95% CI [-3.09, -1.85], p < 0.001). Substantial heterogeneity was observed
     (I 2 = 82.3%). Subgroup analyses showed that Baduanjin demonstrated significant
     improvement in sleep quality (MD = -2.89, 95% CI [-3.39, -2.39], p < 0.001)
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'The effects of Qigong exercise on sleep quality in older adults: a
     systematic review and meta-analysis'
 population_applicability:

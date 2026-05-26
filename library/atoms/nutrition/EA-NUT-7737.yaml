@@ -7,8 +7,8 @@ citations:
 - id: 10.1016/j.physbeh.2018.09.012
   locator_quote: Therefore, even mild iron deficiency (ID) may result in decreased
     endurance, increased irritability and withdrawal behavior among women.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Mild iron deficiency may affect female endurance and behavior
 population_applicability:
   age: 20-32 years

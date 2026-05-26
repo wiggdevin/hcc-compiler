@@ -11,8 +11,8 @@ citations:
     reduced body fat percentage (BFP) (WMD: -0.66%; 95% CI: -1.03, -0.28; p = 0.001),
     fat mass (FM) (WMD: -0.66 kg; 95% CI: -0.91, -0.41; p < 0.001), and waist circumference
     (WC) (WMD: -0.69 cm; 95% CI: -1.16, -0.22; p = 0.004).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of Supplementation with Milk Proteins on Body Composition
     and Anthropometric Parameters: A Systematic Review and Dose-Response Meta-Analysis'
 population_applicability:

@@ -9,8 +9,8 @@ citations:
   locator_quote: Among single-form aerobic exercise interventions for fibromyalgia,
     swimming appeared to provide the greatest improvement in overall health status,
     while Liuzijue showed favorable effects on pain reduction and sleep quality.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effectiveness of aerobic exercise in fibromyalgia: A systematic review
     and network meta-analysis'
 population_applicability:

@@ -8,8 +8,8 @@ citations:
   locator_quote: "A pooled analysis revealed no significant effect of carbohydrate\
     \ intake on muscle hypertrophy (SMD\u2009=\u20090.15, p\u2009=\u20090.23), with\
     \ negligible heterogeneity across studies."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'The Effect of Carbohydrate Intake on Muscle Hypertrophy: A Systematic
     Review and Meta-analysis'
 population_applicability:

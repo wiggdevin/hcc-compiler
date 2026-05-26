@@ -9,8 +9,8 @@ citations:
   locator_quote: In sarcopenic older adults, designing an evidence-based RT induces
     significant gains in muscle mass, but training variables manipulation does not
     yield greater outcomes.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Influence of Resistance Training Variables to Improve Muscle Mass
     Outcomes in Sarcopenia: A Systematic Review With Meta-Regressions'
 population_applicability:

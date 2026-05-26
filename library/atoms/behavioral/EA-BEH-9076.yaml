@@ -9,8 +9,8 @@ citations:
   locator_quote: This umbrella review identified "social support (unspecified)" as
     a consistently effective BCT across multiple adolescent health behavior domains,
     particularly with parental/peer involvement.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Behavior Change Techniques in Digital Health Interventions for Promoting
     Adolescent Health Behaviors: Systematic Umbrella Review'
 population_applicability:

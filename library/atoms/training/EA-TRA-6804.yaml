@@ -10,8 +10,8 @@ citations:
   locator_quote: Results showed a significant effect favouring SSGs over HIIT protocols
     in improving COD, while no significant differences were found regarding ST, VJ,
     and END.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effectiveness of small-sided games vs high-intensity interval training
     on physical fitness in female soccer players: a systematic review and meta-analysis'
 population_applicability:

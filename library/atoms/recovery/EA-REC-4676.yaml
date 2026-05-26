@@ -17,8 +17,8 @@ citations:
     \ 0.48-0.89) demonstrated a larger positive effect than after cardiovascular intermittent\
     \ (g\u2009=\u20090.52, 95% CI: 0.06-0.97), while physical recovery techniques\
     \ performed after cardiovascular continuous exercise had no effect."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Influence of physical post-exercise recovery techniques on vagally-mediated
     heart rate variability: A systematic review and meta-analysis'
 population_applicability:

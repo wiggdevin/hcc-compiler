@@ -7,8 +7,8 @@ citations:
 - id: 10.1016/j.bcmd.2026.102989
   locator_quote: Endurance exercise training improves cardiorespiratory function and
     HRQoL related to physical function in patients with SCD.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Exercise training adaptations on cardiorespiratory fitness and quality
     of life of patients with sickle cell disease: A systematic review'
 population_applicability:

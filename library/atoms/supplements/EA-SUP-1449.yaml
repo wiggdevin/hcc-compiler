@@ -8,8 +8,8 @@ citations:
 - id: 10.3390/nu17101709
   locator_quote: 'Caffeine supplementation improved volleyball-specific outcomes,
     including attack and serve accuracy (SMD: 0.50; 95% CI: 0.11-0.90; p = 0.01).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of Caffeine Supplementation on Exercise Performance in Volleyball
     Players: A Systematic Review and Meta-Analysis'
 population_applicability:

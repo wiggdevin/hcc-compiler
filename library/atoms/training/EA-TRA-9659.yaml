@@ -9,8 +9,8 @@ citations:
   locator_quote: Standalone plyometric training is effective for enhancing vertical
     jump performance in basketball players, particularly squat jump, but has limited
     transfer to 20-meter sprint performance.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Standalone plyometric training in basketball players: a meta-analytic
     comparison of countermovement jump, squat jump, and sprint performance enhancements'
 population_applicability:

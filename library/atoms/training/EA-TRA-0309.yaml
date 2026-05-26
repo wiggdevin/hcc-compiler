@@ -13,8 +13,8 @@ citations:
     ranking (SUCRA 79.0%). For PBF, both MC (MD = -3.53, 95% CI -5.70 to -1.36) and
     RT (MD = -2.30, 95% CI -3.98 to -0.62) were effective, with MC ranking highest
     (SUCRA 77.1%).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Comparative effectiveness of exercise modalities and nutritional supplementation
     for sarcopenic obesity in older adults: a network meta-analysis based on randomized
     controlled trials'

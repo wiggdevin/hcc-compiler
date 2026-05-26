@@ -14,8 +14,8 @@ citations:
     physical indicators such as chair rise (large effect, SMD = 1.09; CoE: high),
     timed up and go (medium SMD, 0.70; CoE: high), and global mobility score (large
     SMD, 1.02; CoE: high).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Explore the Optimal Treatment Regimen Across Combinations of Variate
     Protein Sources and Exercise Modalities and Its Associated Factors in Older Adults:
     A Network Meta-Analysis and Meta-Regression of Randomized Controlled Trials'

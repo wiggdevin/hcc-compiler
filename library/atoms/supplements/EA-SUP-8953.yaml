@@ -7,8 +7,8 @@ citations:
 - id: 10.3389/fimmu.2026.1743603
   locator_quote: Creatine supplementation does not significantly reduce inflammatory
     biomarkers in humans based on current evidence.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Impact of creatine supplementation on inflammation: evidence from
     a systematic review and meta-analysis of randomized double-blind placebo trials'
 population_applicability:

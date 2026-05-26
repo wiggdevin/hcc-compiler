@@ -8,8 +8,8 @@ citations:
 - id: 10.7717/peerj.20764
   locator_quote: Meta-analyses confirmed statistically significant benefits, particularly
     in terms of sleep latency and efficiency.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Physical exercise programmes to improve insomnia or poor sleep quality
     in non-hospitalised elderly people: a systematic review and meta-analysis'
 population_applicability:

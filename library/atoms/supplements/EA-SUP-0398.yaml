@@ -14,8 +14,8 @@ citations:
     \ to 2.57), and Five Times Sit-to-Stand Test performance (SMD = -1.42, 95% CI:\
     \ -2.68 to -0.16). No significant effects were observed for skeletal muscle mass\
     \ index or appendicular skeletal muscle mass."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Combined resistance training and amino acid-based supplementation
     for sarcopenia in older adults: a systematic review and meta-analysis'
 population_applicability:

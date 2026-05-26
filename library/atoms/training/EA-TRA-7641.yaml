@@ -9,8 +9,8 @@ citations:
     and sex-adjusted norms, fit participants with relative VO2max values in the 70th
     percentile or higher possessed longer telomeres (standardized mean difference
     [95% confidence interval {CI}]: 0.36 [0.14-0.59], p = .002).'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: A Systematic Review and Meta-analysis Highlights a Link Between Aerobic
     Fitness and Telomere Maintenance
 population_applicability:

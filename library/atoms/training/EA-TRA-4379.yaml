@@ -11,8 +11,8 @@ citations:
     \ between mean changes in time-trial speed/power (reflecting competition endurance\
     \ performance) and mean changes in endurance performance predictors [peak speed/power,\
     \ maximal oxygen uptake (V\u0307O2max), and aerobic/anaerobic threshold]."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Meta-analyses of the effects of high-intensity interval training in
     elite athletes - part II: relationships between the mean effects on various performance
     measures'

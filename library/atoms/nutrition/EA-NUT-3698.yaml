@@ -8,8 +8,8 @@ citations:
   locator_quote: A meta-analysis of five studies (n = 241) showed that VLED with exercise
     resulted in a higher retention of FFM compared to VLED alone (mean difference
     = 0.83 kg, 95 % CI 0.17-1.49, p = 0.01).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'The impact of exercise on fat free mass reduction during very low
     energy diet-induced weight loss in adults with overweight or obesity: A systematic
     review and meta-analysis'

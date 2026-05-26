@@ -9,8 +9,8 @@ citations:
   locator_quote: Caff-MR was associated with trivial-to-small improvements in exercise
     performance (k = 114; g = 0.12, p = 0.01). Benefits were most consistent for aerobic
     endurance and in the fed state; ~5-s rinses outperformed longer durations.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Revisiting the evidence on caffeine mouth rinse: effects on exercise
     and cognitive performance: a meta-analytic review'
 population_applicability:

@@ -10,8 +10,8 @@ citations:
     U/mL, 95% CI: -4.172 to -0.069, p = 0.043), but showed no significant effects\
     \ on BMI, fat mass, fat-free mass, visceral fat, blood lipids, glucose, HOMA-IR,\
     \ or blood pressure (p > 0.05)."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of time-restricted eating on body composition and metabolic
     parameters in overweight and obese women: a systematic review and meta-analysis'
 population_applicability:

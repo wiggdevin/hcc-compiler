@@ -16,8 +16,8 @@ citations:
     \ For post-exercise recovery, pure protein supplements also showed statistically\
     \ significant effects compared to carbohydrate supplements for maintaining glycogen\
     \ resynthesis [\u03BC(SMD): 0.83, 95% CI: 0.21 to 1.46]."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: The effectiveness of protein supplements on athletic performance and
     post-exercise recovery - a Bayesian multilevel meta-analysis of randomized controlled
     trials

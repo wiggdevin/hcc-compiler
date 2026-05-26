@@ -9,8 +9,8 @@ citations:
   locator_quote: Analysis reveals that AI-powered social robots effectively motivate
     older adults to engage in PAs, leading to increased exercise adherence, higher
     engagement levels, and extended training durations.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Artificial intelligence-powered social robots for promoting physical
     activity in older adults: A systematic review'
 population_applicability:

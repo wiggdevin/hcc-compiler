@@ -8,8 +8,8 @@ citations:
 - id: 10.1186/s13690-026-01892-5
   locator_quote: Combined aerobic and resistance training demonstrated the largest
     effect (standardized mean difference -1.56; 95% credible interval -2.08 to -1.03).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: "Non-pharmacological interventions for improving sleep quality in adults\
     \ aged 50\_years and older: a systematic review and network meta-analysis"
 population_applicability:

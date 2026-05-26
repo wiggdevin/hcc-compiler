@@ -7,8 +7,8 @@ citations:
 - id: 10.1016/j.clnu.2025.08.005
   locator_quote: Combined aerobic exercise (AE) and resistance exercise (RE) significantly
     improved 6-min walk test (6MWT) (MD = 52.2 m; 95 % CrI, 31.7-73.0).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Nutritional and exercise interventions for muscle status in hemodialysis
     patients: A systematic review and network meta-analysis'
 population_applicability:

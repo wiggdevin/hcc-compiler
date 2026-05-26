@@ -7,8 +7,8 @@ citations:
 - id: 10.1002/pri.70033
   locator_quote: The results of this study indicate that CWI after exercise may have
     a positive acute effect on parasympathetic reactivation, as measured by HRV.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Cold Water Immersion, Heart Rate Variability and Post-Exercise Recovery:
     A Systematic Review'
 population_applicability:

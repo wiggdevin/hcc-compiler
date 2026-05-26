@@ -12,8 +12,8 @@ citations:
     with those of CER. All IER diets combined reduced fat-free mass (WMD: -0.20 kg;
     95% CI: -0.39 to -0.01; P = 0.044) and waist circumference (WMD: -0.91 cm; 95%
     CI: -1.76 to -0.06; P = 0.036) more than CER.'
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Effects of Intermittent Energy Restriction Compared with Those of Continuous
     Energy Restriction on Body Composition and Cardiometabolic Risk Markers - A Systematic
     Review and Meta-Analysis of Randomized Controlled Trials in Adults

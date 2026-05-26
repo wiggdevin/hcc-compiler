@@ -8,8 +8,8 @@ citations:
 - id: 10.1080/02640414.2025.2603845
   locator_quote: MVPA, particularly vigorous PA, showed the most consistent benefits,
     including lower adiposity, reduced cardiometabolic risk, and higher fitness.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Compositional data analysis of 24-hour movement behaviors as a predictor
     for cardiometabolic health outcomes among school-aged youth: A systematic review'
 population_applicability:

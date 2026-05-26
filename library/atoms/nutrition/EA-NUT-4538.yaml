@@ -8,8 +8,8 @@ citations:
   locator_quote: Our results demonstrate moderate associations between total daily
     leucine and both quadriceps CSA (r = 0.42; p = 0.004) and 1-RM (r = 0.45; p =
     0.001).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Daily Leucine Intake Is Positively Associated with Lower Limb Skeletal
     Muscle Mass and Strength in the Elderly
 population_applicability:

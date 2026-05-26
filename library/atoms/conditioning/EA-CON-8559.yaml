@@ -8,8 +8,8 @@ citations:
   locator_quote: Despite the very low certainty of evidence, the findings suggest
     similar effects induced by both SSG and HIIT on improving endurance performance
     and VO2max.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Endurance Performance Adaptations between SSG and HIIT in Soccer Players:
     A Meta-analysis'
 population_applicability:

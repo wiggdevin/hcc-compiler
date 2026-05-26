@@ -10,8 +10,8 @@ citations:
     \ showed significant reductions in BW (MD: -1.46\u2009kg; 95% CI: -2.65, -0.26),\
     \ FM (MD: -1.50\u2009kg; 95% CI: -2.77, -0.24), and FFM (MD: -0.41\u2009kg; 95%\
     \ CI: -0.79, -0. 03)."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing
     Time-Restricted Eating With and Without Caloric Restriction for Weight Loss
 population_applicability:

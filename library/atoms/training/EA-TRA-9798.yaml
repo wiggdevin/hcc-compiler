@@ -8,8 +8,8 @@ citations:
 - id: 10.1016/j.jaip.2025.11.032
   locator_quote: HIIT improved asthma control, asthma-related quality of life, and
     aerobic capacity in adults with asthma compared with CG.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'High-Intensity Interval Training in Adults With Asthma: Systematic
     Review and Meta-Analysis'
 population_applicability:

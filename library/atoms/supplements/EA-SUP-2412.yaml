@@ -8,8 +8,8 @@ citations:
   locator_quote: The review supported claims that creatine supplementation can increases
     brain creatine content but also demonstrated somewhat equivocal results for effects
     on cognition.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Creatine supplementation research fails to support the theoretical
     basis for an effect on cognition: Evidence from a systematic review'
 population_applicability:

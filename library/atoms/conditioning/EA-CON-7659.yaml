@@ -9,8 +9,8 @@ citations:
   locator_quote: HIIT elicited significantly greater VO2max improvements than GT (g
     = 0.97; p < 0.01) and also surpassed GT for continuous endurance performance (g
     = 0.91; p < 0.01).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: Meta-analysis of high-intensity interval training and alternative modalities
     for enhancing aerobic and anaerobic endurance in young athletes
 population_applicability:

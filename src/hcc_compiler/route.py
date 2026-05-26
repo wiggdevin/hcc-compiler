@@ -14,6 +14,21 @@ def _id_present_in_library(library_root: Path, atom_id: str) -> bool:
     return any((d / fname).exists() for d in atoms_root.iterdir() if d.is_dir())
 
 
+def _merge_citation_verdicts(atom: dict, verify: dict) -> None:
+    """Mutate ``atom['citations'][i]['existence'/'faithfulness']`` in place
+    from the verify-output payload, so library YAMLs carry the gate's
+    real verdicts instead of the LLM's placeholder strings."""
+    verdicts_by_id = {
+        c["id"]: c for c in verify.get("citations", []) if "id" in c
+    }
+    for cit in atom.get("citations", []):
+        v = verdicts_by_id.get(cit.get("id"))
+        if v is None:
+            continue
+        cit["existence"] = v["existence"]
+        cit["faithfulness"] = v["faithfulness"]
+
+
 def route_draft(draft_dir: Path, verify_dir: Path, library_root: Path) -> dict[str, str]:
     """Move each draft YAML into library/atoms/<domain>/ (admitted) or library/queue/ (queued)."""
     decisions: dict[str, str] = {}
@@ -24,7 +39,9 @@ def route_draft(draft_dir: Path, verify_dir: Path, library_root: Path) -> dict[s
         if not verify_path.exists():
             decisions[atom_id] = "skipped-no-verify"
             continue
-        verdict = json.loads(verify_path.read_text(encoding="utf-8")).get("overall")
+        verify = json.loads(verify_path.read_text(encoding="utf-8"))
+        verdict = verify.get("overall")
+        _merge_citation_verdicts(atom, verify)
         tier = atom.get("tier")
         if _id_present_in_library(library_root, atom_id):
             decisions[atom_id] = "skipped-collision"

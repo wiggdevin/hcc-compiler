@@ -8,8 +8,8 @@ citations:
   locator_quote: Creatine showed a significant effect (ES = -0.46; 95% CIs = -0.75
     to -0.17, p = 0.002; I2 = 11%) on swimming performance, while the rest of the
     analyzed supplements did not show significant effects (all p > 0.05).
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Sport supplementation in competitive swimmers: a systematic review
     with meta-analysis'
 population_applicability:

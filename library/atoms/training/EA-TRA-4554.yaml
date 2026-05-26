@@ -8,8 +8,8 @@ citations:
 - id: 10.3389/fphys.2026.1797432
   locator_quote: Exercise interventions with high adherence to the ACSM guidelines
     may be more effective in improving quality of life, fatigue, and pain.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of ACSM guideline-based exercise on patients with lung cancer:
     a systematic review and meta-analysis'
 population_applicability:

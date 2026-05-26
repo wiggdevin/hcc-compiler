@@ -8,8 +8,8 @@ citations:
   locator_quote: This study suggests that goal-setting guidelines for return-to-work
     rehabilitation in Australia are inconsistent and primarily based on SMART goal
     principles.
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: A systematic-narrative review of goal-setting guidelines in workers'
     compensation rehabilitation in Australia
 population_applicability:

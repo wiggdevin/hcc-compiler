@@ -10,8 +10,8 @@ citations:
     +\u2009protein (SMD: 2.2, very large), carbohydrate\u2009+\u2009electrolyte (SMD:\
     \ 1.3, large), bovine colostrum (SMD: moderate) and caffeine (SMD: 0.29, small)\
     \ were associated with a significant effect on increasing the distance covered."
-  existence: UNVERIFIABLE
-  faithfulness: ACCESS_LIMITED
+  existence: VERIFIED
+  faithfulness: VERIFIED
   cited_title: 'Effects of different dietary supplements on athletic performance in
     soccer players: a systematic review and network meta-analysis'
 population_applicability:
