@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — carl_strength
 
-- Compiled at: 2026-05-25T10:29:35.915565+00:00
+- Compiled at: 2026-05-26T13:35:08.534301+00:00
 - Library version: 0.1.0
 
 ---
@@ -26,7 +26,17 @@
 **For this client — constraint-aware notes:**
 - CKD: cap protein at 1.2-1.4 g/kg/day or per nephrology guidance; monitor eGFR + serum creatinine 4-6 weekly during deficit; avoid the 2.3-3.1 g/kg/day band entirely until clinical clearance.
 
-### Pattern: RP-NUT-hypertrophy-surplus-lean-mass (sim=0.80)
+### Pattern: RP-NUT-protein-band (sim=0.80)
+
+**Applies because:** Resistance-trained adults in an energy deficit.
+**Parameterization:** 2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.
+**Safety bounds:** Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.
+
+**Backing evidence (top 3 by population match):**
+
+> ⚠ ⚠ CKD or other renal contraindication present. (matches intake)
+
+### Pattern: RP-NUT-hypertrophy-surplus-lean-mass (sim=0.79)
 
 **Applies because:** Positive energy balance provides substrate availability that allows mTOR-mediated MPS to exceed muscle protein breakdown without substrate competition; elevated protein intake across the day saturates fractional synthetic rate repeatedly; resistance training creates the mechanical stimulus that directs surplus calories toward lean tissue rather than adipose deposition.
 **For this client (M, 45y, trained):** Resistance-trained adults (1-3 years, 18-49 y): 10-15% caloric surplus; protein 1.8-2.2 g/kg/day; carbohydrate intake does not significantly enhance hypertrophy beyond adequate protein under isonitrogenous conditions; prioritize carbohydrate for training performance rather than anabolic effect.
@@ -43,16 +53,6 @@ Untrained adults (0-12 months resistance training): 10-15% caloric surplus above
 
 > ⚠ ⚠ CKD (protein restriction required) (matches intake)
 
-### Pattern: RP-NUT-protein-band (sim=0.80)
-
-**Applies because:** Resistance-trained adults in an energy deficit.
-**Parameterization:** 2.3-3.1 g/kg/day for resistance-trained adults in a hypocaloric period; pick upper end in steeper deficits or higher training volume.
-**Safety bounds:** Flag renal history before recommending; daily intakes above ~3.1 g/kg/d are not supported by the cited evidence for additional FFM benefit.
-
-**Backing evidence (top 3 by population match):**
-
-> ⚠ ⚠ CKD or other renal contraindication present. (matches intake)
-
 ### Pattern: RP-NUT-meal-timing-protein-distribution (sim=0.78)
 
 **Applies because:** Skeletal muscle protein synthesis is acutely stimulated by a leucine threshold-dependent mechanism per meal; distributing protein across multiple feedings captures repeated MPS pulses throughout the day rather than relying on a single large bolus, which saturates the response and leaves the muscle in a relative fasting state between feedings.
@@ -66,30 +66,16 @@ Sedentary or untrained healthy adults: 3-4 meals daily, ~25-30 g protein per mea
 
 **Backing evidence (top 3 by population match):**
 - Protein requirements estimated by the indicator amino acid oxidation (IAAO) method are approximately 30% higher than those estimated by the nitrogen balance (NB) method in both non-athletes and athletes. ([10.1016/j.tjnut.2025.08.036])
+- Protein timing does not importantly modify exercise-induced changes in lean body mass. ([10.3390/nu17132070])
 
 - **EA-NUT-1139** (sim 0.73, pop-match 1.00): Time-restricted feeding reduces body mass and improves nutrient metabolism in both normal-weight and overweight individuals without altering fat-free mass or impairing aerobic fitness and muscular performance among physically active adults. ([10.1080/07315724.2021.1958719])
 - **EA-NUT-1643** (sim 0.70, pop-match 1.00): The mean nitrogen requirement for healthy adults is 104.2 mg N/kg/day, with no significant differences observed based on sex, age group, climate, or protein source. ([10.3390/nu17162615])
-- **EA-NUT-1676** (sim 0.66, pop-match 1.00): In adults with overweight or obesity, intermittent fasting (IF) is comparably effective to continuous caloric restriction (CR) for reducing body weight and adiposity, and for improving cardiometabolic health markers. ([10.1111/obr.13855])
-- **EA-NUT-7354** (sim 0.65, pop-match 1.00): While lean mass loss is substantial during significant weight reduction, the proportion of weight lost as lean mass is broadly comparable between incretin-based pharmacotherapy and lifestyle interventions, and muscle mass can be significantly preserved by integrating resistance training, adequate protein intake, and body composition monitoring. ([10.1111/dom.70666])
-- **EA-NUT-6673** (sim 0.65, pop-match 1.00): Resistance training performed in a fasted state results in similar gains in fat-free mass, muscle hypertrophy, and strength compared to training in a fed state, but may be associated with greater reductions in body fat mass. ([10.1016/j.jbmt.2025.08.003])
+- **EA-NUT-6673** (sim 0.67, pop-match 1.00): Resistance training performed in a fasted state results in similar gains in fat-free mass, muscle hypertrophy, and strength compared to training in a fed state, but may be associated with greater reductions in body fat mass. ([10.1016/j.jbmt.2025.08.003])
+- **EA-NUT-4389** (sim 0.66, pop-match 1.00): Meta-analysis quantifies the accuracy of blood glucose prediction models across various horizons and the performance of meal and physical activity detection models. ([10.1088/2516-1091/ae39b9])
 
 ## Training
 
-### Pattern: RP-TRA-hypertrophy-frequency-volume-trained (sim=0.78)
-
-**Applies because:** In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery.
-**For this client (M, 45y, trained):** Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume.
-<details><summary>All populations covered by this pattern</summary>
-
-Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.
-
-</details>
-**Safety bounds:** Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably.
-
-**Backing evidence (top 3 by population match):**
-- Supersets provide a time-efficient alternative to traditional resistance training, reducing session duration without compromising training volume, muscle activation, perceived recovery, or chronic adaptations in maximal strength, strength endurance, and muscle hypertrophy. ([10.1007/s40279-025-02176-8])
-
-### Pattern: RP-TRA-maximal-strength-low-rep-trained (sim=0.77)
+### Pattern: RP-TRA-maximal-strength-low-rep-trained (sim=0.80)
 
 **Applies because:** Maximal strength adaptation is mediated by neural drive and motor unit recruitment, which are preferentially stimulated by high-load (>= 85% 1RM) low-rep contractions; resistance-trained adults have the connective tissue and motor control to safely tolerate near-maximal loads and require this intensity stimulus to drive further strength gains beyond the moderate-load hypertrophy zone.
 **For this client (M, 45y, trained):** Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 reps at 85-100% 1RM, 3-6 sets per primary compound lift, 2-4 sessions per week, 3-5 min rest between heavy sets.
@@ -102,7 +88,7 @@ Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 r
 
 **Backing evidence (top 3 by population match):**
 
-### Pattern: RP-TRA-endurance-concurrent-trained (sim=0.76)
+### Pattern: RP-TRA-endurance-concurrent-trained (sim=0.79)
 
 **Applies because:** Concurrent endurance and resistance training trigger conflicting intracellular signaling cascades (AMPK vs mTOR) that can attenuate hypertrophic adaptations from resistance training when scheduled too closely; this interference effect is dose-dependent and modifiable by session separation, intensity selection, and exercise specificity, allowing trained adults to develop both strength and endurance capacities concurrently with appropriate programming.
 **For this client (M, 45y, trained):** Endurance-trained adults adding resistance training (e.g., distance runners, cyclists, triathletes): 2 strength sessions per week, 30-45 min each, focused on compound movements (squat, deadlift, lunge, single-leg work) at 4-8 reps and 75-85% 1RM; cap weekly resistance volume at 8-12 hard sets per major lower-body muscle group during peak endurance training phases.
@@ -117,14 +103,28 @@ Endurance-trained adults adding resistance training (e.g., distance runners, cyc
 - Aerobic and resistance training significantly improve quality of life, fatigue, body composition, and functional capacity in patients across various cancer types. ([10.1007/s00520-026-10363-0])
 - Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents. ([10.1111/sms.14764])
 
+### Pattern: RP-TRA-hypertrophy-frequency-volume-trained (sim=0.79)
+
+**Applies because:** In resistance-trained adults, hypertrophy follows a graded dose-response to weekly volume (~0.023 effect-size increment per added weekly set per muscle), with training frequency of 2-3x/week per muscle producing greater hypertrophy than 1x/week at matched volume due to distributed mechanical tension and higher per-session quality enabled by inter-session recovery.
+**For this client (M, 45y, trained):** Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume.
+<details><summary>All populations covered by this pattern</summary>
+
+Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets per muscle group distributed across 2-3 sessions per week, 6-15 reps at RIR 1-3, with primary compound lifts driving 50-70% of weekly set volume. Advanced trainees (3+ years, hypertrophy plateau): consider 16-22 weekly sets with frequency 2-3x/week per muscle and 25-30% of volume at 5-8 reps for stimulus diversity. Older trained adults (50+ y): same weekly volume framework but extend recovery to 48-72 h between same-muscle sessions; prioritize machine-supported variants for axial-loading-sensitive joints. Body recomposition during caloric deficit: cap weekly volume at 12-15 sets per muscle to preserve recovery quality; emphasize the higher-load end of the rep range (6-10 reps) to maintain strength under reduced calories. Hypertrophy-focused phase during caloric surplus: progress toward upper bound (15-20 sets) over 4-6 week mesocycles with weekly volume increase of 10-15% from baseline. Recreational lifters (less than 1 yr): start at the lower end (6-10 weekly sets per muscle) and add 1-2 sets weekly until reaching 10-12 sets before plateauing volume.
+
+</details>
+**Safety bounds:** Cap weekly sets per muscle group at 25 without experienced coach supervision; reduce volume by 20-30% during planned deload weeks every 4-8 weeks; halt volume progression and reassess if joint pain, sleep deterioration, or chronically elevated session RPE (>9 across multiple sessions) emerge; do not escalate volume across multiple muscles simultaneously when recovery markers are trending unfavorably.
+
+**Backing evidence (top 3 by population match):**
+- Supersets provide a time-efficient alternative to traditional resistance training, reducing session duration without compromising training volume, muscle activation, perceived recovery, or chronic adaptations in maximal strength, strength endurance, and muscle hypertrophy. ([10.1007/s40279-025-02176-8])
+
+- **EA-TRA-1931** (sim 0.72, pop-match 1.00): Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect. ([10.1080/02640414.2024.2425536])
+- **EA-TRA-4688** (sim 0.69, pop-match 1.00): High-intensity interval training appears to improve aerobic capacity in adults with congenital heart disease with no serious adverse events. ([10.1016/j.hlc.2024.09.008])
+- **EA-TRA-7564** (sim 0.69, pop-match 1.00): Resistance exercise interventions lasting up to 6 months do not result in meaningful changes in muscle fiber number, as meta-analysis results indicated no significant alteration in estimated muscle fibers. ([10.23736/S0022-4707.25.17206-X])
 - **EA-TRA-9632** (sim 0.69, pop-match 1.00): Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. ([10.3389/fpubh.2026.1707627])
-- **EA-TRA-1931** (sim 0.69, pop-match 1.00): Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect. ([10.1080/02640414.2024.2425536])
-- **EA-TRA-7354** (sim 0.68, pop-match 1.00): In adults with overweight or obesity undergoing significant weight reduction, adding resistance training to lifestyle intervention produces the most favourable lean-mass preservation profile, with only 17.5% (95% CI: 14.2–20.8%) of total weight lost attributable to lean mass, compared to 26.2% for lifestyle alone and 25.4–35.2% for incretin-based pharmacotherapy. ([10.1111/dom.70666])
-- **EA-TRA-4939** (sim 0.68, pop-match 1.00): Higher resistance training volume yields better outcomes for pain intensity and disability compared to lower volume in individuals with patellofemoral pain. ([10.2519/jospt.2025.13062])
 
 ## Conditioning
 
-### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.69)
+### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.66)
 
 **Applies because:** HIIT drives superior mitochondrial biogenesis, stroke volume augmentation, and peripheral oxygen extraction versus lower-intensity modalities by repeatedly stressing the oxygen transport chain near its ceiling, as corroborated by consistent effect-size advantages (SMD/g 0.37–3.6 for VO2-related outcomes) across diverse meta-analyses spanning clinical, youth, and performance populations.
 **Parameterization:** Healthy endurance athletes: standard normoxic HIIT; add hypoxic stimulus (live-high-train-low or hypoxic intervals) for an incremental VO2max gain of ~SMD 0.26 over normoxic HIIT alone. Racket-sport and team-sport athletes: HIIT or small-sided games (SSG) are interchangeable for VO2max; HIIT favored when sprint and power outcomes are co-primary. Youth athletes: apply age-appropriate volume scaling; effect sizes are large (g ≈ 0.97) so moderate session counts (2–3×/week) suffice. Post-stroke patients: begin at 50–60% HRR and progress to ≥80% HRR under supervised conditions; target VO2-VT improvements first (MD +2.20 mL/kg/min vs. MICT). HFpEF patients: combine HIIT with inspiratory muscle training (IMT) for additive VO2 peak benefit (IMT SMD 3.6, HIIT SMD 3.5 mL/kg·min); reduce session duration and increase rest intervals relative to healthy cohorts.
@@ -135,14 +135,14 @@ Endurance-trained adults adding resistance training (e.g., distance runners, cyc
 - Intermittent hypoxia (IH) protocols, including live high-train low (LHTL), repeated sprint training in hypoxia (RSH), and hypoxic interval training, effectively improve aerobic capacity, anaerobic performance, and muscular strength in both trained and untrained individuals. ([10.1186/s40798-025-00933-7])
 - High-intensity interval training (HIIT) is more effective than moderate-intensity continuous training (MICT) in improving oxygen consumption at peak (V̇O2-peak) and at ventilation threshold (VO2-VT) in patients after stroke. ([10.3389/fneur.2026.1727980])
 
-- **EA-CON-9235** (sim 0.59, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
+- **EA-CON-9235** (sim 0.60, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
 
 ## Supplements
 
 **For this client — constraint-aware notes:**
 - CKD: do NOT initiate creatine loading without nephrology clearance and baseline + 4-week eGFR + serum creatinine; standard creatine doses generally safe in CKD 1-2 but require monitoring.
 
-### Pattern: RP-SUP-creatine-resistance-body-composition (sim=0.70)
+### Pattern: RP-SUP-creatine-resistance-body-composition (sim=0.71)
 
 **Applies because:** Creatine supplementation saturates intramuscular phosphocreatine stores, accelerating ATP resynthesis during repeated high-intensity bouts and enabling higher training volumes, thereby amplifying the anabolic stimulus of resistance training and producing consistent meta-analytic gains in fat-free mass (+0.82–1.39 kg) and strength across diverse populations.
 **Parameterization:** Postmenopausal women: ≥5 g/day required to elicit lean mass gains (+0.37 kg) and lower-body strength (+7.5 kg leg-press 1RM); untrained individuals: expect larger absolute strength gains than trained athletes, who show greater absolute FFM gains (1.82 kg vs 1.23 kg); active females: performance responses are inconsistent and clients should set conservative expectations; combat sport and swimming athletes: use for sport-specific power and ergogenic outcomes; co-supplementation with β-alanine (divided 4–6.4 g/day) may further enhance repeated high-intensity bout performance without adding to maximal strength beyond creatine alone.
@@ -150,12 +150,12 @@ Endurance-trained adults adding resistance training (e.g., distance runners, cyc
 
 **Backing evidence (top 3 by population match):**
 - Creatine supplementation significantly improves muscle strength in the general population, with untrained individuals showing greater improvements than trained ones, and low-to-moderate doses combined with high-intensity exercise yielding better effects. ([10.7717/peerj.20380])
-- Creatine supplementation combined with resistance training increases lean body mass and reduces body fat percentage and mass compared to resistance training alone. ([10.1519/JSC.0000000000004862])
-- Creatine supplementation increases body mass and fat-free mass, and improves muscular power and maximal strength in combat sport athletes. ([10.1080/19390211.2025.2539880])
+- Creatine supplementation demonstrated superior effects for muscle strength, protein supplementation proved most effective for endurance performance, and omega-3 supplementation yielded the greatest benefits for recovery outcomes in trained athletes. ([10.3390/nu18060909])
+- Protein supplements demonstrate beneficial effects on endurance performance, muscle strength, and glycogen resynthesis compared to placebo or carbohydrate-only supplements, though these benefits may be attributable to unmatched energy intake between groups rather than protein per se. ([10.1080/15502783.2025.2605338])
 
 ## Recovery
 
-### Pattern: RP-REC-exercise-sleep-quality (sim=0.67)
+### Pattern: RP-REC-exercise-sleep-quality (sim=0.64)
 
 **Applies because:** Multiple systematic reviews and meta-analyses consistently report significant SMD improvements in subjective sleep quality (range ~0.47–1.56 across modalities), likely mediated by thermoregulatory normalization, hypothalamic-pituitary-adrenal axis down-regulation, and circadian rhythm entrainment via timed physical stimulation.
 **Parameterization:** Adults ≥50 yr: combined aerobic + resistance training preferred (SMD −1.56); perinatal women: relaxation exercises 30–60 min/session, 1–2×/week, ≤4 weeks (SMD −2.54 to −3.13); cancer patients on chemotherapy: activity pacing plus progressive muscle relaxation first-line (ranked 98.6%), aerobic exercise or walking as alternatives; older adults with sleep disturbance or mild cognitive impairment: Tai Chi, Baduanjin-style Qigong (PSQI reduction −2.47), or rTMS+Tai Chi combination; perimenopausal women with insomnia: acupuncture or community-based traditional Chinese exercises as adjuncts; general adults: any aerobic, resistance, or mind-body modality scaled to baseline sleep impairment severity and intervention duration.
@@ -166,22 +166,22 @@ Endurance-trained adults adding resistance training (e.g., distance runners, cyc
 - Dance interventions produce a statistically significant overall improvement in sleep quality with a small-to-approaching-moderate effect. ([10.3389/fpubh.2026.1776902])
 - Routine acupuncture combined with auricular acupuncture may be an effective intervention for treating insomnia in perimenopausal women. ([10.3389/fneur.2025.1726927])
 
-- **EA-REC-4676** (sim 0.64, pop-match 1.00): Physical post-exercise recovery techniques produce a small to moderate positive effect on vagally-mediated heart rate variability (RMSSD), with cold water immersion showing a moderate to large effect and techniques following resistance exercise demonstrating a larger positive effect than those following cardiovascular exercise. ([10.1111/cpf.12855])
-- **EA-REC-8071** (sim 0.64, pop-match 1.00): In offshore sailing, optimal sleep management strategies vary by crew size and race duration: for short regattas, 'banking sleep' beforehand is beneficial, while for long races, 4.5-5.5 h of daily sleep, in 30-min to 1-h episodes, is optimal. ([10.1007/s40279-025-02389-x])
-- **EA-REC-8163** (sim 0.60, pop-match 1.00): Cold water immersion (CWI) after exercise may have a positive acute effect on parasympathetic reactivation, as measured by heart rate variability (HRV). ([10.1002/pri.70033])
-- **EA-REC-1657** (sim 0.56, pop-match 1.00): Sleep and circadian interventions in athletes have a more substantial impact on positive affect compared to negative affect. ([10.1007/s40279-025-02387-z])
+- **EA-REC-4676** (sim 0.65, pop-match 1.00): Physical post-exercise recovery techniques produce a small to moderate positive effect on vagally-mediated heart rate variability (RMSSD), with cold water immersion showing a moderate to large effect and techniques following resistance exercise demonstrating a larger positive effect than those following cardiovascular exercise. ([10.1111/cpf.12855])
+- **EA-REC-1657** (sim 0.65, pop-match 1.00): Sleep and circadian interventions in athletes have a more substantial impact on positive affect compared to negative affect. ([10.1007/s40279-025-02387-z])
+- **EA-REC-8071** (sim 0.63, pop-match 1.00): In offshore sailing, optimal sleep management strategies vary by crew size and race duration: for short regattas, 'banking sleep' beforehand is beneficial, while for long races, 4.5-5.5 h of daily sleep, in 30-min to 1-h episodes, is optimal. ([10.1007/s40279-025-02389-x])
+- **EA-REC-8163** (sim 0.59, pop-match 1.00): Cold water immersion (CWI) after exercise may have a positive acute effect on parasympathetic reactivation, as measured by heart rate variability (HRV). ([10.1002/pri.70033])
 
 ## Behavioral
 
-### Pattern: RP-BEH-multicomponent-exercise-adherence (sim=0.73)
+### Pattern: RP-BEH-multicomponent-exercise-adherence (sim=0.72)
 
 **Applies because:** COM-B model and TDF analyses establish that exercise adherence is co-determined by capability, opportunity, and motivational factors simultaneously, meaning isolated single-domain strategies produce insufficient and non-durable behavior change, while multi-component approaches address the full causal architecture of adherence.
 **Parameterization:** Scale social support modality by setting and age: older adults benefit from AI-assisted or robotic social prompting to extend training duration and engagement; T2D populations require integration of glycemic self-monitoring feedback (HbA1c, fasting glucose, waist circumference targets) as motivational anchors; chronic pain populations should pair adherence strategies with high-value physiotherapy protocols and technology-based delivery where in-person access is limited; autonomy support and emotional experience management should be weighted more heavily when extrinsic motivation is low.
 **Safety bounds:** Exercise intensity must remain within individually medically cleared ranges; patients with uncontrolled HbA1c >10%, unstable cardiovascular disease, acute musculoskeletal injury, or severe unmanaged chronic pain flares require direct clinical supervision before program enrollment; AI/robotic-assisted interventions must include human clinical oversight protocols.
 
 **Backing evidence (top 3 by population match):**
-- Technology-based interventions can improve exercise adherence in patients with chronic pain undergoing high-value physiotherapy. ([10.1093/pm/pnad134])
 - Flexible and personalized physical activity programs, multidimensional social support, participant education, enhancing self-efficacy and motivation, monitoring and feedback, and managing emotional experiences are key implementation strategies to improve adherence in individuals with type 2 diabetes. ([10.1007/s12529-025-10400-y])
+- Technology-based interventions can improve exercise adherence in patients with chronic pain undergoing high-value physiotherapy. ([10.1093/pm/pnad134])
 - Barriers and facilitators to exercise adherence in community-dwelling older adults can be categorized using the COM-B model and TDF, and effective implementation strategies include tailored exercise programs, appropriate environments, multidimensional social support, monitoring and feedback, managing emotional experiences, participant education, enhancing self-efficacy, and exerting participant autonomy. ([10.1016/j.ijnurstu.2024.104808])
 
 ### Pattern: RP-BEH-multicomponent-bct-physical-activity (sim=0.66)
@@ -194,8 +194,8 @@ Endurance-trained adults adding resistance training (e.g., distance runners, cyc
 - Behavioral sleep interventions utilizing behavior change techniques (BCTs) such as goal setting and meditation are linked to positive outcomes for both sleep quality and cognitive function in middle-aged adults. ([10.1038/s41598-025-24009-4])
 - Behavioral change techniques such as Social support, Self-monitoring, Feedback, Social reward, Prompts/cues, and Behavioral contract are more frequently applied in effective physical activity interventions for adolescents. ([10.1186/s12889-025-25618-4])
 
-- **EA-BEH-6255** (sim 0.57, pop-match 1.00): Goal-setting guidelines for return-to-work rehabilitation in Australia are inconsistent and primarily based on SMART goal principles. ([10.1071/PY25160])
-- **EA-BEH-8816** (sim 0.52, pop-match 1.00): Interactive conversational agents can improve specific dietary behaviors, including fruit and vegetable intake and adherence to the Mediterranean diet, while also enhancing nutritional knowledge. ([10.2196/78220])
+- **EA-BEH-6255** (sim 0.56, pop-match 1.00): Goal-setting guidelines for return-to-work rehabilitation in Australia are inconsistent and primarily based on SMART goal principles. ([10.1071/PY25160])
+- **EA-BEH-8816** (sim 0.50, pop-match 1.00): Interactive conversational agents can improve specific dietary behaviors, including fruit and vegetable intake and adherence to the Mediterranean diet, while also enhancing nutritional knowledge. ([10.2196/78220])
 
 ## Metadata
 
