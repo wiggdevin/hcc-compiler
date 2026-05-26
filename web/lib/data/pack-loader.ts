@@ -20,9 +20,12 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { getPersona, type Persona } from "./personas";
 import type { EvidencePack, ClientIntake } from "./types";
 
-const REPO_ROOT = path.resolve(process.cwd(), "..");
-const PACK_DIR = path.join(REPO_ROOT, "docs", "examples", "sp2");
-const INTAKE_DIR = path.join(REPO_ROOT, "tests", "fixtures", "intakes");
+// The 9 demo personas are bundled into web/public/{sp2,intakes}/ at build
+// time (see web/package.json `prebuild` script) so they ship with the
+// deployed Vercel function. `process.cwd()` is the web/ root in both dev
+// and production serverless contexts.
+const PACK_DIR = path.join(process.cwd(), "public", "sp2");
+const INTAKE_DIR = path.join(process.cwd(), "public", "intakes");
 
 const UUID_RE =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;

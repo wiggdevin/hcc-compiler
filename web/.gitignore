@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Demo persona fixtures bundled into web/public/ at build time via web/package.json prebuild.
+# Source of truth is docs/examples/sp2/ and tests/fixtures/intakes/.
+public/sp2/
+public/intakes/

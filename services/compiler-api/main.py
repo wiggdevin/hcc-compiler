@@ -139,7 +139,7 @@ async def compile_endpoint(
     except LibraryVersionMismatch as exc:
         raise HTTPException(status_code=409, detail=str(exc))
     except Exception as exc:
-        logger.exception("Compile error for coach=%s", coach_id)
+        logger.exception("Compile error")
         raise HTTPException(status_code=500, detail={"error": "compile_failed", "message": str(exc)})
 
     return CompileResponse(json=result["json"], md=result["md"])

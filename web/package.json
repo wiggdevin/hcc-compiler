@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "mkdir -p public/sp2 public/intakes && cp -R ../docs/examples/sp2/. public/sp2/ && cp -R ../tests/fixtures/intakes/. public/intakes/",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

@@ -32,11 +32,11 @@ async function servePersonaMarkdown(slug: string): Promise<Response> {
     return new Response("Persona not found", { status: 404 });
   }
   const basename = persona.packFile.replace(/\.json$/, "");
+  // Demo persona .md files are bundled into web/public/sp2/ at build time
+  // (see web/package.json `prebuild`). Use the public dir, not ../docs/.
   const mdPath = path.resolve(
     process.cwd(),
-    "..",
-    "docs",
-    "examples",
+    "public",
     "sp2",
     `${basename}.md`,
   );
