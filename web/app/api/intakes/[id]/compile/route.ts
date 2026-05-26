@@ -116,13 +116,22 @@ export async function POST(
     return NextResponse.json({ error: msg }, { status: 500 });
   }
 
-  // Derive summary stats from the compiled JSON when present.
-  const j = compileResult.json as {
-    overall_confidence?: number;
-    patterns?: unknown[];
-    atoms?: unknown[];
-    warnings?: unknown[];
-  };
+  // Sum per-domain pattern/atom/warning counts. The compile JSON shape is
+  // { domain_recommendations: { <domain>: { patterns, atoms, gaps } } }.
+  // overall_confidence is computed client-side from per-atom + per-pattern
+  // scores via web/lib/scoring.ts, so we leave it null at insert time.
+  const dr = (compileResult.json?.domain_recommendations ?? {}) as Record<
+    string,
+    { patterns?: unknown[]; atoms?: unknown[]; warnings?: unknown[] }
+  >;
+  let patternCount = 0;
+  let atomCount = 0;
+  let warningsCount = 0;
+  for (const d of Object.values(dr)) {
+    if (Array.isArray(d.patterns)) patternCount += d.patterns.length;
+    if (Array.isArray(d.atoms)) atomCount += d.atoms.length;
+    if (Array.isArray(d.warnings)) warningsCount += d.warnings.length;
+  }
 
   const { error: packError } = await admin.from("packs").insert({
     intake_id: intake.id,
@@ -131,10 +140,10 @@ export async function POST(
     json_path: jsonPath,
     md_path: mdPath,
     pdf_path: null,
-    overall_confidence: j?.overall_confidence ?? null,
-    pattern_count: Array.isArray(j?.patterns) ? j.patterns.length : null,
-    atom_count: Array.isArray(j?.atoms) ? j.atoms.length : null,
-    warnings_count: Array.isArray(j?.warnings) ? j.warnings.length : null,
+    overall_confidence: null,
+    pattern_count: patternCount,
+    atom_count: atomCount,
+    warnings_count: warningsCount,
   });
 
   if (packError) {
