@@ -105,12 +105,18 @@ def _esearch(query: str) -> list[str]:
 
 
 def _summary(pmid: str) -> dict:
-    from hcc_compiler.citation_gate.lookup import fetch_pubmed_abstract, fetch_pubmed_by_pmid
+    from hcc_compiler.citation_gate.lookup import (
+        fetch_pmc_full_text,
+        fetch_pubmed_abstract,
+        fetch_pubmed_by_pmid,
+    )
     r = fetch_pubmed_by_pmid(pmid)
     abstract = fetch_pubmed_abstract(pmid)
+    full_text = fetch_pmc_full_text(pmid)
     return {
         "pmid": pmid, "doi": r.doi, "title": r.title,
-        "year": r.year, "journal": r.journal, "abstract": abstract,
+        "year": r.year, "journal": r.journal,
+        "abstract": abstract, "full_text": full_text,
     }
 
 

@@ -1,11 +1,15 @@
-"""Load harvested abstracts from disk for downstream verification.
+"""Load harvested source texts from disk for downstream verification.
 
 The harvest stage writes one JSON file per domain run to ``harvest-output/``,
-each containing a list of candidate dicts (``pmid``, ``doi``, ``abstract``,
-``title``, ...).  The Layer-2 faithfulness check in the citation gate needs
-the abstract text keyed by whatever identifier the draft atom uses
-(DOI *or* PMID), so this module flattens every JSON in a directory into one
-``{identifier: abstract}`` dict.
+each containing a list of candidate dicts. Each candidate carries at least
+an ``abstract`` (PubMed efetch) and — when the article has been deposited
+in PubMed Central — a ``full_text`` (PMC efetch JATS body, joined paragraph
+text). The Layer-2 faithfulness check substring-matches the locator quote
+against this text, so the longer the text, the more atoms can clear the
+gate.
+
+``load_source_texts()`` returns ``full_text`` when present, else the
+abstract. ``load_abstracts()`` is preserved as a backward-compatible alias.
 """
 from __future__ import annotations
 
@@ -13,12 +17,18 @@ import json
 from pathlib import Path
 
 
-def load_abstracts(harvest_dir: str | Path) -> dict[str, str]:
-    """Return a mapping from DOI **and** PMID to the candidate's abstract.
+def load_source_texts(harvest_dir: str | Path) -> dict[str, str]:
+    """Return a mapping from DOI **and** PMID to the candidate's best
+    available source text.
 
-    Both identifiers point at the same string when both are present, so the
-    caller can look up a citation by whichever id form it has.  Missing
-    abstracts and missing identifiers are skipped silently.
+    Both identifiers map to the same string when both are present, so callers
+    can look up a citation by whichever id form it has. Preference order:
+
+        1. ``candidate["full_text"]`` (PMC JATS body when deposited)
+        2. ``candidate["abstract"]`` (PubMed efetch)
+        3. nothing — entry skipped
+
+    Missing identifiers are silently skipped.
     """
     root = Path(harvest_dir)
     out: dict[str, str] = {}
@@ -34,13 +44,22 @@ def load_abstracts(harvest_dir: str | Path) -> dict[str, str]:
         for entry in data:
             if not isinstance(entry, dict):
                 continue
-            abstract = entry.get("abstract")
-            if not abstract:
+            source = entry.get("full_text") or entry.get("abstract")
+            if not source:
                 continue
             doi = entry.get("doi")
             pmid = entry.get("pmid")
             if doi:
-                out[str(doi)] = abstract
+                out[str(doi)] = source
             if pmid:
-                out[str(pmid)] = abstract
+                out[str(pmid)] = source
     return out
+
+
+def load_abstracts(harvest_dir: str | Path) -> dict[str, str]:
+    """Backward-compatible alias. Returns full_text-or-abstract per id.
+
+    Kept so existing callers continue to work after the rename to
+    ``load_source_texts``.
+    """
+    return load_source_texts(harvest_dir)

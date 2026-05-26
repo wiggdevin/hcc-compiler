@@ -56,3 +56,23 @@ def test_unverifiable_when_cited_title_missing():
     """Without a claimed title we cannot run the DOI_MISMATCH check."""
     outcome = verify_existence(_cite(cited_title=None))
     assert outcome == "UNVERIFIABLE"
+
+
+def test_minor_title_drift_admits_at_0_60_threshold():
+    """Title gate sits at 0.60 so small drift (subscripts, hyphens, formatting)
+    must not produce a DOI_MISMATCH. The previous 0.70 threshold tripped on
+    edits like 'vitamin D3' vs 'vitamin D₃ (cholecalciferol)'.
+    """
+    resolved = LookupResult(
+        title="Vitamin D3 supplementation and muscle function in athletes",
+        year=2020,
+        doi="10.x/v",
+        pmid=None,
+        journal="J Sport Sci",
+    )
+    drift_cite = _cite(
+        cited_title="Vitamin D₃ (cholecalciferol) supplementation and muscle function in athletes",
+    )
+    with patch("hcc_compiler.citation_gate.layer1.resolve_doi", return_value=resolved):
+        outcome = verify_existence(drift_cite)
+    assert outcome == "VERIFIED"

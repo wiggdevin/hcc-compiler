@@ -5,7 +5,7 @@ from hcc_compiler.citation_gate.text import title_similarity
 
 EXISTENCE_OUTCOMES = {"VERIFIED", "PLAUSIBLE", "UNVERIFIABLE", "DOI_MISMATCH", "FABRICATED"}
 
-_TITLE_GATE = 0.70
+_TITLE_GATE = 0.60
 
 
 def verify_existence(citation: Citation) -> str:

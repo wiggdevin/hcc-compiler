@@ -22,7 +22,7 @@ import yaml  # noqa: E402
 
 from hcc_compiler.citation_gate.orchestrator import verify_atom  # noqa: E402
 from hcc_compiler.extract import extract_atom  # noqa: E402
-from hcc_compiler.harvest.abstracts import load_abstracts  # noqa: E402
+from hcc_compiler.harvest.abstracts import load_source_texts  # noqa: E402
 from hcc_compiler.harvest.queries import _esearch, _summary, build_query  # noqa: E402
 from hcc_compiler.models import EvidenceAtom  # noqa: E402
 from hcc_compiler.route import route_draft  # noqa: E402
@@ -145,7 +145,7 @@ def verify_drafts(draft_paths: list[Path], proof: list[str]) -> dict[str, str]:
     """Verify each draft. Returns {atom_id: overall_verdict}. Writes JSON to verify-output/."""
     verify_dir = REPO / "verify-output"
     verify_dir.mkdir(parents=True, exist_ok=True)
-    abstracts = load_abstracts(REPO / "harvest-output")
+    source_text_map = load_source_texts(REPO / "harvest-output")
     results: dict[str, str] = {}
     proof.append(f"=== Verification (n={len(draft_paths)}) ===")
     for p in draft_paths:
@@ -154,7 +154,7 @@ def verify_drafts(draft_paths: list[Path], proof: list[str]) -> dict[str, str]:
         except Exception as exc:
             proof.append(f"  SCHEMA FAIL {p.name}: {exc!r}")
             continue
-        source_texts = {c.id: abstracts[c.id] for c in atom.citations if c.id in abstracts}
+        source_texts = {c.id: source_text_map[c.id] for c in atom.citations if c.id in source_text_map}
         result = verify_atom(atom, source_texts=source_texts)
         (verify_dir / f"{atom.id}.json").write_text(json.dumps(result, indent=2))
         overall = result["overall"]

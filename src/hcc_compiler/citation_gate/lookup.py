@@ -100,6 +100,70 @@ def fetch_pubmed_abstract(pmid: str) -> str:
     return " ".join(parts)
 
 
+def fetch_pmc_full_text(pmid: str) -> str:
+    """Return the full-text body of the PMC article linked to ``pmid``.
+
+    Two hops:
+        1. ``elink dbfrom=pubmed db=pmc`` — map PMID → PMCID.
+        2. ``efetch db=pmc retmode=xml`` — fetch the JATS XML.
+
+    Returns the concatenation of every ``<p>`` under ``<body>`` (i.e. the
+    article narrative, excluding metadata, references and figure captions).
+    Empty string when:
+        - no PMC equivalent exists (paywall, not deposited),
+        - either eutils call fails or returns malformed XML.
+
+    The Layer 2 faithfulness check normalises and substring-matches against
+    whatever text is here, so a slightly noisy concatenation is fine; missing
+    text just falls through to ``ACCESS_LIMITED``.
+    """
+    elink_url = (
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?"
+        + urlencode({
+            "dbfrom": "pubmed", "db": "pmc", "id": pmid, "retmode": "json",
+            "tool": "hcc-compiler", "email": _email(),
+        })
+    )
+    try:
+        data = _get_json(elink_url)
+    except Exception:
+        return ""
+
+    pmcid: str | None = None
+    for linkset in data.get("linksets") or []:
+        for dbs in linkset.get("linksetdbs") or []:
+            if dbs.get("dbto") == "pmc":
+                links = dbs.get("links") or []
+                if links:
+                    pmcid = str(links[0])
+                    break
+        if pmcid:
+            break
+    if not pmcid:
+        return ""
+
+    efetch_url = (
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?"
+        + urlencode({
+            "db": "pmc", "id": pmcid, "retmode": "xml",
+            "tool": "hcc-compiler", "email": _email(),
+        })
+    )
+    try:
+        xml_text = _get_text(efetch_url)
+        root = ET.fromstring(xml_text)
+    except Exception:
+        return ""
+
+    parts: list[str] = []
+    for body in root.iter("body"):
+        for p in body.iter("p"):
+            text = " ".join("".join(p.itertext()).split()).strip()
+            if text:
+                parts.append(text)
+    return " ".join(parts)
+
+
 def resolve_doi(doi: str) -> LookupResult:
     url = f"https://api.crossref.org/works/{quote(doi, safe='/')}"
     data = _get_json(url)

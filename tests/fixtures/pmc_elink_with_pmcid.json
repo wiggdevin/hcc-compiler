@@ -1,0 +1,15 @@
+{
+  "linksets": [
+    {
+      "dbfrom": "pubmed",
+      "ids": ["28642676"],
+      "linksetdbs": [
+        {
+          "dbto": "pmc",
+          "linkname": "pubmed_pmc",
+          "links": ["5477153"]
+        }
+      ]
+    }
+  ]
+}

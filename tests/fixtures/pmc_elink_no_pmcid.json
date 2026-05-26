@@ -1,0 +1,9 @@
+{
+  "linksets": [
+    {
+      "dbfrom": "pubmed",
+      "ids": ["12345678"],
+      "linksetdbs": []
+    }
+  ]
+}
