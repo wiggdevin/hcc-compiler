@@ -6,6 +6,7 @@ import { Resend } from "resend";
 import { render } from "@react-email/render";
 import { WelcomeEmail } from "./email-templates/welcome";
 import { PlanReadyEmail } from "./email-templates/plan-ready";
+import { PlanReadyForClientEmail } from "./email-templates/plan-ready-for-client";
 
 // Lazily instantiated so the module can be imported without RESEND_API_KEY
 // in environments where it's not needed (e.g., during static build passes).
@@ -84,5 +85,57 @@ export async function sendPlanReadyEmail(params: {
     return { id: null, error: error.message };
   }
 
+  return { id: data?.id ?? null, error: null };
+}
+
+/**
+ * Send the client-facing email with their magic-link to /p/<token>.
+ * Branded with the coach's name + headshot, not "HCC Compiler".
+ */
+export async function sendPlanReadyForClientEmail(params: {
+  to: string;
+  coachName: string;
+  coachHeadshotUrl?: string | null;
+  clientFirstName: string;
+  packUrl: string;
+  customMessage?: string;
+  customSubject?: string;
+}): Promise<SendResult> {
+  const {
+    to,
+    coachName,
+    coachHeadshotUrl,
+    clientFirstName,
+    packUrl,
+    customMessage,
+    customSubject,
+  } = params;
+
+  const html = await render(
+    PlanReadyForClientEmail({
+      coachName,
+      coachHeadshotUrl,
+      clientFirstName,
+      packUrl,
+      customMessage,
+    }),
+  );
+
+  const subject =
+    customSubject?.trim() || `${clientFirstName}, your plan from ${coachName}`;
+  const fromMatch = FROM_ADDRESS.match(/<(.+)>/);
+  const fromAddress = `${coachName} via HCC <${fromMatch?.[1] ?? "noreply@hccompiler.com"}>`;
+
+  const { data, error } = await getClient().emails.send({
+    from: fromAddress,
+    to,
+    subject,
+    html,
+  });
+
+  if (error) {
+    console.error("[resend] sendPlanReadyForClientEmail failed:", error);
+    return { id: null, error: error.message };
+  }
   return { id: data?.id ?? null, error: null };
 }

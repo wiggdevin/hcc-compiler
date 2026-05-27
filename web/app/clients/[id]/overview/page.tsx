@@ -12,6 +12,7 @@ import { SafetyBanner } from "@/components/safety-banner";
 import { PrescriptionSection } from "@/components/prescription-section";
 import { ScoreExplainer } from "@/components/score-explainer";
 import { PrintButton } from "@/components/print-button";
+import { SendToClientButton } from "@/components/send-to-client-button";
 import { formatDate, formatPercent } from "@/lib/format";
 
 function capitalize(s: string): string {
@@ -29,7 +30,7 @@ export default async function OverviewPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const { persona, pack, intake } = await loadPackForView(id);
+  const { persona, pack, intake, source } = await loadPackForView(id);
 
   const overall = overallConfidence(pack);
   const perDomain = domainConfidences(pack);
@@ -246,7 +247,12 @@ export default async function OverviewPage({
           <Download className="h-3.5 w-3.5" strokeWidth={1.5} />
           Download as Markdown
         </a>
-        <PrintButton>Print plan</PrintButton>
+        <div className="flex items-center gap-3">
+          {source === "coach" ? (
+            <SendToClientButton packId={id} clientLabel={persona.displayName} />
+          ) : null}
+          <PrintButton>Print plan</PrintButton>
+        </div>
       </div>
     </div>
   );

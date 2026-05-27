@@ -18,6 +18,7 @@ export interface CoachBrand {
 
 export interface ShareView {
   token: string;
+  packId: string;
   pack: EvidencePack;
   intake: ClientIntake;
   coach: CoachBrand;
@@ -84,6 +85,7 @@ export const loadShare = cache(async (token: string): Promise<ShareView> => {
 
   return {
     token,
+    packId: shareRow.pack_id,
     pack,
     intake: intakeRow.payload,
     coach: coachRow,
