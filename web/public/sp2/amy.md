@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — amy_runner
 
-- Compiled at: 2026-05-26T15:06:31.584364+00:00
+- Compiled at: 2026-05-27T10:16:28.190742+00:00
 - Library version: 0.1.0
 
 ---
@@ -108,7 +108,7 @@ Resistance-trained adults pursuing strength (1+ year consistent training): 1-5 r
 
 ## Conditioning
 
-### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.74)
+### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.68)
 
 **Applies because:** HIIT drives superior mitochondrial biogenesis, stroke volume augmentation, and peripheral oxygen extraction versus lower-intensity modalities by repeatedly stressing the oxygen transport chain near its ceiling, as corroborated by consistent effect-size advantages (SMD/g 0.37–3.6 for VO2-related outcomes) across diverse meta-analyses spanning clinical, youth, and performance populations.
 **Parameterization:** Healthy endurance athletes: standard normoxic HIIT; add hypoxic stimulus (live-high-train-low or hypoxic intervals) for an incremental VO2max gain of ~SMD 0.26 over normoxic HIIT alone. Racket-sport and team-sport athletes: HIIT or small-sided games (SSG) are interchangeable for VO2max; HIIT favored when sprint and power outcomes are co-primary. Youth athletes: apply age-appropriate volume scaling; effect sizes are large (g ≈ 0.97) so moderate session counts (2–3×/week) suffice. Post-stroke patients: begin at 50–60% HRR and progress to ≥80% HRR under supervised conditions; target VO2-VT improvements first (MD +2.20 mL/kg/min vs. MICT). HFpEF patients: combine HIIT with inspiratory muscle training (IMT) for additive VO2 peak benefit (IMT SMD 3.6, HIIT SMD 3.5 mL/kg·min); reduce session duration and increase rest intervals relative to healthy cohorts.

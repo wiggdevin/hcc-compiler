@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_jackson_white
 
-- Compiled at: 2026-05-26T15:06:34.588853+00:00
+- Compiled at: 2026-05-27T10:16:31.796498+00:00
 - Library version: 0.1.0
 
 ---
@@ -114,7 +114,7 @@ Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: m
 
 - **EA-TRA-1931** (sim 0.74, pop-match 1.00): Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect. ([10.1080/02640414.2024.2425536])
 - **EA-TRA-9632** (sim 0.69, pop-match 1.00): Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. ([10.3389/fpubh.2026.1707627])
-- **EA-TRA-8464** (sim 0.66, pop-match 1.00): High-intensity interval training (HIIT) significantly improves aerobic capacity, athletic performance, and body composition in martial arts athletes. ([10.3389/fnut.2026.1792680])
+- **EA-TRA-8464** (sim 0.65, pop-match 1.00): High-intensity interval training (HIIT) significantly improves aerobic capacity, athletic performance, and body composition in martial arts athletes. ([10.3389/fnut.2026.1792680])
 
 ## Conditioning
 
@@ -127,9 +127,9 @@ Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: m
 **Backing evidence (top 3 by population match):**
 - In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory muscle training, high-intensity interval training, and combined aerobic and resistance exercise are the most effective interventions for improving aerobic capacity (VO2 peak). ([10.1097/CRD.0000000000000447])
 - High-intensity interval training (HIIT) performed under hypoxic conditions results in greater improvements in VO2 max compared to normoxic conditions in distance runners. ([10.14814/phy2.70349])
-- Small-sided games (SSGs) and high-intensity interval training (HIIT) produce similar effects on improving endurance performance and VO2max in soccer players. ([10.1055/a-2171-3255])
+- High-Intensity Interval Training (HIIT) improves VO2 max, running and repetitive sprint performance, jumping performance, and hitting speed in racket sports athletes. ([10.1371/journal.pone.0295362])
 
-- **EA-CON-9235** (sim 0.61, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
+- **EA-CON-9235** (sim 0.60, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
 
 ## Supplements
 

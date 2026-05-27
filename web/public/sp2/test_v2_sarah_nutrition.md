@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — test_v2_sarah_nutrition
 
-- Compiled at: 2026-05-26T15:06:35.173333+00:00
+- Compiled at: 2026-05-27T10:16:32.538043+00:00
 - Library version: 0.1.0
 
 ---
@@ -19,20 +19,6 @@
 - Cycle-aware nutrition: follicular = baseline calories + standard macros; luteal += 150-300 kcal mostly carb timed around training; monitor body composition only at consistent cycle phase (mid-follicular preferred); track late-luteal craving + fluid retention.
 - Compressed eating window: front-load protein to 0.4-0.5 g/kg/meal across the window; consume the largest carbohydrate-protein meal within 90 min post-training; rule out chronic underfueling by tracking energy availability (target ≥40 kcal/kg FFM/day for active females).
 - Underfueling flag: target energy availability ≥40 kcal/kg FFM/day for active female athletes; lean mass loss despite high volume is a primary EA marker. Audit pre/intra/post-training carbohydrate exposure first.
-
-### Pattern: RP-NUT-female-cycle-aware-nutrition (sim=0.80)
-
-**Applies because:** Resting energy expenditure in the luteal phase is measurably elevated by 40-44 kcal/day; ignoring this elevation creates an unintended caloric deficit that exacerbates luteal-phase fatigue, cravings, and perceived recovery difficulty; iron homeostasis fluctuates with cycle phase, with early-follicular levels lowest, creating a performance-limiting micronutrient window in endurance-trained women.
-**For this client (F, 26y, trained):** Active and resistance-trained women (18-49 y): follicular phase — higher training load is well-tolerated; standard carbohydrate intake; luteal phase — increase carbohydrate by 30-40 g/day and total calories by 200-250 kcal to match elevated REE; prioritize iron-rich foods in days 1-5 (early follicular/menstruation) when iron, ferritin, and transferrin saturation are at cycle nadir.
-<details><summary>All populations covered by this pattern</summary>
-
-Sedentary or lightly active naturally menstruating women: follicular phase — standard caloric target; luteal phase — add 150-200 kcal/day from carbohydrate and protein sources to offset elevated REE; this reduces cravings, supports mood stability, and prevents inadvertent deficit deepening. Active and resistance-trained women (18-49 y): follicular phase — higher training load is well-tolerated; standard carbohydrate intake; luteal phase — increase carbohydrate by 30-40 g/day and total calories by 200-250 kcal to match elevated REE; prioritize iron-rich foods in days 1-5 (early follicular/menstruation) when iron, ferritin, and transferrin saturation are at cycle nadir. Endurance-trained women (>= 5 h/week): early-follicular phase iron depletion risk is meaningful; supplement iron if serum ferritin <30 ng/mL; continue high-carbohydrate fueling through menstruation as iron-deficiency impairs endurance capacity; luteal phase — reduce training intensity in final days before menstruation if PRE/PMS symptoms impair output. Perimenopausal women (40-55 y): cycle irregularity makes precise phase periodization difficult; apply a general 150-200 kcal increase on high-fatigue days and increase protein to 1.6-2.0 g/kg/day to offset accelerating lean mass loss; iron status monitoring remains important during irregular cycles with heavier bleeding episodes. Oral contraceptive users: the synthetic hormone cycle attenuates natural REE fluctuation (luteal REE elevation is blunted or absent); cycle-aware periodization is less applicable; maintain consistent daily caloric targets; iron status monitoring is still warranted during the placebo-pill menstrual phase.
-
-</details>
-**Safety bounds:** Do not restrict calories in the luteal phase to counteract the REE increase — doing so deepens effective deficit and may worsen hormonal disruption; iron supplementation above 45 mg/day requires physician oversight and gastrointestinal monitoring; do not apply oral-contraceptive users' flat-calorie protocol to naturally cycling women.
-
-**Backing evidence (top 3 by population match):**
-- In naturally menstruating women, resting energy expenditure is approximately 40-44 kcal higher in the luteal phase compared to the follicular phase. ([10.1249/MSS.0000000000003518])
 
 ### Pattern: RP-NUT-protein-band (sim=0.80)
 
@@ -56,6 +42,20 @@ Untrained adults (0-12 months resistance training): 10-15% caloric surplus above
 
 **Backing evidence (top 3 by population match):**
 - Protein intakes of 2.3-3.1 g/kg/day may be needed to maximize retention of lean body mass in resistance-trained subjects during hypocaloric periods. ([10.1186/s12970-017-0177-8])
+
+### Pattern: RP-NUT-female-cycle-aware-nutrition (sim=0.77)
+
+**Applies because:** Resting energy expenditure in the luteal phase is measurably elevated by 40-44 kcal/day; ignoring this elevation creates an unintended caloric deficit that exacerbates luteal-phase fatigue, cravings, and perceived recovery difficulty; iron homeostasis fluctuates with cycle phase, with early-follicular levels lowest, creating a performance-limiting micronutrient window in endurance-trained women.
+**For this client (F, 26y, trained):** Active and resistance-trained women (18-49 y): follicular phase — higher training load is well-tolerated; standard carbohydrate intake; luteal phase — increase carbohydrate by 30-40 g/day and total calories by 200-250 kcal to match elevated REE; prioritize iron-rich foods in days 1-5 (early follicular/menstruation) when iron, ferritin, and transferrin saturation are at cycle nadir.
+<details><summary>All populations covered by this pattern</summary>
+
+Sedentary or lightly active naturally menstruating women: follicular phase — standard caloric target; luteal phase — add 150-200 kcal/day from carbohydrate and protein sources to offset elevated REE; this reduces cravings, supports mood stability, and prevents inadvertent deficit deepening. Active and resistance-trained women (18-49 y): follicular phase — higher training load is well-tolerated; standard carbohydrate intake; luteal phase — increase carbohydrate by 30-40 g/day and total calories by 200-250 kcal to match elevated REE; prioritize iron-rich foods in days 1-5 (early follicular/menstruation) when iron, ferritin, and transferrin saturation are at cycle nadir. Endurance-trained women (>= 5 h/week): early-follicular phase iron depletion risk is meaningful; supplement iron if serum ferritin <30 ng/mL; continue high-carbohydrate fueling through menstruation as iron-deficiency impairs endurance capacity; luteal phase — reduce training intensity in final days before menstruation if PRE/PMS symptoms impair output. Perimenopausal women (40-55 y): cycle irregularity makes precise phase periodization difficult; apply a general 150-200 kcal increase on high-fatigue days and increase protein to 1.6-2.0 g/kg/day to offset accelerating lean mass loss; iron status monitoring remains important during irregular cycles with heavier bleeding episodes. Oral contraceptive users: the synthetic hormone cycle attenuates natural REE fluctuation (luteal REE elevation is blunted or absent); cycle-aware periodization is less applicable; maintain consistent daily caloric targets; iron status monitoring is still warranted during the placebo-pill menstrual phase.
+
+</details>
+**Safety bounds:** Do not restrict calories in the luteal phase to counteract the REE increase — doing so deepens effective deficit and may worsen hormonal disruption; iron supplementation above 45 mg/day requires physician oversight and gastrointestinal monitoring; do not apply oral-contraceptive users' flat-calorie protocol to naturally cycling women.
+
+**Backing evidence (top 3 by population match):**
+- Even mild iron deficiency may result in decreased endurance and increased irritability and withdrawal behavior among women. ([10.1016/j.physbeh.2018.09.012])
 
 - **EA-NUT-5322** (sim 0.70, pop-match 1.00): Calorie restriction combined with exercise is the most effective strategy for reducing weight and fat percentage while maintaining lean body mass in healthy adults. ([10.3390/nu16173007])
 - **EA-NUT-0926** (sim 0.70, pop-match 1.00): In community-dwelling adults aged 50 or older, a serum amino acid factor reflecting insulin resistance-related branched-chain and aromatic amino acids is positively associated with nondynapenic obesity in both sexes, while sex-specific nitrogen metabolism patterns are differentially linked to dynapenia and adiposity. ([10.1007/s40200-025-01746-x])
@@ -113,21 +113,21 @@ Trained adults during caloric deficit (250-500 kcal/day) pursuing weight loss: m
 
 - **EA-TRA-9632** (sim 0.70, pop-match 1.00): Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. ([10.3389/fpubh.2026.1707627])
 - **EA-TRA-8105** (sim 0.69, pop-match 1.00): Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents. ([10.1111/sms.14764])
-- **EA-TRA-6351** (sim 0.68, pop-match 1.00): Interval training combined with blood flow restriction (IT+BFR) significantly improves maximal oxygen uptake (VO2max), mean power during the Wingate 30-s test, muscle strength, muscle endurance, time to fatigue, and maximal aerobic speed compared to interval training alone. ([10.1016/j.jshs.2025.101030])
 - **EA-TRA-1931** (sim 0.67, pop-match 1.00): Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect. ([10.1080/02640414.2024.2425536])
+- **EA-TRA-6351** (sim 0.67, pop-match 1.00): Interval training combined with blood flow restriction (IT+BFR) significantly improves maximal oxygen uptake (VO2max), mean power during the Wingate 30-s test, muscle strength, muscle endurance, time to fatigue, and maximal aerobic speed compared to interval training alone. ([10.1016/j.jshs.2025.101030])
 
 ## Conditioning
 
-### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.68)
+### Pattern: RP-CON-hiit-vo2max-broad-population (sim=0.62)
 
 **Applies because:** HIIT drives superior mitochondrial biogenesis, stroke volume augmentation, and peripheral oxygen extraction versus lower-intensity modalities by repeatedly stressing the oxygen transport chain near its ceiling, as corroborated by consistent effect-size advantages (SMD/g 0.37–3.6 for VO2-related outcomes) across diverse meta-analyses spanning clinical, youth, and performance populations.
 **Parameterization:** Healthy endurance athletes: standard normoxic HIIT; add hypoxic stimulus (live-high-train-low or hypoxic intervals) for an incremental VO2max gain of ~SMD 0.26 over normoxic HIIT alone. Racket-sport and team-sport athletes: HIIT or small-sided games (SSG) are interchangeable for VO2max; HIIT favored when sprint and power outcomes are co-primary. Youth athletes: apply age-appropriate volume scaling; effect sizes are large (g ≈ 0.97) so moderate session counts (2–3×/week) suffice. Post-stroke patients: begin at 50–60% HRR and progress to ≥80% HRR under supervised conditions; target VO2-VT improvements first (MD +2.20 mL/kg/min vs. MICT). HFpEF patients: combine HIIT with inspiratory muscle training (IMT) for additive VO2 peak benefit (IMT SMD 3.6, HIIT SMD 3.5 mL/kg·min); reduce session duration and increase rest intervals relative to healthy cohorts.
 **Safety bounds:** Clinical populations require physician clearance before initiating HIIT; absolute contraindications include unstable angina, decompensated heart failure (NYHA IV), acute arrhythmia, or recent (≤3 months) cardiovascular event. Maximum session intensity should not exceed 90% HRmax without on-site medical supervision for cardiac patients. Hypoxic protocols are contraindicated in individuals with sickle-cell trait, severe anemia (Hb < 8 g/dL), or symptomatic pulmonary hypertension. Youth athletes: cap work intervals at ≤95% HRmax; mandatory warm-up ≥10 min.
 
 **Backing evidence (top 3 by population match):**
+- In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory muscle training, high-intensity interval training, and combined aerobic and resistance exercise are the most effective interventions for improving aerobic capacity (VO2 peak). ([10.1097/CRD.0000000000000447])
 - High-Intensity Interval Training (HIIT) improves VO2 max, running and repetitive sprint performance, jumping performance, and hitting speed in racket sports athletes. ([10.1371/journal.pone.0295362])
 - High-intensity interval training (HIIT) performed under hypoxic conditions results in greater improvements in VO2 max compared to normoxic conditions in distance runners. ([10.14814/phy2.70349])
-- In patients with heart failure with preserved ejection fraction (HFpEF), inspiratory muscle training, high-intensity interval training, and combined aerobic and resistance exercise are the most effective interventions for improving aerobic capacity (VO2 peak). ([10.1097/CRD.0000000000000447])
 
 - **EA-CON-9235** (sim 0.55, pop-match 1.00): Greater age is associated with longer phosphocreatine (PCr) recovery times in upper leg muscles, and more acidic end-of-exercise pH correlates with longer PCr recovery times across muscle groups in healthy individuals. ([10.1002/nbm.70023])
 

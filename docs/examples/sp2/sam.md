@@ -1,6 +1,6 @@
 # Personalized Evidence Pack — sam_recomp
 
-- Compiled at: 2026-05-26T15:06:32.505361+00:00
+- Compiled at: 2026-05-27T10:16:29.248197+00:00
 - Library version: 0.1.0
 
 ---
@@ -93,8 +93,8 @@ Trained adults (1+ year consistent resistance training): 10-20 weekly hard sets 
 
 - **EA-TRA-8105** (sim 0.69, pop-match 1.00): Concurrent training significantly improves countermovement jump performance compared to resistance training alone in children and adolescents. ([10.1111/sms.14764])
 - **EA-TRA-1931** (sim 0.66, pop-match 1.00): Resistance training under hypoxic conditions (RTH) results in trivial benefits for muscle strength gains compared to normoxic conditions (RTN), with specific programming variables like non-full-body routines and higher weekly volumes potentially enhancing this effect. ([10.1080/02640414.2024.2425536])
-- **EA-TRA-9632** (sim 0.64, pop-match 1.00): Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. ([10.3389/fpubh.2026.1707627])
 - **EA-TRA-8671** (sim 0.64, pop-match 1.00): Aerobic and resistance exercise improve anthropometric measures, metabolic health, and hormonal balance in women with PCOS. ([10.61622/rbgo/2025rbgo56])
+- **EA-TRA-9632** (sim 0.64, pop-match 1.00): Linear and undulating periodization resistance training have comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. ([10.3389/fpubh.2026.1707627])
 
 ## Conditioning
 
