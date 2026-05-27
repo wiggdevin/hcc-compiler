@@ -273,6 +273,9 @@ Web (`web/.env.local` / Vercel project env):
 - `RESEND_API_KEY`
 - `RESEND_FROM` (verified sender email)
 - `INTERNAL_API_SECRET` (gates `/api/email/welcome`)
+- `ANTHROPIC_BASE_URL` (added 2026-05-27 for client-viewer schedule LLM; default `https://api.z.ai/api/anthropic`)
+- `ANTHROPIC_AUTH_TOKEN` (added 2026-05-27; from `zsvault get zai_api_key`)
+- `SCHEDULE_MODEL` (added 2026-05-27; default `glm-4.6`)
 
 Compiler API (`services/compiler-api` / Fly secrets):
 - `SUPABASE_URL`
