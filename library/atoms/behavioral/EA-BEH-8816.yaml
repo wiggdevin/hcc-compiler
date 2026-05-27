@@ -18,7 +18,7 @@ population_applicability:
   sex: unspecified
   training_status: unspecified
   dose_magnitude: unspecified
-  duration: unspecified
+  duration: 12 weeks
 effect: Improvements in fruit and vegetable intake, adherence to the Mediterranean
   diet, and nutritional knowledge were observed, alongside modest weight loss and
   increased physical activity.

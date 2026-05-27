@@ -22,7 +22,7 @@ population_applicability:
   sex: mixed
   training_status: various
   dose_magnitude: varied
-  duration: varied
+  duration: 48 weeks
 effect: Significant improvement in mental health outcomes including wellbeing, anxiety,
   depression, and stress.
 contraindications: []
