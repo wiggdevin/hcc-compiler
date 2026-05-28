@@ -1,0 +1,32 @@
+id: EA-NUT-7005
+domain: nutrition
+claim: Pre-sleep ingestion of 45 g of protein (casein or whey) increases both mitochondrial
+  and myofibrillar muscle protein synthesis rates during overnight recovery from endurance
+  exercise compared with a non-caloric placebo.
+evidence_level: L2
+citations:
+- id: 10.1007/s40279-023-01822-3
+  locator_quote: Protein ingestion prior to sleep increases both mitochondrial and
+    myofibrillar protein synthesis rates during overnight recovery from exercise.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Pre-sleep Protein Ingestion Increases Mitochondrial Protein Synthesis
+    Rates During Overnight Recovery from Endurance Exercise: A Randomized Controlled
+    Trial'
+population_applicability:
+  age: healthy young adults
+  sex: male
+  training_status: physically active, capable of evening endurance exercise
+  dose_magnitude: 45 g casein or whey protein ingested ~30 min before sleep
+  duration: single overnight recovery period
+effect: "Pooled pre-sleep protein ingestion elevated mitochondrial protein synthesis\
+  \ rates (0.087 \xB1 0.020 vs 0.067 \xB1 0.016%\xB7h\u207B\xB9, p = 0.005) and myofibrillar\
+  \ protein synthesis rates (0.060 \xB1 0.014 vs 0.047 \xB1 0.011%\xB7h\u207B\xB9\
+  , p = 0.012) versus placebo; casein and whey did not differ significantly for either\
+  \ fraction (mitochondrial p = 0.690; myofibrillar p = 0.440)."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

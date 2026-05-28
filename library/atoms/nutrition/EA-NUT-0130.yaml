@@ -1,15 +1,15 @@
 id: EA-NUT-0130
 domain: nutrition
-claim: In the context of an energy-reduced diet, distributing daily energy intake
-  with a focus on earlier (morning/midday) rather than later (evening) consumption
-  produces significantly greater short-term weight loss of approximately 1.23 kg.
+claim: In the context of an energy-reduced diet, distributing total daily energy intake
+  with a focus on earlier intake results in significantly greater short-term weight
+  loss compared with later intakes.
 evidence_level: L1
 citations:
 - id: 10.1111/obr.13537
   locator_quote: distributing energy intake with a focus on earlier intake resulted
     in significantly greater weight loss (-1.23 kg; 95% CI 2.40, -0.06, p = 0.04)
   existence: VERIFIED
-  faithfulness: UNSUPPORTED
+  faithfulness: VERIFIED
   cited_title: 'Distribution of energy intake across the day and weight loss: A systematic
     review and meta-analysis'
 population_applicability:
@@ -18,13 +18,12 @@ population_applicability:
   training_status: not specified
   dose_magnitude: energy-reduced diet
   duration: short-term
-effect: Earlier distribution of daily energy intake (front-loading calories) produces
-  ~1.23 kg greater weight loss than later (evening-skewed) distribution under caloric
-  restriction; secondary improvements in HOMA-IR, fasting glucose, and LDL cholesterol
-  also observed.
+effect: "Earlier daily energy distribution yields approximately \u22121.23 kg greater\
+  \ weight loss (95% CI \u22122.40 to \u22120.06, p = 0.04) versus later intake patterns,\
+  \ with additional improvements in HOMA-IR, fasting glucose, and LDL cholesterol."
 contraindications: []
 tier: high-impact
-approval: auto
-library_version: 0.1.0
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
 last_reviewed: '2026-05-28'
 expiry: '2028-05-28'

@@ -8,8 +8,11 @@ text). The Layer-2 faithfulness check substring-matches the locator quote
 against this text, so the longer the text, the more atoms can clear the
 gate.
 
-``load_source_texts()`` returns ``full_text`` when present, else the
-abstract. ``load_abstracts()`` is preserved as a backward-compatible alias.
+``load_source_texts()`` returns abstract + ``full_text`` concatenated
+(when both are present), or whichever single field exists. Abstracts
+often phrase meta-analytic results differently than the published body,
+and the Layer-2 substring check needs to find the locator_quote in
+EITHER. ``load_abstracts()`` is preserved as a backward-compatible alias.
 """
 from __future__ import annotations
 
@@ -22,13 +25,11 @@ def load_source_texts(harvest_dir: str | Path) -> dict[str, str]:
     available source text.
 
     Both identifiers map to the same string when both are present, so callers
-    can look up a citation by whichever id form it has. Preference order:
-
-        1. ``candidate["full_text"]`` (PMC JATS body when deposited)
-        2. ``candidate["abstract"]`` (PubMed efetch)
-        3. nothing — entry skipped
-
-    Missing identifiers are silently skipped.
+    can look up a citation by whichever id form it has. When PMC full text
+    is available, abstract + full_text are concatenated — the abstract often
+    phrases meta-analytic results differently than the body, and the Layer-2
+    substring check needs to find the locator_quote in EITHER. Missing
+    identifiers are silently skipped.
     """
     root = Path(harvest_dir)
     out: dict[str, str] = {}
@@ -44,9 +45,10 @@ def load_source_texts(harvest_dir: str | Path) -> dict[str, str]:
         for entry in data:
             if not isinstance(entry, dict):
                 continue
-            source = entry.get("full_text") or entry.get("abstract")
-            if not source:
+            parts = [t for t in (entry.get("abstract"), entry.get("full_text")) if t]
+            if not parts:
                 continue
+            source = "\n\n".join(parts)
             doi = entry.get("doi")
             pmid = entry.get("pmid")
             if doi:

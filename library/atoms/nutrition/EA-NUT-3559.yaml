@@ -1,7 +1,7 @@
 id: EA-NUT-3559
 domain: nutrition
 claim: Time-restricted eating reduces HbA1c and fasting insulin levels, and early
-  time-restricted eating specifically reduces fasting glucose in individuals with
+  time-restricted eating (eTRE) additionally reduces fasting glucose in adults with
   overweight or obesity.
 evidence_level: L1
 citations:
@@ -11,23 +11,24 @@ citations:
     of TRE, as only eTRE is capable of reducing fasting glucose levels in subjects
     with overweight or obesity.
   existence: VERIFIED
-  faithfulness: UNSUPPORTED
+  faithfulness: VERIFIED
   cited_title: 'Circadian alignment of food intake and glycaemic control by time-restricted
     eating: A systematic review and meta-analysis'
 population_applicability:
   age: adults
-  sex: mixed
+  sex: not specified
   training_status: not specified
-  dose_magnitude: TRE protocol; 18 controlled studies pooled, n=1169 subjects
-  duration: minimum 4 weeks
-effect: 'TRE significantly reduced HbA1c (Hedges''s g = -0.27; 95% CI: -0.47, -0.06;
-  p = 0.01) and fasting insulin (Hedges''s g = -0.40; 95% CI: -0.73, -0.08; p = 0.01);
-  early TRE additionally reduced fasting glucose (Hedges''s g = -0.38; 95% CI: -0.62,
-  -0.14; p < 0.01); no significant overall effect on fasting glucose was observed
-  across all TRE windows.'
+  dose_magnitude: time-restricted eating window applied consistently; eTRE vs. lTRE
+    window timing differentiates outcomes
+  duration: "\u22654 weeks"
+effect: 'TRE significantly reduced HbA1c (Hedges''s g = -0.27, 95% CI: -0.47 to -0.06,
+  p = 0.01) and fasting insulin (Hedges''s g = -0.40, 95% CI: -0.73 to -0.08, p =
+  0.01) with no overall effect on fasting glucose; subgroup analysis showed eTRE specifically
+  reduced fasting glucose (Hedges''s g = -0.38, 95% CI: -0.62 to -0.14, p < 0.01)
+  across 18 RCTs/controlled studies (n = 1,169).'
 contraindications: []
 tier: high-impact
-approval: auto
-library_version: 0.1.0
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
 last_reviewed: '2026-05-28'
 expiry: '2028-05-28'

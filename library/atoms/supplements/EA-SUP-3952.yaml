@@ -1,0 +1,32 @@
+id: EA-SUP-3952
+domain: supplements
+claim: "Pre-sleep protein supplementation at 0.5 g\xB7kg\u207B\xB9\xB7day\u207B\xB9\
+  \ does not reduce plasma creatine kinase or inflammatory cytokine responses compared\
+  \ to isocaloric carbohydrate in trained swimmers undergoing two weeks of sprint\
+  \ interval training."
+evidence_level: L2
+citations:
+- id: 10.1080/15502783.2023.2244478
+  locator_quote: Pre-sleep protein ingestion failed to ameliorate blood markers of
+    muscle damage.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Effects of pre-sleep protein supplementation on plasma markers of muscle
+    damage and inflammatory cytokines resulting from sprint interval training in trained
+    swimmers
+population_applicability:
+  age: adult
+  sex: not reported
+  training_status: trained swimmers
+  dose_magnitude: 0.5 g kg-1 day-1 protein beverage pre-sleep
+  duration: 2 weeks
+effect: "No significant attenuation of CK, IL-6, IL-10, or TNF\u03B1 relative to isocaloric\
+  \ carbohydrate control; two weeks of swimming SIT reduced IL-6:IL-10 ratio at 48\
+  \ h post-exercise (anti-inflammatory shift) in both groups regardless of supplement\
+  \ type."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

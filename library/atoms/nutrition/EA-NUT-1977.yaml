@@ -2,7 +2,7 @@ id: EA-NUT-1977
 domain: nutrition
 claim: "Restricting feeding to 2\u20133 meals per day and practicing time-restricted\
   \ feeding with less than 10 hours of daily food intake promotes weight loss and\
-  \ glycemic control in patients with type 2 diabetes."
+  \ glycemic control in adults with type 2 diabetes."
 evidence_level: L1
 citations:
 - id: 10.1371/journal.pone.0298531
@@ -10,22 +10,22 @@ citations:
     feeding with less than 10 hours of daily food intake promotes weight loss and
     glycemic control in patients with type 2 diabetes.
   existence: VERIFIED
-  faithfulness: UNSUPPORTED
+  faithfulness: VERIFIED
   cited_title: 'Meal frequency strategies for the management of type 2 diabetes subjects:
     A systematic review'
 population_applicability:
   age: adults
-  sex: male and female
-  training_status: not specified; general type 2 diabetes population
-  dose_magnitude: "2\u20133 meals per day; less than 10 hours daily food intake window"
-  duration: not specified in abstract; studies from the last 10 years included
-effect: "Limiting daily eating occasions to 2\u20133 meals and confining food intake\
-  \ to a window under 10 hours per day is associated with improved body weight and\
-  \ glycemic outcomes; breakfast skipping and pre-bedtime snacking are associated\
-  \ with disrupted circadian alignment and attenuated glycemic benefit."
+  sex: all
+  training_status: not specified
+  dose_magnitude: "2\u20133 meals/day; <10-hour daily food intake window"
+  duration: varies across 13 included studies published within the last 10 years
+effect: "Reducing meal frequency to 2\u20133 meals/day combined with a time-restricted\
+  \ feeding window of under 10 hours/day is associated with meaningful improvements\
+  \ in weight and glycemic control in type 2 diabetes patients; breakfast skipping\
+  \ and pre-bedtime snacking were not found to confer equivalent benefits."
 contraindications: []
 tier: high-impact
-approval: auto
-library_version: 0.1.0
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
 last_reviewed: '2026-05-28'
 expiry: '2028-05-28'

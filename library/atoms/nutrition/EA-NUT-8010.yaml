@@ -1,0 +1,30 @@
+id: EA-NUT-8010
+domain: nutrition
+claim: A systematic review of 10 studies found that time-restricted eating did not
+  adversely affect health-related quality of life in adults, with multiple studies
+  reporting improvements in overall HR-QoL scores across diverse populations.
+evidence_level: L1
+citations:
+- id: 10.1093/nutrit/nuae044
+  locator_quote: No studies reported that TRE adversely affected HR-QoL.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'The impact of time-restricted eating on health-related quality of
+    life: a systematic literature review'
+population_applicability:
+  age: adults (including middle-aged and older adults)
+  sex: mixed (male and female)
+  training_status: mixed (sedentary older adults, generally healthy adults, shift
+    workers, adults with type 2 diabetes or obesity)
+  dose_magnitude: various TRE protocols reviewed
+  duration: primarily 12 weeks / 3 months
+effect: Time-restricted eating does not adversely affect health-related quality of
+  life; 4 of 10 studies reported improvements in overall HR-QoL scores and 3 studies
+  reported significant or nonsignificant improvements in specific HR-QoL domains;
+  improvements appeared primarily at 12 weeks/3 months.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

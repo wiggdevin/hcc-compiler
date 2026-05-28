@@ -1,8 +1,9 @@
 id: EA-SUP-0882
 domain: supplements
-claim: Both pre-sleep and post-exercise ingestion of 30 g micellar casein enhanced
-  anaerobic performance in highly trained male soccer players, with neither timing
-  strategy demonstrating superiority over the other.
+claim: In highly trained male soccer players, both pre-sleep and post-exercise ingestion
+  of 30 g micellar casein enhanced anaerobic performance 24 hours after training compared
+  to a no-supplement control, with neither timing strategy demonstrating superiority
+  over the other.
 evidence_level: L2
 citations:
 - id: 10.3390/nu17243938
@@ -12,24 +13,22 @@ citations:
     over the other, suggesting that casein timing may be flexibly applied according
     to athletes' preferences and training contexts.
   existence: VERIFIED
-  faithfulness: UNSUPPORTED
+  faithfulness: VERIFIED
   cited_title: 'Casein Supplementation Timing and Exercise Performance in Soccer Players:
     Pre-Sleep vs. Post-Exercise Intake-A Randomized Controlled Trial'
 population_applicability:
-  age: "~20.6 \xB1 1.8 years"
+  age: "20.6 \xB1 1.8 years"
   sex: male
   training_status: highly trained soccer players
   dose_magnitude: 30 g micellar casein dissolved in 300 mL water
   duration: acute; performance assessed 24 h post-training session
-effect: "Pre-sleep casein (PSCIG) significantly improved CMJ (\u0394+1.45 cm, d=2.04)\
-  \ and RAST mean power (\u0394+125.14 W, d=1.55) vs control. Post-exercise casein\
-  \ (PECIG) significantly improved RAST peak power (\u0394+205.79 W, d=1.64), mean\
-  \ power (\u0394+128.43 W, d=1.24), and fatigue index (\u0394+4.12 W/s, d=1.29) vs\
-  \ control. No significant between-timing differences were observed (all p > 0.05),\
-  \ indicating flexible timing applicability."
+effect: "Both PSCIG and PECIG produced large improvements in CMJ and RAST variables\
+  \ vs. control (effect sizes d = 1.24\u20132.04); PSCIG favored CMJ and RAST mean\
+  \ power, PECIG favored RAST peak power and fatigue index. No between-timing differences\
+  \ reached significance (all p > 0.05), indicating flexible timing is viable."
 contraindications: []
-tier: high-impact
+tier: routine
 approval: auto
-library_version: 0.1.0
+library_version: 0.2.0
 last_reviewed: '2026-05-28'
 expiry: '2028-05-28'

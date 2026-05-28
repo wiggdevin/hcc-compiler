@@ -1,0 +1,33 @@
+id: EA-NUT-8250
+domain: nutrition
+claim: "Time-restricted eating increases hunger compared to isocaloric control strategies\
+  \ in adults with overweight or obesity (MD 2.05, 95% CI 1.46\u20132.64; I\xB2=0%),\
+  \ which may limit its long-term feasibility in weight-loss programs."
+evidence_level: L1
+citations:
+- id: 10.1016/j.nutres.2025.04.003
+  locator_quote: "The findings revealed that TRE resulted in an increase in hunger\
+    \ (MD 2.05, 95% CI 1.46, 2.64; I\xB2 = 0%) compared to the isocaloric control\
+    \ group."
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Time-restricted eating increases hunger in adults with overweight
+    and obesity: A systematic review and meta-analysis of randomized controlled studies'
+population_applicability:
+  age: "adults \u226518 years"
+  sex: not specified
+  training_status: not specified (overweight/obese adults)
+  dose_magnitude: time-restricted eating protocol vs. isocaloric control; 323 participants
+    across 4 RCTs
+  duration: individual trial durations not reported in abstract; literature search
+    through January 2025
+effect: "TRE produces a statistically significant increase in subjective hunger relative\
+  \ to isocaloric comparators (MD 2.05, 95% CI 1.46\u20132.64; I\xB2=0%), suggesting\
+  \ the chrononutrition protocol itself\u2014beyond mere caloric restriction\u2014\
+  drives heightened appetite."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'
