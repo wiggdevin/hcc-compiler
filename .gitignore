@@ -6,7 +6,9 @@ __pycache__/
 *.egg-info/
 harvest-output/
 draft-output/
+draft-output-archive/
 verify-output/
+supabase/.temp/
 
 # Next.js sub-app
 web/node_modules/
