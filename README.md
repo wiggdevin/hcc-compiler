@@ -40,7 +40,7 @@ Example outputs for 9 persona intakes (3 core + 6 test_v2) are checked in under 
 
 ```yaml
 client_id: amy_runner
-library_version: "0.1.0"
+library_version: "0.2.0"
 demographics:
   age: 32
   sex: F

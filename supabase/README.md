@@ -29,7 +29,7 @@ supabase link --project-ref <your-project-ref>
 
 # 4. Run the migration
 supabase db push
-# OR paste the contents of migrations/0001_initial.sql in Dashboard > SQL editor and run.
+# OR paste each migration file under migrations/ (0001_initial.sql, 0002_billing.sql, 0003_share_tokens_and_coach_brand.sql) into Dashboard > SQL editor in order.
 
 # 5. Create storage buckets (CLI)
 supabase storage create intakes --public false

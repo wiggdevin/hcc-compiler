@@ -212,7 +212,9 @@ web/lib/supabase.ts                        # NEW (client + admin clients)
 web/lib/stripe.ts                          # NEW (Stripe client + helpers)
 web/lib/intake-yaml.ts                     # NEW (Zod → YAML serializer matching pydantic loader)
 
-supabase/migrations/0001_initial.sql       # NEW (coaches, intakes, packs, subs, credits)
+supabase/migrations/0001_initial.sql       # NEW (coaches, intakes, packs)
+supabase/migrations/0002_billing.sql       # NEW (subscriptions, credits, billing webhooks)
+supabase/migrations/0003_share_tokens_and_coach_brand.sql  # NEW (client-share tokens + coach brand)
 supabase/config.toml                       # NEW
 ```
 
@@ -304,7 +306,7 @@ SUPABASE_SERVICE_ROLE_KEY=<service-role-key from dashboard>
 
 # Apply migrations
 supabase link --project-ref <project-ref>
-supabase db push  # applies 0001_initial.sql + 0002_billing.sql
+supabase db push  # applies 0001_initial.sql + 0002_billing.sql + 0003_share_tokens_and_coach_brand.sql
 
 # Storage buckets (run in SQL editor or via supabase storage CLI)
 insert into storage.buckets (id, name, public) values ('intakes', 'intakes', false);
