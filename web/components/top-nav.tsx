@@ -1,24 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
 export function TopNav() {
+  const pathname = usePathname();
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
 
   useEffect(() => {
     const supabase = createClient();
-    // Check current session.
     supabase.auth.getUser().then(({ data: { user } }) => {
       setSignedIn(!!user);
     });
-    // Update on auth state changes (sign-in / sign-out in other tabs).
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       setSignedIn(!!session?.user);
     });
     return () => listener.subscription.unsubscribe();
   }, []);
+
+  if (pathname?.startsWith("/p/")) return null;
 
   return (
     <nav className="sticky top-0 z-20 flex items-center justify-between border-b border-white/[0.06] bg-[var(--bg)]/80 px-4 py-3 backdrop-blur-sm md:px-8">
