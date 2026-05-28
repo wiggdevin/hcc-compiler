@@ -1,11 +1,14 @@
 """compile() orchestrator: intake → retrieval → applicability → safety → EvidencePack."""
 from __future__ import annotations
 
+import logging
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
 from hcc_compiler.models import Domain, EvidenceAtom, RecommendationPattern
+
+logger = logging.getLogger(__name__)
 from hcc_compiler.retrieve import query as retrieve_query
 from hcc_compiler.sp2.intake import ClientIntake
 from hcc_compiler.sp2.pack import (
@@ -63,15 +66,21 @@ def compile(
         for row in con.execute("SELECT id, json FROM atoms").fetchall():
             try:
                 atoms_by_id[row["id"]] = EvidenceAtom.model_validate_json(row["json"])
-            except Exception:
-                pass  # skip malformed rows defensively
+            except Exception as exc:
+                logger.warning(
+                    "compile: skipping malformed atom id=%s (%s)",
+                    row["id"], exc.__class__.__name__,
+                )
 
         patterns_by_id: dict[str, RecommendationPattern] = {}
         for row in con.execute("SELECT id, json FROM patterns").fetchall():
             try:
                 patterns_by_id[row["id"]] = RecommendationPattern.model_validate_json(row["json"])
-            except Exception:
-                pass
+            except Exception as exc:
+                logger.warning(
+                    "compile: skipping malformed pattern id=%s (%s)",
+                    row["id"], exc.__class__.__name__,
+                )
     finally:
         con.close()
 
