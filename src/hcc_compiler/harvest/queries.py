@@ -1,5 +1,7 @@
 from __future__ import annotations
 import os
+import sys
+import time
 from urllib.parse import urlencode
 
 from hcc_compiler.citation_gate.lookup import _get_json
@@ -18,6 +20,13 @@ DOMAIN_QUERIES: dict[str, list[str]] = {
         '(("iron deficiency" OR ferritin) OR ("vitamin D status" OR "micronutrient status")) AND athletes AND ("meta-analysis"[pt] OR "systematic review"[pt])',
         '(MASLD OR "non-alcoholic fatty liver" OR NAFLD) AND (diet OR nutrition OR "weight loss") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
         '("chronic kidney disease" OR CKD) AND ("protein intake" OR "dietary intervention") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        # nutrient-timing expansion 2026-05-28
+        '(chrononutrition OR "circadian alignment" OR "time of day" OR "morning energy intake" OR "evening energy intake") AND ("body composition" OR "weight loss" OR "metabolic health") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        '("time-restricted eating" OR "time-restricted feeding" OR TRE OR TRF) AND ("resistance training" OR "lean body mass" OR "fat-free mass" OR hypertrophy) AND ("meta-analysis"[pt] OR "systematic review"[pt] OR "randomized controlled trial"[pt])',
+        '("pre-sleep protein" OR "bedtime protein" OR "casein protein" OR "overnight muscle protein synthesis") AND (hypertrophy OR "muscle protein synthesis" OR recovery) AND ("meta-analysis"[pt] OR "systematic review"[pt] OR "randomized controlled trial"[pt])',
+        '("meal frequency" OR "eating frequency") AND ("energy deficit" OR "caloric restriction" OR "weight loss" OR hypocaloric) AND ("lean body mass" OR "body composition" OR "muscle preservation") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
+        '("protein distribution" OR "protein pulse" OR "leucine threshold") AND ("energy deficit" OR "caloric restriction" OR cut OR "fat loss") AND ("muscle protein synthesis" OR "lean body mass") AND ("meta-analysis"[pt] OR "systematic review"[pt] OR "randomized controlled trial"[pt])',
+        '("diet break" OR refeed OR "intermittent energy restriction" OR "diet refeed") AND ("metabolic adaptation" OR "adaptive thermogenesis" OR "weight loss maintenance" OR "fat loss") AND ("meta-analysis"[pt] OR "systematic review"[pt] OR "randomized controlled trial"[pt])',
     ],
     "supplements": [
         '(creatine[MeSH] OR "creatine monohydrate") AND ("athletic performance" OR "exercise") AND ("meta-analysis"[pt] OR "systematic review"[pt])',
@@ -125,9 +134,18 @@ def run_harvest(domain: str, since: int) -> list[dict]:
     seen: set[str] = set()
     out: list[dict] = []
     for base in queries:
-        for pmid in _esearch(build_query(base, since)):
+        try:
+            pmids = _esearch(build_query(base, since))
+        except Exception as e:
+            print(f"  esearch failed for query: {e!r}", file=sys.stderr)
+            continue
+        for pmid in pmids:
             if pmid in seen:
                 continue
             seen.add(pmid)
-            out.append(_summary(pmid))
+            try:
+                out.append(_summary(pmid))
+            except Exception as e:
+                print(f"  skip pmid={pmid}: {e!r}", file=sys.stderr)
+            time.sleep(0.4)  # NCBI ≤3 req/s without API key
     return out

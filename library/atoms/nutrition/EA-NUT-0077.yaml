@@ -1,0 +1,36 @@
+id: EA-NUT-0077
+domain: nutrition
+claim: "Early time-restricted eating (eTRE; 8:00 AM\u20132:00 PM feeding window) produces\
+  \ significantly greater body weight reduction than delayed TRE or a control eating\
+  \ window over 8 weeks in young women performing resistance training, while muscle\
+  \ thickness and push-up endurance improvements remain comparable across all conditions."
+evidence_level: L2
+citations:
+- id: 10.3390/nu17061022
+  locator_quote: "The eTRE group achieved a significant reduction in body weight (-2.61\
+    \ \xB1 1.06 kg; p < 0.001), which surpassed the changes observed in both the dTRE\
+    \ (-1.44 \xB1 1.12 kg) and control (-0.48 \xB1 0.64 kg) groups. However, no significant\
+    \ between-group differences emerged for muscle thickness or push-up performance."
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Early Time-Restricted Eating Improves Weight Loss While Preserving
+    Muscle: An 8-Week Trial in Young Women'
+population_applicability:
+  age: young women (exact range not specified in abstract)
+  sex: female
+  training_status: limited resistance training experience
+  dose_magnitude: "8-hour feeding window (eTRE 8:00 AM\u20132:00 PM or dTRE 12:00\
+    \ PM\u20136:00 PM); 4 sets \xD7 10 reps knee-supported push-ups, three sessions/week"
+  duration: 8 weeks
+effect: "eTRE (8:00 AM\u20132:00 PM) produced \u22122.61 \xB1 1.06 kg body weight\
+  \ loss (p < 0.001), significantly greater than dTRE (\u22121.44 \xB1 1.12 kg) and\
+  \ control (\u22120.48 \xB1 0.64 kg); triceps brachii thickness increased similarly\
+  \ across all groups (1.36\u20131.55 mm) and push-up endurance improved comparably\
+  \ (62\u201374 additional repetitions), indicating muscle adaptations are not impaired\
+  \ by either TRE protocol."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

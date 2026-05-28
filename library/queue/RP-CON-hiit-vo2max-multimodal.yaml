@@ -1,0 +1,48 @@
+id: RP-CON-hiit-vo2max-multimodal
+domain: conditioning
+pattern: Prescribe high-intensity interval training (HIIT) as the primary conditioning
+  modality to maximize VO2 max/peak gains across healthy athletes and clinical populations,
+  with hypoxic augmentation or inspiratory muscle training added when population-specific
+  evidence supports a further aerobic ceiling.
+parameterization: 'Healthy athletes (racket sports, youth, soccer): standard normoxic
+  HIIT; small-sided games are interchangeable for soccer players (VO2max ES non-significant
+  vs HIIT). Distance runners or altitude-tolerant athletes: replace normoxic HIIT
+  with hypoxic HIIT to gain an additional SMD ~0.68 in VO2max. Post-stroke patients:
+  HIIT over MICT (target MD +1.88 mL/kg·min VO2peak, +2.20 mL/kg·min VO2-VT); begin
+  at reduced intensity (50–60% HRmax) with supervised titration. HFpEF patients: layer
+  inspiratory muscle training (SMD 3.6) as primary modality, with HIIT (SMD 3.5) or
+  combined aerobic-resistance (SMD 3.2) as adjuncts under cardiologist supervision.
+  Live-high-train-low and repeated-sprint-in-hypoxia protocols (RSH g=0.50, RSA g=0.61)
+  suit team-sport athletes seeking combined aerobic and anaerobic gains.'
+backing_atom_ids:
+- EA-CON-0247
+- EA-CON-0964
+- EA-CON-2262
+- EA-CON-6779
+- EA-CON-6998
+- EA-CON-7623
+- EA-CON-7659
+- EA-CON-8559
+falsification_signal: A pre-registered RCT (n ≥ 200, ≥ 12 weeks) in matched healthy
+  or stable clinical participants demonstrating that moderate-intensity continuous
+  training (MICT) produces equivalent or superior VO2max/peak gains to HIIT at the
+  same weekly training volume, with effect size difference < 0.20 SMD.
+safety_bounds: HIIT is absolutely contraindicated in unstable angina, decompensated
+  heart failure, or uncontrolled arrhythmia; HFpEF and post-stroke protocols require
+  physician clearance and on-site clinical supervision for every session; peak session
+  intensity must not exceed 95% HRmax without continuous cardiac monitoring; hypoxic
+  protocols (FiO2 < 0.15 or altitude > 3000 m equivalent) require SpO2 monitoring
+  and abort threshold ≥ 85% SpO2.
+applies_because: HIIT repeatedly recruits cardiac output and skeletal muscle oxygen
+  extraction to near-maximal levels, producing superior central adaptations (increased
+  stroke volume, cardiac remodeling) and peripheral adaptations (mitochondrial biogenesis,
+  oxidative enzyme upregulation, capillary density) compared to lower-intensity modalities;
+  hypoxic conditions further amplify erythropoietic and ventilatory drive responses.
+doesnt_apply_if: Unstable or decompensated cardiovascular disease; acute musculoskeletal
+  injury preventing high-intensity effort; severe pulmonary hypertension; uncontrolled
+  hypertension (resting SBP > 180 mmHg or DBP > 110 mmHg); active neurological instability
+  post-stroke; pediatric populations below Tanner stage II without pediatric sports
+  medicine oversight.
+tier: high-impact
+approval: auto
+version: 0.1.0

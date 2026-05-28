@@ -1,0 +1,31 @@
+id: EA-NUT-7134
+domain: nutrition
+claim: Post-exercise ingested leucine dose predicts the magnitude of muscle protein
+  synthesis responses in older adults but not in younger adults, with no single plasma
+  leucine variable showing substantial predictive capacity in either age group.
+evidence_level: L1
+citations:
+- id: 10.14814/phy2.15775
+  locator_quote: Ingested leucine dose was associated with the magnitude of the MPS
+    response in older, but not younger, adults over acute (0-2 h, r2  = 0.64, p =
+    0.02) and the entire postprandial (>2 h, r2  = 0.18, p = 0.01) period.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Association of postprandial postexercise muscle protein synthesis
+    rates with dietary leucine: A systematic review'
+population_applicability:
+  age: healthy older and younger adults
+  sex: not specified
+  training_status: healthy adults undergoing acute resistance exercise
+  dose_magnitude: bolus protein ingestion within one hour post-resistance exercise
+  duration: "acute postprandial window (0\u20132 h and >2 h)"
+effect: "Leucine dose predicted postprandial post-exercise MPS in older adults (r\xB2\
+  =0.64 at 0\u20132 h; r\xB2=0.18 at >2 h) but not in younger adults; no plasma leucine\
+  \ variable (peak magnitude, rate of rise, or total availability) independently correlated\
+  \ with the magnitude of the anabolic response in either age group."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

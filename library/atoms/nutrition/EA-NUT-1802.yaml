@@ -1,0 +1,40 @@
+id: EA-NUT-1802
+domain: nutrition
+claim: Dawn-to-dusk dry Ramadan intermittent fasting is associated with significant
+  reductions in body weight, waist circumference, body fat percentage, diastolic blood
+  pressure, total cholesterol, triglycerides, and fasting blood glucose across healthy
+  subjects and the general population.
+evidence_level: L1
+citations:
+- id: 10.1016/j.clnesp.2025.03.006
+  locator_quote: "In healthy subjects, RIF was associated with significant reductions\
+    \ in BW (Hedges' G = -0.33; 95 % confidence interval (CI) = -0.37, -0.29; p-value\
+    \ = 2.63 \xD7 10-52), WC (Hedges' G = -0.30; 95 % CI = -0.38, -0.23; p-value =\
+    \ 5.73 \xD7 10-15), BFP (Hedges' G = -0.26; 95 % CI = -0.37, -0.14; p-value =\
+    \ 6.81 \xD7 10-06), DBP (n = 3,456; Hedges' G = -0.26; 95 % CI = -0.38, -0.15;\
+    \ p-value = 9.18 \xD7 10-06), TC (n = 9,314; Hedges' G = -0.16; 95 % CI = -0.25,\
+    \ -0.07; p-value = 6.27 \xD7 10-04), and TG levels (n = 9,020; Hedges' G = -0.16;\
+    \ 95 % CI = -0.24, -0.08; p-value = 6.87 \xD7 10-05)."
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Cardiometabolic and obesity risk outcomes of dawn-to-dusk, dry intermittent
+    fasting: Insights from an umbrella review'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: general population and healthy subjects
+  dose_magnitude: dawn-to-dusk dry intermittent fasting (Ramadan protocol, no food
+    or water during daylight hours)
+  duration: "Ramadan fasting period (~29\u201330 consecutive days)"
+effect: "Small-to-moderate reductions (Hedges' G range: \u22120.15 to \u22120.33)\
+  \ in body weight, waist circumference, body fat percentage, diastolic blood pressure,\
+  \ total cholesterol, and triglycerides in healthy subjects; triglycerides and fasting\
+  \ blood glucose also significantly reduced in the general population. Effects on\
+  \ other cardiometabolic markers (LDL-C, HDL-C, SBP, HbA1c, HOMA-IR, insulin, leptin,\
+  \ adiponectin) not reported as significant at umbrella level."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2029-05-28'

@@ -1,0 +1,37 @@
+id: EA-SUP-1607
+domain: supplements
+claim: "In healthy adults, consuming 20\u201340 g of whey protein in combination with\
+  \ resistance exercise enhances myofibrillar fractional synthetic rate and activates\
+  \ the AKT/mTOR signalling pathway, improving muscle protein synthesis in a time-\
+  \ and dose-dependent manner."
+evidence_level: L1
+citations:
+- id: 10.3390/nu17162579
+  locator_quote: Consumption of 20-40g of whey protein before multiple sets of resistance
+    exercise may enhance myofibrillar FSR and activate the AKT/mTOR pathway, thereby
+    augmenting MPS and extending the anabolic window.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Whey Protein Supplementation Combined with Exercise on Muscle Protein
+    Synthesis and the AKT/mTOR Pathway in Healthy Adults: A Systematic Review and
+    Meta-Analysis'
+population_applicability:
+  age: Adults (range not further specified by abstract)
+  sex: Not restricted; healthy adults of unspecified sex
+  training_status: "Healthy adults (exercise-na\xEFve to resistance-trained per included\
+    \ RCTs)"
+  dose_magnitude: "20\u201340 g whey protein; dose-response observed across 10\u2013\
+    60 g range"
+  duration: "Acute peri-exercise window; AKT/mTOR signalling measured at 1\u20132\
+    \ h post-exercise"
+effect: "Whey protein + exercise significantly increased myofibrillar FSR (Hedges'\
+  \ g = 1.24, 95% CI 0.71\u20131.77; p < 0.001), with 1.3\u20131.6-fold rises when\
+  \ consumed immediately post-exercise and up to 2.5-fold when given 45 min pre-exercise;\
+  \ phosphorylation of AKT, mTOR, 4E-BP1, p70S6K, and rpS6 was elevated vs. placebo\
+  \ at 1\u20132 h post-exercise and declined by 4\u20135 h."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2029-05-28'

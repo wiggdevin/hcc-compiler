@@ -1,0 +1,37 @@
+id: EA-NUT-6526
+domain: nutrition
+claim: A 16:8 time-restricted eating protocol combined with resistance and endurance
+  circuit training reduces total menopausal symptom scores (MRS) and improves quality
+  of life (MENQOL physical and psychosocial domains) significantly more than exercise
+  alone in menopausal women.
+evidence_level: L2
+citations:
+- id: 10.3390/nu17203274
+  locator_quote: These findings suggest that integrating time-restricted eating with
+    exercise results in greater alleviation of menopausal symptoms and improvements
+    in quality of life compared to exercise alone in menopausal women.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Time-Restricted Eating Combined with Exercise Reduces Menopausal Symptoms
+    and Improves Quality of Life More than Exercise Alone in Menopausal Women: A Quasi-Randomized
+    Controlled Trial'
+population_applicability:
+  age: Menopausal women
+  sex: Female
+  training_status: General menopausal population enrolled in a structured exercise
+    program
+  dose_magnitude: TRE 16:8 (16-hour fast, 8-hour eating window) plus resistance and
+    endurance circuit training; n=54 (combination n=24, exercise-only n=30)
+  duration: Not specified in abstract
+effect: Combination group showed significantly greater reduction in total MRS score
+  and psychological and somatic subdomains vs. exercise-only (p=0.008, p=0.009, p=0.007
+  respectively); post-intervention MENQOL physical and psychosocial subdomain scores
+  were significantly lower in the combination group (p=0.013, p=0.002 respectively);
+  no significant between-group differences in urogenital MRS domain or vasomotor and
+  sexual MENQOL subdomains.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

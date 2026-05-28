@@ -1,0 +1,35 @@
+id: EA-NUT-9666
+domain: nutrition
+claim: Time-restricted feeding combined with resistance training significantly reduces
+  body mass, fat mass, insulin, total cholesterol, LDL-C, and energy intake compared
+  to resistance training alone without adversely affecting muscle mass or strength
+  in adults.
+evidence_level: L1
+citations:
+- id: 10.3390/nu16183066
+  locator_quote: 'TRF + RT significantly reduced body mass (WMD -2.90, 95% CI: -5.30
+    to -0.51), fat mass (WMD -1.52, 95% CI: -2.30 to -0.75), insulin (SMD -0.72, 95%
+    CI: -1.24 to -0.21), total cholesterol (WMD -9.44, 95% CI: -13.62 to -5.27), low-density
+    lipoprotein cholesterol (LDL-C) (WMD -9.94, 95% CI: -13.47 to -6.41), and energy
+    intake (WMD -174.88, 95% CI: -283.79 to -65.97) compared to CON + RT.'
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Synergistic Effects of Time-Restricted Feeding and Resistance Training
+    on Body Composition and Metabolic Health: A Systematic Review and Meta-Analysis'
+population_applicability:
+  age: adults
+  sex: not specified
+  training_status: resistance training participants
+  dose_magnitude: TRF protocol combined with resistance training; eating window duration
+    not specified in abstract
+  duration: "\u22654 weeks"
+effect: "Significant reductions in body mass (WMD \u22122.90 kg), fat mass (WMD \u2212\
+  1.52 kg), insulin (SMD \u22120.72), total cholesterol (WMD \u22129.44 mg/dL), LDL-C\
+  \ (WMD \u22129.94 mg/dL), and energy intake (WMD \u2212174.88 kcal/day) versus resistance\
+  \ training with habitual eating; no significant changes in muscle mass or strength."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

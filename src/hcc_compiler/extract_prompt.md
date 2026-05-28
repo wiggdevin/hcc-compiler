@@ -42,7 +42,7 @@ Schema (output JSON only, no markdown fences):
   "contraindications": [],
   "tier": "high-impact|routine",
   "approval": "auto",
-  "library_version": "0.1.0",
+  "library_version": "0.2.0",
   "last_reviewed": "YYYY-MM-DD",
   "expiry": "YYYY-MM-DD"
 }

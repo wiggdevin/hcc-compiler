@@ -1,0 +1,16 @@
+goals:
+- hypertrophy
+- strength
+client_id: qa-smoke-2026-05-26
+constraints: []
+demographics:
+  age: 35
+  sex: M
+  height_cm: 180
+  weight_kg: 82
+current_regimen: 'Trains 5x/week powerlifting + accessories. Eats 3000 kcal/4 meals,
+  ~200g protein. Supplements: creatine 5g/day, vitamin D 4000IU. Sleeps 7h. Trained
+  8+ years; squat 180kg, bench 130kg, dead 220kg.'
+library_version: 0.2.0
+training_status: trained
+contraindications: []

@@ -1,0 +1,40 @@
+id: RP-BEH-structured-bct-multicomponent
+domain: behavioral
+pattern: Design interventions using a structured bundle of behavioral change techniques—prioritizing
+  social support, self-monitoring, feedback, and goal-setting—within multicomponent
+  delivery frameworks to meaningfully improve physical activity, mental health, and
+  sleep outcomes across adolescent through middle-aged adult populations.
+parameterization: 'Adolescents: weight toward social reward, prompts/cues, and digital/app-based
+  delivery; university students: any PA-focused BCT bundle yields large mental-health
+  gains; middle-aged adults: emphasize goal-setting and mindfulness/meditation BCTs
+  for sleep and cognition benefits; multicomponent stacking (educational + technological
+  + environmental) amplifies effect size regardless of age group.'
+backing_atom_ids:
+- EA-BEH-2105
+- EA-BEH-3918
+- EA-BEH-6526
+- EA-BEH-9076
+- EA-BEH-9829
+falsification_signal: High-quality RCTs (n ≥ 200, active control) demonstrate that
+  interventions deploying these specific BCTs (social support, self-monitoring, feedback,
+  goal-setting) produce no statistically significant difference from passive control
+  on physical activity volume, validated mental-health scales, or objectively measured
+  sleep quality.
+safety_bounds: No hard physiological dose limits apply; when targeting clinical anxiety,
+  depression, or insomnia diagnoses, delivery must be supervised or adjunct to licensed
+  clinical care and must not substitute for prescribed pharmacological or psychotherapeutic
+  treatment.
+applies_because: Converging systematic reviews and meta-analyses across adolescent
+  PA, digital health, university mental health, and sleep domains consistently identify
+  the same BCT cluster (social support, self-monitoring, feedback, goal-setting) as
+  the active ingredients driving statistically significant behavior change, indicating
+  a shared motivational and self-regulatory mechanism rather than population- or domain-specific
+  effects.
+doesnt_apply_if: Individuals with severe or acute psychiatric conditions (e.g., psychosis,
+  active suicidality) requiring primary clinical intervention; settings with no capacity
+  to sustain multicomponent delivery (e.g., single-session psychoeducation only);
+  populations where social interaction BCTs are contraindicated (e.g., certain autism
+  spectrum profiles requiring individualized rather than group-based social reinforcement).
+tier: routine
+approval: auto
+version: 0.1.0

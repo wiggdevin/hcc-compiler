@@ -1,0 +1,36 @@
+id: EA-NUT-2696
+domain: nutrition
+claim: Intermittent fasting combined with energy restriction produces comparable weight
+  loss and body fat reduction to continuous energy restriction over a three-week dietary
+  intervention, with energy intake rather than meal timing being the primary determinant
+  of body composition changes.
+evidence_level: L2
+citations:
+- id: 10.7150/ijms.99116
+  locator_quote: The results showed a comparable effect in the weight loss and body
+    fat reduction regardless of the timing of the food intake. The diet quality, together
+    with the energy intake, appeared to be one of the most important factors influencing
+    the body composition.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: The Influence of Intermittent Fasting on Selected Human Anthropometric
+    Parameters
+population_applicability:
+  age: adults (unspecified range)
+  sex: not specified
+  training_status: not specified
+  dose_magnitude: 75% of calculated energy intake requirements in a six-hour time
+    window (IF+ER); 75% without time window (CER); 100% in a six-hour time window
+    (IF without ER)
+  duration: 3 weeks
+effect: "IF with energy restriction yielded mean weight loss of 2.3 \xB1 1.4 kg and\
+  \ adipose tissue loss of 1.3 \xB1 1.1 kg, not significantly different from CER (2.2\
+  \ \xB1 1.1 kg; 1.5 \xB1 1.2 kg fat loss); IF without energy restriction produced\
+  \ significantly less weight loss (1.1 \xB1 1.2 kg; p=0.003 vs IF+ER, p=0.012 vs\
+  \ CER) and the lowest fat-free mass loss (0.2 \xB1 1.3 kg)."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

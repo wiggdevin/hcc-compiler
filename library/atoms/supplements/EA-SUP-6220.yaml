@@ -1,0 +1,33 @@
+id: EA-SUP-6220
+domain: supplements
+claim: Pre-sleep casein supplementation (40 g) confers no significant benefit over
+  afternoon protein supplementation or isoenergetic placebo for recovery or performance
+  outcomes in professional cyclists habitually consuming high-protein diets (>2.5
+  g/kg/day) across a six-day strenuous training camp.
+evidence_level: L2
+citations:
+- id: 10.1080/15502783.2023.2166366
+  locator_quote: Protein supplementation, whether administered before sleep or earlier
+    in the day, exerts no beneficial effects during a short-term strenuous training
+    period in professional cyclists, who naturally consume a high-protein diet.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Pre-sleep protein supplementation in professional cyclists during
+    a training camp: a three-arm randomized controlled trial'
+population_applicability:
+  age: "19 \xB1 1 years (U23 professional cyclists)"
+  sex: not reported in abstract
+  training_status: "professional U23 cyclists (VO\u2082peak 79.8 \xB1 4.9 ml/kg/min)"
+  dose_magnitude: 40 g casein supplement; habitual total protein >2.5 g/kg/day across
+    all groups
+  duration: 6-day training camp with markedly elevated training loads (TSS ~1207/week)
+effect: No significant between-group differences on any measured outcome (Hooper index,
+  RESTQ-Sport, countermovement jump, body composition, 1/5/20-min time trials, estimated
+  critical power; all p > 0.05); protein timing (pre-sleep vs. afternoon) conferred
+  no additional advantage when total protein intake is already very high.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

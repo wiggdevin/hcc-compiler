@@ -1,0 +1,34 @@
+id: EA-NUT-6329
+domain: nutrition
+claim: In middle-aged and older adults consuming a 2-meal eating pattern, a daily
+  protein intake of 1.5 g/kg/d produces significantly greater whole-body net protein
+  balance than either 0.8 g/kg/d or 1.1 g/kg/d.
+evidence_level: L2
+citations:
+- id: 10.1016/j.tjnut.2024.12.025
+  locator_quote: Within a 2-meal eating pattern, a protein intake of 1.5 g/kg/d led
+    to a more positive whole-body net protein balance than intakes of 0.8 and 1.1
+    g/kg/d in middle-aged and older adults.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effect of 3 Different Daily Protein Intakes in a 2-Meal Eating Pattern
+    on Protein Turnover in Middle Age and Older Adults: A Randomized Controlled Trial'
+population_applicability:
+  age: "Middle-aged and older adults (mean 61 \xB1 6 y)"
+  sex: Mixed (not disaggregated in abstract)
+  training_status: Not specified
+  dose_magnitude: 0.8, 1.1, or 1.5 g/kg/d protein distributed across 2 meals within
+    a 9-h eating window
+  duration: 24-hour metabolic study
+effect: "Protein intake of 1.5 g/kg/d within a 2-meal pattern yields significantly\
+  \ higher whole-body net protein balance vs. 0.8 g/kg/d (mean difference +0.55 g/kg\
+  \ LBM/d; 95% CI: 0.17\u20130.93; P=0.004) and vs. 1.1 g/kg/d (mean difference +0.60\
+  \ g/kg LBM/d; 95% CI: 0.23\u20130.97; P=0.001); no significant difference between\
+  \ 0.8 and 1.1 g/kg/d (P=0.936); muscle protein synthesis not significantly different\
+  \ across any groups (P=0.388)."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

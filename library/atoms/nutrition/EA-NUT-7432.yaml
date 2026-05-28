@@ -1,0 +1,33 @@
+id: EA-NUT-7432
+domain: nutrition
+claim: "In resistance-trained adults, time-restricted eating with 8\u201310 hour eating\
+  \ windows significantly reduces fat mass (MD: \u22121.25 kg) and body fat percentage\
+  \ (MD: \u22121.57%) without significantly affecting fat-free mass compared to a\
+  \ habitual diet."
+evidence_level: L1
+citations:
+- id: 10.1016/j.nutres.2026.01.001
+  locator_quote: "Significant reductions were observed for BMI (MD: -0.75 kg/m\xB2\
+    ; 95% CI: -1.42 to -0.08; I\xB2 = 69.8%), BF% (MD: -1.57%; 95% CI: -3.12 to -0.01;\
+    \ I\xB2 = 0%), and FM (MD: -1.25 kg; 95% CI: -1.95 to -0.54; I\xB2 = 0%)."
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Time-restricted eating shows a modest reduction in fat mass in resistance-trained
+    individuals: A systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: not specified
+  training_status: resistance-trained
+  dose_magnitude: eating windows of 8 to 10 hours
+  duration: short-duration RCTs; specific trial lengths not reported in abstract
+effect: "TRE with 8\u201310 hour eating windows produces statistically significant\
+  \ reductions in BMI (MD: \u22120.75 kg/m\xB2), body fat percentage (MD: \u22121.57%),\
+  \ and fat mass (MD: \u22121.25 kg) in resistance-trained adults; no significant\
+  \ changes detected in body mass or fat-free mass. Effect sizes are modest and certainty\
+  \ is limited by small sample sizes and short trial durations."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

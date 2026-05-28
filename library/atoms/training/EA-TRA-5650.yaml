@@ -1,0 +1,32 @@
+id: EA-TRA-5650
+domain: training
+claim: "In adults aged 18\u201365, the time of day at which exercise is performed\
+  \ does not significantly affect metabolic or glucose responses, supporting exercise\
+  \ at any time of day as an equivalent public health goal."
+evidence_level: L1
+citations:
+- id: 10.1080/07420528.2024.2419867
+  locator_quote: The results indicate that there is no clear effect of the time of
+    the day on metabolic responses to exercise and exercise at any time of day should
+    be the goal of public health strategies.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'The impact of the time of day on metabolic responses to exercise in
+    adults: A systematic and meta-analysis review'
+population_applicability:
+  age: "18\u201365 years"
+  sex: not specified
+  training_status: not specified
+  dose_magnitude: any exercise modality at a specific time of day
+  duration: not specified
+effect: "No significant difference in 24 h CGM glucose between morning and afternoon/evening\
+  \ exercise on the day of exercise (SMD = 0.12 [\u22120.22\u20130.46], p = 0.76)\
+  \ or the following day (SMD = \u22120.02 [\u22120.36\u20130.33], p = 0.94); systematic\
+  \ review of 12 RCTs shows a general unclear risk of bias and low certainty in the\
+  \ evidence."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

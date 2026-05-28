@@ -1,0 +1,34 @@
+id: EA-NUT-4384
+domain: nutrition
+claim: In exercising adults, time-restricted eating produces a small but significant
+  reduction in fat mass and body fat percentage without significantly altering fat-free
+  mass compared to unrestricted eating.
+evidence_level: L1
+citations:
+- id: 10.1038/s41366-024-01704-2
+  locator_quote: TRE had a small but significant reduction of fat mass (FM) kg with
+    an effect size of -0.20 (95% CI = -0.28 to -0.13, p < 0.001) and on body fat percent
+    (BF%) with an effect size of -0.23 (95% CI = -0.35 to -0.11, p < 0.001).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of time-restricted eating with exercise on body composition
+    in adults: a systematic review and meta-analysis'
+population_applicability:
+  age: Adults
+  sex: Not specified
+  training_status: Exercising (aerobic, resistance, or concurrent training)
+  dose_magnitude: Time-restricted eating window vs. unrestricted eating; specific
+    eating-window widths varied across included studies
+  duration: Varied across 15 included studies; literature searched through May 2023
+effect: "TRE combined with exercise reduces fat mass (ES = \u22120.20, 95% CI \u2212\
+  0.28 to \u22120.13, p < 0.001) and body fat percentage (ES = \u22120.23, 95% CI\
+  \ \u22120.35 to \u22120.11, p < 0.001) while preserving fat-free mass (p = 0.07,\
+  \ non-significant) versus exercise-matched unrestricted eating; subgroup analyses\
+  \ found no significant moderating effect of age, BMI, exercise type, study duration,\
+  \ or energy intake."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

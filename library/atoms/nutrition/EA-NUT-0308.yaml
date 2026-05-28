@@ -1,0 +1,33 @@
+id: EA-NUT-0308
+domain: nutrition
+claim: In adolescents, the interval between acute exercise and a subsequent meal significantly
+  moderates post-exercise energy intake in lean individuals but not in those with
+  overweight or obesity, indicating that meal timing prescriptions should be individualized
+  by weight-status phenotype.
+evidence_level: L1
+citations:
+- id: 10.1016/j.tjnut.2025.01.007
+  locator_quote: the meal interval significantly moderated effect sizes within-study
+    arms with lean participants (ps = 0.006 and 0.019, respectively), but not in those
+    with overweight/obesity (ps = 0.070 and 0.620, respectively) in both analyses
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'The Role of Meal Timing in Appetitive Responses to Acute Exercise
+    in Adolescents with and without Obesity: A Systematic Review and Meta-Analysis'
+population_applicability:
+  age: children and adolescents (median age 13 y)
+  sex: mixed (not disaggregated in abstract)
+  training_status: general youth population; includes lean and overweight/obese subgroups
+  dose_magnitude: "acute exercise bouts of varied intensity and duration; post-exercise\
+    \ meal interval 0\u20133 h (median 30 min)"
+  duration: single acute exercise session per trial arm
+effect: Post-exercise meal timing interval modulates energy intake in lean adolescents
+  (significant in both linear and spline analyses) but shows no significant moderation
+  in those with overweight/obesity; exercise intensity, duration, and modality did
+  not alter this relationship.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

@@ -1,0 +1,33 @@
+id: EA-NUT-8478
+domain: nutrition
+claim: Time-restricted feeding (TRF) overall decreases self-reported total sleep time
+  and impairs subjective sleep quality as measured by the Pittsburgh Sleep Quality
+  Index, with effects that depend on the type and duration of dietary restriction.
+evidence_level: L1
+citations:
+- id: 10.1080/07420528.2025.2577859
+  locator_quote: The results showed that TRF decreased self-reported TST and impaired
+    subjective sleep quality, as evidenced by an increase in the global score of the
+    PSQI.
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: 'Effects of time restricted feeding on sleep: A systematic review and
+    meta-analysis'
+population_applicability:
+  age: "unrestricted; 51 studies from 17 countries published 2001\u20132023"
+  sex: unrestricted
+  training_status: unrestricted
+  dose_magnitude: various TRF protocols including Ramadan and non-Ramadan fasting
+    windows
+  duration: varied across included studies; search spanned to March 2024
+effect: Overall TRF decreases self-reported total sleep time (TST) and raises the
+  PSQI global score (indicating worse sleep quality). Disaggregated, Ramadan fasting
+  significantly decreases TST and increases PSQI, while non-Ramadan TRF is associated
+  with an overall increase in TST and no statistically significant PSQI difference
+  versus controls, indicating that TRF timing and structure are key moderators.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

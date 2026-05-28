@@ -1,0 +1,35 @@
+id: EA-NUT-5196
+domain: nutrition
+claim: "Modified alternate-day fasting is the most effective intermittent fasting\
+  \ intervention for reducing body weight compared to usual diet, with a mean difference\
+  \ of \u22125.18 kg (95% CI: \u22127.04, \u22123.32), supported by high certainty\
+  \ of evidence from a network meta-analysis of 56 studies."
+evidence_level: L1
+citations:
+- id: 10.1007/s13668-025-00684-7
+  locator_quote: 'With high certainty of evidence, modified alternate-day fasting
+    was found to be the most effective intervention compared to a usual diet in reducing
+    body weight (MD= -5.18 kg; 95% CI: -7.04, -3.32), waist circumference (-3.55 cm;
+    -5.66, -1.45), systolic blood pressure (-7.24 mmHg; -11.90, -2.58), diastolic
+    blood pressure (-4.70 mmHg; -8.46, -0.95).'
+  existence: VERIFIED
+  faithfulness: MAJOR_DISTORTION
+  cited_title: 'Intermittent Fasting for the Prevention of Cardiovascular Disease
+    Risks: Systematic Review and Network Meta-Analysis'
+population_applicability:
+  age: "adults \u2265 18 years"
+  sex: not specified
+  training_status: not specified
+  dose_magnitude: modified alternate-day fasting protocol
+  duration: not specified; long-term RCT evidence lacking
+effect: "Modified alternate-day fasting reduces body weight (MD \u22125.18 kg), waist\
+  \ circumference (\u22123.55 cm), systolic blood pressure (\u22127.24 mmHg), and\
+  \ diastolic blood pressure (\u22124.70 mmHg) versus usual diet with high certainty;\
+  \ time-restricted eating additionally reduces fat-free mass, waist circumference,\
+  \ diastolic blood pressure, and fasting plasma glucose with high certainty."
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

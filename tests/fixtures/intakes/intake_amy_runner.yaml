@@ -1,5 +1,5 @@
 client_id: amy_runner
-library_version: "0.1.0"
+library_version: "0.2.0"
 demographics:
   age: 32
   sex: F

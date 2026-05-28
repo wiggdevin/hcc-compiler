@@ -1,0 +1,32 @@
+id: EA-NUT-7483
+domain: nutrition
+claim: Early time-restricted eating (eTRE) within an 8-hour daytime window for two
+  months significantly reduces muscle damage biomarkers (CPK, AST, CRP) and anxiety
+  levels in healthy elderly men compared to controls.
+evidence_level: L2
+citations:
+- id: 10.1016/j.exger.2025.112896
+  locator_quote: Significant decreases were also found in muscle damage and inflammation
+    markers, including CPK (p = 0.0067), AST (p < 0.0001), CRP (p = 0.0011), and bilirubin
+    (p = 0.044), indicating reduced physiological stress and improved liver function.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: The effect of early time-restricted eating on muscle damage-related
+    biomarkers and anxiety in older men
+population_applicability:
+  age: older/elderly men
+  sex: male
+  training_status: healthy, not specified as trained
+  dose_magnitude: all daily caloric intake within an 8-hour window (7:00 AM to 3:00
+    PM)
+  duration: 2 months
+effect: "eTRE significantly reduced CPK, AST, CRP, and bilirubin (muscle damage and\
+  \ inflammation markers) and improved body composition (BMI, body fat, fat-free mass)\
+  \ and anxiety (STICSA scales) versus control; mediation analyses indicated LDH,\
+  \ ALT, and AST mediated the eTRE\u2013anxiety reduction relationship."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

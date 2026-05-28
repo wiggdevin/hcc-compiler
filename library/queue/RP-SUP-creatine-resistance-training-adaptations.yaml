@@ -1,0 +1,89 @@
+id: RP-SUP-creatine-resistance-training-adaptations
+domain: supplements
+pattern: Supplement with creatine monohydrate (3–5 g/day maintenance, or a 5–7 day
+  loading phase of 20 g/day in four divided doses) combined with progressive resistance
+  training to increase fat-free mass, upper- and lower-body strength, and high-intensity
+  exercise capacity.
+parameterization: Untrained individuals exhibit greater relative strength gains than
+  trained individuals (though trained athletes accumulate greater absolute fat-free
+  mass, ~1.82 kg vs ~1.23 kg); postmenopausal women require ≥5 g/day to achieve meaningful
+  lean-mass (+0.37 kg) and leg-press (+7.5 kg 1RM) benefits; active females as a whole
+  show inconsistent performance responses and may need higher resistance-training
+  volumes to realise ergogenic effects; low-to-moderate doses paired with high-intensity
+  exercise outperform high doses alone for strength; co-ingestion with β-alanine extends
+  benefit to repeated-bout anaerobic performance without additional maximal-strength
+  gains; combat-sport and competitive swimming populations benefit specifically for
+  power output and sprint performance.
+backing_atom_ids:
+- EA-SUP-0001
+- EA-SUP-0398
+- EA-SUP-0510
+- EA-SUP-0822
+- EA-SUP-1084
+- EA-SUP-1351
+- EA-SUP-1368
+- EA-SUP-1449
+- EA-SUP-1607
+- EA-SUP-1930
+- EA-SUP-2054
+- EA-SUP-2412
+- EA-SUP-2459
+- EA-SUP-2597
+- EA-SUP-2701
+- EA-SUP-3021
+- EA-SUP-3039
+- EA-SUP-3594
+- EA-SUP-3993
+- EA-SUP-4083
+- EA-SUP-4139
+- EA-SUP-4168
+- EA-SUP-4341
+- EA-SUP-4445
+- EA-SUP-4514
+- EA-SUP-4525
+- EA-SUP-5023
+- EA-SUP-5676
+- EA-SUP-5761
+- EA-SUP-6155
+- EA-SUP-6220
+- EA-SUP-6467
+- EA-SUP-6912
+- EA-SUP-7073
+- EA-SUP-7092
+- EA-SUP-7180
+- EA-SUP-7507
+- EA-SUP-7536
+- EA-SUP-7640
+- EA-SUP-7825
+- EA-SUP-8071
+- EA-SUP-8319
+- EA-SUP-8400
+- EA-SUP-8455
+- EA-SUP-8548
+- EA-SUP-8825
+- EA-SUP-8953
+- EA-SUP-9218
+- EA-SUP-9444
+- EA-SUP-9818
+- EA-SUP-9880
+falsification_signal: A pre-registered RCT (n > 500, ≥12 weeks, matched progressive
+  resistance training) demonstrating no significant between-group difference in fat-free
+  mass or 1RM strength for creatine versus placebo in resistance-trained adults would
+  disprove the core ergogenic claim.
+safety_bounds: Loading phase must not exceed 20 g/day for more than 7 days; maintenance
+  dose ≤5 g/day for healthy adults; serum creatinine may transiently rise (~0.07 µmol/L)
+  without GFR impairment, but individuals with eGFR < 60 mL/min/1.73 m² or a single
+  functioning kidney must obtain nephrology clearance before use; no established safe
+  upper limit exists for long-term doses above 10 g/day.
+applies_because: Exogenous creatine saturates intramuscular phosphocreatine stores,
+  accelerating ATP resynthesis during high-intensity contractions, enabling greater
+  cumulative training volume and downstream mTOR-mediated anabolic signalling that
+  drives hypertrophy and strength gains across training cycles.
+doesnt_apply_if: Pre-existing renal impairment (eGFR < 60 mL/min/1.73 m²); active
+  females engaged in non-resistance-based exercise programmes where performance benefit
+  is inconsistent; athletes seeking anti-inflammatory outcomes (no significant effect
+  on CRP, IL-6, IL-1β, TNF-α, or PGE2); primarily endurance-focused athletes for whom
+  protein supplementation is the more effective ergogenic modality.
+tier: high-impact
+approval: auto
+version: 0.1.0

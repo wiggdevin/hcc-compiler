@@ -1,0 +1,33 @@
+id: EA-NUT-3559
+domain: nutrition
+claim: Time-restricted eating reduces HbA1c and fasting insulin levels, and early
+  time-restricted eating specifically reduces fasting glucose in individuals with
+  overweight or obesity.
+evidence_level: L1
+citations:
+- id: 10.1007/s11154-023-09853-x
+  locator_quote: Our meta-analysis suggests that TRE can reduce HbA1c and insulin
+    levels, and that timing of food intake is a crucial factor in the metabolic benefit
+    of TRE, as only eTRE is capable of reducing fasting glucose levels in subjects
+    with overweight or obesity.
+  existence: VERIFIED
+  faithfulness: UNSUPPORTED
+  cited_title: 'Circadian alignment of food intake and glycaemic control by time-restricted
+    eating: A systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: mixed
+  training_status: not specified
+  dose_magnitude: TRE protocol; 18 controlled studies pooled, n=1169 subjects
+  duration: minimum 4 weeks
+effect: 'TRE significantly reduced HbA1c (Hedges''s g = -0.27; 95% CI: -0.47, -0.06;
+  p = 0.01) and fasting insulin (Hedges''s g = -0.40; 95% CI: -0.73, -0.08; p = 0.01);
+  early TRE additionally reduced fasting glucose (Hedges''s g = -0.38; 95% CI: -0.62,
+  -0.14; p < 0.01); no significant overall effect on fasting glucose was observed
+  across all TRE windows.'
+contraindications: []
+tier: high-impact
+approval: auto
+library_version: 0.1.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

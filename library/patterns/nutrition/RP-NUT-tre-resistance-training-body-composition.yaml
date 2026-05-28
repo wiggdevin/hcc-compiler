@@ -1,0 +1,98 @@
+id: RP-NUT-tre-resistance-training-body-composition
+domain: nutrition
+pattern: Combining an 8–10 hour time-restricted eating window with resistance training
+  at least 3 days per week reduces fat mass while preserving fat-free mass in physically
+  active adults.
+parameterization: Early TRE windows (e.g., 8 AM–2 PM) may enhance total body-weight
+  reduction versus delayed or ad-libitum windows; protein intake of ≥1.6 g/kg/day
+  within the eating window further protects lean mass, escalating to 2.3–3.1 g/kg/day
+  during hypocaloric phases in resistance-trained individuals; add a 250–750 kcal/day
+  deficit for overweight or obese adults to amplify fat loss; for adults ≥50 years,
+  distribute ≥25–30 g leucine-rich protein per meal and treat 1.5 g/kg/day as a minimum
+  protein floor; adolescent meal-timing prescriptions must be individualized by weight-status
+  phenotype rather than applied universally; menopausal women gain additional quality-of-life
+  benefit from the 16:8 variant combined with circuit-style resistance and endurance
+  training.
+backing_atom_ids:
+- EA-NUT-0001
+- EA-NUT-0077
+- EA-NUT-0266
+- EA-NUT-0308
+- EA-NUT-0496
+- EA-NUT-0926
+- EA-NUT-1085
+- EA-NUT-1139
+- EA-NUT-1643
+- EA-NUT-1676
+- EA-NUT-1802
+- EA-NUT-2040
+- EA-NUT-2097
+- EA-NUT-2558
+- EA-NUT-2696
+- EA-NUT-3067
+- EA-NUT-3103
+- EA-NUT-3357
+- EA-NUT-3504
+- EA-NUT-3698
+- EA-NUT-3752
+- EA-NUT-4009
+- EA-NUT-4384
+- EA-NUT-4512
+- EA-NUT-4538
+- EA-NUT-5322
+- EA-NUT-5482
+- EA-NUT-5593
+- EA-NUT-5978
+- EA-NUT-6066
+- EA-NUT-6095
+- EA-NUT-6175
+- EA-NUT-6194
+- EA-NUT-6329
+- EA-NUT-6511
+- EA-NUT-6526
+- EA-NUT-6603
+- EA-NUT-6631
+- EA-NUT-6673
+- EA-NUT-7134
+- EA-NUT-7175
+- EA-NUT-7354
+- EA-NUT-7432
+- EA-NUT-7436
+- EA-NUT-7483
+- EA-NUT-7491
+- EA-NUT-7737
+- EA-NUT-8888
+- EA-NUT-8934
+- EA-NUT-9353
+- EA-NUT-9579
+- EA-NUT-9665
+- EA-NUT-9666
+- EA-NUT-9906
+falsification_signal: An adequately powered RCT demonstrating that TRE+RT produces
+  no significant advantage in fat-mass reduction or fat-free mass preservation versus
+  protein-matched, isocaloric resistance training alone, or showing that fat-free
+  mass is significantly lower with TRE+RT than with RT alone, would disprove this
+  pattern.
+safety_bounds: Eating window must not be compressed below 6 hours per day; protein
+  intake must not drop below 1.2 g/kg/day during any TRE protocol; caloric deficit
+  must not exceed 1 000 kcal/day without clinical supervision; individuals with BMI
+  ≥40, type 1 diabetes, active eating disorders, or who are pregnant or lactating
+  require medical clearance before adopting TRE; adolescents must not follow a TRE
+  protocol without individualized guidance.
+applies_because: Compressing the eating window reduces total daily energy intake through
+  fewer feeding opportunities and attenuated appetite signaling, while concurrent
+  resistance training sustains muscle protein synthesis and prevents the fat-free
+  mass loss otherwise observed with TRE alone—their combination produced −3.2 ± 0.4
+  kg fat mass with stable fat-free mass over 8 weeks versus −1.1 kg fat mass for RT
+  alone and fat-free mass loss of −2.3 ± 0.6 kg for TRE alone (EA-NUT-8888), and is
+  further reinforced by meta-analytic evidence across multiple TRE-plus-exercise trials
+  (EA-NUT-9666, EA-NUT-4384, EA-NUT-6603).
+doesnt_apply_if: Active or recovering eating disorders; pregnancy or lactation; type
+  1 diabetes or insulin-dependent type 2 diabetes requiring precise carbohydrate timing
+  across the day; shift workers with chronic circadian misalignment; adolescents with
+  overweight or obesity (meal timing does not modulate post-exercise energy intake
+  in this subgroup, EA-NUT-0308); adults with severe sarcopenia or cachexia where
+  caloric restriction is contraindicated.
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+version: 0.2.0

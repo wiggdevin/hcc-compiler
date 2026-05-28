@@ -1,0 +1,35 @@
+id: EA-NUT-6603
+domain: nutrition
+claim: In overweight or obese women, combining time-restricted eating with physical
+  activity produces greater improvements in body composition, lipid profile, and physical
+  performance than time-restricted eating alone, with no significant difference in
+  outcomes between early and late eating windows.
+evidence_level: L2
+citations:
+- id: 10.3390/nu17010169
+  locator_quote: The integration of TRE with PA leads to greater improvements in body
+    composition, lipid profile, and physical performance, with no significant differences
+    between the ETRE-PA and LTRE-PA approaches.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Effectiveness of Early Versus Late Time-Restricted Eating Combined
+    with Physical Activity in Overweight or Obese Women
+population_applicability:
+  age: "27\u201336 years (group means)"
+  sex: female
+  training_status: "untrained; overweight or obese (BMI 32\u201335 kg/m\xB2; body\
+    \ weight 88\u201395 kg)"
+  dose_magnitude: TRE (early or late eating window) plus combined aerobic and resistance
+    training program over 12 weeks; control and TRE-only arms included
+  duration: 12 weeks
+effect: Both TRE+PA groups achieved significant reductions in body weight and BMI
+  versus control and TRE-only (p < 0.0005); ETRE-PA additionally reduced fat mass
+  (p = 0.02), LDL-C (p = 0.01), and AST (p = 0.002); both TRE+PA groups reduced ALT
+  and outperformed controls on 6-min walk test, bench press, 30-s squat, crunch, vertical
+  jump (p < 0.0005), and leg extension (p < 0.02).
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

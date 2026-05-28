@@ -1,0 +1,37 @@
+id: EA-NUT-6095
+domain: nutrition
+claim: "An 8-week program combining time-restricted eating, high-protein intake (1.6\
+  \ g\xB7kg-1\xB7day-1), and resistance training under 25% calorie restriction significantly\
+  \ reduces visceral and subcutaneous adipose tissue while preserving fat-free mass\
+  \ in women with overweight."
+evidence_level: L2
+citations:
+- id: 10.1123/ijsnem.2025-0010
+  locator_quote: An 8-week program combining TRE, high-protein intake, and RT effectively
+    reduced VAT, subcutaneous adipose tissue, and leptin levels while preserving muscle
+    mass in women with overweight.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'High-Protein Time-Restricted Eating Alongside Resistance Training
+    Reduces Adipose Tissue While Preserving Fat-Free Mass in Women With Overweight:
+    A Randomized Controlled Trial'
+population_applicability:
+  age: "18\u201330 years"
+  sex: female
+  training_status: "women with overweight (BMI 25\u201330 kg/m\xB2) engaged in resistance\
+    \ training"
+  dose_magnitude: "1.6 g\xB7kg-1\xB7day-1 protein; 25% calorie restriction; time-restricted\
+    \ eating (TRE)"
+  duration: 8 weeks
+effect: "TRE combined with high-protein intake and RT produced the greatest reduction\
+  \ in VAT in the THP group (\u0394 = -146.98 \xB1 12.66, d = -1.867) and significant\
+  \ reductions in subcutaneous adipose tissue and leptin across all groups; fat-free\
+  \ mass was preserved or increased in high-protein groups (\u0394 THP = +1.06 \xB1\
+  \ 1.75 kg; \u0394 HP = +2.37 \xB1 0.64 kg); plasma ghrelin levels remained unchanged\
+  \ across all groups."
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

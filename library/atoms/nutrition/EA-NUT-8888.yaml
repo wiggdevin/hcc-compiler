@@ -1,0 +1,34 @@
+id: EA-NUT-8888
+domain: nutrition
+claim: "Combining 10-hour time-restricted eating with resistance training decreases\
+  \ fat mass by 3.2 \xB1 0.4 kg while maintaining fat-free mass, outperforming either\
+  \ intervention alone, in young adults with overweight or obesity over 8 weeks."
+evidence_level: L2
+citations:
+- id: 10.1080/15502783.2025.2481127
+  locator_quote: TRE combined with RT might be more effective for weight/fat loss,
+    maintaining muscle mass, and good quality of sleep among young adults with overweight
+    or obesity.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Efficacy of time restricted eating and resistance training on body
+    composition and mood profiles among young adults with overweight/obesity: a randomized
+    controlled trial'
+population_applicability:
+  age: young college adults
+  sex: not specified
+  training_status: untrained or sedentary with overweight/obesity (BMI-defined)
+  dose_magnitude: 10-hour eating window per day (TRE); supervised resistance exercise
+    (RT); n=54 randomized across 4 arms
+  duration: 8 weeks
+effect: "TRE+RT decreased fat mass by 3.2 \xB1 0.4 kg and stably maintained fat-free\
+  \ mass; TRE alone reduced body weight >2 kg and BMI ~1 kg/m\xB2 but also decreased\
+  \ fat-free mass by 2.3 \xB1 0.6 kg; RT alone increased fat-free mass by 1.6 \xB1\
+  \ 0.3 kg and decreased fat mass by 1.1 \xB1 0.5 kg; combination additionally improved\
+  \ sleep quality and normalized baseline mild anxiety."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2029-05-28'

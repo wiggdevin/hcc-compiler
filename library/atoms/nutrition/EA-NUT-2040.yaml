@@ -1,0 +1,34 @@
+id: EA-NUT-2040
+domain: nutrition
+claim: Adaptive thermogenesis after weight loss may be small or non-statistically
+  significant when higher-quality methodological designs are used, and appears attenuated
+  or non-existent after periods of weight stabilisation.
+evidence_level: L1
+citations:
+- id: 10.1017/S0007114521001094
+  locator_quote: These findings suggest that although WL may lead to AT in some of
+    the EE components, these values may be small or non-statistically significant
+    when higher-quality methodological designs are used. Furthermore, AT seems to
+    be attenuated, or non-existent, after periods of weight stabilisation/neutral
+    EB.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Does adaptive thermogenesis occur after weight loss in adults? A systematic
+    review
+population_applicability:
+  age: Adults older than 18 years
+  sex: Male and female (not disaggregated)
+  training_status: Not specified; mixed across included studies
+  dose_magnitude: "Varied; statistically significant weight loss required for study\
+    \ inclusion; sample size \u226510 participants"
+  duration: "Intervention period \u22651 week; studies published up to May 2020"
+effect: Adaptive thermogenesis was detected in 27 of 33 included studies (82.8% for
+  REE, 80.0% for TDEE, 100% for SEE), but well-designed studies reported lower or
+  non-significant values; AT was further attenuated or absent following weight stabilisation
+  or return to neutral energy balance.
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2029-05-28'

@@ -130,12 +130,12 @@ function renderPackBrief(pack: EvidencePack): string {
     const atoms = block.atoms ?? [];
     if (!patterns.length && !atoms.length) continue;
     lines.push(`\n### ${domain.toUpperCase()}`);
-    for (const p of patterns.slice(0, 2)) {
+    for (const p of patterns.slice(0, 3)) {
       lines.push(`- **${p.pattern_id}** — ${truncate(p.applies_because, 220)}`);
       if (p.parameterization)
         lines.push(`  - How to apply: ${truncate(p.parameterization, 260)}`);
     }
-    for (const a of atoms.slice(0, 4)) {
+    for (const a of atoms.slice(0, 5)) {
       lines.push(`- \`${a.atom_id}\` — ${truncate(a.claim, 200)}`);
     }
   }

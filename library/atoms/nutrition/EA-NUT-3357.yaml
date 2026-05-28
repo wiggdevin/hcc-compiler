@@ -1,0 +1,34 @@
+id: EA-NUT-3357
+domain: nutrition
+claim: Intermittent dieting with break periods produces a significantly smaller compensatory
+  reduction in resting metabolic rate than continuous energy restriction, while achieving
+  comparable improvements in body mass, fat mass, BMI, body fat percentage, and waist
+  circumference.
+evidence_level: L1
+citations:
+- id: 10.1093/nutrit/nuad168
+  locator_quote: The compensatory reduction in RMR was significantly smaller following
+    INT-B compared with CER, suggesting a lesser degree of metabolic adaptation.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Effects of intermittent dieting with break periods on body composition
+    and metabolic adaptation: a systematic review and meta-analysis'
+population_applicability:
+  age: adults
+  sex: mixed (not specified)
+  training_status: overweight/obese and resistance-trained individuals included; RMR-retention
+    advantage more pronounced in overweight/obese
+  dose_magnitude: continuous vs. intermittent energy restriction protocols with structured
+    break periods
+  duration: varied; intervention duration examined as a subgroup moderator across
+    12 RCTs
+effect: INT-B preserves RMR significantly better than CER (lesser metabolic adaptation),
+  while both strategies produce equivalent reductions in body mass, fat mass, BMI,
+  body fat percentage, and waist circumference; the RMR-protective effect is greater
+  in overweight/obese populations than in resistance-trained individuals.
+contraindications: []
+tier: high-impact
+approval: Devin Wiggins 2026-05-28
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

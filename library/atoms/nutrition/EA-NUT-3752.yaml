@@ -1,0 +1,35 @@
+id: EA-NUT-3752
+domain: nutrition
+claim: In middle-aged physically active individuals, both volumetric diet and time-restricted
+  eating produce equivalent significant reductions in body weight and fat mass while
+  preserving lean body mass over 12 weeks, with no significant between-group differences.
+evidence_level: L2
+citations:
+- id: 10.1186/s12937-025-01167-9
+  locator_quote: Both VD and TRE groups showed significant reductions in BW (p = 0.0002;
+    d = 0.61), absolute FM (p < 0.0001; d = 0.85), relative FM (p < 0.0001; d = 0.84),
+    BMI (p = 0.0001; d = 0.60), WC (p < 0.0001; d = 0.92), HC (p = 0.003; d = 0.51)
+    and WHR (p < 0.0001; d = 0.90) after 12 weeks. No significant differences were
+    observed between groups or in interaction effects for these parameters. Both groups
+    maintained LBM throughout the intervention.
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: 'Similar body composition outcomes following volumetric diet and time-restricted
+    eating in middle-aged individuals: a 12-week randomized controlled trial'
+population_applicability:
+  age: "middle-aged (mean ~39\u201342 years)"
+  sex: not reported in abstract
+  training_status: physically active
+  dose_magnitude: "VD: energy density \u22641.5 kcal/g; TRE: 8-hour eating window\
+    \ (11:30 AM\u20137:30 PM)"
+  duration: 12 weeks
+effect: "Both VD and TRE significantly reduced body weight, absolute and relative\
+  \ fat mass, BMI, waist circumference, hip circumference, and WHR with medium-to-large\
+  \ effect sizes (d = 0.51\u20130.92) while preserving lean body mass; TRE showed\
+  \ significantly higher adherence than VD (5.78 vs 5.29 days/week, p = 0.0002)."
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

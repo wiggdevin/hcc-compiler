@@ -1,0 +1,32 @@
+id: EA-NUT-2558
+domain: nutrition
+claim: Six weeks of 16/8 time-restricted eating without caloric restriction significantly
+  reduced fat mass and body fat percentage while preserving fat-free mass in female
+  DanceSport dancers.
+evidence_level: L2
+citations:
+- id: 10.1080/15502783.2025.2513943
+  locator_quote: After 6 weeks, the TRE group showed significant reductions in FM
+    and BF% compared to baseline (p < 0.01). No significant changes were observed
+    in body weight or FFM (p > 0.05).
+  existence: VERIFIED
+  faithfulness: VERIFIED
+  cited_title: Impact of 16/8 time-restricted eating on body composition and lipolytic
+    hormone regulation in female DanceSport dancers
+population_applicability:
+  age: adult
+  sex: female
+  training_status: competitive DanceSport athletes
+  dose_magnitude: "16-hour fast / 8-hour eating window (11:00\u201319:00), no caloric\
+    \ restriction imposed"
+  duration: 6 weeks
+effect: 16/8 TRE significantly reduced fat mass and body fat percentage versus baseline
+  without altering fat-free mass, body weight, or total caloric and macronutrient
+  intake; HDL-C and catecholamines (epinephrine, norepinephrine) and adiponectin also
+  increased significantly.
+contraindications: []
+tier: routine
+approval: auto
+library_version: 0.2.0
+last_reviewed: '2026-05-28'
+expiry: '2028-05-28'

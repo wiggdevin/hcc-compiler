@@ -32,9 +32,11 @@ COPY --chown=appuser:appuser library.db* /data-seed/
 
 # --- copy sidecar source ---------------------------------------------------
 COPY services/compiler-api/ ./services/compiler-api/
+RUN chmod +x ./services/compiler-api/entrypoint.sh
 
 # --- data directory (Fly volume mount point) --------------------------------
-RUN mkdir -p /data && chown appuser:appuser /data
+# Seed dir + volume dir both owned by appuser so the entrypoint cp succeeds.
+RUN mkdir -p /data /data-seed && chown -R appuser:appuser /data /data-seed
 
 # --- drop privileges -------------------------------------------------------
 USER appuser
@@ -43,10 +45,11 @@ USER appuser
 EXPOSE 8080
 
 # --- entrypoint ------------------------------------------------------------
-# The sidecar imports from services/compiler-api/ so we run from there.
-# LIBRARY_DB_PATH defaults to /data/library.db; the Fly volume is mounted at /data.
+# entrypoint.sh seeds /data/library.db from /data-seed/library.db if the
+# baked seed is newer than (or replaces a missing) volume copy, then exec's
+# uvicorn. Keeps deploys self-updating without needing fly ssh.
 WORKDIR /app/services/compiler-api
 ENV PYTHONUNBUFFERED=1
 ENV PORT=8080
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["./entrypoint.sh"]
