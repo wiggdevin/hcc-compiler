@@ -225,7 +225,7 @@ export default function NewClientPage() {
                 type="text"
                 value={intake.library_version}
                 onChange={(e) => update("library_version", e.target.value)}
-                placeholder="0.1.0"
+                placeholder="0.2.0"
                 className={inputClass}
               />
             </div>

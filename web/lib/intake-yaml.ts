@@ -124,7 +124,7 @@ export function intakeToYaml(intake: ClientIntake): string {
 export function blankIntake(): ClientIntake {
   return {
     client_id: "",
-    library_version: "0.1.0",
+    library_version: "0.2.0",
     demographics: { age: 30, sex: "M", weight_kg: 75, height_cm: 175 },
     training_status: "trained",
     goals: [],
