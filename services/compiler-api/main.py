@@ -76,21 +76,41 @@ async def rate_limit_handler(request: Request, exc: RateLimitExceeded) -> JSONRe
     )
 
 
+_BODY_BEARING_METHODS = {"POST", "PUT", "PATCH"}
+
+
 # ---------------------------------------------------------------------------
 # Body size + per-request log middleware
 # ---------------------------------------------------------------------------
 @app.middleware("http")
 async def body_cap_and_log(request: Request, call_next):
     # Reject oversized bodies before they hit any route handler.
-    content_length = request.headers.get("content-length")
-    if content_length and content_length.isdigit() and int(content_length) > _MAX_BODY_BYTES:
-        return JSONResponse(
-            status_code=413,
-            content={
-                "error": "payload_too_large",
-                "message": f"Body exceeds {_MAX_BODY_BYTES} bytes",
-            },
-        )
+    #
+    # Prior version only honored a numeric Content-Length, which left
+    # Transfer-Encoding: chunked and missing-CL POSTs free to stream past
+    # _MAX_BODY_BYTES. We now require a numeric Content-Length on any
+    # body-bearing method so the cap is always enforceable up-front.
+    # Clients that need chunked uploads should buffer locally and resend with
+    # a Content-Length, or (future work) we wrap the ASGI receive callable
+    # to count bytes as they arrive.
+    if request.method in _BODY_BEARING_METHODS:
+        content_length = request.headers.get("content-length")
+        if content_length is None or not content_length.isdigit():
+            return JSONResponse(
+                status_code=411,
+                content={
+                    "error": "length_required",
+                    "message": "Content-Length header (numeric) is required for body-bearing requests.",
+                },
+            )
+        if int(content_length) > _MAX_BODY_BYTES:
+            return JSONResponse(
+                status_code=413,
+                content={
+                    "error": "payload_too_large",
+                    "message": f"Body exceeds {_MAX_BODY_BYTES} bytes",
+                },
+            )
 
     t0 = time.monotonic()
     response = await call_next(request)
