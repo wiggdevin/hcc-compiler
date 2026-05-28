@@ -1,5 +1,5 @@
 client_id: test_v2_jackson_white
-library_version: "0.1.0"
+library_version: "0.2.0"
 demographics:
   age: 30
   sex: M

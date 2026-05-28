@@ -48,7 +48,7 @@ Read `src/hcc_compiler/sp2/intake.py` (ClientIntake pydantic model). Generate a 
 5. Current regimen (long-form textarea)
 6. Optional: metabolic_calibration
 
-Submit → POST to `/api/intakes` → writes a row to `public.intakes` in the new Supabase project + writes the YAML to Supabase Storage at `intakes/<client_id>.yaml`.
+Submit → POST to `/api/intakes` → writes a row to `public.intakes` in the new Supabase project + writes the YAML to Supabase Storage at `intakes/<coach_id>/intake_<client_id>.yaml` (per-coach prefix scopes RLS without a separate lookup).
 
 ### 1.2 Admin dashboard
 

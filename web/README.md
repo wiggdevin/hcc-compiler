@@ -10,7 +10,7 @@ pnpm install     # only once
 pnpm dev         # http://localhost:3000
 ```
 
-Loads compiled plans from `../docs/examples/sp2/*.json` and intakes from `../tests/fixtures/intakes/*.yaml` via Server Components at request time.
+Loads compiled plans from `public/sp2/*.json` and intakes from `public/intakes/*.yaml` via Server Components at request time. Those `public/` copies are refreshed from `../docs/examples/sp2/` and `../tests/fixtures/intakes/` via the `pnpm prebuild` script — Vercel's `rootDirectory=web/` can't reach `../docs/` at build time, so the copies are committed to git.
 
 ## Phase 4 — Billing env vars
 
@@ -54,29 +54,12 @@ SUPABASE_SERVICE_ROLE_KEY
   - `invoice.payment_failed`
 - Copy the signing secret → set as `STRIPE_WEBHOOK_SECRET`
 
-## Compile gate — add to `web/app/api/intakes/[id]/compile/route.ts`
+## Compile gate (shipped)
 
-The compile route is owned by the other subagent. Main session must add the following
-check near the top of the POST handler, after `requireCoach()` resolves:
-
-```ts
-import { canCompile, consumeCredit } from "@/lib/billing";
-
-// Inside the POST handler, after: const coach = await requireCoach();
-const billing = await canCompile(coach.id);
-if (!billing.ok) {
-  return NextResponse.json({ error: billing.reason }, { status: 402 });
-}
-
-// ... run the actual compile ...
-
-// After compile succeeds, consume a credit if the coach is on pay-per-use:
-if (billing.remaining !== undefined) {
-  await consumeCredit(coach.id);
-}
-```
-
-HTTP 402 Payment Required is the correct status for a billing denial.
+The billing gate lives in `web/app/api/intakes/[id]/compile/route.ts`:
+`canCompile(user.id)` runs before compile, returning 402 Payment Required when
+the coach has no active subscription and no credits; `consumeCredit(user.id)`
+fires after a successful compile when the coach is on pay-per-use.
 
 ## Routes
 
