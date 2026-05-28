@@ -25,8 +25,14 @@ function getClient(): Resend {
   return _client;
 }
 
-const FROM_ADDRESS =
-  process.env.RESEND_FROM_ADDRESS ?? "HCC Compiler <noreply@hccompiler.com>";
+function normalizeFromAddress(): string {
+  const raw = (process.env.RESEND_FROM ?? process.env.RESEND_FROM_ADDRESS ?? "")
+    .trim();
+  if (!raw) return "HCC Compiler <noreply@hccompiler.com>";
+  return raw.includes("<") ? raw : `HCC Compiler <${raw}>`;
+}
+
+const FROM_ADDRESS = normalizeFromAddress();
 
 export interface SendResult {
   id: string | null;
