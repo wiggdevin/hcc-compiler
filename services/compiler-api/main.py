@@ -129,7 +129,7 @@ async def body_cap_and_log(request: Request, call_next):
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-_LIBRARY_VERSION = "0.1.0"
+_LIBRARY_VERSION = "0.2.0"
 
 
 def _db_path() -> Path:

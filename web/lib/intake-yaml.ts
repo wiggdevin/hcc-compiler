@@ -76,7 +76,7 @@ export function validateIntake(intake: ClientIntake): IntakeValidationError[] {
   const errs: IntakeValidationError[] = [];
   if (!intake.client_id.trim()) errs.push({ field: "client_id", message: "Required." });
   if (!intake.library_version.trim())
-    errs.push({ field: "library_version", message: "Required (e.g. 0.1.0)." });
+    errs.push({ field: "library_version", message: "Required (e.g. 0.2.0)." });
   if (intake.demographics.age < 14 || intake.demographics.age > 100)
     errs.push({ field: "demographics.age", message: "Must be 14–100." });
   if (intake.demographics.weight_kg <= 0 || intake.demographics.weight_kg > 300)

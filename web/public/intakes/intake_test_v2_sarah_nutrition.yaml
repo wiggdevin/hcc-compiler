@@ -1,5 +1,5 @@
 client_id: test_v2_sarah_nutrition
-library_version: "0.1.0"
+library_version: "0.2.0"
 demographics:
   age: 26               # INFERRED — Rise Movement athlete, cycle-aware protocol; exact DOB not in deliverables
   sex: F

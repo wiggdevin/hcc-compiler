@@ -1,7 +1,7 @@
 # Handoff: Nutrient-timing evidence expansion
 status: done
 date: 2026-05-28
-branch: main   last-commit: 8c7180e chore(intake): bump default library_version 0.1.0 → 0.2.0
+branch: main   last-commit: 671af1e chore: handoff record + gitignore curation working dirs
 
 ## Active Task
 Add chrononutrition / time-restricted eating / pre-sleep protein / meal-frequency / deficit-protein-distribution / refeed-and-adaptive-thermogenesis evidence to the HCC compiler library and surface it in the client-viewer schedule.
