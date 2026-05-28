@@ -170,7 +170,7 @@ fly deploy \
 Verify:
 ```bash
 curl https://hcc-compiler-api.fly.dev/library/version
-# {"library_version":"0.2.0","pattern_count":22,"atom_count":215}
+# {"library_version":"0.2.0","pattern_count":23,"atom_count":225}
 ```
 
 ---
@@ -198,7 +198,7 @@ pip install -e .
 pip install -r services/compiler-api/requirements.txt
 
 cd services/compiler-api
-COMPILER_API_TOKEN=dev-secret \
+COMPILER_API_TOKEN=local-dev-only-do-not-deploy \
 LIBRARY_DB_PATH=../../library.db \
 uvicorn main:app --reload --port 8080
 ```

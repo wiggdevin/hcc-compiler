@@ -12,7 +12,7 @@ Architecture independently converged on by Claude Opus 4.7 and GPT-5.5.
 
 | Sub-project | What it is | Status |
 |---|---|---|
-| **SP1** | Evidence library + offline curation pipeline | **SHIPPED** (Plans 1+2+3, 179 atoms + 8 patterns across 6 domains) |
+| **SP1** | Evidence library + offline curation pipeline | **SHIPPED** (Plans 1+2+3, 225 atoms + 23 patterns across 6 domains) |
 | **SP2** | Per-client compiler runtime (deterministic core) | **SHIPPED** — `compile(intake) -> EvidencePack` with applicability scoring, contraindication checks, markdown render, CLI |
 | SP3 | Dynamic re-planning / Change Ledger engine | designed (future) |
 
@@ -34,7 +34,7 @@ uv run python scripts/compile_plan.py tests/fixtures/intakes/intake_carl_strengt
     --top-k 5
 ```
 
-Example outputs for three persona intakes are checked in under `docs/examples/sp2/`.
+Example outputs for 9 persona intakes (3 core + 6 test_v2) are checked in under `docs/examples/sp2/`.
 
 ### Client intake schema (minimal)
 
@@ -71,7 +71,7 @@ See `src/hcc_compiler/sp2/intake.py` for the full Pydantic schema.
 | `docs/specs/sp1-evidence-library-design.md` | Full SP1 architecture & rationale |
 | `docs/plans/sp2-compiler-runtime.md` | SP2 task-by-task implementation plan |
 | `docs/explainer.html` | Visual overview of the whole redesign |
-| `docs/examples/sp2/{amy,carl,sam}.{md,json}` | Real example outputs of `make compile` against the live library |
+| `docs/examples/sp2/` | 9 persona pack examples (json+md) — outputs of `make compile` against the live library |
 
 ## Pipeline at a glance
 
@@ -107,9 +107,11 @@ Resume an interrupted run with `/goal --resume hcc-compiler-sp2`.
 ## Verify locally
 
 ```bash
-make check   # validate library + build_index + run the full pytest suite
+make check   # validate library + build_index + run the library/SP2 pytest suite (tests/)
 ```
 
-The suite is ~475 deterministic offline tests at SP2-shipped (HEAD). All HTTP / LLM / Ollama
-calls are mocked in tests; live modes gated behind `HCC_LIVE_HTTP=1`, `HCC_LIVE_LLM=1`, and
-`HCC_LIVE_EMBED=1`.
+The library/SP2 suite (under `tests/`) is 537 deterministic offline tests at library 0.2.0 (HEAD).
+All HTTP / LLM / Ollama calls are mocked; live modes gated behind `HCC_LIVE_HTTP=1`,
+`HCC_LIVE_LLM=1`, and `HCC_LIVE_EMBED=1`. The compiler-API FastAPI service has its own test
+suite under `services/compiler-api/tests/` (16 cases — 6 smoke + 10 integration); run it after
+`pip install -r services/compiler-api/requirements.txt` via `cd services/compiler-api && pytest -q`.

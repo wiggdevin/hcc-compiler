@@ -10,7 +10,7 @@
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Dashboard > Settings > API > anon public key |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase Dashboard > Settings > API > service_role secret — **never expose to browser** |
 | `COMPILER_API_URL` | URL of the deployed FastAPI sidecar, e.g. `https://hcc-compiler-api.fly.dev` |
-| `COMPILER_API_TOKEN` | Short-lived JWT or shared secret used to authenticate calls to the compiler API |
+| `COMPILER_API_TOKEN` | Shared bearer secret authenticating calls to the compiler API (set on both Vercel and Fly, values must match) |
 | `NEXT_PUBLIC_APP_URL` | Public URL of the web app, e.g. `https://hccompiler.com` or `http://localhost:3010` in dev |
 
 Set these in Vercel Dashboard > Project > Settings > Environment Variables.
