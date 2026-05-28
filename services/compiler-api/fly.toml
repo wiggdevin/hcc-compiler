@@ -38,7 +38,10 @@ primary_region = "iad"
   cpus = 1
 
 [env]
-  LIBRARY_DB_PATH = "/data-seed/library.db"
+  # LIBRARY_DB_PATH defaults to /data/library.db (volume mount).
+  # entrypoint.sh seeds it from /data-seed/library.db on container start
+  # when the baked seed is newer than the volume copy, so each fly deploy
+  # propagates library changes without manual volume surgery.
   HCC_LIBRARY_ROOT = "/app/library"
   PORT = "8080"
   LOG_LEVEL = "INFO"

@@ -4,20 +4,25 @@ Endpoints
 ---------
 GET  /healthz              unauthenticated — liveness probe
 GET  /library/version      unauthenticated — library stats
-POST /compile              authenticated (Supabase JWT) — run compile()
+POST /compile              authenticated (static bearer `COMPILER_API_TOKEN`) — run compile()
 """
 from __future__ import annotations
 
 import logging
 import os
 import sqlite3
+import time
 from pathlib import Path
 from typing import Any
 
 import yaml
 from fastapi import Depends, FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 from pydantic import BaseModel, ValidationError
+from slowapi import Limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.util import get_remote_address
 
 from auth import require_bearer
 from compile_runner import run_compile
@@ -48,9 +53,58 @@ def _validate_env() -> None:
 _validate_env()
 
 # ---------------------------------------------------------------------------
-# App
+# Request body size cap
 # ---------------------------------------------------------------------------
-app = FastAPI(title="hcc-compiler API", version="0.1.0")
+# ClientIntake payloads are typically <5 KiB. 256 KiB is generous headroom
+# while preventing arbitrary-size POSTs from chewing memory.
+_MAX_BODY_BYTES = int(os.environ.get("MAX_BODY_BYTES", str(256 * 1024)))
+
+# ---------------------------------------------------------------------------
+# App + rate limiter
+# ---------------------------------------------------------------------------
+limiter = Limiter(key_func=get_remote_address, default_limits=["60/minute"])
+app = FastAPI(title="hcc-compiler API", version="0.2.0")
+app.state.limiter = limiter
+app.add_middleware(SlowAPIMiddleware)
+
+
+@app.exception_handler(RateLimitExceeded)
+async def rate_limit_handler(request: Request, exc: RateLimitExceeded) -> JSONResponse:
+    return JSONResponse(
+        status_code=429,
+        content={"error": "rate_limited", "message": str(exc.detail)},
+    )
+
+
+# ---------------------------------------------------------------------------
+# Body size + per-request log middleware
+# ---------------------------------------------------------------------------
+@app.middleware("http")
+async def body_cap_and_log(request: Request, call_next):
+    # Reject oversized bodies before they hit any route handler.
+    content_length = request.headers.get("content-length")
+    if content_length and content_length.isdigit() and int(content_length) > _MAX_BODY_BYTES:
+        return JSONResponse(
+            status_code=413,
+            content={
+                "error": "payload_too_large",
+                "message": f"Body exceeds {_MAX_BODY_BYTES} bytes",
+            },
+        )
+
+    t0 = time.monotonic()
+    response = await call_next(request)
+    latency_ms = int((time.monotonic() - t0) * 1000)
+    # Structured log: human-readable msg + JSON-ish kv tail for log parsers.
+    logger.info(
+        "req method=%s path=%s status=%d latency_ms=%d",
+        request.method,
+        request.url.path,
+        response.status_code,
+        latency_ms,
+    )
+    return response
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -111,7 +165,9 @@ async def library_version() -> dict:
 
 
 @app.post("/compile", response_model=CompileResponse)
+@limiter.limit("30/minute")
 async def compile_endpoint(
+    request: Request,
     body: CompileRequest,
     _: None = Depends(require_bearer),
 ) -> CompileResponse:

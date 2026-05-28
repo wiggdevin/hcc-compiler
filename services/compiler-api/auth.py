@@ -23,11 +23,13 @@ def _expected_token() -> str:
     return tok
 
 
-async def require_bearer(authorization: str = Header(...)) -> None:
+async def require_bearer(authorization: str | None = Header(default=None)) -> None:
     """Validate the request carries the shared service bearer.
 
     Raises HTTPException(401) on missing / malformed / mismatched bearer.
     """
+    if authorization is None:
+        raise HTTPException(status_code=401, detail="Missing Authorization header")
     if not authorization.startswith("Bearer "):
         raise HTTPException(
             status_code=401,
