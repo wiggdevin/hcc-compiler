@@ -197,6 +197,83 @@ def test_compile_metadata_queries_issued_has_six_entries(tmp_path: Path) -> None
     assert len(pack.compile_metadata.queries_issued) == 6
 
 
+def test_compile_logs_warning_on_malformed_atom(
+    tmp_path: Path, caplog: pytest.LogCaptureFixture
+) -> None:
+    """Malformed atom rows surface as WARN logs rather than silently disappearing.
+
+    Why: a corrupt library row used to be swallowed by `except: pass`, which can
+    mask real data-integrity bugs and produce 'successful' packs with missing
+    evidence. Observability over silence.
+    """
+    import logging
+
+    db = _make_fixture_db(tmp_path)
+
+    con = sqlite3.connect(db)
+    con.execute(
+        "INSERT INTO atoms VALUES (?,?,?,?,?)",
+        (
+            "EA-BAD-9999",
+            "nutrition",
+            "high-impact",
+            "L1",
+            '{"id":"EA-BAD-9999","not":"a valid atom"}',
+        ),
+    )
+    con.execute(
+        "INSERT INTO embeddings VALUES (?,?,?)",
+        ("EA-BAD-9999", "atom", json.dumps(QUERY_VEC)),
+    )
+    con.commit()
+    con.close()
+
+    intake = _make_intake()
+    with caplog.at_level(logging.WARNING, logger="hcc_compiler.sp2.compile"):
+        with patch("hcc_compiler.retrieve.embed") as mock_embed:
+            mock_embed.return_value = QUERY_VEC
+            pack = compile(intake, db)
+
+    assert isinstance(pack, EvidencePack)
+    matching = [r for r in caplog.records if "EA-BAD-9999" in r.getMessage()]
+    assert matching, f"expected a warning mentioning EA-BAD-9999; got {[r.getMessage() for r in caplog.records]}"
+    assert any("skipping malformed atom" in r.getMessage() for r in matching)
+
+
+def test_compile_logs_warning_on_malformed_pattern(
+    tmp_path: Path, caplog: pytest.LogCaptureFixture
+) -> None:
+    """Same observability guarantee for malformed pattern rows."""
+    import logging
+
+    db = _make_fixture_db(tmp_path)
+
+    con = sqlite3.connect(db)
+    con.execute(
+        "INSERT INTO patterns VALUES (?,?,?,?)",
+        (
+            "RP-BAD-9999",
+            "nutrition",
+            "high-impact",
+            '{"id":"RP-BAD-9999","not":"a valid pattern"}',
+        ),
+    )
+    con.commit()
+    con.close()
+
+    intake = _make_intake()
+    with caplog.at_level(logging.WARNING, logger="hcc_compiler.sp2.compile"):
+        with patch("hcc_compiler.retrieve.embed") as mock_embed:
+            mock_embed.return_value = QUERY_VEC
+            pack = compile(intake, db)
+
+    assert isinstance(pack, EvidencePack)
+    assert any(
+        "RP-BAD-9999" in r.getMessage() and "skipping malformed pattern" in r.getMessage()
+        for r in caplog.records
+    )
+
+
 def test_compile_metadata_fields_filled(tmp_path: Path) -> None:
     """compile_metadata has expected values matching compile() arguments."""
     db = _make_fixture_db(tmp_path)
