@@ -15,3 +15,9 @@ web/node_modules/
 web/.next/
 web/.turbo/
 web/next-env.d.ts
+
+# Local-only env files, but allow committing the example template.
+web/.env
+web/.env.local
+web/.env.*.local
+!web/.env.example

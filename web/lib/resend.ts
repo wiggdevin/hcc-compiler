@@ -25,11 +25,12 @@ function getClient(): Resend {
   return _client;
 }
 
-function normalizeFromAddress(): string {
-  const raw = (process.env.RESEND_FROM ?? process.env.RESEND_FROM_ADDRESS ?? "")
-    .trim();
-  if (!raw) return "HCC Compiler <noreply@hccompiler.com>";
-  return raw.includes("<") ? raw : `HCC Compiler <${raw}>`;
+export function normalizeFromAddress(raw?: string | null): string {
+  const value = (
+    raw ?? process.env.RESEND_FROM ?? process.env.RESEND_FROM_ADDRESS ?? ""
+  ).trim();
+  if (!value) return "HCC Compiler <noreply@hccompiler.com>";
+  return value.includes("<") ? value : `HCC Compiler <${value}>`;
 }
 
 const FROM_ADDRESS = normalizeFromAddress();
