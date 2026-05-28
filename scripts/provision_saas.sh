@@ -68,12 +68,21 @@ if ! fly apps list 2>/dev/null | grep -q hcc-compiler-api; then
     --config services/compiler-api/fly.toml || true
 fi
 
+# Generate COMPILER_API_TOKEN once so the SAME value lands on both Fly and Vercel.
+# Previous version read it back via `fly secrets list`, which only returns digest+age
+# (Fly redacts values after set). That broke /compile auth because Vercel ended up with
+# the digest, not the token.
+COMPILER_API_TOKEN="$(openssl rand -hex 32)"
+zsvault add compiler-api-token "$COMPILER_API_TOKEN" --overwrite >/dev/null 2>&1 \
+  || zsvault add compiler-api-token "$COMPILER_API_TOKEN" >/dev/null 2>&1 \
+  || log "warning: failed to write compiler-api-token to vault; record manually."
+
 log "Setting Fly secrets"
 fly secrets set --app hcc-compiler-api \
   SUPABASE_URL="$(zsvault get supabase_hcc_url)" \
   SUPABASE_SERVICE_ROLE_KEY="$(zsvault get supabase_hcc_service_role)" \
   SUPABASE_JWT_SECRET="$(zsvault get supabase_hcc_jwt_secret)" \
-  COMPILER_API_TOKEN="$(openssl rand -hex 32)"
+  COMPILER_API_TOKEN="$COMPILER_API_TOKEN"
 
 log "Deploying compiler-api"
 fly deploy --app hcc-compiler-api \
@@ -81,7 +90,9 @@ fly deploy --app hcc-compiler-api \
   --dockerfile services/compiler-api/Dockerfile
 
 COMPILER_API_URL="https://hcc-compiler-api.fly.dev"
-COMPILER_API_TOKEN="$(fly secrets list --app hcc-compiler-api | grep COMPILER_API_TOKEN | awk '{print $3}')"
+# $COMPILER_API_TOKEN is the in-script value from the rand-hex line above —
+# DO NOT replace with `fly secrets list | awk '{print $3}'`; Fly's list returns
+# a digest+age tuple, not the secret value.
 
 # --- 4. Stripe products ------------------------------------------
 log "Stripe products — run these via Stripe dashboard or CLI:"
